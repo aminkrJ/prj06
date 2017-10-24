@@ -5,7 +5,8 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "react-scripts": "1.0.14"
