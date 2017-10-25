@@ -39,7 +39,7 @@ class App extends Component {
                   <span className="font-weight-bold">Anti-inflammatory</span>
                 </h2>
                 <h4 className="text-white">
-                  Free 7 day program and recipes
+                  Free 7 day anti-inflammatory smoothie recipes
                 </h4>
                 <form className="row mb-2 w-auto w-lg-80 pos-relative align-items-center">
                   <div className="col-lg-9 mb-3">
@@ -58,6 +58,74 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <div id="content" className="pt-5 pb-6 bg-white pos-relative pos-zindex-10">
+          <div className="container pb-6">
+            <hr className="hr-lg mt-0 mb-2 w-10 ml-0 hr-primary" />
+            <h3 className="text-left text-uppercase mt-0 mb-3">
+              Featured <span className="font-weight-bold">Programs</span>
+            </h3>
+            <div className="row text-left">
+              <div className="col-lg-4 d-lg-flex mb-3">
+                <div className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b" data-bg-img="assets/img/homes/code.jpg">
+                  <h2 className="text-white text-uppercase font-weight-bold mb-0 display-4">
+                    <span data-toggle="count-to" data-to="238" data-from="0">0</span>
+                  </h2>
+                  <p className="text-white text-uppercase mb-0">Anti-inflammatory</p>
+                  <hr className="hr-lg mt-2 mb-0 w-20 ml-0 hr-primary" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 order-lg-2 mb-4 mb-lg-0">
+              </div>
+              <div className="col-lg-9 pull-lg-3 mb-3">
+                <hr className="hr-lg mt-0 mb-2 w-10 ml-0 hr-primary" />
+                <h3 className="text-left mb-3 font-weight-bold text-uppercase">
+                  Coming up
+                </h3>
+                <div className="card px-3 py-4 mb-3 row-hover pos-relative">
+                  <div className="row align-items-center ">
+                    <div className="col-md-2">
+                      <img src="assets/img/customers/customer-1.png" alt="RRT Productions" className="img-fluid d-none d-md-block" />
+                    </div>
+                    <div className="col-md-8">
+                      <h4 className="text-left mb-0">
+                        Bootstrap Designer/Developer
+                      </h4>
+                      <p className="text-left text-muted mb-2 text-sm"><a href="#" className="font-weight-bold text-muted">RRT Productions</a> (Senior level, Contract)</p>
+                      <p className="text-muted mb-2 text-sm">
+                      </p>
+                    </div>
+                    <div className="col-md-2 text-md-center">
+                      <a href="#" className="btn btn-danger text-uppercase font-weight-bold d-lg-block">Subscribe</a> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <footer id="footer" className="py-3">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <p className="text-left mb-0 text-sm">Copyright 2017 &copy; Personalised Nutrition</p>
+                <ul className="list-inline footer-links mb-0 text-sm">
+                </ul>
+              </div>
+              <div className="col-md-6 flex-valign">
+                <div className="float-md-right ml-md-auto">
+                  <a href="#" className="btn btn-sm btn-icon btn-inverse btn-rounded mr-1"><i className="fa fa-instagram"></i></a>
+                  <a href="#" className="btn btn-sm btn-icon btn-inverse btn-rounded mr-1"><i className="fa fa-facebook"></i></a>
+                  <a href="#top" className="btn btn-sm btn-icon btn-inverse btn-rounded" title="Back to top"><i className="fa fa-chevron-up"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }
