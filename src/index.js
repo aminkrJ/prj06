@@ -10,6 +10,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'appStrap/assets/css/custom-style.css';
 import 'appStrap/assets/css/theme-style.css';
 
+import 'izitoast/dist/css/iziToast.css';
+import 'nprogress/nprogress.css';
+
+import axios from 'axios';
+
+axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}/api/v1`
+
 import WebFont from 'webfontloader';
 
 WebFont.load({

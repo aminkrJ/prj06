@@ -6,6 +6,8 @@
     "appStrap": "git+https://d45b7b74db9addb4b0c5b3ab5abb0ceb66a6d05a:x-oauth-basic@github.com/aminkrJ/appStrap.git",
     "bootstrap": "^4.0.0-beta",
     "font-awesome": "^4.7.0",
+    "izitoast": "^1.1.5",
+    "nprogress": "^0.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webfontloader": "^1.6.28"
