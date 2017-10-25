@@ -14,10 +14,10 @@ import 'izitoast/dist/css/iziToast.css';
 import 'nprogress/nprogress.css';
 
 import axios from 'axios';
+import WebFont from 'webfontloader';
 
 axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}/api/v1`
 
-import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
