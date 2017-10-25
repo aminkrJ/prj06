@@ -118,8 +118,8 @@ class App extends Component {
               </div>
               <div className="col-md-6 flex-valign">
                 <div className="float-md-right ml-md-auto">
-                  <a href="#" className="btn btn-sm btn-icon btn-inverse btn-rounded mr-1"><i className="fa fa-instagram"></i></a>
-                  <a href="#" className="btn btn-sm btn-icon btn-inverse btn-rounded mr-1"><i className="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/lifelixir" className="btn btn-sm btn-icon btn-inverse btn-rounded mr-1"><i className="fa fa-instagram"></i></a>
+                  <a href="https://fb.me/LifeElixirAU" className="btn btn-sm btn-icon btn-inverse btn-rounded mr-1"><i className="fa fa-facebook"></i></a>
                   <a href="#top" className="btn btn-sm btn-icon btn-inverse btn-rounded" title="Back to top"><i className="fa fa-chevron-up"></i></a>
                 </div>
               </div>
