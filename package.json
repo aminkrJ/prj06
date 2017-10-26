@@ -11,6 +11,7 @@
     "nprogress": "^0.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "reactstrap": "^5.0.0-alpha.3",
     "underscore": "^1.8.3",
     "webfontloader": "^1.6.28"
   },

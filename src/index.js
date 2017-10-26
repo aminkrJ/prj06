@@ -7,7 +7,6 @@ import registerServiceWorker from './registerServiceWorker';
 import 'font-awesome/css/font-awesome.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import 'appStrap/assets/css/custom-style.css';
 import 'appStrap/assets/css/theme-style.css';
 
 import 'izitoast/dist/css/iziToast.css';

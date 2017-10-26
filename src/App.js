@@ -3,6 +3,9 @@ import axios from 'axios';
 import NProgress from 'nprogress';
 import iziToast from 'izitoast';
 import _ from 'underscore';
+import {render} from 'react-dom';
+
+import CustomModal from './Modal';
 
 import './App.css';
 
@@ -17,8 +20,12 @@ class App extends Component {
     }
   }
 
-  handleSubscribe(e) {
+  handleSubscribe(campaign, e) {
     e.preventDefault()
+
+    render(
+      <CustomModal campaign={campaign} onSubscribe={this.subscribe.bind(this)} onEmailChange={this.handleEmailChange.bind(this)} />
+      , document.getElementById('modal')).toggle()
   }
 
   handleEmailChange(e) {
@@ -117,7 +124,7 @@ class App extends Component {
                 </p>
               </div>
               <div className="col-md-2 text-md-center">
-                <a href="#" data-campaign_id={campaign.id} onClick={this.handleSubscribe.bind(this)} className="btn btn-danger text-uppercase font-weight-bold d-lg-block">Subscribe</a> 
+                <a href="#" data-campaign_id={campaign.id} onClick={this.handleSubscribe.bind(this, campaign)} className="btn btn-danger text-uppercase font-weight-bold d-lg-block">Subscribe</a> 
               </div>
             </div>
           </div>
