@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   handleSubscribe(e) {
-   // Open a modal and ask for email and name
+    e.preventDefault()
   }
 
   handleEmailChange(e) {
@@ -137,7 +137,7 @@ class App extends Component {
         </div>
 
         <div id="highlighted">
-          <div className="bg-white overlay overlay-gradient-flip overlay-op-8 text-center text-lg-left py-5 py-lg-10 flex-valign">
+          <div className="main-bg bg-white overlay overlay-gradient-flip overlay-op-8 text-center text-lg-left py-5 py-lg-10 flex-valign">
             <div>
               <div className="container pt-6">
                 <h2 className="display-4 text-white mb-3">
