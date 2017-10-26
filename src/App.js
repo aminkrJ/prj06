@@ -1,7 +1,112 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import NProgress from 'nprogress';
+import iziToast from 'izitoast';
+import _ from 'underscore';
+
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      campaigns: [],
+      activeCampaign: {},
+      email: ""
+    }
+  }
+
+  handleSubscribe(e) {
+   // Open a modal and ask for email and name
+  }
+
+  handleEmailChange(e) {
+    this.setState({
+      email: e.target.value
+    })
+  }
+
+  handleDownload(e) {
+    e.preventDefault()
+    var campaignId = e.target.getAttribute("data-campaign_id")
+
+    this.subscribe(campaignId)
+  }
+
+  subscribe(campaignId) {
+    NProgress.start()
+    axios.post("/campaigns/" + campaignId + "/subscribers", {
+      subscriber: {
+        email: this.state.email
+      }
+    })
+    .then((response) => {
+      NProgress.done()
+
+      iziToast.success({
+        position: 'topRight',
+        message: "You are subscribed successfully!"
+      })
+
+      this.setState({email: ""})
+    })
+    .catch((error) => {
+      NProgress.done()
+
+      iziToast.error({
+        position: 'topRight',
+        message: "Email " + error.response.data.email[0]
+      })
+    })
+  }
+
+  componentDidMount() {
+    NProgress.start()
+
+    axios.get("/campaigns/")
+    .then((response) => {
+      NProgress.done()
+
+      this.setState({
+        campaigns: response.data,
+        activeCampaign: _.find(response.data, (c) => { return c.active === true })
+      })
+    })
+    .catch((error) => {
+      NProgress.done()
+    })
+  }
+
+  renderInactiveCampaigns() {
+    return (
+      this.state.campaigns.map((campaign) => {
+        return (
+          <div key={campaign.id} className="card px-3 py-4 mb-3 row-hover pos-relative">
+            <div className="row align-items-center ">
+              <div className="col-md-2">
+                <img src="" alt={campaign.name} className="img-fluid d-none d-md-block" />
+              </div>
+              <div className="col-md-8">
+                <h4 className="text-left mb-0">
+                  {campaign.name}
+                </h4>
+                <p className="text-left text-muted mb-2 text-sm">
+                  {campaign.short_description}
+                </p>
+                <p className="text-muted mb-2 text-sm">
+                </p>
+              </div>
+              <div className="col-md-2 text-md-center">
+                <a href="#" data-campaign_id={campaign.id} onClick={this.handleSubscribe.bind(this)} className="btn btn-danger text-uppercase font-weight-bold d-lg-block">Subscribe</a> 
+              </div>
+            </div>
+          </div>
+        )
+      })
+    )
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -17,7 +122,7 @@ class App extends Component {
                     </h1>
                   </a>
                   <div className="header-divider d-none d-lg-block"></div>
-                  <div className="header-slogan text-sm d-none d-lg-block">Food is medicine</div>
+                  <div className="header-slogan text-sm d-none d-lg-block"></div>
                 </div>
                 <div className="header-block order-12">
                   <a href="#top" className="btn btn-link btn-icon text-white op-6 header-btn float-right d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i className="fa fa-bars"></i> </a>
@@ -36,23 +141,23 @@ class App extends Component {
             <div>
               <div className="container pt-6">
                 <h2 className="display-4 text-white mb-3">
-                  <span className="font-weight-bold">Anti-inflammatory</span>
+                  <span className="font-weight-bold">{this.state.activeCampaign.name}</span>
                 </h2>
                 <h4 className="text-white">
-                  Free 7 day anti-inflammatory smoothie recipes
+                  {this.state.activeCampaign.short_description}
                 </h4>
                 <form className="row mb-2 w-auto w-lg-80 pos-relative align-items-center">
                   <div className="col-lg-9 mb-3">
                     <i className="fa fa-envelope-o text-white icon-2x pos-absolute pos-l mt-2 ml-3 d-none d-lg-block"></i>
-                    <input className="form-control form-control-lg form-control-transparent form-control-dark text-center text-lg-left pl-lg-5" type="text" placeholder="Your email here" ></input>
+                    <input onChange={this.handleEmailChange.bind(this)} className="form-control form-control-lg form-control-transparent form-control-dark text-center text-lg-left pl-lg-5" type="text" placeholder="Email" value={this.state.email} ></input>
                     <hr className="hr-inverse hr-lg mx-auto mt-1 mb-0" />
                   </div>
                   <div className="col-lg-3">
-                    <a href="#content" className="btn btn-danger btn-rounded btn-lg px-5 py-lg-3 px-lg-5 d-lg-block">Download</a>
+                    <a href="#" data-campaign_id={this.state.activeCampaign.id} onClick={this.handleDownload.bind(this)} className="btn btn-danger btn-rounded btn-lg px-5 py-lg-3 px-lg-5 d-lg-block">Download</a>
                   </div>
                 </form>
                 <h5 className="text-grey my-0 font-weight-normal">
-                  Currently practicing by <span className="font-weight-bold">234 people</span>.
+                  Currently practicing by <span className="font-weight-bold">{this.state.activeCampaign.campaign_subscribers_count} people</span>.
                 </h5>
               </div>
             </div>
@@ -68,9 +173,9 @@ class App extends Component {
               <div className="col-lg-4 d-lg-flex mb-3">
                 <div className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b" data-bg-img="assets/img/homes/code.jpg">
                   <h2 className="text-white text-uppercase font-weight-bold mb-0 display-4">
-                    <span data-toggle="count-to" data-to="238" data-from="0">0</span>
+                    <span>{this.state.activeCampaign.campaign_subscribers_count}</span>
                   </h2>
-                  <p className="text-white text-uppercase mb-0">Anti-inflammatory</p>
+                  <p className="text-white text-uppercase mb-0">{this.state.activeCampaign.name}</p>
                   <hr className="hr-lg mt-2 mb-0 w-20 ml-0 hr-primary" />
                 </div>
               </div>
@@ -85,24 +190,18 @@ class App extends Component {
                 <h3 className="text-left mb-3 font-weight-bold text-uppercase">
                   Coming up
                 </h3>
-                <div className="card px-3 py-4 mb-3 row-hover pos-relative">
-                  <div className="row align-items-center ">
-                    <div className="col-md-2">
-                      <img src="assets/img/customers/customer-1.png" alt="RRT Productions" className="img-fluid d-none d-md-block" />
-                    </div>
-                    <div className="col-md-8">
-                      <h4 className="text-left mb-0">
-                        Bootstrap Designer/Developer
-                      </h4>
-                      <p className="text-left text-muted mb-2 text-sm"><a href="#" className="font-weight-bold text-muted">RRT Productions</a> (Senior level, Contract)</p>
-                      <p className="text-muted mb-2 text-sm">
-                      </p>
-                    </div>
-                    <div className="col-md-2 text-md-center">
-                      <a href="#" className="btn btn-danger text-uppercase font-weight-bold d-lg-block">Subscribe</a> 
-                    </div>
-                  </div>
+                {this.renderInactiveCampaigns()}
+
+                <div className="bg-faded p-4">
+                  <h3 className="font-weight-bold mb-2">
+                    Australian made?
+                  </h3>
+                  <h4 className="font-weight-normal text-muted mb-3">
+                    We love to support Australian made healthy goodies in our programs.
+                  </h4>
+                  <a href="mailto:support@lifelixir.com.au" className="btn btn-primary btn-rounded">Contact us</a> 
                 </div>
+
               </div>
             </div>
           </div>
