@@ -11,6 +11,7 @@ class App extends Component {
     super(props)
     this.state = {
       campaigns: [],
+      featuredCampaigns: [],
       activeCampaign: {},
       email: ""
     }
@@ -69,12 +70,31 @@ class App extends Component {
 
       this.setState({
         campaigns: response.data,
-        activeCampaign: _.find(response.data, (c) => { return c.active === true })
+        activeCampaign: _.find(response.data, (c) => { return c.active === true }),
+        featuredCampaigns: _.first(response.data, 3)
       })
     })
     .catch((error) => {
       NProgress.done()
     })
+  }
+
+  renderFeaturedCampaings() {
+    return (
+      this.state.featuredCampaigns.map((c) => {
+        return (
+         <div className="col-lg-4 d-lg-flex mb-3">
+           <div className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b">
+             <h2 className="text-white text-uppercase font-weight-bold mb-0 display-4">
+               <span>{c.campaign_subscribers_count}</span>
+             </h2>
+             <p className="text-white text-uppercase mb-0">{c.name}</p>
+             <hr className="hr-lg mt-2 mb-0 w-20 ml-0 hr-primary" />
+           </div>
+         </div>
+        )
+      })
+    )
   }
 
   renderInactiveCampaigns() {
@@ -170,15 +190,7 @@ class App extends Component {
               Featured <span className="font-weight-bold">Programs</span>
             </h3>
             <div className="row text-left">
-              <div className="col-lg-4 d-lg-flex mb-3">
-                <div className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b" data-bg-img="assets/img/homes/code.jpg">
-                  <h2 className="text-white text-uppercase font-weight-bold mb-0 display-4">
-                    <span>{this.state.activeCampaign.campaign_subscribers_count}</span>
-                  </h2>
-                  <p className="text-white text-uppercase mb-0">{this.state.activeCampaign.name}</p>
-                  <hr className="hr-lg mt-2 mb-0 w-20 ml-0 hr-primary" />
-                </div>
-              </div>
+              {this.renderFeaturedCampaings()}
             </div>
           </div>
           <div className="container">
@@ -191,17 +203,6 @@ class App extends Component {
                   Coming up
                 </h3>
                 {this.renderInactiveCampaigns()}
-
-                <div className="bg-faded p-4">
-                  <h3 className="font-weight-bold mb-2">
-                    Australian made?
-                  </h3>
-                  <h4 className="font-weight-normal text-muted mb-3">
-                    We love to support Australian made healthy goodies in our programs.
-                  </h4>
-                  <a href="mailto:support@lifelixir.com.au" className="btn btn-primary btn-rounded">Contact us</a> 
-                </div>
-
               </div>
             </div>
           </div>
