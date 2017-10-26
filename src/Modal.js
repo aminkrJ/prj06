@@ -28,7 +28,7 @@ class CustomModal extends Component {
   render() {
     return (
       <Modal isOpen={this.state.modal} toggle={this.toggle.bind(this)} backdrop={this.state.backdrop}>
-        <ModalHeader>
+        <ModalHeader toggle={this.toggle.bind(this)}>
           {this.props.campaign.name}
         </ModalHeader>
         <ModalBody>
