@@ -91,7 +91,7 @@ class App extends Component {
       this.state.featuredCampaigns.map((c) => {
         return (
          <div key={c.id} className="col-lg-4 d-lg-flex mb-3">
-           <div style={ {backgroundImage: "url(" + c.photo.medium + ")", backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed", backgroundSize: "cover"} } className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b">
+           <div style={ {backgroundImage: "url(" + c.photo.original + ")", backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed", backgroundSize: "cover"} } className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b">
              <h2 className="text-white text-uppercase font-weight-bold mb-0 display-4">
                <span>{c.campaign_subscribers_count}</span>
              </h2>
@@ -106,12 +106,12 @@ class App extends Component {
 
   renderInactiveCampaigns() {
     return (
-      this.state.campaigns.map((campaign) => {
+      this.state.campaigns.map((campaign, index) => {
         return (
           <div key={campaign.id} className="card px-3 py-4 mb-3 row-hover pos-relative">
             <div className="row align-items-center ">
               <div className="col-md-2">
-                <img src={campaign.photo.thumb} alt={campaign.name} className="img-fluid d-none d-md-block" />
+                <h2 className="text-center">{index + 1}</h2>
               </div>
               <div className="col-md-8">
                 <h4 className="text-left mb-0">
