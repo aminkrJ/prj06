@@ -9,6 +9,8 @@ import CustomModal from './Modal';
 
 import './App.css';
 
+var pageTitle = "Elevated superfood smoothies, and tonics";
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -66,6 +68,10 @@ class App extends Component {
         message: "Email " + error.response.data.email[0]
       })
     })
+  }
+
+  componentWillMount() {
+    document.title = "Life Elixir " + pageTitle;
   }
 
   componentDidMount() {
@@ -149,7 +155,7 @@ class App extends Component {
                     </h1>
                   </a>
                   <div className="header-divider d-none d-lg-block"></div>
-                  <div className="header-slogan text-sm d-none d-lg-block">Elevated superfood smoothies, tonic, and elixirs</div>
+                  <div className="header-slogan text-sm d-none d-lg-block">{pageTitle}</div>
                 </div>
                 <div className="header-block order-12">
                   <a href="#top" className="btn btn-link btn-icon text-white op-6 header-btn float-right d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i className="fa fa-bars"></i> </a>
