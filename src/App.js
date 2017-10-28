@@ -9,7 +9,7 @@ import CustomModal from './Modal';
 
 import './App.css';
 
-var pageTitle = "Elevated superfood smoothies, and tonics";
+var pageTitle = "Elevated superfood smoothies and elixirs";
 
 class App extends Component {
   constructor(props){
@@ -71,7 +71,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    document.title = "Life Elixir " + pageTitle;
+    document.title = "Life Elixir, " + pageTitle;
   }
 
   componentDidMount() {
