@@ -55,7 +55,8 @@ class App extends Component {
 
       iziToast.success({
         position: 'topRight',
-        message: "You are subscribed successfully!"
+        message: "Check your email to download the PDF.",
+        title: "Congratulation!"
       })
 
       this.setState({email: ""})
@@ -111,8 +112,11 @@ class App extends Component {
   }
 
   renderInactiveCampaigns() {
+    var inactiveCamapigns = _.reject(this.state.campaigns, (i) => {
+      return i.active === true
+    })
     return (
-      this.state.campaigns.map((campaign, index) => {
+      inactiveCamapigns.map((campaign, index) => {
         return (
           <div key={campaign.id} className="card px-3 py-4 mb-3 row-hover pos-relative">
             <div className="row align-items-center ">
@@ -158,7 +162,6 @@ class App extends Component {
                   <div className="header-slogan text-sm d-none d-lg-block">{pageTitle}</div>
                 </div>
                 <div className="header-block order-12">
-                  <a href="#top" className="btn btn-link btn-icon text-white op-6 header-btn float-right d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i className="fa fa-bars"></i> </a>
                 </div>
                 <div className="navbar navbar-expand-md">
                   <div className="navbar-main collapse">
@@ -180,13 +183,13 @@ class App extends Component {
                   {this.state.activeCampaign.short_description}
                 </h4>
                 <form className="row mb-2 w-auto w-lg-80 pos-relative align-items-center">
-                  <div className="col-lg-9 mb-3">
+                  <div className="col-lg-8 mb-3">
                     <i className="fa fa-envelope-o text-white icon-2x pos-absolute pos-l mt-2 ml-3 d-none d-lg-block"></i>
                     <input onChange={this.handleEmailChange.bind(this)} className="form-control form-control-lg form-control-transparent form-control-dark text-center text-lg-left pl-lg-5" type="text" placeholder="Email" value={this.state.email} ></input>
                     <hr className="hr-inverse hr-lg mx-auto mt-1 mb-0" />
                   </div>
-                  <div className="col-lg-3">
-                    <a href="#" data-campaign_id={this.state.activeCampaign.id} onClick={this.handleDownload.bind(this)} className="btn btn-danger btn-rounded btn-lg px-5 py-lg-3 px-lg-5 d-lg-block">Download</a>
+                  <div className="col-lg-4">
+                    <a href="#" data-campaign_id={this.state.activeCampaign.id} onClick={this.handleDownload.bind(this)} className="btn btn-danger btn-rounded btn-lg px-5 py-lg-3 px-lg-5 d-lg-block">Download Now</a>
                   </div>
                 </form>
                 <h5 className="text-grey my-0 font-weight-normal">
@@ -200,7 +203,7 @@ class App extends Component {
           <div className="container pb-6">
             <hr className="hr-lg mt-0 mb-2 w-10 ml-0 hr-primary" />
             <h3 className="text-left text-uppercase mt-0 mb-3">
-              Featured <span className="font-weight-bold">Programs</span>
+              Popular <span className="font-weight-bold">Programs</span>
             </h3>
             <div className="row text-left">
               {this.renderFeaturedCampaings()}
