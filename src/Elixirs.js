@@ -5,8 +5,6 @@ import NProgress from 'nprogress';
 import iziToast from 'izitoast';
 import _ from 'underscore';
 
-import ThumbImg from './img/thumb.png';
-
 class Elixirs extends Component {
   constructor(props) {
     super(props)
