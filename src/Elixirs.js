@@ -37,7 +37,7 @@ class Elixirs extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <img className="card-img-top img-fluid" src={ThumbImg} alt={product.name} />
+              <img className="card-img-top img-fluid" src={product.photo.medium} alt={product.name} />
             </div>
 
             <div className="card-body">

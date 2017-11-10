@@ -7,8 +7,6 @@ import _ from 'underscore';
 
 import Carousel from './Carousel';
 
-import ThumbImg from './img/thumb.png';
-
 class Home extends Component {
 
   constructor(props) {
@@ -40,7 +38,7 @@ class Home extends Component {
           return(
             <div key={index}>
               <Link to={"/elixirs/" + product.slug} className="project overlay-hover">
-                <img src={ThumbImg} className="img-fluid" />
+                <img src={product.photo.medium} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
                   <span class="h5 mt-4">{product.name}</span>
@@ -87,25 +85,25 @@ class Home extends Component {
             <div className="row text-center">
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
-                  Premium ingredients
+                  Premium Ingredients
                 </h4>
                 <p>Seasonal, pesticide-free, and certified organic ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
-                  No added sugar
+                  No Added Sugar
                 </h4>
                 <p>Enjoy the natural sweetness of fruits in our smoothies</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
-                  No preservative
+                  No Preservative
                 </h4>
                 <p>Freshness is our commitment</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
-                  Effective programs
+                  Effective Programs
                 </h4>
                 <p>Various recipes to suit different diet plans</p>
               </div>
@@ -113,13 +111,13 @@ class Home extends Component {
                 <h4 className="mt-2">
                   Nutritious n Delicious
                 </h4>
-                <p></p>
+                <p>Get enough nutritions as a whole meal</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
-                  Natural remedies
+                  Natural Remedies
                 </h4>
-                <p></p>
+                <p>With healing agents it is more than a drink </p>
               </div>
             </div>
           </div>
