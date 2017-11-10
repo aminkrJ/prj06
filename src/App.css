@@ -6,3 +6,20 @@
   background-size:  cover;
   background-color: #999;
 }
+
+.header .nav-item{
+  padding: 18px 14px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-top: 3px solid transparent;
+}
+
+#highlighted .overlay{
+  background-position: center bottom;
+  background-attachment: fixed;
+}

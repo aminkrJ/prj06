@@ -9,8 +9,10 @@
     "font-awesome": "^4.7.0",
     "izitoast": "^1.1.5",
     "nprogress": "^0.2.0",
+    "owl.carousel": "^2.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
     "reactstrap": "^5.0.0-alpha.3",
     "underscore": "^1.8.3",
     "webfontloader": "^1.6.28"
