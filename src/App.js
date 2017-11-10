@@ -14,6 +14,7 @@ import Find from './Find';
 import Home from './Home';
 import Footer from './Footer';
 import Product from './Product';
+import Thanks from './Thanks';
 import CustomModal from './Modal';
 
 import './App.css';
@@ -111,6 +112,7 @@ class App extends Component {
           <Route exact path='/elixirs' component={Elixirs} />
           <Route exact path='/elixirs/:slug' component={Product} />
           <Route exact path="/contact_us" component={Contact} />
+          <Route exact path="/thanks" component={Thanks} />
         </div>
         <Footer />
       </div>

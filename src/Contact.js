@@ -21,23 +21,24 @@ class Contact extends Component {
                 </h2>
                 <div class="row">
                   <div class="col-md-6">
-                    <form id="contact-form" action="#" role="form">
+                    <form id="contact-form" action="https://formspree.io/support@lifelixir.com.au" method="POST" role="form">
+                      <input type="hidden" name="_next" value="//lifelixir.com.au/thanks" />
                       <div class="form-group">
                         <label class="sr-only" for="contact-name">Name</label>
-                        <input type="text" class="form-control" id="contact-name" placeholder="Name" />
+                        <input type="text" class="form-control" id="contact-name" placeholder="Name" name="name" />
                         <small id="contact-name-help" class="form-text text-muted">First and last names.</small>
                       </div>
                       <div class="form-group">
                         <label class="sr-only" for="contact-email">Email</label>
-                        <input type="email" class="form-control" id="contact-email" placeholder="Email" />
+                        <input type="email" class="form-control" id="contact-email" placeholder="Email" name="_replyto" />
                         <small id="contact-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
                       </div>
                       <div class="form-group">
                         <label class="sr-only" for="contact-message">Message</label>
-                        <textarea rows="12" class="form-control" id="contact-message" placeholder="Message"></textarea>
+                        <textarea rows="12" class="form-control" id="contact-message" placeholder="Message" name="message"></textarea>
                         <small id="contact-message-help" class="form-text text-muted">Your message and details.</small>
                       </div>
-                      <input type="button" class="btn btn-primary" value="Send Message" />
+                      <input type="submit" class="btn btn-primary" value="Send Message" />
                     </form>
                   </div>
                   <div class="col-md-6">
