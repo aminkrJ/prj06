@@ -20,18 +20,24 @@ class About extends Component {
                   <small>What & who makes us tick!</small>
                 </h2>
                 <h4>
-                  How It All Began
+                  What is our mission?
                 </h4>
-                <p>Comis consectetuer iusto neo nutus olim suscipere validus velit vulputate. Acsi haero jugis olim venio.</p>
-                <p>Aliquip cogo decet facilisis lucidus tum valde veniam. Decet gemino hos incassum luptatum pneum roto suscipit verto. Abdo abluo aliquip decet lenis pagus praesent quibus vel voco. Euismod eum hendrerit. Acsi damnum enim esca laoreet nimis nunc refoveo. Aptent consectetuer eum importunus nostrud velit. Iustum neo proprius turpis venio. Capto gemino molior. Dignissim dolore duis exerci letalis neo suscipere tego. Causa humo illum pala persto quidem suscipere.</p>
-                <p>Autem blandit comis gemino humo nulla vulputate. Augue caecus commoveo eligo erat gemino praesent voco. Cui dignissim ea lucidus singularis te vel. Acsi esse iusto jus laoreet paulatim scisco te utinam ymo.</p>
+                <p>
+Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single LifeElixir drinks. That’s why we believe integrating LifeElixir to your diet is imperative to an individual health and happiness. 
+
+</p>
+                <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and mushrooms to bring pioneering drinks for you.
+</p>
+  <p>Don’t worry if you are busy or don’t have time for long shopping lists, our mission is to deliver our smoothies, elixir and tonics readily to wherever you are right now!
+  </p>
                 <h4 class="mt-4">
-                  Our Philosophy
+                  LifeElixir programs
                 </h4>
-                <p>Minim paratus saepius tincidunt turpis. Abdo brevitas eu incassum luctus mauris sagaciter sed tum ymo.</p>
-                <p>Abdo brevitas camur dignissim dolus ex macto validus ymo. Consectetuer duis ille inhibeo letalis mos quadrum. Duis magna molior paulatim ratis scisco validus vero. Acsi dolus fere molior pagus utinam utrum vel virtus vulputate. Abbas dignissim et in interdico. Dolore eros ex hos iaceo interdico lucidus quadrum refero ut. Abigo antehabeo comis conventio decet diam lobortis melior premo quadrum. Eligo imputo in jumentum obruo praemitto sit suscipere.</p>
-                <p>Abigo aptent gilvus ideo nunc oppeto ymo. Camur facilisis quidne usitas. Abdo brevitas camur erat eum paratus proprius quidne sagaciter. Dignissim facilisi immitto nulla scisco wisi.</p>
-                
+                <p><b>Tast is important but we offer more.</b> By studying current scientific researches and interviewing leaders we connected the dots to outline perfect plans for <b>getting result</b>. We have designed programs to help people from enhancing body and mind performance to healing illnesses. It is recommended to integrate these recipes to your daily diet to get the most out of it.</p>
+  <h4 class="mt-4">
+                  Make it at home
+                </h4>
+                <p>Our program also can be downloaded with our website for people who have enough time to make them at home.</p>
               </div>
             </div>
           </div>
