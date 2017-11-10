@@ -42,41 +42,6 @@ class App extends Component {
     })
   }
 
-  handleDownload(e) {
-    e.preventDefault()
-    var campaignId = e.target.getAttribute("data-campaign_id")
-
-    this.subscribe(campaignId)
-  }
-
-  subscribe(campaignId) {
-    NProgress.start()
-    axios.post("/campaigns/" + campaignId + "/subscribers", {
-      subscriber: {
-        email: this.state.email
-      }
-    })
-    .then((response) => {
-      NProgress.done()
-
-      iziToast.success({
-        position: 'topRight',
-        message: "Check your email to download the PDF.",
-        title: "Congratulation!"
-      })
-
-      this.setState({email: ""})
-    })
-    .catch((error) => {
-      NProgress.done()
-
-      iziToast.error({
-        position: 'topRight',
-        message: "Email " + error.response.data.email[0]
-      })
-    })
-  }
-
   componentWillMount() {
     document.title = "Life Elixir, " + pageTitle;
   }

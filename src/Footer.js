@@ -1,7 +1,81 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import NProgress from 'nprogress';
+import iziToast from 'izitoast';
+import _ from 'underscore';
 
 class Footer extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      campaigns: [],
+      subscribeCampaign: {},
+      email: ""
+    }
+  }
+
+  componentWillMount() {
+    NProgress.start()
+
+    axios.get("/campaigns/")
+    .then((response) => {
+      NProgress.done()
+
+      this.setState({
+        campaigns: response.data,
+        subscribeCampaign: _.find(response.data, (c) => { return c.name === "Subscribe" })
+      })
+    })
+    .catch((error) => {
+      NProgress.done()
+    })
+  }
+
+  handleEmailChange(e) {
+    this.setState({
+      email: e.target.value
+    })
+  }
+
+  handleSubscribe(campaign, e) {
+    e.preventDefault()
+    var campaignId = e.target.getAttribute("data-campaign_id")
+
+    this.subscribe(campaignId)
+  }
+
+  subscribe(campaignId) {
+    NProgress.start()
+    axios.post("/campaigns/" + campaignId + "/subscribers", {
+      subscriber: {
+        email: this.state.email
+      }
+    })
+    .then((response) => {
+      NProgress.done()
+
+      iziToast.success({
+        position: 'topRight',
+        message: "You have subscribed successfully.",
+        title: "Congratulation!"
+      })
+
+      this.setState({email: ""})
+    })
+    .catch((error) => {
+      NProgress.done()
+
+      iziToast.error({
+        position: 'topRight',
+        message: "Email " + error.response.data.email[0]
+      })
+    })
+  }
+
+
+
 
   render() {
     return (
@@ -46,9 +120,9 @@ class Footer extends Component {
               <form>
                 <div class="input-group">
                   <label class="sr-only" for="email-field">Email</label>
-                  <input type="text" class="form-control" id="email-field" placeholder="Email" />
+                  <input type="text" class="form-control" id="email-field" placeholder="Email" onChange={this.handleEmailChange.bind(this)}/>
                   <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Go!</button>
+                    <button class="btn btn-primary" data-campaign_id={this.state.subscribeCampaign.id} onClick={this.handleSubscribe.bind(this, this.state.subscribeCampaign)} type="button">Go!</button>
                   </span>
                 </div>
               </form>

@@ -15,26 +15,11 @@ class Home extends Component {
     super(props)
     this.state = {
       products: [],
-      campaigns: [],
-      activeCampaign: {}
     }
   }
 
   componentWillMount() {
     NProgress.start()
-
-    axios.get("/campaigns/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        campaigns: response.data,
-        activeCampaign: _.find(response.data, (c) => { return c.active === true })
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
 
     axios.get("/products/")
     .then((response) => {
@@ -94,7 +79,7 @@ class Home extends Component {
           <div id="features" className="container py-4 py-lg-6">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">
-              Drink with us
+              Why us?
             </h2>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
             </h5>
@@ -110,7 +95,7 @@ class Home extends Component {
                 <h4 className="mt-2">
                   No added sugar
                 </h4>
-                <p>Enjoy the natural sweetness of fruits in our tonics</p>
+                <p>Enjoy the natural sweetness of fruits in our smoothies</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
@@ -139,7 +124,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div id="projects" className="container p-3 py-lg-6">
+        <div id="projects" className="container p-3 py-lg-1">
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h2 className="text-center text-uppercase font-weight-bold my-0">
             Latest Smoothies
