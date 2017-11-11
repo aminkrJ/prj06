@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
 import axios from 'axios';
 import NProgress from 'nprogress';
@@ -35,16 +36,20 @@ class Elixirs extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <img className="card-img-top img-fluid" src={product.photo.medium} alt={product.name} />
+              <Link to={"/elixirs/" + product.slug}>
+                <img className="card-img-top img-fluid" src={product.photo.original} alt={product.name} />
+              </Link>
             </div>
 
             <div className="card-body">
               <small className="text-muted text-uppercase">{product.category}</small>
-              <h4 className="card-title">
-                {product.name}
-              </h4>
+              <Link className="text-grey-dark" to={"/elixirs/" + product.slug}>
+                <h4 className="card-title">
+                  {product.name}
+                </h4>
+              </Link>
               <p class="text-muted"><small>{product.short_description}</small></p>
-              <p className="card-text"> <i className="fa fa-star text-primary"></i> <i className="fa fa-star text-primary"></i> <i className="fa fa-star text-primary"></i> <i className="fa fa-star text-primary"></i> <i className="fa fa-star text-primary"></i>
+              <p className="card-text">
               </p>
             </div>
           </div>
