@@ -37,7 +37,7 @@ Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin a
   <h4 class="mt-4">
                   Make it at home
                 </h4>
-                <p>Our program also can be downloaded with our website for people who have enough time to make them at home.</p>
+                <p>Our program also can be downloaded within our website for people who have enough time to make them at home.</p>
               </div>
             </div>
           </div>
