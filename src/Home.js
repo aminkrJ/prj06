@@ -38,7 +38,7 @@ class Home extends Component {
           return(
             <div key={index}>
               <Link to={"/elixirs/" + product.slug} className="project overlay-hover">
-                <img src={product.photo.medium} className="img-fluid" />
+                <img src={product.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
                   <span class="h5 mt-4">{product.name}</span>
@@ -49,9 +49,10 @@ class Home extends Component {
         })
 
       return (
-        <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 3}, "1200": {"items": 3}} }>
+        <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
         {products}
         </Carousel>
+        <br/>
       )
     }
   }
