@@ -93,7 +93,7 @@ class Home extends Component {
                 <h4 className="mt-2">
                   No Added Sugar
                 </h4>
-                <p>Enjoy the natural sweetness of fruits in our smoothies</p>
+                <p>Enjoy the naturally occurring sweetness of ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">

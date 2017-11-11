@@ -34,7 +34,7 @@ constructor(props){
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
-                <img src={this.state.product.photo.medium} alt={this.state.product.name} class="lazyOwl img-fluid" width="200" />
+                <img src={this.state.product.photo.original} alt={this.state.product.name} class="lazyOwl img-fluid" />
               </div>
             </div>
             <div class="col-lg-7">
