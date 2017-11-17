@@ -20,6 +20,8 @@ constructor(props){
       this.setState({
         product: response.data
       })
+
+      document.title = "Life Elixir, " + response.data.name
     })
     .catch((error) => {
       NProgress.done()

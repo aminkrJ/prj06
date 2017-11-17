@@ -61,9 +61,9 @@ class Home extends Component {
       <div className="">
         <div id="highlighted">
           <div className="bg-white main-bg overlay overlay-primary overlay-op-3 text-center px-3 py-5 py-lg-10 flex-valign">
-            <h2 className="display-4 text-black">
+            <h1 className="display-4 text-black">
               Elevated <span className="font-weight-bold">Smoothies</span>
-            </h2>
+            </h1>
             <h3 className="text-black font-weight-normal">
               Packed with superfoods, functional herbs and mushrooms
             </h3>
