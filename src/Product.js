@@ -6,8 +6,18 @@ class Product extends Component {
 constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}}
+      product: {photo: {original: ""}, ingredients: []}
     }
+  }
+
+  renderIngredients() {
+    return (
+     this.state.product.ingredients.map((ingredient, index) => {
+       return(
+         <li key={ingredient.id}>{ingredient.name}</li>
+       )
+     })
+    )
   }
 
   componentDidMount() {
@@ -49,7 +59,13 @@ constructor(props){
                   </h2>
                   <hr class="my-3" />
                   <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
-                  <hr class="my-3 mb-5" />
+                  <hr class="my-3 mb-3" />
+                  <a href="https://shop.lifelixir.com.au" class="btn btn-primary">Buy Now</a>
+                  <hr class="my-3 mb-3" />
+                  <h3 class="small h4 mb-2">Ingredients</h3>
+                  <ul>
+                    { this.renderIngredients() }
+                  </ul>
                 </div>
               </div>
             </div>

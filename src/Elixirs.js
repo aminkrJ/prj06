@@ -49,8 +49,7 @@ class Elixirs extends Component {
                 </h4>
               </Link>
               <p class="text-muted"><small>{product.short_description}</small></p>
-              <p className="card-text">
-              </p>
+              <p className="card-text"></p>
             </div>
           </div>
         </div>
@@ -70,8 +69,7 @@ class Elixirs extends Component {
                   {this.renderProducts()}
                 </div>
               </div>
-              <div className="col-lg-3 order-lg-1">
-              </div>
+              <div className="col-lg-3 order-lg-1"></div>
             </div>
           </div>
         </div>
