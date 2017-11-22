@@ -12,6 +12,10 @@
   height: auto
 }
 
+.header-brand img{
+  width: 210px;
+}
+
 .header .nav-item{
   padding: 18px 14px;
   margin: 0;
