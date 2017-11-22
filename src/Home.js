@@ -6,6 +6,10 @@ import iziToast from 'izitoast';
 import _ from 'underscore';
 
 import Carousel from './Carousel';
+import Process from './Process';
+import MakeItAtHome from './MakeItAtHome';
+
+import cups from  './img/cups.png'
 
 class Home extends Component {
 
@@ -60,20 +64,27 @@ class Home extends Component {
     return (
       <div className="">
         <div id="highlighted">
-          <div className="bg-white main-bg overlay overlay-primary overlay-op-3 text-center px-3 py-5 py-lg-10 flex-valign">
-            <h1 className="display-4 text-black">
-              Elevated <span className="font-weight-bold">Smoothies</span>
-            </h1>
-            <h3 className="text-black font-weight-normal">
-              Packed with superfoods, functional herbs and mushrooms
-            </h3>
-            <hr className="hr-inverse hr-lg w-20 mx-auto my-4" />
-            <div>
-              <Link to="/about" className="btn btn-inverse btn-rounded btn-lg py-lg-3 px-lg-5">Find Out More</Link>
+          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-5 py-lg-10 flex-valign">
+            <div class="item">
+              <div class="container padding-top-3x">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                    <div class="from-bottom">
+                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Drinks</h1>
+                      <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
+                      <div class="tp-caption mb-4 pb-1 h4 font-weight-normal text-black">Elixirs, tonic and smoothies packed with superfoods, functional herbs, and mushrooms</div>
+                    </div>
+                    <Link class="btn btn-inverse btn-rounded py-lg-3 px-lg-5" to="/about">Learn more</Link>
+                  </div>
+                  <div class="col-md-6 padding-bottom-2x mb-3"><img class="cups d-block mx-auto" src={cups} /></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div id="content" className="p-0">
+          <Process />
+          <MakeItAtHome />
           <div id="features" className="container py-4 py-lg-6">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">

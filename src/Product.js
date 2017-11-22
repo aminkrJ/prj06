@@ -14,7 +14,7 @@ constructor(props){
     return (
      this.state.product.ingredients.map((ingredient, index) => {
        return(
-         <li key={ingredient.id}>{ingredient.name}</li>
+         <li class="text-muted" key={ingredient.id}><small>{ingredient.name}</small></li>
        )
      })
     )
@@ -59,10 +59,7 @@ constructor(props){
                   </h2>
                   <hr class="my-3" />
                   <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
-                  <hr class="my-3 mb-3" />
-                  <a href="https://shop.lifelixir.com.au" class="btn btn-primary">Buy Now</a>
-                  <hr class="my-3 mb-3" />
-                  <h3 class="small h4 mb-2">Ingredients</h3>
+                  <h3 class="small h6 mb-2 text-muted">Ingredients</h3>
                   <ul>
                     { this.renderIngredients() }
                   </ul>

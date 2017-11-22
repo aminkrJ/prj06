@@ -17,27 +17,26 @@ class About extends Component {
               <div class="col-md-9">
                 <h2 class="title-divider">
                   <span>About <span class="font-weight-normal text-muted">Us</span></span>
-                  <small>What & who makes us tick!</small>
+                  <small></small>
                 </h2>
-                <h4>
-                  What is our mission?
-                </h4>
                 <p>
-Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single LifeElixir drinks. That’s why we believe integrating LifeElixir to your diet is imperative to an individual health and happiness. 
+Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single LifeElixir drinks. That’s why we believe integrating LifeElixir to your diet is imperative to an individual health and happiness.
 
 </p>
                 <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and mushrooms to bring pioneering drinks for you.
 </p>
   <p>Don’t worry if you are busy or don’t have time for long shopping lists, our mission is to deliver our smoothies, elixir and tonics readily to wherever you are right now!
   </p>
+
+                <h4 class="mt-4">
+                  Make it at home
+                </h4>
+                <p>We deliver ingredients to your doorstep. Simply choose the program and you will recieve the ingredinets and recipes to make fresh smoothies and elixirs at home.</p>
+
                 <h4 class="mt-4">
                   LifeElixir programs
                 </h4>
                 <p><b>Tast is important but we offer more.</b> By studying current scientific researches and interviewing leaders we connected the dots to outline perfect plans for <b>getting result</b>. We have designed programs to help people from enhancing body and mind performance to healing illnesses. It is recommended to integrate these recipes to your daily diet to get the most out of it.</p>
-  <h4 class="mt-4">
-                  Make it at home
-                </h4>
-                <p>Our program also can be downloaded within our website for people who have enough time to make them at home.</p>
               </div>
             </div>
           </div>

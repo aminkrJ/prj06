@@ -1,10 +1,15 @@
 .main-bg{
-  background-image: url(./img/main-bg.jpg);
+  background-image: url(./img/main.jpg);
   background-position: center center;
   background-repeat:  no-repeat;
   background-attachment: fixed;
   background-size:  cover;
   background-color: #999;
+}
+
+.cups{
+  width: 100%;
+  height: auto
 }
 
 .header .nav-item{
