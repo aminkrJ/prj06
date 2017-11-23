@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Redirect, Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import NProgress from 'nprogress';
 import DatePicker from 'react-datepicker';
@@ -11,8 +11,8 @@ class Cart extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      product: [],
-      deliveryDate: moment().add(1, 'day'),
+      product: {photo: {}},
+      deliveryAt: moment().add(1, 'day'),
       unitPrice: 0,
       quantity: 1,
       shippingFee: 8.95,
@@ -29,7 +29,8 @@ class Cart extends Component {
 
       this.setState({
         product: response.data,
-        unitPrice: parseFloat(response.data[0].price)
+        unitPrice: parseFloat(response.data.price),
+        total: (parseFloat(response.data.price) + this.state.shippingFee).toFixed(2)
       })
 
     })
@@ -38,8 +39,32 @@ class Cart extends Component {
     })
   }
 
-  handleProceedCheckout() {
-  
+  handleProceedCheckout(e) {
+    var $this = this
+    e.preventDefault()
+    NProgress.start()
+
+    axios.post('/carts', {
+      cart: {
+        cart_products_attributes: [
+          {
+            product_id: this.state.product.id,
+            quantity: this.state.quantity
+          }
+        ],
+        total: this.state.total,
+        shipping_fee: this.state.shippingFee,
+        delivery_at: this.state.deliveryAt,
+        subtotal: (this.state.quantity * this.state.unitPrice).toFixed(2)
+      }
+    })
+    .then(function (response) {
+      NProgress.done()
+      $this.props.history.push('/checkout/' + response.data.reference_number)
+    })
+    .catch(function (error) {
+      NProgress.done()
+    })
   }
 
   handleDecQuantity() {
@@ -57,7 +82,7 @@ class Cart extends Component {
   }
 
   handleDeliveryDateChange(date) {
-    this.setState({deliveryDate: date})
+    this.setState({deliveryAt: date})
   }
 
   renderProduct() {
@@ -118,7 +143,7 @@ class Cart extends Component {
                     <div class="input-group">
                       <label class="sr-only" for="discount">Delivery date</label>
                         <DatePicker
-                                selected={this.state.deliveryDate}
+                                selected={this.state.deliveryAt}
                                 onChange={this.handleDeliveryDateChange.bind(this)}
                                 minDate={moment().add(1, 'day')}
                             />
