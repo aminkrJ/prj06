@@ -115,7 +115,7 @@ class App extends Component {
           <Route exact path='/elixirs/:slug' component={Product} />
           <Route exact path="/contact_us" component={Contact} />
           <Route exact path="/order/:slug" component={Cart} />
-          <Route exact path="/checkout/:reference" component={CheckOut} />
+          <Route exact path="/checkout/:reference_number" component={CheckOut} />
           <Route exact path="/thanks" component={Thanks} />
         </div>
         <Footer />
