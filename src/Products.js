@@ -60,7 +60,7 @@ class Products extends Component {
       Order online
           </h2>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
-      Delivery on the next day
+      Delivery on the next day or same day with UberEats
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack m-7">

@@ -29,16 +29,16 @@ class Process extends Component {
         <div class="py-3 py-lg-6">
           <ul class="nav nav-steps nav-steps-circles flex-column flex-lg-row justify-content-around w-80 mx-auto">
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}> <i class="fa fa-lemon-o icon-2x mb-05"></i> <span class="font-weight-bold d-block">Step 1</span> </a>
+              <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}></a>
             </li>
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 2})} data-toggle="tab" onClick={this.activate.bind(this, 2)}> <i class="fa fa-leaf icon-2x mb-05"></i> <span class="font-weight-bold d-block">Step 2</span> </a>
+              <a class={classNames("nav-link", {active: this.state.selected === 2})} data-toggle="tab" onClick={this.activate.bind(this, 2)}></a>
             </li>
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 3})} data-toggle="tab" onClick={this.activate.bind(this, 3)}> <i class="fa fa-pagelines icon-2x mb-05"></i> <span class="font-weight-bold d-block">Step 3</span> </a>
+              <a class={classNames("nav-link", {active: this.state.selected === 3})} data-toggle="tab" onClick={this.activate.bind(this, 3)}></a>
             </li>
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}> <i class="fa fa-rocket icon-2x mb-05"></i> <span class="font-weight-bold d-block">Step 4</span> </a>
+              <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}></a>
             </li>
           </ul>
           <div class="tab-content text-center pb-2 px-md-6">
@@ -50,9 +50,9 @@ class Process extends Component {
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps2">
               <h3>
-                Activate, insecticide free almonds
+                Activate, insecticide free nuts and seeds
               </h3>
-              <p>We use activated and insecticide free almonds to make milk and add them to our smoothies. This process increases the nutrient value of the almonds along with breaking down the problematic compounds that help enhance their digestibility.</p>
+              <p>We use activated and insecticide free nuts and seeds in our smoothies. This process increases the nutrient value of the nuts and seeds along with breaking down the problematic compounds that help enhance their digestibility.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 3}, {active: this.state.selected === 3})} id="tab-steps3">
               <h3>

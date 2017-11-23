@@ -87,13 +87,13 @@ class Home extends Component {
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Drinks</h1>
+                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Smoothies</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <div class="tp-caption mb-4 pb-1 h4 font-weight-normal text-black">Elixirs, tonic and smoothies packed with superfoods, functional herbs, and mushrooms</div>
+                      <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black">Elixirs, tonic and smoothies packed with superfoods, functional herbs, and mushrooms</h3>
                     </div>
                     <Link class="btn btn-inverse btn-rounded py-lg-3 px-lg-5" to="/about">Learn more</Link>
                   </div>
-                  <div class="col-md-6 padding-bottom-2x mb-3"><img class="cups d-block mx-auto" src={cups} /></div>
+                  <div class="col-md-6 padding-bottom-2x mb-3"><img class="cups d-block mx-auto" /></div>
                 </div>
               </div>
             </div>
@@ -113,6 +113,12 @@ class Home extends Component {
             <div className="row text-center">
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
+                  Freshness
+                </h4>
+                <p>We are committed to under 3h delivery from when we make smoothies</p>
+              </div>
+              <div className="col-lg-4 py-2">
+                <h4 className="mt-2">
                   Premium Ingredients
                 </h4>
                 <p>Seasonal, pesticide-free, and certified organic ingredients</p>
@@ -127,13 +133,7 @@ class Home extends Component {
                 <h4 className="mt-2">
                   No Preservative
                 </h4>
-                <p>Freshness is our commitment</p>
-              </div>
-              <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
-                  Effective Programs
-                </h4>
-                <p>Various recipes to suit different diet plans</p>
+                <p>No process or additives to expand the shelf-life of our products</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
