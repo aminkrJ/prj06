@@ -15,6 +15,8 @@ import Home from './Home';
 import Footer from './Footer';
 import Product from './Product';
 import Thanks from './Thanks';
+import Cart from './Cart';
+import CheckOut from './CheckOut';
 import CustomModal from './Modal';
 
 import './App.css';
@@ -112,6 +114,8 @@ class App extends Component {
           <Route exact path='/elixirs' component={Elixirs} />
           <Route exact path='/elixirs/:slug' component={Product} />
           <Route exact path="/contact_us" component={Contact} />
+          <Route exact path="/order/:slug" component={Cart} />
+          <Route exact path="/checkout" component={CheckOut} />
           <Route exact path="/thanks" component={Thanks} />
         </div>
         <Footer />

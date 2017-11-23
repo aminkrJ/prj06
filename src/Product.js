@@ -6,15 +6,15 @@ class Product extends Component {
 constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}, ingredients: []}
+      recipe: {photo: {original: ""}, ingredients: []}
     }
   }
 
   renderIngredients() {
     return (
-     this.state.product.ingredients.map((ingredient, index) => {
+     this.state.recipe.ingredients.map((ingredient, index) => {
        return(
-         <li class="text-muted" key={ingredient.id}><small>{ingredient.name}</small></li>
+         <li class="text-muted" key={ingredient.id}><small>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</small></li>
        )
      })
     )
@@ -23,15 +23,15 @@ constructor(props){
   componentDidMount() {
     NProgress.start()
 
-    axios.get("/products/" + this.props.match.params.slug)
+    axios.get("/recipes/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 
       this.setState({
-        product: response.data
+        recipe: response.data
       })
 
-      document.title = "Life Elixir, " + response.data.name
+      document.title = "Life Elixir, " + response.data.title
     })
     .catch((error) => {
       NProgress.done()
@@ -46,23 +46,22 @@ constructor(props){
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
-                <img src={this.state.product.photo.original} alt={this.state.product.name} class="lazyOwl img-fluid" />
+                <img src={this.state.recipe.photo.original} alt={this.state.recipe.title} class="lazyOwl img-fluid" />
               </div>
+              <ul class="list-inline">
+                { this.renderIngredients() }
+              </ul>
             </div>
             <div class="col-lg-7">
               <div class="card product-card mb-4">
-                <div class="card-ribbon card-ribbon-bottom card-ribbon-right bg-primary text-white">Life Elixir</div>
+                <div class="card-ribbon card-ribbon-bottom card-ribbon-right bg-primary text-white">{this.state.recipe.tag}</div>
                 <div class="card-body p-4 pos-relative">
-                  <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.category}</span></p>
+                  <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.recipe.tag}</span></p>
                   <h2 class="card-title mb-2">
-                    {this.state.product.name}
+                    {this.state.recipe.title}
                   </h2>
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
-                  <h3 class="small h6 mb-2 text-muted">Ingredients</h3>
-                  <ul>
-                    { this.renderIngredients() }
-                  </ul>
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted text-sm" />
                 </div>
               </div>
             </div>

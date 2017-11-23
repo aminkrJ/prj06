@@ -7,7 +7,7 @@ import _ from 'underscore';
 
 import Carousel from './Carousel';
 import Process from './Process';
-import MakeItAtHome from './MakeItAtHome';
+import Products from './Products';
 
 import cups from  './img/cups.png'
 
@@ -17,11 +17,24 @@ class Home extends Component {
     super(props)
     this.state = {
       products: [],
+      recipes: []
     }
   }
 
   componentWillMount() {
     NProgress.start()
+
+    axios.get("/recipes/")
+    .then((response) => {
+      NProgress.done()
+
+      this.setState({
+        recipes: response.data
+      })
+    })
+    .catch((error) => {
+      NProgress.done()
+    })
 
     axios.get("/products/")
     .then((response) => {
@@ -37,6 +50,10 @@ class Home extends Component {
   }
 
   renderProducts() {
+  
+  }
+
+  renderRecipes() {
     if (this.state.products.length) {
       var products = this.state.products.map((product, index) => {
           return(
@@ -84,7 +101,7 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           <Process />
-          <MakeItAtHome />
+          <Products products={this.state.products} />
           <div id="features" className="container py-4 py-lg-6">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">
@@ -141,7 +158,7 @@ class Home extends Component {
           <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
-          { this.renderProducts() }
+          { this.renderRecipes() }
         </div>
       </div>
     )

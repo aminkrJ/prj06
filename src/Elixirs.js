@@ -10,19 +10,19 @@ class Elixirs extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: []
+      recipes: []
     }
   }
 
   componentDidMount() {
     NProgress.start()
 
-    axios.get("/products")
+    axios.get("/recipes")
     .then((response) => {
       NProgress.done()
 
       this.setState({
-        products: response.data
+        recipes: response.data
       })
     })
     .catch((error) => {
@@ -30,25 +30,25 @@ class Elixirs extends Component {
     })
   }
 
-  renderProducts() {
-    return this.state.products.map((product, index) => {
+  renderRecipes() {
+    return this.state.recipes.map((recipe, index) => {
       return(
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <Link to={"/elixirs/" + product.slug}>
-                <img className="card-img-top img-fluid" src={product.photo.original} alt={product.name} />
+              <Link to={"/elixirs/" + recipe.slug}>
+                <img className="card-img-top img-fluid" src={recipe.photo.original} alt={recipe.name} />
               </Link>
             </div>
 
             <div className="card-body">
-              <small className="text-muted text-uppercase">{product.category}</small>
-              <Link className="text-grey-dark" to={"/elixirs/" + product.slug}>
+              <small className="text-muted text-uppercase">{recipe.tag}</small>
+              <Link className="text-grey-dark" to={"/elixirs/" + recipe.slug}>
                 <h4 className="card-title">
-                  {product.name}
+                  {recipe.title}
                 </h4>
               </Link>
-              <p class="text-muted"><small>{product.short_description}</small></p>
+              <p class="text-muted"><small>{recipe.short_description}</small></p>
               <p className="card-text"></p>
             </div>
           </div>
@@ -66,7 +66,7 @@ class Elixirs extends Component {
             <div className="row">
               <div className="col-lg-9 order-lg-2">
                 <div className="row">
-                  {this.renderProducts()}
+                  {this.renderRecipes()}
                 </div>
               </div>
               <div className="col-lg-3 order-lg-1"></div>
