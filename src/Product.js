@@ -14,7 +14,7 @@ constructor(props){
     return (
      this.state.recipe.ingredients.map((ingredient, index) => {
        return(
-         <li class="text-muted" key={ingredient.id}><small>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</small></li>
+         <span class="text-muted" key={ingredient.id}><small>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</small></span>
        )
      })
     )
@@ -48,9 +48,7 @@ constructor(props){
               <div class="product-gallery pos-relative">
                 <img src={this.state.recipe.photo.original} alt={this.state.recipe.title} class="lazyOwl img-fluid" />
               </div>
-              <ul class="list-inline">
-                { this.renderIngredients() }
-              </ul>
+              { this.renderIngredients() }
             </div>
             <div class="col-lg-7">
               <div class="card product-card mb-4">
