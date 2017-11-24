@@ -7,6 +7,11 @@
   background-color: #999;
 }
 
+.nav-link img{
+  max-width: 100%;
+  max-height: 100%
+}
+
 .cups{
   width: 100%;
   height: auto

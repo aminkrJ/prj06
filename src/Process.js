@@ -3,6 +3,11 @@ import { Route, Link, withRouter } from 'react-router-dom';
 
 import classNames from 'classnames'
 
+import lemon from './img/lemon.png'
+import raspberry from './img/raspberry.png'
+import blueberries from './img/blueberries.png'
+import almond from './img/almond.png'
+
 class Process extends Component {
 
   constructor(props) {
@@ -29,16 +34,24 @@ class Process extends Component {
         <div class="py-3 py-lg-6">
           <ul class="nav nav-steps nav-steps-circles flex-column flex-lg-row justify-content-around w-80 mx-auto">
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}></a>
+              <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}>
+        <img src={lemon} />
+      </a>
             </li>
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 2})} data-toggle="tab" onClick={this.activate.bind(this, 2)}></a>
+              <a class={classNames("nav-link", {active: this.state.selected === 2})} data-toggle="tab" onClick={this.activate.bind(this, 2)}>
+        <img src={almond} />
+      </a>
             </li>
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 3})} data-toggle="tab" onClick={this.activate.bind(this, 3)}></a>
+              <a class={classNames("nav-link", {active: this.state.selected === 3})} data-toggle="tab" onClick={this.activate.bind(this, 3)}>
+        <img src={blueberries} />
+      </a>
             </li>
             <li class="nav-item">
-              <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}></a>
+              <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}>
+        <img src={raspberry} />
+      </a>
             </li>
           </ul>
           <div class="tab-content text-center pb-2 px-md-6">
