@@ -50,10 +50,6 @@ class Contact extends Component {
                       <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
                        support@lifelixir.com.au
                     </p>
-                    <p>
-                      <abbr title="Address"><i class="fa fa-home"></i></abbr>
-                       12-14 Cecil St., Gordon, NSW, Sydney, 2072
-                    </p>
                   </div>
                 </div>
               </div>
