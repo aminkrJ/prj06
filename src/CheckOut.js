@@ -67,6 +67,8 @@ class CheckOut extends Component {
           .then(function (data) {
             NProgress.done()
             self.setState({isSending: false})
+
+            self.props.history.push('/checkout/' + self.props.match.params.reference_number)
           })
           .catch(function (error) {
             NProgress.done()
