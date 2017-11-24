@@ -63,7 +63,7 @@ class Products extends Component {
       Drink it next day or Uber it now!
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
-          <div class="row pricing-stack m-7">
+          <div class="row pricing-stack">
       {this.renderProducts()}
             <div class="col-md-4">
               <div class="card bg-white bg-shadow text-center card-outline-primary">
