@@ -54,7 +54,6 @@ constructor(props){
             </div>
             <div class="col-lg-7">
               <div class="card product-card mb-4">
-                <div class="card-ribbon card-ribbon-bottom card-ribbon-right bg-primary text-white">{this.state.recipe.tag}</div>
                 <div class="card-body p-4 pos-relative">
                   <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.recipe.tag}</span></p>
                   <h2 class="card-title mb-2">

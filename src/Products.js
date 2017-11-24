@@ -68,7 +68,7 @@ class Products extends Component {
             <div class="col-md-4">
               <div class="card bg-white bg-shadow text-center card-outline-primary">
                 <h3 class="card-title py-3 text-shadow">
-                  <span class="em">Events pack</span>
+                  <span class="em">Event pack</span>
                 </h3>
                 <p class="price-banner bg-primary text-white border-primary card-body-overlap">
                   <span class="price-currency">Contact us</span>
