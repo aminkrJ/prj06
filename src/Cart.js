@@ -4,6 +4,7 @@ import axios from 'axios';
 import NProgress from 'nprogress';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
+import business from 'moment-business'
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -81,6 +82,10 @@ class Cart extends Component {
     })
   }
 
+  isWeekday(date) {
+    return business.isWeekDay(date)
+  }
+
   handleDeliveryDateChange(date) {
     this.setState({deliveryAt: date})
   }
@@ -146,6 +151,7 @@ class Cart extends Component {
                                 selected={this.state.deliveryAt}
                                 onChange={this.handleDeliveryDateChange.bind(this)}
                                 minDate={moment().add(1, 'day')}
+                                filterDate={this.isWeekday}
                             />
                     </div>
                   </form>

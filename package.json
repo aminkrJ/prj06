@@ -8,6 +8,7 @@
     "bootstrap": "^4.0.0-beta",
     "font-awesome": "^4.7.0",
     "izitoast": "^1.1.5",
+    "moment-business": "^3.0.1",
     "nprogress": "^0.2.0",
     "owl.carousel": "^2.2.0",
     "react": "^16.0.0",
