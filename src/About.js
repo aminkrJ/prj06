@@ -23,9 +23,10 @@ class About extends Component {
 Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single LifeElixir drinks. That’s why we believe integrating LifeElixir to your diet is imperative to an individual health and happiness.
 
 </p>
-                <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and mushrooms to bring pioneering drinks for you.
+                <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and mushrooms to bring pioneering drinks for you. Our smoothies offer more diverse flavours using natural ingredients only, providing consumers with new and amazing experiences. Life Elixir is all about quality, care, passion, great ingredients, effectiveness and most importantly pronounced flavours.
+
 </p>
-  <p>Don’t worry if you are busy or don’t have time for long shopping lists, our mission is to deliver our smoothies, elixir and tonics readily to wherever you are right now!
+  <p>Don’t worry if you are busy or don’t have time for long shopping lists, our mission is to deliver our smoothies, elixir and tonics readily to wherever you are.
   </p>
 
                 <h4 class="mt-4">

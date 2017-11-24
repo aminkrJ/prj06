@@ -58,6 +58,9 @@ class Header extends Component {
                   <NavItem>
                     <NavLink href="/contact_us">Contact Us</NavLink>
                   </NavItem>
+                  <NavItem>
+                    <NavLink className="btn btn-primary text-white" href="/plans">Shop</NavLink>
+                  </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>

@@ -21,7 +21,7 @@ class Process extends Component {
       <div class="container">
           <hr class="hr-lg mt-5 mb-3 w-10 mx-auto hr-primary" />
           <h2 class="text-center text-uppercase font-weight-bold my-0">
-            How we make them
+            Experience like never before
           </h2>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
           </h5>
@@ -58,13 +58,13 @@ class Process extends Component {
               <h3>
                 Fruits and vegetables
               </h3>
-              <p>We use seasonal and/or organic fruits and vegtables to enhance the taste, natural sweetness, and nutritions in our smoothies.</p>
+              <p>We harness the power of seasonal organic fruits and vegtables to enhance the taste, natural sweetness, and nutritions in our smoothies.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 4}, {active: this.state.selected === 4})} id="tab-steps4">
               <h3>
                 Superfood and mushrooms
               </h3>
-              <p>Certified organic superfoods and mushrooms in our smoothies bring them to another level.</p>
+              <p>Certified organic nutrition-dense superfoods and mushrooms high in antioxidant, vitamin and minerals from all around the world in our smoothies to bring them to another level. </p>
             </div>
           </div>
         </div>

@@ -101,6 +101,9 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           <Process />
+          <div id="projects" className="container p-3 py-lg-1">
+            { this.renderRecipes() }
+          </div>
           <Products products={this.state.products} />
           <div id="features" className="container py-4 py-lg-6">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
@@ -150,16 +153,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <div id="projects" className="container p-3 py-lg-1">
-          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h2 className="text-center text-uppercase font-weight-bold my-0">
-            Latest Smoothies
-          </h2>
-          <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-          </h5>
-          <hr className="mb-5 w-50 mx-auto" />
-          { this.renderRecipes() }
-        </div>
+
       </div>
     )
   }

@@ -16,6 +16,7 @@ import Footer from './Footer';
 import Product from './Product';
 import Thanks from './Thanks';
 import Cart from './Cart';
+import Plans from './Plans';
 import CheckOut from './CheckOut';
 import Confirmation from './Confirmation';
 import CustomModal from './Modal';
@@ -119,6 +120,7 @@ class App extends Component {
           <Route exact path="/checkout/:reference_number" component={CheckOut} />
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
+          <Route exact path="/plans" component={Plans} />
         </div>
         <Footer />
       </div>

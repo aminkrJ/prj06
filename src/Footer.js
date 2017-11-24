@@ -98,8 +98,6 @@ class Footer extends Component {
                     support@lifelixir.com.au
                   </li>
                   <li>
-                    <abbr title="Address"><i class="fa fa-home fa-fw"></i></abbr>
-                    12-14 Cecil St., Gordon, NSW, Sydney, 2072
                   </li>
                 </ul>
               </address>
