@@ -54,15 +54,15 @@ class Home extends Component {
   }
 
   renderRecipes() {
-    if (this.state.products.length) {
-      var products = this.state.products.map((product, index) => {
+    if (this.state.recipes.length) {
+      var recipes = this.state.recipes.map((recipe, index) => {
           return(
             <div key={index}>
-              <Link to={"/elixirs/" + product.slug} className="project overlay-hover">
-                <img src={product.photo.original} className="img-fluid" />
+              <Link to={"/elixirs/" + recipe.slug} className="project overlay-hover">
+                <img src={recipe.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
-                  <span class="h5 mt-4">{product.name}</span>
+                  <span class="h5 mt-4">{recipe.title}</span>
                 </span>
               </Link>
             </div>
@@ -71,7 +71,7 @@ class Home extends Component {
 
       return (
         <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 3}, "1200": {"items": 3}} }>
-        {products}
+        {recipes}
         </Carousel>
       )
     }
