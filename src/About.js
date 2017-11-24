@@ -29,14 +29,9 @@ Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin a
   </p>
 
                 <h4 class="mt-4">
-                  Make it at home
+      Drink it next day or Uber it now!
                 </h4>
-                <p>We deliver ingredients to your doorstep. Simply choose the program and you will recieve the ingredinets and recipes to make fresh smoothies and elixirs at home.</p>
-
-                <h4 class="mt-4">
-                  LifeElixir programs
-                </h4>
-                <p><b>Tast is important but we offer more.</b> By studying current scientific researches and interviewing leaders we connected the dots to outline perfect plans for <b>getting result</b>. We have designed programs to help people from enhancing body and mind performance to healing illnesses. It is recommended to integrate these recipes to your daily diet to get the most out of it.</p>
+                <p>We are committed to freshness thats why we have designed a new delivey system that guarantees quick delivery, less than 5h from production, accross Australia.</p>
               </div>
             </div>
           </div>
