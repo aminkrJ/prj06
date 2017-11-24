@@ -11,7 +11,7 @@ class CustomInput extends Component {
     super(props)
     this.state = {
       value: props.value,
-      errors: props.errors || []
+      errors: []
     }
   }
 
@@ -26,7 +26,7 @@ class CustomInput extends Component {
   }
 
   render() {
-    var messages = this.state.errors.map((message, index) => {
+    var messages = this.props.errors.map((message, index) => {
       return (
         <div key={index} className="error-message">{ message }</div>
       )
@@ -40,7 +40,7 @@ class CustomInput extends Component {
         <MaskedInput { ...this.props } className='form-control' value={ this.state.value } onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } /> :
         <input value={ this.state.value } { ...this.props } className='form-control' onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } />
         }
-        { messages }
+        <span class="text-danger"><small>{ messages }</small></span>
       </div>
     )
   }
@@ -49,6 +49,10 @@ class CustomInput extends Component {
 CustomInput.propTypes = {
   constraints: PropTypes.object,
   errors: PropTypes.array
+}
+
+CustomInput.defaultProps = {
+  errors: []
 }
 
 export default CustomInput

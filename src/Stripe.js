@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import scriptLoader from 'react-async-script-loader';
 
 let stripe, elements, card
 
@@ -7,33 +6,39 @@ class Stripe extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      token: null,
-      stripe: {},
-      card: {}
+      card: {},
+      engine: {}
     }
-  }
-
-  componentWillReceiveProps({ isScriptLoaded, isScriptLoadSucceed }) {
-    if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
-      if (isScriptLoadSucceed) {
-        this.initStripe()
-      }
-      else this.props.onError()
-    }
-  }
-
-  async generateToken() {
-    const {token, error} = await stripe.createToken(card)
   }
 
   initStripe() {
-    this.state.stripe = window.Stripe("`${process.env.STRIPE_PUBLISHABLE_KEY}`")
-    elements = this.state.stripe.elements()
-    const style = {}
-    this.state.card = elements.create('card', {style})
-    this.state.card.mount('#card-element')
+    stripe = window.Stripe('pk_test_3xBMvv94iePdC12w62hXQ6sM')
+    elements = stripe.elements({
+      fonts: [
+        {
+          family: 'Open Sans',
+          weight: 400,
+          src: 'local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format("woff2")',
+          unicodeRange: 'U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215',
+        }
+      ]
+    })
+    const style = {
+      base: {
+        fontSize: '16px',
+        fontFamily: '"Open Sans", Arial, serif',
+        color: '#495057'
+      }
+    }
+    card = elements.create('card', {style})
+    card.mount('#card-element')
 
-    this.state.card.addEventListener('change', ({error}) => {
+    this.setState({
+      card: card,
+      engine: stripe
+    })
+
+    card.addEventListener('change', ({error}) => {
       const displayError = document.getElementById('card-errors')
       if (error) {
         displayError.textContent = error.message
@@ -44,17 +49,14 @@ class Stripe extends Component {
   }
 
   componentDidMount() {
-    const { isScriptLoaded, isScriptLoadSucceed } = this.props
-    if (isScriptLoaded && isScriptLoadSucceed) {
-      this.initStripe()
-    }
+    this.initStripe()
   }
 
   render() {
     return (
       <div className='stripe'>
         <div id='card-element'></div>
-        <div id='card-errors'></div>
+        <small id='card-errors' class='text-danger'></small>
       </div>
     )
   }
@@ -63,6 +65,4 @@ class Stripe extends Component {
 Stripe.propTypes = {
 }
 
-export default scriptLoader(
-  "https://js.stripe.com/v3/"
-)(Stripe)
+export default Stripe

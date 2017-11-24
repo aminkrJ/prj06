@@ -21,42 +21,59 @@ class CheckOut extends Component {
     e.preventDefault()
 
     var self = this
-    var address = self.refs.shippingAddress.state
+    var address = self.refs.shippingAddress.refs
     var stripe = self.refs.Stripe.state
 
     this.setState({paymentError: ''})
 
-    stripe.stripe.createToken(stripe.card, {
+    NProgress.start()
+    this.setState({isSending: true})
+
+    stripe.engine.createToken(stripe.card, {
     }).then(function(result) {
+
       if (result.error) {
-        self.setState({paymentError: result.error.message})
+        NProgress.done()
+        self.setState({
+          isSending: false,
+          paymentError: result.error.message
+        })
       } else {
         self.setState({stripeToken: result.token.id})
 
-        NProgress.start()
-        this.setState({isSending: true})
-
-        axios.post("/carts/checkout",
+        axios.post(`/carts/${self.props.match.params.reference_number}/checkout`,
           {
             cart: Object.assign({}, {
             stripe_token: self.state.stripeToken,
           }, {
             customer_attributes: {
-              country: address.country,
-              city: address.city,
-              state: address.state,
-              postcode: address.postcode,
-              suburb: address.suburb,
-              address: address.address,
-              email: self.state.email,
-              fullname: address.fullname}
+              addresses_attributes: [
+                {
+                  country: "Australia",
+                  city: "Sydney",
+                  state: "NSW",
+                  zip: address.postcode.state.value,
+                  suburb: address.suburb.state.value,
+                  street_address: address.street_address.state.value,
+                  suite_apt: address.suite_apt.state.value
+                }
+              ],
+              email: self.refs.email.state.value,
+              firstname: address.firstname.state.value,
+              lastname: address.lastname.state.value,
+            }
             })
           })
           .then(function (data) {
-            this.setState({isSending: false})
+            NProgress.done()
+            self.setState({isSending: false})
           })
           .catch(function (error) {
-            this.setState({isSending: false})
+            NProgress.done()
+            self.setState({
+              isSending: false,
+              errors: error.response.data.errors
+            })
           })
       }
     })
@@ -87,15 +104,15 @@ class CheckOut extends Component {
           <h4>
             Customer information
           </h4>
-          <div class="mb-4 bg-faded p-3 rounded mb-4" id="billing">
-            <CustomInput type='email' placeholder='Email' name='email' required />
+          <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
+            <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
           </div>
 
           <h4>
             Shipping Address
           </h4>
-          <div class="mb-4 bg-faded p-3 rounded mb-4" id="billing">
-              <ShippingAddress ref='shippingAddress' errors={this.state.errors}/>
+          <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
+            <ShippingAddress ref='shippingAddress' errors={this.state.errors}/>
           </div>
           <h4>
             Payment Options
@@ -143,7 +160,7 @@ class CheckOut extends Component {
             </div>
             <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />
           </div>
-          <a href="shop-confirmation.html" class="btn btn-primary btn-rounded btn-lg">Make Payment</a> 
+          <a href="#" class="btn btn-primary btn-rounded btn-lg" disabled={this.state.isSending} onClick={this.handleSubmit.bind(this)}>Make Payment</a>
         </div>
       </div>
       </div>
