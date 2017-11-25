@@ -113,8 +113,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
-          <Route exact path='/elixirs' component={Elixirs} />
-          <Route exact path='/elixirs/:slug' component={Product} />
+          <Route exact path='/smoothies' component={Elixirs} />
+          <Route exact path='/smoothies/:slug' component={Product} />
           <Route exact path="/contact_us" component={Contact} />
           <Route exact path="/order/:slug" component={Cart} />
           <Route exact path="/checkout/:reference_number" component={CheckOut} />
