@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
 
 class About extends Component {
@@ -29,6 +30,12 @@ Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin a
   <p>Don’t worry if you are busy or don’t have time for long shopping lists, our mission is to deliver our smoothies, elixir and tonics readily to wherever you are.
   </p>
 
+                <h4 class="mt-4">
+      Suitable for all diets
+                </h4>
+                <p>
+      We use all plant based ingredints in making our smoothies thus it is suitable for vegan and vegetarian diet. Besides, no chemicals or preservatives in our smoothies. With less carbs and more in healthy fats and protein it is a perfect meal for people with <Link to="https://en.wikipedia.org/wiki/Paleolithic_diet">Paleo diet</Link> and <Link to="https://en.wikipedia.org/wiki/Ketogenic_diet">Ketogenic diet</Link>. Moreover, we rather our water to be purified, electrolyte-enhanced and alkaline.
+                </p>
                 <h4 class="mt-4">
       Drink it next day or Uber it now!
                 </h4>
