@@ -6,19 +6,23 @@ import Stripe from './Stripe';
 import CustomInput from './CustomInput';
 import ShippingAddress from './ShippingAddress';
 
-class CheckOut extends Component {
+class Checkout extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
       cart: {},
       errors: [],
-      paymentError: ''
+      paymentError: '',
+      isSending: false
     }
   }
 
   handleSubmit(e){
     e.preventDefault()
+
+    NProgress.start()
+    this.setState({isSending: true})
 
     var self = this
     var address = self.refs.shippingAddress.refs
@@ -26,8 +30,6 @@ class CheckOut extends Component {
 
     this.setState({paymentError: ''})
 
-    NProgress.start()
-    this.setState({isSending: true})
 
     stripe.engine.createToken(stripe.card, {
     }).then(function(result) {
@@ -68,7 +70,7 @@ class CheckOut extends Component {
             NProgress.done()
             self.setState({isSending: false})
 
-            self.props.history.push('/checkout/' + self.props.match.params.reference_number)
+            self.props.history.push('/confirmation/' + self.props.match.params.reference_number)
           })
           .catch(function (error) {
             NProgress.done()
@@ -162,7 +164,7 @@ class CheckOut extends Component {
             </div>
             <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />
           </div>
-          <a href="#" class="btn btn-primary btn-rounded btn-lg" disabled={this.state.isSending} onClick={this.handleSubmit.bind(this)}>Make Payment</a>
+          <input type="button" class="btn btn-primary btn-rounded btn-lg" disabled={this.state.isSending} value="Make Payment" onClick={this.handleSubmit.bind(this)}></input>
         </div>
       </div>
       </div>
@@ -171,4 +173,4 @@ class CheckOut extends Component {
   }
 }
 
-export default CheckOut
+export default Checkout

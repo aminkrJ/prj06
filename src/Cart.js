@@ -17,7 +17,8 @@ class Cart extends Component {
       unitPrice: 0,
       quantity: 1,
       shippingFee: 8.95,
-      total: 0
+      total: 0,
+      isSending: false
     }
   }
 
@@ -41,9 +42,11 @@ class Cart extends Component {
   }
 
   handleProceedCheckout(e) {
-    var $this = this
     e.preventDefault()
     NProgress.start()
+    this.setState({isSending: true})
+
+    var $this = this
 
     axios.post('/carts', {
       cart: {
@@ -65,6 +68,7 @@ class Cart extends Component {
     })
     .catch(function (error) {
       NProgress.done()
+      this.setState({isSending: false})
     })
   }
 
@@ -170,7 +174,7 @@ class Cart extends Component {
                     </h3>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                   </div>
-                  <input type="button" class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)} value="Proceed To Checkout"></input>
+                  <input type="button" disabled={this.state.isSending} class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)} value="Proceed To Checkout"></input>
                 </div>
               </div>
             </div>
