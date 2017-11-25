@@ -147,7 +147,7 @@ class Checkout extends Component {
             </div>
             <div class="row">
               <div class="col-md-6">
-                <h4 class="font-weight-light">Shipping fee</h4>
+                <h4 class="font-weight-light">Delivery fee</h4>
               </div>
               <div class="col-md-6 text-right">
                 <h4 class="font-weight-light">${this.state.cart.shipping_fee}</h4>

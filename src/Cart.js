@@ -16,7 +16,7 @@ class Cart extends Component {
       deliveryAt: moment().add(1, 'day'),
       unitPrice: 0,
       quantity: 1,
-      shippingFee: 8.95,
+      shippingFee: 5,
       total: 0,
       isSending: false
     }
@@ -166,7 +166,7 @@ class Cart extends Component {
                       Subtotal: ${this.state.unitPrice * this.state.quantity}
                     </h4>
                     <h4 class="font-weight-light">
-                      Shipping fee: ${this.state.shippingFee}
+                      Delivery fee: ${this.state.shippingFee}
                     </h4>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                     <h3>
