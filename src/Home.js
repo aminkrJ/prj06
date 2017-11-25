@@ -58,7 +58,7 @@ class Home extends Component {
       var recipes = this.state.recipes.map((recipe, index) => {
           return(
             <div key={index}>
-              <Link to={"/elixirs/" + recipe.slug} className="project overlay-hover">
+              <Link to={"/smoothies/" + recipe.slug} className="project overlay-hover">
                 <img src={recipe.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>

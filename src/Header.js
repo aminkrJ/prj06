@@ -50,7 +50,7 @@ class Header extends Component {
                     <NavLink href="/about">About Us</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/elixirs">Smoothies</NavLink>
+                    <NavLink href="/smoothies">Smoothies</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="/find_us">Find Us</NavLink>

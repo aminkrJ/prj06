@@ -36,14 +36,14 @@ class Elixirs extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <Link to={"/elixirs/" + recipe.slug}>
+              <Link to={"/smoothies/" + recipe.slug}>
                 <img className="card-img-top img-fluid" src={recipe.photo.original} alt={recipe.name} />
               </Link>
             </div>
 
             <div className="card-body">
               <small className="text-muted text-uppercase">{recipe.tag}</small>
-              <Link className="text-grey-dark" to={"/elixirs/" + recipe.slug}>
+              <Link className="text-grey-dark" to={"/smoothies/" + recipe.slug}>
                 <h4 className="card-title">
                   {recipe.title}
                 </h4>
@@ -60,7 +60,7 @@ class Elixirs extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Smoothies & Elixirs" location={ {title: "Smoothies & Elixirs", path:"/elixirs"} } />
+        <PageTitle title="Smoothies" location={ {title: "Smoothies & Elixirs", path:"/smoothies"} } />
         <div id="content" className="py-3 py-lg-6">
           <div className="container">
             <div className="row">
