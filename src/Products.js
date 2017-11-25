@@ -64,21 +64,7 @@ class Products extends Component {
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
-      {this.renderProducts()}
-            <div class="col-md-4">
-              <div class="card bg-white bg-shadow text-center card-outline-primary">
-                <h3 class="card-title py-3 text-shadow">
-                  <span class="em">Event pack</span>
-                </h3>
-                <p class="price-banner bg-primary text-white border-primary card-body-overlap">
-                  <span class="price-currency">Contact us</span>
-                </p>
-                <div class="card-body">
-                  <p class="text-muted">To enquiry about corporate and event catering please contact us.</p>
-                  <Link to="/contact_us" class="btn btn-primary btn-block btn-rounded mt-4">Contact us</Link>
-                </div>
-              </div>
-            </div>
+            {this.renderProducts()}
           </div>
         </div>
       </div>
