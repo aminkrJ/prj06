@@ -3,8 +3,8 @@ import { Route, Link, withRouter } from 'react-router-dom';
 
 import classNames from 'classnames'
 
-import lemon from './img/lemon.png'
-import raspberry from './img/raspberry.png'
+import water from './img/water.png'
+import brain from './img/brain.png'
 import blueberries from './img/blueberries.png'
 import almond from './img/almond.png'
 
@@ -35,7 +35,7 @@ class Process extends Component {
           <ul class="nav nav-steps nav-steps-circles flex-column flex-lg-row justify-content-around w-80 mx-auto">
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}>
-        <img src={lemon} />
+        <img src={water} />
       </a>
             </li>
             <li class="nav-item">
@@ -50,7 +50,7 @@ class Process extends Component {
             </li>
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}>
-        <img src={raspberry} />
+        <img src={brain} />
       </a>
             </li>
           </ul>
@@ -77,7 +77,7 @@ class Process extends Component {
               <h3>
                 Superfood and mushrooms
               </h3>
-              <p>Certified organic nutrition-dense superfoods and mushrooms high in antioxidant, vitamin and minerals from all around the world in our smoothies to bring them to another level. </p>
+              <p>Certified organic nutrition-dense superfoods and natural nootropics mushrooms, smart drugs, high in antioxidant, vitamin and minerals from all around the world in our smoothies to bring them to another level.</p>
             </div>
           </div>
         </div>
