@@ -31,6 +31,7 @@ class Products extends Component {
                 <h3 class="card-title py-3 text-shadow">
                   <span class="">{product.name}</span>
                 </h3>
+                <img src={product.photo.medium} />
                 <p class="price-banner bg-primary text-white border-primary card-body-overlap">
                   <span class="price-currency">$</span>
                   <span class="price-digits">{product.price}<span></span></span>
