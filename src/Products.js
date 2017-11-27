@@ -16,7 +16,7 @@ class Products extends Component {
     return(
       product.recipes.map((recipe, index) => {
         return(
-          <li key={index}>{recipe.description} of <Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></li>
+          <li key={index}>{recipe.description} <Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></li>
         )
       })
     )
