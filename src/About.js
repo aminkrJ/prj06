@@ -18,7 +18,7 @@ class About extends Component {
               <div class="col-md-9">
                 <h2 class="title-divider">
                   <span>About <span class="font-weight-normal text-muted">Us</span></span>
-                  <small></small>
+                  <small>The quality of your food determines the quality of your thoughts.</small>
                 </h2>
                 <p>
 Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single LifeElixir drinks. That’s why we believe integrating LifeElixir to your diet is imperative to an individual health and happiness.
