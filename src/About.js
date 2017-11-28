@@ -13,6 +13,49 @@ class About extends Component {
             <div class="row">
               <div class="col-md-3">
                 <div class="nav-section-menu">
+                  <div class="nav nav-list">
+                    <span class="nav-header">In This Section</span> 
+                    <a href="about.html" class="nav-link first active">
+                      About Us 
+                      <small>Basic Version</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="about-extended.html" class="nav-link">
+                      About Us 
+                      <small>Extended Version</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="about-me.html" class="nav-link">
+                      About Me 
+                      <small>More About Me</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="team.html" class="nav-link">
+                      The Team 
+                      <small>Team List</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="team-grid.html" class="nav-link">
+                      The Team 
+                      <small>Team Grid</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="team-member.html" class="nav-link">
+                      Team Member 
+                      <small>Individual Display</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="contact.html" class="nav-link">
+                      Contact Us
+                      <small>How to get in touch</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                    <a href="contact.php" class="nav-link">
+                      Contact Us (PHP)
+                      <small>How to get in touch</small>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="col-md-9">
