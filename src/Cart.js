@@ -18,7 +18,8 @@ class Cart extends Component {
       quantity: 1,
       shippingFee: 5,
       total: 0,
-      isSending: false
+      isSending: false,
+      errors: {}
     }
   }
 
@@ -39,6 +40,18 @@ class Cart extends Component {
     .catch((error) => {
       NProgress.done()
     })
+  }
+
+  renderErrors() {
+    if(this.state.errors["delivery_at"] !== undefined){
+      return(
+        this.state.errors["delivery_at"].map((error, index) => {
+          return (
+            <li key={index}>{error}</li>
+          )
+        })
+      )
+    }
   }
 
   handleProceedCheckout(e) {
@@ -68,7 +81,10 @@ class Cart extends Component {
     })
     .catch(function (error) {
       NProgress.done()
-      this.setState({isSending: false})
+      $this.setState({
+        isSending: false,
+        errors: error.response.data.errors
+      })
     })
   }
 
@@ -146,18 +162,19 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-muted mb-3"> Next day delivery only in NSW.
-                  </h6>
+                  <h6 class="text-muted mb-3"> LifeElixir only offers next day deliveries in NSW.</h6>
                   <form action="#" role="form">
                     <div class="input-group">
                       <label class="sr-only" for="discount">Delivery date</label>
                         <DatePicker
                                 selected={this.state.deliveryAt}
                                 onChange={this.handleDeliveryDateChange.bind(this)}
+                                locale="en-au"
                                 minDate={moment().add(1, 'day')}
                                 filterDate={this.isWeekday}
                             />
                     </div>
+                    <ul class="text-danger">{this.renderErrors()}</ul>
                   </form>
                 </div>
                 <div class="col-md-8 text-md-right mt-3 mt-md-0">
