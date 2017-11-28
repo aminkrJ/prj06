@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import cachios from 'cachios';
 import axios from 'axios';
 import NProgress from 'nprogress';
 import iziToast from 'izitoast';
@@ -19,7 +20,7 @@ class Footer extends Component {
   componentWillMount() {
     NProgress.start()
 
-    axios.get("/campaigns/")
+    cachios.get("/campaigns/")
     .then((response) => {
       NProgress.done()
 
