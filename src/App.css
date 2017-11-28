@@ -7,6 +7,10 @@
   background-color: #999;
 }
 
+.social-media-branding a{
+  color: #464646
+}
+
 .nav-link img{
   max-width: 100%;
   max-height: 100%

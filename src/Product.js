@@ -3,7 +3,7 @@ import axios from 'axios'
 import NProgress from 'nprogress'
 
 class Product extends Component {
-constructor(props){
+  constructor(props){
     super(props)
     this.state = {
       product: {photo: {original: ""}, recipes: []}

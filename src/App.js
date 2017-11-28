@@ -21,6 +21,7 @@ import Product from './Product';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import Blog from './Blog'
+import Post from './Post'
 import CustomModal from './Modal';
 
 import './App.css';
@@ -65,6 +66,7 @@ class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
+          <Route exact path="/blog/:slug" component={Post} />
           <Route exact path='/smoothies' component={Smoothies} />
           <Route exact path='/smoothies/:slug' component={Smoothie} />
           <Route exact path='/products/:slug' component={Product} />

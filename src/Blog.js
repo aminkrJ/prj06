@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import api from './Api'
 import NProgress from 'nprogress'
+import moment from 'moment'
 
 class Blog extends Component {
   constructor(props) {
@@ -34,15 +35,15 @@ class Blog extends Component {
         <div class="col-sm-6 col-md-4 grid-item">
           <div class="blog-post">
             <div class="blog-media">
-              <a href="">
-                <img src="assets/img/blog/ape.jpg" alt="Picture of frog by Ben Fredericson" class="img-fluid" />
-              </a>
+              <Link to={"/blog/" + article.slug}>
+                <img src={article.photo.medium} alt={article.title} class="img-fluid" />
+              </Link>
             </div>
             <div class="mt-4">
               <div class="date-wrapper date-wrapper-horizontal">
-<span class="date-m bg-primary">July</span>
-<span class="date-d">31</span> </div>
-              <div class="tags"><a href="#" class="text-primary">design</a> / <a href="#" class="type">image</a></div>
+<span class="date-m bg-primary">{moment(article.updated_at).format("MMMM")}</span>
+<span class="date-d">{moment(article.updated_at).format("D")}</span> </div>
+              <div class="tags"></div>
               <h4 class="timeline-item-title">
                 <Link to={"/blog/" + article.slug}>{article.title}</Link>
               </h4>
@@ -80,16 +81,13 @@ class Blog extends Component {
               </h4>
               <ul class="list-unstyled social-media-branding">
                 <li>
-                  <a href="#" class="social-link branding-twitter"><i class="fa fa-twitter-square fa-fw"></i> Twitter</a>
+                  <a href="https://www.instagram.com/lifelixir/" class="social-link branding-instagram"><i class="fa fa-instagram fa-fw"></i> Instagram</a>
                 </li>
                 <li>
-                  <a href="#" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
+                  <a href="https://www.facebook.com/LifeElixirAU/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
                 </li>
                 <li>
-                  <a href="#" class="social-link branding-linkedin"><i class="fa fa-linkedin-square fa-fw"></i> LinkedIn</a>
-                </li>
-                <li>
-                  <a href="#" class="social-link branding-google-plus"><i class="fa fa-google-plus-square fa-fw"></i> Google+</a>
+                  <a href="#" class="social-link branding-youtube"><i class="fa fa-youtube-play fa-fw"></i> YouTube</a>
                 </li>
               </ul>
             </div>
