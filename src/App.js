@@ -22,6 +22,7 @@ import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import Blog from './Blog'
 import Post from './Post'
+import Delivery from './Delivery'
 import CustomModal from './Modal';
 
 import './App.css';
@@ -75,6 +76,7 @@ class App extends Component {
           <Route exact path="/checkout/:reference_number" component={Checkout} />
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
+          <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/plans" component={Plans} />
         </div>
         <Footer />

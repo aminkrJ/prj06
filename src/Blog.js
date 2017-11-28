@@ -22,6 +22,8 @@ class Blog extends Component {
       this.setState({
         articles: response.data
       })
+
+      document.title = "Life Elixir, " + response.data.title
     })
     .catch((error) => {
       NProgress.done()

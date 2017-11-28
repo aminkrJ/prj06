@@ -89,7 +89,7 @@ class Home extends Component {
                     <div class="from-bottom">
                       <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Smoothies</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black">Elixirs, tonic and smoothies packed with superfoods, functional herbs, and mushrooms</h3>
+                      <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black">Elixirs, tonic and smoothies packed with superfoods, functional herbs, and medicinal mushrooms</h3>
                     </div>
                     <Link class="btn btn-inverse btn-rounded py-lg-3 px-lg-5" to="/about">Learn more</Link>
                   </div>
