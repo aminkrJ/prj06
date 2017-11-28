@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import NProgress from 'nprogress'
 
-class Product extends Component {
+class Smoothie extends Component {
 constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}, recipes: []}
+      recipe: {photo: {original: ""}, ingredients: []}
     }
   }
 
-  renderRecipes() {
+  renderIngredients() {
     return (
-     this.state.product.recipes.map((recipe, index) => {
+     this.state.recipe.ingredients.map((ingredient, index) => {
        return(
-         <span class="text-muted" key={recipe.id}><small>{recipe.title}{index + 1 === this.state.product.recipes.length ? "" : ", " }</small></span>
+         <span class="text-muted" key={ingredient.id}><small>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</small></span>
        )
      })
     )
@@ -23,12 +23,12 @@ constructor(props){
   componentDidMount() {
     NProgress.start()
 
-    axios.get("/prodcuts/" + this.props.match.params.slug)
+    axios.get("/recipes/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 
       this.setState({
-        product: response.data
+        recipe: response.data
       })
 
       document.title = "Life Elixir, " + response.data.title
@@ -46,19 +46,19 @@ constructor(props){
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
-                <img src={this.state.product.photo.original} alt={this.state.product.title} class="lazyOwl img-fluid" />
+                <img src={this.state.recipe.photo.original} alt={this.state.recipe.title} class="lazyOwl img-fluid" />
               </div>
-              { this.renderRecipes() }
+              { this.renderIngredients() }
             </div>
             <div class="col-lg-7">
               <div class="card product-card mb-4">
                 <div class="card-body p-4 pos-relative">
-                  <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.tag}</span></p>
+                  <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.recipe.tag}</span></p>
                   <h2 class="card-title mb-2">
-                    {this.state.product.title}
+                    {this.state.recipe.title}
                   </h2>
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted text-sm" />
                 </div>
               </div>
             </div>
@@ -71,4 +71,4 @@ constructor(props){
   }
 }
 
-export default Product
+export default Smoothie

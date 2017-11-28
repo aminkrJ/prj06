@@ -7,23 +7,25 @@ import _ from 'underscore';
 import {render} from 'react-dom';
 
 import Header from './Header';
-import Elixirs from './Elixirs';
+import Smoothies from './Smoothies';
 import About from './About';
 import Contact from './Contact';
 import Find from './Find';
 import Home from './Home';
 import Footer from './Footer';
-import Product from './Product';
+import Smoothie from './Smoothie';
 import Thanks from './Thanks';
 import Cart from './Cart';
 import Plans from './Plans';
+import Product from './Product';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
+import Blog from './Blog'
 import CustomModal from './Modal';
 
 import './App.css';
 
-var pageTitle = "Elevated superfood smoothies, elixirs and tonics";
+var pageTitle = "Elevated healthy superfood smoothies, elixirs and tonics"
 
 class App extends Component {
   constructor(props){
@@ -113,9 +115,11 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
-          <Route exact path='/smoothies' component={Elixirs} />
-          <Route exact path='/smoothies/:slug' component={Product} />
-          <Route exact path="/contact_us" component={Contact} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path='/smoothies' component={Smoothies} />
+          <Route exact path='/smoothies/:slug' component={Smoothie} />
+          <Route exact path='/products/:slug' component={Product} />
+          <Route exact path="/contact" component={Contact} />
           <Route exact path="/order/:slug" component={Cart} />
           <Route exact path="/checkout/:reference_number" component={Checkout} />
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />

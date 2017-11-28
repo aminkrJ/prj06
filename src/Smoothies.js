@@ -6,7 +6,7 @@ import NProgress from 'nprogress';
 import iziToast from 'izitoast';
 import _ from 'underscore';
 
-class Elixirs extends Component {
+class Smoothies extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -60,7 +60,7 @@ class Elixirs extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Smoothies" location={ {title: "Smoothies & Elixirs", path:"/smoothies"} } />
+        <PageTitle title="Smoothies" location={ {title: "Smoothies", path:"/smoothies"} } />
         <div id="content" className="py-3 py-lg-6">
           <div className="container">
             <div className="row">
@@ -78,4 +78,4 @@ class Elixirs extends Component {
   }
 }
 
-export default Elixirs
+export default Smoothies

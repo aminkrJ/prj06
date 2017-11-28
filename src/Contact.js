@@ -6,7 +6,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Contact Us" location={ {title: "Contact Us", path:"/contact_us"} } />
+        <PageTitle title="Contact Us" location={ {title: "Contact Us", path:"/contact"} } />
         <div id="content">
           <div class="container">
             <div class="row">

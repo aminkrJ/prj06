@@ -137,8 +137,8 @@ class Footer extends Component {
               </div>
               <div class="col-md-6">
                 <ul class="list-inline footer-links float-md-right mb-0">
-                  <li class="list-inline-item"><Link to="/find_us">Find Us</Link></li>
-                  <li class="list-inline-item"><Link to="/contact_us">Contact Us</Link></li>
+                  <li class="list-inline-item"><Link to="/blog">Blog</Link></li>
+                  <li class="list-inline-item"><Link to="/contact">Contact Us</Link></li>
                 </ul>
               </div>
             </div>
