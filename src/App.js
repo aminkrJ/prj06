@@ -56,57 +56,6 @@ class App extends Component {
   componentDidMount() {
   }
 
-  renderFeaturedCampaings() {
-    return (
-      this.state.featuredCampaigns.map((c) => {
-        return (
-         <div key={c.id} className="col-lg-4 d-lg-flex mb-3">
-           <div style={ {backgroundImage: "url(" + c.photo.original + ")", backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundAttachment: "fixed", backgroundSize: "cover"} } className="px-3 pb-3 pt-6 overlay overlay-gradient-flip overlay-op-8 rounded flex-ew flex-valign-b">
-             <h2 className="text-white text-uppercase font-weight-bold mb-0 display-4">
-               <span>{c.campaign_subscribers_count}</span>
-             </h2>
-             <p className="text-white text-uppercase mb-0">{c.name}</p>
-             <hr className="hr-lg mt-2 mb-0 w-20 ml-0 hr-primary" />
-           </div>
-         </div>
-        )
-      })
-    )
-  }
-
-  renderInactiveCampaigns() {
-    var inactiveCamapigns = _.reject(this.state.campaigns, (i) => {
-      return i.active === true
-    })
-    return (
-      inactiveCamapigns.map((campaign, index) => {
-        return (
-          <div key={campaign.id} className="card px-3 py-4 mb-3 row-hover pos-relative">
-            <div className="row align-items-center ">
-              <div className="col-md-2">
-                <h2 className="text-center">{index + 1}</h2>
-              </div>
-              <div className="col-md-8">
-                <h4 className="text-left mb-0">
-                  {campaign.name}
-                </h4>
-                <p className="text-left text-muted mb-2 text-sm">
-                  {campaign.short_description}
-                </p>
-                <p className="text-muted mb-2 text-sm">
-                </p>
-              </div>
-              <div className="col-md-2 text-md-center">
-                <a href="#" data-campaign_id={campaign.id} onClick={this.handleSubscribe.bind(this, campaign)} className="btn btn-danger text-uppercase font-weight-bold d-lg-block">Subscribe</a> 
-              </div>
-            </div>
-          </div>
-        )
-      })
-    )
-  }
-
-
   render() {
     return (
       <div className="App">
