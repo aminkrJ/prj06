@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios'
 import NProgress from 'nprogress'
 
@@ -14,7 +15,7 @@ class Product extends Component {
     return (
      this.state.product.recipes.map((recipe, index) => {
        return(
-         <span class="text-muted" key={recipe.id}><small>{recipe.title}{index + 1 === this.state.product.recipes.length ? "" : ", " }</small></span>
+         <li key={index}>{recipe.description} <Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></li>
        )
      })
     )
@@ -23,7 +24,7 @@ class Product extends Component {
   componentDidMount() {
     NProgress.start()
 
-    axios.get("/prodcuts/" + this.props.match.params.slug)
+    axios.get("/products/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 
@@ -46,18 +47,20 @@ class Product extends Component {
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
-                <img src={this.state.product.photo.original} alt={this.state.product.title} class="lazyOwl img-fluid" />
+                <img src={this.state.product.photo.original} alt={this.state.product.name} class="lazyOwl img-fluid" />
               </div>
-              { this.renderRecipes() }
             </div>
             <div class="col-lg-7">
               <div class="card product-card mb-4">
                 <div class="card-body p-4 pos-relative">
                   <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.tag}</span></p>
                   <h2 class="card-title mb-2">
-                    {this.state.product.title}
+                    {this.state.product.name}
                   </h2>
                   <hr class="my-3" />
+                  <ul>
+                    { this.renderRecipes() }
+                  </ul>
                   <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
                 </div>
               </div>

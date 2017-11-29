@@ -29,11 +29,15 @@ class Products extends Component {
             <div class="col-md-4">
               <div class="card bg-shadow text-center rounded">
                 <h3 class="card-title py-3 text-shadow">
-                  <span class="">{product.name}</span>
+          <Link to={"/products/" + product.slug} class="">
+                  <span class="text-black text-capitalize">{product.name}</span>
+          </Link>
                 </h3>
                 <div class="row">
                   <div class="col-md-12">
+          <Link to={"/products/" + product.slug} class="">
                     <img class="img-fluid"src={product.photo.original} />
+          </Link>
                   </div>
                 </div>
                 <p class="price-banner bg-primary text-white border-primary card-body-overlap">
@@ -48,6 +52,7 @@ class Products extends Component {
                     {this.renderRecipes(product)}
                   </ul>
                   <Link to={"/order/" + product.slug} class="btn btn-primary btn-block btn-rounded mt-4">Order Now</Link>
+                  <Link to={"/products/" + product.slug} class="btn btn-link mt-2">Learn more</Link>
                 </div>
               </div>
             </div>
