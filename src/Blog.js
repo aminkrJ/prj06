@@ -38,7 +38,7 @@ class Blog extends Component {
           <div class="blog-post">
             <div class="blog-media">
               <Link to={"/blog/" + article.slug}>
-                <img src={article.photo.medium} alt={article.title} class="img-fluid" />
+                <img src={article.photo.original} alt={article.title} class="img-fluid" />
               </Link>
             </div>
             <div class="mt-4">
