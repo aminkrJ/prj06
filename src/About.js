@@ -34,7 +34,7 @@ class About extends Component {
                 <h4>Carefully Crafted</h4>
                 <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and <a href="https://www.lifelixir.com.au/blog/the-healing-power-of-medicinal-mushrooms">medicinal mushrooms</a> to bring pioneering drinks for you. Our smoothies offer more diverse flavours using natural ingredients only, providing consumers with new and amazing experiences. Life Elixir is all about quality, care, passion, great ingredients, effectiveness and most importantly pronounced flavours.
 </p>
-  <p><b>Homemade nuts milk.</b> Unfortunately, in milk industry, there are many questionable additives to the both plant-based and cow's milks which brought us to make a clean homemade plant-based milk for our smoothies. Our process is simple. We mix activated nuts - almond, walnuts, and macadamia - with right balance of fat and protein and electrolyte-enhanced water and blend it. Then, we follow a double extraction process to produce our milk.</p>
+  <p><b>Homemade nuts milk.</b> Unfortunately, in milk industry, there are many questionable additives to the both plant-based and cow's milks which brought us to make a clean homemade plant-based milk for our smoothies. We make our milk from nuts - almond, walnuts, and macadamia - with right balance of fat and protein and electrolyte-enhanced water.</p>
                 <p>Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single <Link to="/smoothies">LifeElixir drinks</Link>. That’s why we believe integrating LifeElixir to your diet is imperative to an individual health and happiness.
 </p>
                 <h4 class="mt-4">
