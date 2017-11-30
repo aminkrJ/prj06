@@ -158,7 +158,7 @@ class Footer extends Component {
         
         <hr class="my-4 hr-white op-1" />
         <div class="subfooter text-sm text-center">
-          <p>Copyright 2017 &copy; LifeElixir</p>
+          <p>Copyright 2017 &copy; LifeElixir by Personalised Nutrition</p>
           <ul class="list-inline footer-links">
             <li class="list-inline-item"><Link to="/about">About</Link></li>
             <li class="list-inline-item"><Link to="/blog">Blog</Link></li>

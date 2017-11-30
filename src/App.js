@@ -27,7 +27,7 @@ import CustomModal from './Modal';
 
 import './App.css';
 
-var pageTitle = "Elevated healthy superfood smoothies, elixirs and tonics"
+var pageTitle = "Elixirs, tonic and elevated healthy smoothies and smoothie bowls packed with superfoods, functional herbs, and medicinal mushrooms"
 
 class App extends Component {
   constructor(props){
