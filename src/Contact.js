@@ -42,14 +42,6 @@ class Contact extends Component {
                     </form>
                   </div>
                   <div class="col-md-6">
-                    <p>
-                      <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
-                       0435 123 714
-                    </p>
-                    <p>
-                      <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
-                       support@lifelixir.com.au
-                    </p>
                   </div>
                 </div>
               </div>
