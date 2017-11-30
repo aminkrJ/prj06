@@ -6,6 +6,8 @@ import NProgress from 'nprogress';
 import iziToast from 'izitoast';
 import _ from 'underscore';
 
+import PaymentMethods from './img/card-brands.svg'
+
 class Footer extends Component {
 
   constructor(props) {
@@ -80,73 +82,87 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer id="footer" class="p-0">
-        <div class="container pt-6 pb-5">
-          <div class="row">
-
-            <div class="col-md-4">
-              <h4 class="text-uppercase text-white">
-                Contact Us
-              </h4>
-              <address>
-                <ul class="list-unstyled">
-                  <li>
-                    <abbr title="Phone"><i class="fa fa-phone fa-fw"></i></abbr>
-      0435 123 714
-                  </li>
-                  <li>
-                    <abbr title="Email"><i class="fa fa-envelope fa-fw"></i></abbr>
-                    support@lifelixir.com.au
-                  </li>
-                  <li>
-                  </li>
-                </ul>
-              </address>
-            </div>
-            
-            <div class="col-md-4">
-              <h4 class="text-uppercase text-white">
-                About Us
-              </h4>
-              <p>Electrolytes, natural cognitive compounds, antioxidants, live enzymes, vitamin and minerals are essentials which can be traced in every single LifeElixir drinks.</p>
-            </div>
-            
-            <div class="col-md-4">
-              <h4 class="text-uppercase text-white">
-                Newsletter
-              </h4>
-              <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
-              <form>
-                <div class="input-group">
-                  <label class="sr-only" for="email-field">Email</label>
-                  <input type="text" class="form-control" id="email-field" placeholder="Email" onChange={this.handleEmailChange.bind(this)}/>
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" data-campaign_id={this.state.subscribeCampaign.id} onClick={this.handleSubscribe.bind(this, this.state.subscribeCampaign)} type="button">Go!</button>
-                  </span>
-                </div>
-              </form>
+      <div>
+      <footer id="footer">
+      <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-uppercase text-slab font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3> 
+      <p class="text-sm">Improving the quality of lives by enhancing the quality of the food based on the cutting edge scientific studies and researches.</p>
+      <address> 
+        <ul class="list-unstyled text-sm"> 
+          <li> </li>
+                <li>
+                  <abbr title="Email"><i class="fa fa-envelope fa-fw text-white"></i></abbr>
+                  support@lifelixir.com.au
+                </li>
+              </ul>
+            </address>
+            <div class="mt-3 mb-4 mb-lg-0">
+              <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
+              <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
+              <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
             </div>
 
+              <div className="mt-4 mb-4 mb-lg-4">
+                <img src={PaymentMethods} alt="Payment Methods" />
+              </div>
           </div>
-        </div>
-        <hr class="my-0 hr-blank op-2" />
-        <div class="bg-inverse-dark text-sm py-3">
-          <div class="container">
+          
+          <div class="col-lg-7 offset-lg-1">
             <div class="row">
-              <div class="col-md-6">
-                <p class="mb-0">Copyright 2017 &copy; Personalised Nutrition</p>
-              </div>
-              <div class="col-md-6">
-                <ul class="list-inline footer-links float-md-right mb-0">
-                  <li class="list-inline-item"><Link to="/blog">Blog</Link></li>
-                  <li class="list-inline-item"><Link to="/contact">Contact Us</Link></li>
+              <div class="col-6 col-md-3">
+                <h4 class="mt-0 text-slab">
+                  Products
+                </h4>
+                <ul class="list-unstyled footer-links">
+                  <li><a href="#">Shoes</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Trousers</a></li>
+                  <li><a href="#">Customise it</a></li>
                 </ul>
               </div>
+              <div class="col-6 col-md-3">
+                <h4 class="mt-0 text-slab">
+                  Company
+                </h4>
+                <ul class="list-unstyled footer-links">
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Delivery Info</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Join us</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-6">
+                <h4 class="text-uppercase text-white">
+                  Newsletter
+                </h4>
+                <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+                <form>
+                  <div class="input-group">
+                    <label class="sr-only" for="email-field">Email</label>
+                    <input type="text" class="form-control" id="email-field" placeholder="Email" onChange={this.handleEmailChange.bind(this)}/>
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" data-campaign_id={this.state.subscribeCampaign.id} onClick={this.handleSubscribe.bind(this, this.state.subscribeCampaign)} type="button">Go!</button>
+                    </span>
+                  </div>
+                </form>
+              </div>
             </div>
-            <a href="#top" class="btn btn-icon btn-inverse pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden" title="Back to top"><i class="fa fa-chevron-up"></i></a>
           </div>
         </div>
-      </footer>
+        
+        <hr class="my-4 hr-white op-1" />
+        <div class="subfooter text-sm text-center">
+          <p>Copyright 2017 &copy; LifeElixir</p>
+          <ul class="list-inline footer-links">
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="#top" class="btn btn-icon btn-inverse pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden" title="Back to top" data-scroll="scroll-state"><i class="fa fa-chevron-up"></i></a>
+    </footer>
+
+      </div>
     )
   }
 }
