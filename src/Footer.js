@@ -107,8 +107,8 @@ class Footer extends Component {
             </address>
             <div class="mt-3 mb-4 mb-lg-0">
               <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
-              <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
-              <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
+              <a href="https://www.facebook.com/LifeElixirAU" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
+              <a href="https://www.instagram.com/lifelixir" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
             </div>
 
               <div className="mt-4 mb-4 mb-lg-4">
@@ -131,10 +131,10 @@ class Footer extends Component {
                   Company
                 </h4>
                 <ul class="list-unstyled footer-links">
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Delivery Info</a></li>
-                  <li><a href="#">Contact us</a></li>
-                  <li><a href="#">Join us</a></li>
+                  <li><Link to="/about">About us</Link></li>
+                  <li><Link to="/delivery">Delivery Info</Link></li>
+                  <li><Link to="/contact">Contact us</Link></li>
+                  <li><Link to="/join">Join us</Link></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">
@@ -160,9 +160,9 @@ class Footer extends Component {
         <div class="subfooter text-sm text-center">
           <p>Copyright 2017 &copy; LifeElixir</p>
           <ul class="list-inline footer-links">
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Privacy</a></li>
-            <li class="list-inline-item"><a href="#">Contact Us</a></li>
+            <li class="list-inline-item"><Link to="/about">About</Link></li>
+            <li class="list-inline-item"><Link to="/blog">Blog</Link></li>
+            <li class="list-inline-item"><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
       </div>
