@@ -33,7 +33,8 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      email: ""
+      email: "",
+      products: []
     }
   }
 
@@ -55,7 +56,22 @@ class App extends Component {
     document.title = "Life Elixir, " + pageTitle;
   }
 
+  fetchProducts() {
+    axios.get("/products/")
+    .then((response) => {
+      NProgress.done()
+
+      this.setState({
+        products: response.data
+      })
+    })
+    .catch((error) => {
+      NProgress.done()
+    })
+  }
+
   componentDidMount() {
+    this.fetchProducts()
   }
 
   render() {
@@ -63,7 +79,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="">
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={() => <Home products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
@@ -77,9 +93,9 @@ class App extends Component {
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
-          <Route exact path="/plans" component={Plans} />
+          <Route exact path="/plans" component={() => <Plans products={this.state.products}/>} />
         </div>
-        <Footer />
+        <Footer products={this.state.products}/>
       </div>
     );
   }

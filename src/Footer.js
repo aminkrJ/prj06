@@ -36,6 +36,16 @@ class Footer extends Component {
     })
   }
 
+  renderProducts(){
+    return(
+      this.props.products.map((product, index) => {
+       return(
+         <li key={index}><Link to={`/products/${product.slug}`}>{product.name}</Link></li>
+       )
+      })
+    )
+  }
+
   handleEmailChange(e) {
     this.setState({
       email: e.target.value
@@ -113,10 +123,7 @@ class Footer extends Component {
                   Products
                 </h4>
                 <ul class="list-unstyled footer-links">
-                  <li><a href="#">Shoes</a></li>
-                  <li><a href="#">Shirts</a></li>
-                  <li><a href="#">Trousers</a></li>
-                  <li><a href="#">Customise it</a></li>
+                  {this.renderProducts()}
                 </ul>
               </div>
               <div class="col-6 col-md-3">
@@ -165,6 +172,10 @@ class Footer extends Component {
       </div>
     )
   }
+}
+
+Footer.defaultProps = {
+  products: [],
 }
 
 export default Footer

@@ -10,38 +10,27 @@ class Plans extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: [],
     }
   }
 
   componentWillMount() {
-    NProgress.start()
-
-    axios.get("/products/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        products: response.data
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
   }
-
 
   render() {
     return (
       <div class="">
         <div id="content" class="py-5">
           <div class="container">
-            <Products products={this.state.products} />
+            <Products products={this.props.products} />
           </div>
       </div>
     </div>
     )
   }
+}
+
+Plans.defaultProps = {
+  products: [],
 }
 
 export default Plans

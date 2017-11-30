@@ -16,7 +16,6 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: [],
       recipes: []
     }
   }
@@ -35,22 +34,6 @@ class Home extends Component {
     .catch((error) => {
       NProgress.done()
     })
-
-    axios.get("/products/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        products: response.data
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
-  }
-
-  renderProducts() {
-  
   }
 
   renderRecipes() {
@@ -101,7 +84,7 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           <Process />
-          <Products products={this.state.products} />
+          <Products products={this.props.products} />
           <div id="features" className="container py-4 py-lg-6">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">
@@ -164,6 +147,10 @@ class Home extends Component {
       </div>
     )
   }
+}
+
+Home.defaultProps = {
+  products: [],
 }
 
 export default Home
