@@ -98,7 +98,7 @@ class Home extends Component {
                 <h4 className="mt-2">
                   Freshness
                 </h4>
-                <p>We are committed to under 3h delivery from when we make smoothies</p>
+                <p>We are committed to under 6 hours delivery from when we make smoothies</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
