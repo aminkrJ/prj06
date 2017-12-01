@@ -35,6 +35,12 @@ class About extends Component {
                 <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and <a href="https://www.lifelixir.com.au/blog/the-healing-power-of-medicinal-mushrooms">medicinal mushrooms</a> to bring pioneering drinks for you. Our smoothies offer more diverse flavors using natural ingredients only, providing consumers with new and amazing experiences. LifeElixir is all about quality, care, passion, great ingredients, effectiveness and most importantly pronounced flavors.
 </p>
   <p><b>Homemade almond milk.</b> We make our pure almond milk from organic or insecticide free almonds along with electrolyte-enhanced water.</p>
+  <p><b>Filtered and electrolyte-enhanced water.</b> We either user coconut water or electrolyte-enhanced water in our smoothies so you make sure when you’re exercising, or if you're outside on a hot day, your body is in a healthy condition. If you’re an athlete, this is essential for your optimal performance (<a href="https://www.ncbi.nlm.nih.gov/pubmed/12056182">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/17883020">2</a>).</p>
+  <p>
+                  <b>Herbs </b>
+                  Modern science has now shown that herbs do indeed carry remarkable health benefits. For example, cinnamon lowers blood sugar levels and has a powerful anti-Diabetic effect (<a href="https://www.ncbi.nlm.nih.gov/pubmed/16190627">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/21538147">2</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/19930003">3</a>), turmeric with powerful anti-inflammatory effects (<a href="https://www.ncbi.nlm.nih.gov/pubmed/17569207">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/19594223">2</a>), ginger can treat Nausea and has anti-inflammatory properties (<a href="https://www.ncbi.nlm.nih.gov/pubmed/10793599">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/20418184">2</a>)
+  </p>
+  <p><b>Medicinal Mushrooms</b> Human use of medicinal mushrooms has a long history, and the valuable medicines of mushrooms are a vital element in protecting our health. Numerous studies show that mushrooms are vital, biologically active compounds with significant protective effects such as fighting cancer, improve immunity and lower inflammation, support energy and improve brain function.</p>
                 <h4 class="mt-4">
       Suitable for all diets
                 </h4>
