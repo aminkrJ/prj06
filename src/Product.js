@@ -17,8 +17,7 @@ class Product extends Component {
      this.state.product.recipes.map((recipe, index) => {
        return(
          <div key={index}>
-         <dt><Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></dt>
-         <dd>{recipe.description}</dd>
+         <dd><small>{recipe.description} <Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></small></dd>
          </div>
        )
      })
