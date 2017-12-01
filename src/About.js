@@ -21,7 +21,7 @@ class About extends Component {
                       <i class="fa fa-angle-right"></i>
                     </Link>
                     <Link to="/delivery" class="nav-link">
-                      Delivery
+                      Delivery info
                       <small>Menu or bundles</small>
                       <i class="fa fa-angle-right"></i>
                     </Link>
