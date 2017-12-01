@@ -34,7 +34,8 @@ class App extends Component {
     super(props)
     this.state = {
       email: "",
-      products: []
+      menu: [],
+      bundles: []
     }
   }
 
@@ -62,7 +63,8 @@ class App extends Component {
       NProgress.done()
 
       this.setState({
-        products: response.data
+        bundles: _.filter(response.data, (r) => {return r.primary === true}),
+        menu: _.filter(response.data, (r) => {return r.primary === false})
       })
     })
     .catch((error) => {
@@ -79,7 +81,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="">
-          <Route exact path="/" component={() => <Home products={this.state.products}/>} />
+          <Route exact path="/" component={() => <Home bundles={this.state.bundles} menu={this.state.menu}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
@@ -93,9 +95,9 @@ class App extends Component {
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
-          <Route exact path="/plans" component={() => <Plans products={this.state.products}/>} />
+          <Route exact path="/plans" component={() => <Plans products={this.state.bundles}/>} />
         </div>
-        <Footer products={this.state.products}/>
+        <Footer products={this.state.menu}/>
       </div>
     );
   }

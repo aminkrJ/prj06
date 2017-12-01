@@ -7,7 +7,8 @@ class Product extends Component {
   constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}, recipes: []}
+      product: {photo: {original: ""}, recipes: []},
+      orderable: false
     }
   }
 
@@ -15,7 +16,10 @@ class Product extends Component {
     return (
      this.state.product.recipes.map((recipe, index) => {
        return(
-         <li key={index}>{recipe.description} <Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></li>
+         <div key={index}>
+         <dt><Link to={"/smoothies/" + recipe.slug}>{recipe.title}</Link></dt>
+         <dd>{recipe.description}</dd>
+         </div>
        )
      })
     )
@@ -29,7 +33,8 @@ class Product extends Component {
       NProgress.done()
 
       this.setState({
-        product: response.data
+        product: response.data,
+        orderable: response.data.primary
       })
 
       document.title = "Life Elixir, " + response.data.title
@@ -57,11 +62,17 @@ class Product extends Component {
                   <h2 class="card-title mb-2">
                     {this.state.product.name}
                   </h2>
+                  <h4 class="font-weight-bold text-primary">
+      ${this.state.product.price}
+                  </h4>
                   <hr class="my-3" />
-                  <ul>
+                    <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
+                  <hr class="my-3" />
+                  <dl class="">
                     { this.renderRecipes() }
-                  </ul>
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
+                  </dl>
+                  <hr class="my-3" />
+      { this.state.orderable ? <Link to={`/order/${this.state.product.slug}`} class="btn btn-primary"><i class="fa fa-cart-plus mr-2"></i> Order Now</Link> : <span class="alert alert-light"><small>Delivery via UberEats, Deliveroo, and Menulog</small></span> }
                 </div>
               </div>
             </div>

@@ -21,31 +21,31 @@ class Home extends Component {
   }
 
   componentWillMount() {
-    NProgress.start()
+    //NProgress.start()
 
-    axios.get("/recipes/")
-    .then((response) => {
-      NProgress.done()
+    //axios.get("/recipes/")
+    //.then((response) => {
+      //NProgress.done()
 
-      this.setState({
-        recipes: response.data
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
+      //this.setState({
+        //recipes: response.data
+      //})
+    //})
+    //.catch((error) => {
+      //NProgress.done()
+    //})
   }
 
-  renderRecipes() {
-    if (this.state.recipes.length) {
-      var recipes = this.state.recipes.map((recipe, index) => {
+  renderMenu() {
+    if (this.props.menu.length) {
+      var menu = this.props.menu.map((menu, index) => {
           return(
             <div key={index}>
-              <Link to={"/smoothies/" + recipe.slug} className="project overlay-hover">
-                <img src={recipe.photo.original} className="img-fluid" />
+              <Link to={"/menu/" + menu.slug} className="project overlay-hover">
+                <img src={menu.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
-                  <span class="h5 mt-4">{recipe.title}</span>
+                  <span class="h5 mt-4">{menu.name}</span>
                 </span>
               </Link>
             </div>
@@ -53,8 +53,8 @@ class Home extends Component {
         })
 
       return (
-        <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 3}, "1200": {"items": 3}} }>
-        {recipes}
+        <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 5}, "1200": {"items": 5}} }>
+        {menu}
         </Carousel>
       )
     }
@@ -84,8 +84,19 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           <Process />
-          <Products products={this.props.products} />
-          <div id="features" className="container py-4 py-lg-6">
+          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+          <h2 className="text-center text-uppercase font-weight-bold my-0">
+            Our Menu
+          </h2>
+          <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
+            UberEats, Deliveroo, Menulog
+          </h5>
+          <hr className="mb-5 w-50 mx-auto" />
+          <div id="projects" className="container p-3 py-lg-1">
+            { this.renderMenu() }
+          </div>
+          <Products products={this.props.bundles} />
+          <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">
               Why us?
@@ -132,16 +143,6 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h2 className="text-center text-uppercase font-weight-bold my-0">
-            Latest drinks
-          </h2>
-          <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-          </h5>
-          <hr className="mb-5 w-50 mx-auto" />
-          <div id="projects" className="container p-3 py-lg-1">
-            { this.renderRecipes() }
-          </div>
         </div>
 
       </div>
@@ -150,7 +151,7 @@ class Home extends Component {
 }
 
 Home.defaultProps = {
-  products: [],
+  bundles: [],
 }
 
 export default Home

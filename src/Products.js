@@ -52,7 +52,7 @@ class Products extends Component {
                     {this.renderRecipes(product)}
                   </ul>
                   <Link to={"/order/" + product.slug} class="btn btn-primary btn-block btn-rounded mt-4">Order Now</Link>
-                  <Link to={"/products/" + product.slug} class="btn btn-link mt-2">Learn more</Link>
+                  <Link to={"/products/" + product.slug} class="btn btn-link">Learn more</Link>
                 </div>
               </div>
             </div>
@@ -63,14 +63,14 @@ class Products extends Component {
 
   render() {
     return (
-      <div id="pricing" class="bg-faded py-3 py-lg-6">
+      <div id="pricing" class="bg-faded">
         <div class="container">
           <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h2 class="text-center text-uppercase font-weight-bold my-0">
-      Order online
+      Our Bundles
           </h2>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
-      Drink it next day or Uber it now!
+      Next day delivery
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
