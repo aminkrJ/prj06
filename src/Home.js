@@ -64,19 +64,20 @@ class Home extends Component {
     return (
       <div className="">
         <div id="highlighted">
-          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-5 py-lg-10 flex-valign">
+          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-5 py-lg-8 flex-valign">
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-6 col-md-6 padding-bottom-2x text-md-left text-center">
+                  <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
                       <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated smoothies</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black">Elixirs, tonic and elevated healthy smoothies and smoothie bowls packed with superfoods, functional herbs, and medicinal mushrooms</h3>
                     </div>
-                    <Link class="btn btn-inverse btn-rounded py-lg-3 px-lg-5" to="/about">Learn more</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/plans">Order Now</Link>
+                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Learn More</Link>
                   </div>
-                  <div class="col-md-6 padding-bottom-2x mb-3"><img class="cups d-block mx-auto" /></div>
+                  <div class="col-md-6 padding-bottom-1x mb-3"><img class="cups d-block mx-auto" /></div>
                 </div>
               </div>
             </div>

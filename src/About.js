@@ -16,7 +16,7 @@ class About extends Component {
                   <div class="nav nav-list">
                     <span class="nav-header">In This Section</span> 
                     <Link to="/about" class="nav-link first active">
-                      Smoothies
+                      Our smoothies
                       <small>Carefully crafted</small>
                       <i class="fa fa-angle-right"></i>
                     </Link>

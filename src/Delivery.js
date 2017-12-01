@@ -10,7 +10,7 @@ class Delivery extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Delivery" location={ {title: "Delivery", path:"/delivery"} } />
+        <PageTitle title="Delivery info" location={ {title: "Delivery info", path:"/delivery"} } />
         <div id="content">
           <div class="container">
             <div class="row">
@@ -19,12 +19,12 @@ class Delivery extends Component {
                   <div class="nav nav-list">
                     <span class="nav-header">In This Section</span> 
                     <Link to="/about" class="nav-link first">
-                      Smoothies
+                      Our smoothies
                       <small>Carefully crafted</small>
                       <i class="fa fa-angle-right"></i>
                     </Link>
                     <Link to="/delivery" class="nav-link active">
-                      Delivery
+                      Delivery info
                       <small>Menu or bundles</small>
                       <i class="fa fa-angle-right"></i>
                     </Link>
