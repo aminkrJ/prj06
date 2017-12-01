@@ -41,7 +41,7 @@ class Home extends Component {
       var menu = this.props.menu.map((menu, index) => {
           return(
             <div key={index}>
-              <Link to={"/menu/" + menu.slug} className="project overlay-hover">
+              <Link to={"/products/" + menu.slug} className="project overlay-hover">
                 <img src={menu.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
