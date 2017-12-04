@@ -21,31 +21,31 @@ class Home extends Component {
   }
 
   componentWillMount() {
-    //NProgress.start()
+    NProgress.start()
 
-    //axios.get("/recipes/")
-    //.then((response) => {
-      //NProgress.done()
+    axios.get("/recipes/")
+    .then((response) => {
+      NProgress.done()
 
-      //this.setState({
-        //recipes: response.data
-      //})
-    //})
-    //.catch((error) => {
-      //NProgress.done()
-    //})
+      this.setState({
+        recipes: response.data
+      })
+    })
+    .catch((error) => {
+      NProgress.done()
+    })
   }
 
   renderMenu() {
-    if (this.props.menu.length) {
-      var menu = this.props.menu.map((menu, index) => {
+    if (this.props.recipes.length) {
+      var recipes = this.props.recipes.map((recipe, index) => {
           return(
             <div key={index}>
-              <Link to={"/products/" + menu.slug} className="project overlay-hover">
-                <img src={menu.photo.original} className="img-fluid" />
+              <Link to={"/products/" + recipe.slug} className="project overlay-hover">
+                <img src={recipe.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
-                  <span class="h5 mt-4">{menu.name}</span>
+                  <span class="h5 mt-4">{recipe.title}</span>
                 </span>
               </Link>
             </div>
@@ -54,7 +54,7 @@ class Home extends Component {
 
       return (
         <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
-        {menu}
+        {recipes}
         </Carousel>
       )
     }
