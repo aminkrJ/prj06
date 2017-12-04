@@ -37,8 +37,8 @@ class Home extends Component {
   }
 
   renderMenu() {
-    if (this.props.recipes.length) {
-      var recipes = this.props.recipes.map((recipe, index) => {
+    if (this.state.recipes.length) {
+      var recipes = this.state.recipes.map((recipe, index) => {
           return(
             <div key={index}>
               <Link to={"/smoothies/" + recipe.slug} className="project overlay-hover">
