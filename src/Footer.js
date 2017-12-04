@@ -36,11 +36,11 @@ class Footer extends Component {
     })
   }
 
-  renderProducts(){
+  renderRecipes(){
     return(
-      this.props.products.map((product, index) => {
+      this.props.recipes.map((recipe, index) => {
        return(
-         <li key={index}><Link to={`/products/${product.slug}`}>{product.name}</Link></li>
+         <li key={index}><Link to={`/recipes/${recipe.slug}`}>{recipe.title}</Link></li>
        )
       })
     )
@@ -123,7 +123,7 @@ class Footer extends Component {
                   Our menu
                 </h4>
                 <ul class="list-unstyled footer-links">
-                  {this.renderProducts()}
+                  {this.renderRecipes()}
                 </ul>
               </div>
               <div class="col-6 col-md-3">
@@ -176,6 +176,7 @@ class Footer extends Component {
 
 Footer.defaultProps = {
   products: [],
+  recipes: [],
 }
 
 export default Footer

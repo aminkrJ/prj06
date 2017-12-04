@@ -35,7 +35,8 @@ class App extends Component {
     this.state = {
       email: "",
       menu: [],
-      bundles: []
+      bundles: [],
+      recipes: []
     }
   }
 
@@ -57,7 +58,25 @@ class App extends Component {
     document.title = "Life Elixir, " + pageTitle;
   }
 
+  fetchRecipes() {
+    NProgress.start()
+
+    axios.get("/recipes/")
+    .then((response) => {
+      NProgress.done()
+
+      this.setState({
+        recipes: response.data
+      })
+    })
+    .catch((error) => {
+      NProgress.done()
+    })
+  }
+
   fetchProducts() {
+    NProgress.start()
+
     axios.get("/products/")
     .then((response) => {
       NProgress.done()
@@ -74,6 +93,7 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchProducts()
+    this.fetchRecipes()
   }
 
   render() {
@@ -81,7 +101,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="">
-          <Route exact path="/" component={() => <Home bundles={this.state.bundles} menu={this.state.menu}/>} />
+          <Route exact path="/" component={() => <Home bundles={this.state.bundles} menu={this.state.menu} recipes={this.state.recipes}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
@@ -97,7 +117,7 @@ class App extends Component {
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/plans" component={() => <Plans products={this.state.bundles}/>} />
         </div>
-        <Footer products={this.state.menu}/>
+        <Footer products={this.state.menu} recipes={this.state.recipes}/>
       </div>
     );
   }

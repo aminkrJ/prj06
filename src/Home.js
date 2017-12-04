@@ -16,29 +16,15 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      recipes: []
     }
   }
 
   componentWillMount() {
-    NProgress.start()
-
-    axios.get("/recipes/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        recipes: response.data
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
   }
 
-  renderMenu() {
-    if (this.state.recipes.length) {
-      var recipes = this.state.recipes.map((recipe, index) => {
+  renderRecipes() {
+    if (this.props.recipes.length) {
+      var recipes = this.props.recipes.map((recipe, index) => {
           return(
             <div key={index}>
               <Link to={"/smoothies/" + recipe.slug} className="project overlay-hover">
@@ -94,7 +80,7 @@ class Home extends Component {
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">
-            { this.renderMenu() }
+            { this.renderRecipes() }
           </div>
           <Products products={this.props.bundles} />
           <div id="features" className="container">
@@ -153,6 +139,7 @@ class Home extends Component {
 
 Home.defaultProps = {
   bundles: [],
+  recipes: []
 }
 
 export default Home
