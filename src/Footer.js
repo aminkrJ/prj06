@@ -40,7 +40,7 @@ class Footer extends Component {
     return(
       this.props.recipes.map((recipe, index) => {
        return(
-         <li key={index}><Link to={`/recipes/${recipe.slug}`}>{recipe.title}</Link></li>
+         <li key={index}><Link to={`/smoothies/${recipe.slug}`}>{recipe.title}</Link></li>
        )
       })
     )
