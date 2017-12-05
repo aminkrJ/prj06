@@ -48,8 +48,6 @@ constructor(props){
               <div class="product-gallery pos-relative">
                 <img src={this.state.recipe.photo.original} alt={this.state.recipe.title} class="lazyOwl img-fluid" />
               </div>
-              { this.renderIngredients() }
-              <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted text-sm" />
             </div>
             <div class="col-lg-7">
               <div class="card product-card mb-4">
@@ -58,8 +56,16 @@ constructor(props){
                   <h2 class="card-title mb-2">
                     {this.state.recipe.title}
                   </h2>
+
                   <hr class="my-3" />
                   <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted text-sm" />
+
+                  <hr class="my-3" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="text-muted" />
+
+                  <hr class="my-3" />
+                  <b class="text-muted text-sm">Ingredients:</b> { this.renderIngredients() }
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted" />
                 </div>
               </div>
             </div>
