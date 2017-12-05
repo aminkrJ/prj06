@@ -58,14 +58,15 @@ constructor(props){
                   </h2>
 
                   <hr class="my-3" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-muted text-lead" />
+
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="text-muted" />
+
                   <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted text-sm" />
 
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="text-muted" />
-
-                  <hr class="my-3" />
                   <b class="text-muted text-sm">Ingredients:</b> { this.renderIngredients() }
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted text-sm" />
                 </div>
               </div>
             </div>

@@ -9,8 +9,6 @@ import Carousel from './Carousel';
 import Process from './Process';
 import Products from './Products';
 
-import cups from  './img/cups.png'
-
 class Home extends Component {
 
   constructor(props) {
