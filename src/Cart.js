@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 import { Redirect, Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import NProgress from 'nprogress';
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-import business from 'moment-business'
-
-import 'react-datepicker/dist/react-datepicker.css';
 
 class Cart extends Component {
   constructor(props) {
     super(props)
     this.state = {
       product: {photo: {}},
-      deliveryAt: moment().add(1, 'day'),
       unitPrice: 0,
       quantity: 1,
       shippingFee: 5,
@@ -42,18 +36,6 @@ class Cart extends Component {
     })
   }
 
-  renderErrors() {
-    if(this.state.errors["delivery_at"] !== undefined){
-      return(
-        this.state.errors["delivery_at"].map((error, index) => {
-          return (
-            <li key={index}>{error}</li>
-          )
-        })
-      )
-    }
-  }
-
   handleProceedCheckout(e) {
     e.preventDefault()
     NProgress.start()
@@ -71,7 +53,6 @@ class Cart extends Component {
         ],
         total: this.state.total,
         shipping_fee: this.state.shippingFee,
-        delivery_at: this.state.deliveryAt,
         subtotal: (this.state.quantity * this.state.unitPrice).toFixed(2)
       }
     })
@@ -100,14 +81,6 @@ class Cart extends Component {
     this.setState({
       quantity: this.state.quantity + 1,
     })
-  }
-
-  isWeekday(date) {
-    return business.isWeekDay(date)
-  }
-
-  handleDeliveryDateChange(date) {
-    this.setState({deliveryAt: date})
   }
 
   renderProduct() {
@@ -162,19 +135,9 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-muted mb-3"> LifeElixir only offers next day deliveries in NSW.</h6>
                   <form action="#" role="form">
                     <div class="input-group">
-                      <label class="sr-only" for="discount">Delivery date</label>
-                        <DatePicker
-                                selected={this.state.deliveryAt}
-                                onChange={this.handleDeliveryDateChange.bind(this)}
-                                locale="en-au"
-                                minDate={moment().add(1, 'day')}
-                                filterDate={this.isWeekday}
-                            />
                     </div>
-                    <ul class="text-danger">{this.renderErrors()}</ul>
                   </form>
                 </div>
                 <div class="col-md-8 text-md-right mt-3 mt-md-0">

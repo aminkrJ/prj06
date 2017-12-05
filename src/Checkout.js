@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import NProgress from 'nprogress';
+import moment from 'moment'
+import DatePicker from 'react-datepicker'
+import business from 'moment-business'
 import Stripe from './Stripe';
 import CustomInput from './CustomInput';
 import ShippingAddress from './ShippingAddress';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class Checkout extends Component {
 
@@ -12,10 +17,19 @@ class Checkout extends Component {
     super(props)
     this.state = {
       cart: {},
+      deliveryAt: moment().add(1, 'day'),
       errors: [],
       paymentError: '',
       isSending: false
     }
+  }
+
+  isWeekday(date) {
+    return business.isWeekDay(date)
+  }
+
+  handleDeliveryDateChange(date) {
+    this.setState({deliveryAt: date})
   }
 
   handleSubmit(e){
@@ -47,6 +61,7 @@ class Checkout extends Component {
           {
             cart: Object.assign({}, {
             stripe_token: self.state.stripeToken,
+              delivery_at: self.state.deliveryAt
           }, {
             customer_attributes: {
               addresses_attributes: [
@@ -104,7 +119,22 @@ class Checkout extends Component {
     <div id="content" class="py-5">
       <div class="container">
         <div class="row">
+
         <div class="col-md-8">
+          <h4>
+            Delivery date
+          </h4>
+          <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
+        <DatePicker
+                selected={this.state.deliveryAt}
+                onChange={this.handleDeliveryDateChange.bind(this)}
+                locale="en-au"
+      class="form-control"
+                minDate={moment().add(1, 'day')}
+                filterDate={this.isWeekday}
+            />
+            <p class="text-muted mt-2"> LifeElixir only offers next day deliveries in selected suburbs in NSW.</p>
+          </div>
           <h4>
             Customer information
           </h4>
