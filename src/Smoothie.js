@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios'
+import classnames from 'classnames'
 import NProgress from 'nprogress'
 
 class Smoothie extends Component {
 constructor(props){
     super(props)
     this.state = {
-      recipe: {photo: {original: ""}, ingredients: []}
+      recipe: {photo: {original: ""}, ingredients: []},
+      activeTabIndex: 1
     }
   }
 
@@ -18,6 +21,12 @@ constructor(props){
        )
      })
     )
+  }
+
+  handleTabChange(index) {
+    this.setState({
+      activeTabIndex: index
+    })
   }
 
   componentDidMount() {
@@ -56,22 +65,39 @@ constructor(props){
                   <h2 class="card-title mb-2">
                     {this.state.recipe.title}
                   </h2>
-
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-muted text-lead" />
-
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="text-muted" />
-
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted text-sm" />
-
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-muted" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted" />
                   <hr class="my-3" />
-                  <b class="text-muted text-sm">Ingredients:</b> { this.renderIngredients() }
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted text-sm" />
+                  <Link to="/plans" class="btn btn-primary"><i class="fa fa-cart-plus mr-2"></i> Order Now</Link>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-12">
+            <div class="card mt-5 border-top-0">
+              <div class="card-header bg-white pt-0 px-0">
+                <ul class="nav nav-tabs nav-justified card-header-tabs flex-column flex-md-row">
+                  <li class="nav-item"> <a class={classnames("nav-link py-md-4 text-uppercase font-weight-bold", {active: this.state.activeTabIndex === 1})} onClick={this.handleTabChange.bind(this, 1)}>Health Benefits</a> </li>
+                  <li class="nav-item"> <a class={classnames("nav-link py-md-4 text-uppercase font-weight-bold", {active: this.state.activeTabIndex === 2})} onClick={this.handleTabChange.bind(this, 2)}>Nutrition Info</a> </li>
+                  <li class="nav-item"> <a  class={classnames("nav-link py-md-4 text-uppercase font-weight-bold", {active: this.state.activeTabIndex === 3})} onClick={this.handleTabChange.bind(this, 3)}>Ingredients</a> </li>
+                </ul>
+              </div>
+              <div class="card-body p-4">
+                <div class="tab-content">
+                  <div class={classnames("tab-pane show", {active: this.state.activeTabIndex === 1})} id="">
+                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.health_benefits}} class="card-text" />
+                  </div>
+                  <div class={classnames("tab-pane show", {active: this.state.activeTabIndex === 3})} id="">
+                    { this.renderIngredients() }
+                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted text-sm" />
+                  </div>
+                  <div class={classnames("tab-pane show", {active: this.state.activeTabIndex === 2})} id="">
+                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="text-muted text-sm" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
