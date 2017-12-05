@@ -41,12 +41,7 @@ class About extends Component {
                   Modern science has now shown that herbs do indeed carry remarkable health benefits. For example, cinnamon lowers blood sugar levels and has a powerful anti-Diabetic effect (<a href="https://www.ncbi.nlm.nih.gov/pubmed/16190627">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/21538147">2</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/19930003">3</a>), turmeric with powerful anti-inflammatory effects (<a href="https://www.ncbi.nlm.nih.gov/pubmed/17569207">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/19594223">2</a>), ginger can treat Nausea and has anti-inflammatory properties (<a href="https://www.ncbi.nlm.nih.gov/pubmed/10793599">1</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/20418184">2</a>)
   </p>
   <p><b>Medicinal Mushrooms</b> Human use of medicinal mushrooms has a long history, and the valuable medicines of mushrooms are a vital element in protecting our health. Numerous studies show that mushrooms are vital, biologically active compounds with significant protective effects such as fighting cancer, improve immunity and lower inflammation, support energy and improve brain function.</p>
-                <h4 class="mt-4">
-      Suitable for all diets
-                </h4>
-                <p>
-      We use all plant-based ingredients in making our smoothies thus it is suitable for <a href="https://en.wikipedia.org/wiki/Veganism">vegans</a>. Besides, no chemicals or preservatives in our smoothies. With fewer carbs and more in healthy fats and protein, it is a perfect meal for people with <Link to="https://en.wikipedia.org/wiki/Paleolithic_diet">Paleo diet</Link> and <Link to="https://en.wikipedia.org/wiki/Ketogenic_diet">Ketogenic diet</Link>. 
-                </p>
+  <p><b>Probiotics </b> Your body is full of bacteria, both good and bad. Probiotics are often called <b>good</b> or <b>helpful</b> bacteria because they help keep your gut healthy.</p>
               </div>
             </div>
           </div>
