@@ -37,10 +37,10 @@ class Delivery extends Component {
                 <h4>Next day delivery</h4>
                 <p>Simply, <Link to="/plans">choose your bundle</Link> and your desired delivery date and you will receive your smoothies and smoothie bowls in the selected date between around 8 am to 12 pm. You can always <Link to="/contact">contact us</Link> to discuss your customised packages and delivery times.</p>
                 <h4 class="mt-4">
-      Deliver it now!
+      Same day delivery
                 </h4>
                 <p>
-      Alternatively, you can use <a href="https://www.ubereats.com/sydney/">UberEats</a>, <a href="https://deliveroo.com.au/restaurants/sydney/sydney">Delivero</a> and <a href="https://www.menulog.com.au/">Menulog</a> to place your orders online and get your smoothies right away.
+      Alternatively, you can use <a href="https://www.ubereats.com/sydney/">UberEats</a>, <a href="https://deliveroo.com.au/restaurants/sydney/sydney">Delivero</a> and <a href="https://www.menulog.com.au/">Menulog</a> to place your orders online in selected suburbs.
                 </p>
               </div>
             </div>

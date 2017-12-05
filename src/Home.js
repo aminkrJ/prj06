@@ -76,7 +76,7 @@ class Home extends Component {
             Our Menu
           </h2>
           <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-            UberEats, Deliveroo, Menulog
+      Same day delivery
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">
@@ -96,7 +96,7 @@ class Home extends Component {
                 <h4 className="mt-2">
                   Freshness
                 </h4>
-                <p>We are committed to under 6 hours delivery from when we make smoothies</p>
+                <p>Fresh ingredients are at the heart of our philosophy</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
@@ -114,19 +114,19 @@ class Home extends Component {
                 <h4 className="mt-2">
                   No Preservative
                 </h4>
-                <p>No process or additives to expand the shelf-life of our products</p>
+                <p>No process or additives to expand the shelf-life</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
                   Nutritious n Delicious
                 </h4>
-                <p>Get enough nutritions as a whole meal</p>
+                <p>Carefully crafted to hero nutritions and flavor</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2">
                   Natural Remedies
                 </h4>
-                <p>With healing agents it is more than a drink </p>
+                <p>With natural medicinal agents it is more than a meal</p>
               </div>
             </div>
           </div>
