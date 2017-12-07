@@ -24,14 +24,14 @@ class Process extends Component {
   render() {
     return (
       <div class="container">
-          <hr class="hr-lg mt-5 mb-3 w-10 mx-auto hr-primary" />
+          <hr class="hr-lg w-10 mx-auto hr-primary" />
           <h2 class="text-center text-uppercase font-weight-bold my-0">
-            Experience like never before
+      details matter
           </h2>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
           </h5>
           <hr class="mb-0 w-50 mx-auto" />
-        <div class="py-3 py-lg-6">
+        <div class="py-3 py-lg-3">
           <ul class="nav nav-steps nav-steps-circles flex-column flex-lg-row justify-content-around w-80 mx-auto">
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}>

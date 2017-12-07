@@ -21,6 +21,10 @@
   height: auto
 }
 
+.tagline{
+  line-height: 1.5em;
+}
+
 .header-brand img{
   width: 210px;
 }
