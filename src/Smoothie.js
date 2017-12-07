@@ -90,10 +90,10 @@ constructor(props){
                   </div>
                   <div class={classnames("tab-pane show", {active: this.state.activeTabIndex === 3})} id="">
                     { this.renderIngredients() }
-                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-muted text-sm" />
+                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="card-text" />
                   </div>
                   <div class={classnames("tab-pane show", {active: this.state.activeTabIndex === 2})} id="">
-                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="text-muted text-sm" />
+                    <p dangerouslySetInnerHTML={{__html: this.state.recipe.nutrition_info}} class="card-text" />
                   </div>
                 </div>
               </div>
