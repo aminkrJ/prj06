@@ -61,7 +61,7 @@ class Post extends Component {
                         <img src={this.state.post.photo.original} alt={this.state.post.title} class="img-fluid" />
                       </div>
                       <p class="lead">{this.state.post.description}</p>
-                      <p>{this.state.post.content}</p>
+                      <p dangerouslySetInnerHTML={{__html: this.state.post.content}} class="text-muted text-sm" />
                     </div>
                     
                     <div class="tag-cloud post-tag-cloud">
