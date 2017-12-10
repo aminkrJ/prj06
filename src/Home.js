@@ -54,7 +54,7 @@ class Home extends Component {
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated smoothies</h1>
+                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Homemade Smoothies</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black tagline">Healthy smoothies packed with superfoods, functional herbs, and medicinal mushrooms</h3>
                     </div>

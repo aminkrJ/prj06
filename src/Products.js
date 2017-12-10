@@ -75,51 +75,10 @@ class Products extends Component {
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
             <div class="col-md-4">
-              <div class="card bg-shadow text-center rounded">
-                <h3 class="card-title py-3 text-shadow">
-          <Link to="/students" class="">
-                  <span class="text-black text-capitalize">Students</span>
-          </Link>
-                </h3>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="card-body">
-                      <p class="text-muted">We deliver to your school with 30% discount across all orders exclusively for students</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <ul class="text-left list-unstyled list-border-dots">
-                  </ul>
-                  <Link to="/contact" class="btn btn-primary btn-block btn-rounded mt-4">Contact Us</Link>
-                </div>
-              </div>
             </div>
-
             {this.renderProducts()}
             <div class="col-md-4">
-              <div class="card bg-shadow text-center rounded">
-                <h3 class="card-title py-3 text-shadow">
-          <Link to="/contact" class="">
-                  <span class="text-black text-capitalize">Events</span>
-          </Link>
-                </h3>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="card-body">
-                      <p class="text-muted">Healthy juice and smoothies for birthdays, engagements, wedding receptions, buck’s parties and hen’s parties, corporate parties</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <ul class="text-left list-unstyled list-border-dots">
-                  </ul>
-                  <Link to="/contact" class="btn btn-primary btn-block btn-rounded mt-4">Contact Us</Link>
-                </div>
-              </div>
             </div>
-
-
           </div>
         </div>
       </div>

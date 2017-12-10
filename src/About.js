@@ -30,7 +30,7 @@ class About extends Component {
               </div>
               <div class="col-md-9">
                 <p class="lead">The happiness of your life depends on the quality of your thoughts and the quality of your thoughts depend on the food you eat every moment of your life. </p>
-                <p>Scientific studies have shown the effect of food on developing brain neurons and enhancing cognitive functions (<a href="https://www.nature.com/articles/nrn2421">1</a>). Every piece of food changes your physiology in cellular level which will effects your thoughts and consequently the actions you take in a daily basis and subsequently our realities.</p>
+                <p>Scientific studies have shown the effect of food on developing brain neurons and enhancing cognitive functions (<a href="https://www.nature.com/articles/nrn2421">1</a>). Every piece of food changes your physiology in cellular level which will effects your thoughts and consequently the actions you take in a daily basis.</p>
                 <h4>Carefully Crafted</h4>
                 <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and <a href="https://www.lifelixir.com.au/blog/the-healing-power-of-medicinal-mushrooms">medicinal mushrooms</a> to bring pioneering drinks for you. Our smoothies offer more diverse flavors using natural ingredients only, providing consumers with new and amazing experiences. LifeElixir is all about quality, care, passion, great ingredients, effectiveness and most importantly pronounced flavors.
 </p>
