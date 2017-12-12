@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
 import axios from 'axios';
 import NProgress from 'nprogress';
-import iziToast from 'izitoast';
 import _ from 'underscore';
 
 class Smoothies extends Component {
