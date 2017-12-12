@@ -32,15 +32,15 @@ class Delivery extends Component {
                 </div>
               </div>
               <div class="col-md-9">
-                <p class="lead">We utilize a premium delivery process for smoothies to be delivered cold and fresh.</p>
-                <p>We are committed to freshness. We managed to keep the price of next day delivery as low as $5 across selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney.</p>
+                <p class="lead">We are your kitchen. We utilize an innovative production process as well as a premium delivery to deliver raw and fresh smoothies <b>without</b> additives and processing to expand shelf-life.</p>
+                <p>We are committed to freshness. We managed to keep the price of the next day delivery $8 in selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney.</p>
                 <h4>Next day delivery</h4>
                 <p>Simply, <Link to="/plans">choose your bundle</Link> and your desired delivery date and you will receive your smoothies and smoothie bowls in the selected date between around 8 am to 12 pm. You can always <Link to="/contact">contact us</Link> to discuss your customised packages and delivery times.</p>
                 <h4 class="mt-4">
-      Same day delivery
+      Same day pickup
                 </h4>
                 <p>
-      Alternatively, you can use <a href="https://www.ubereats.com/sydney/">UberEats</a>, <a href="https://deliveroo.com.au/restaurants/sydney/sydney">Delivero</a> and <a href="https://www.menulog.com.au/">Menulog</a> to place your orders online in selected suburbs.
+      Alternatively, you can choose from <Link to="/find_us">selected stores in NSW</Link> to pick up your desired smoothies right away.
                 </p>
               </div>
             </div>
