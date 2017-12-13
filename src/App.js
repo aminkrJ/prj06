@@ -108,6 +108,7 @@ class App extends Component {
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path='/smoothies' component={Smoothies} />
           <Route exact path='/smoothies/:slug' component={Smoothie} />
+          <Route path='/smoothies/categories/:id' component={Smoothies} />
           <Route exact path='/products/:slug' component={Product} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/order/:slug" component={Cart} />
