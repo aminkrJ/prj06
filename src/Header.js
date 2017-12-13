@@ -56,6 +56,9 @@ class Header extends Component {
                     <NavLink href="/blog">Blog</NavLink>
                   </NavItem>
                   <NavItem>
+                    <NavLink href="/find_us">Find Us</NavLink>
+                  </NavItem>
+                  <NavItem>
                     <NavLink href="/contact">Contact Us</NavLink>
                   </NavItem>
                   <NavItem>
