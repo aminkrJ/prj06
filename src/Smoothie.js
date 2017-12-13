@@ -17,7 +17,7 @@ constructor(props){
     return (
      this.state.recipe.ingredients.map((ingredient, index) => {
        return(
-         <span class="text-muted text-sm" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</span>
+         <span class="" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</span>
        )
      })
     )
