@@ -122,7 +122,7 @@ class Checkout extends Component {
 
         <div class="col-md-8">
           <h4>
-            Delivery date
+            Delivery Date
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
         <DatePicker
@@ -136,14 +136,14 @@ class Checkout extends Component {
             <p class="text-muted mt-2"> LifeElixir only offers next day deliveries in selected suburbs in NSW.</p>
           </div>
           <h4>
-            Customer information
+            Customer Information
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
             <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
           </div>
 
           <h4>
-            Shipping Address
+            Delivery Options
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
             <ShippingAddress ref='shippingAddress' errors={this.state.errors}/>
