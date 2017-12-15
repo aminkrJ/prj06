@@ -5,6 +5,7 @@ import NProgress from 'nprogress';
 import iziToast from 'izitoast';
 import _ from 'underscore';
 import {render} from 'react-dom';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import Header from './Header';
 import Smoothies from './Smoothies';
@@ -99,6 +100,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="header-upper">
+          <div className="header-inner container">
+            <div className="header-block-flex order-1 mr-auto">
+              <nav className="nav nav-sm header-block-flex">
+              </nav>
+              <div className="dropdown dropdowns-no-carets">
+              </div>
+            </div>
+            <div className="nav nav-icons header-block order-12">
+              <a href="https://www.facebook.com/LifeElixirAU" className="nav-link"> <i className="fa fa-facebook-square icon-1x"></i> <span className="sr-only">Facebook</span> </a>
+              <a href="https://www.instagram.com/lifelixir" className="nav-link"> <i className="fa fa-instagram icon-1x"></i> <span className="sr-only">Instagram</span> </a>
+            </div>
+          </div>
+        </div>
+        <StickyContainer>
         <Header />
         <div className="">
           <Route exact path="/" component={() => <Home bundles={this.state.bundles} menu={this.state.menu} recipes={this.state.recipes}/>} />
@@ -119,6 +135,7 @@ class App extends Component {
           <Route exact path="/plans" component={() => <Plans products={this.state.bundles}/>} />
         </div>
         <Footer products={this.state.menu} recipes={this.state.recipes}/>
+        </StickyContainer>
       </div>
     );
   }

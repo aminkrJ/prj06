@@ -29,6 +29,11 @@
   width: 210px;
 }
 
+.header{
+ z-index: 99999;
+ padding: 1px
+}
+
 .header .nav-item{
   padding: 18px 14px;
   margin: 0;
