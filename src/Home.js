@@ -54,11 +54,11 @@ class Home extends Component {
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Smoothies</h1>
+                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Smoothie bowls</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black tagline">Healthy homemade smoothies packed with superfoods, functional herbs, probiotics, and medicinal mushrooms.</h3>
+                      <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black tagline">Healthy homemade smoothie bowls packed with superfoods, functional herbs, probiotics, and medicinal mushrooms.</h3>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/plans">Order Now</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/bundles">Order Now</Link>
                     <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Learn More</Link>
                   </div>
                   <div class="col-md-6 padding-bottom-1x mb-3"><img class="cups d-block mx-auto" /></div>
@@ -73,8 +73,8 @@ class Home extends Component {
           <h2 className="text-center text-uppercase font-weight-bold my-0">
             Our Menu
           </h2>
-          <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-      Same day delivery
+          <h5 className="text-center font-weight-light mt-2 mb-0">
+      Our menu items can be picked up at <Link to="find_us">selected local stores</Link> now.
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">

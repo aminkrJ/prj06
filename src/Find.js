@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import iziToast from 'izitoast';
 import NProgress from 'nprogress';
@@ -91,7 +92,7 @@ class Find extends Component {
                   <input type="button" value="Search" class="btn btn-inverse btn-rounded btn-lg px-5 py-lg-3 px-lg-5 d-lg-block" onClick={this.handleSearch.bind(this)}></input> 
                 </div>
                 <h5 class="text-sm my-2 mx-3 font-weight-normal">
-                  We only deliver to selected suburbs in NSW.
+                  <Link to="delivery">You can buy our smoothies from selected stores in NSW. </Link>
                 </h5>
                 </form>
               </div>

@@ -17,7 +17,7 @@ import Footer from './Footer';
 import Smoothie from './Smoothie';
 import Thanks from './Thanks';
 import Cart from './Cart';
-import Plans from './Plans';
+import Bundle from './Bundle';
 import Product from './Product';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
@@ -133,7 +133,7 @@ class App extends Component {
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
-          <Route exact path="/plans" component={() => <Plans products={this.state.bundles}/>} />
+          <Route exact path="/bundles" component={() => <Bundle products={this.state.bundles}/>} />
         </div>
         <Footer products={this.state.menu} recipes={this.state.recipes}/>
         </StickyContainer>

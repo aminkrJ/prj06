@@ -61,6 +61,9 @@ constructor(props){
             <div class="col-lg-7">
               <div class="card product-card mb-4">
                 <div class="card-body p-4 pos-relative">
+                <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
+<Link to="/bundles" class="btn btn-light"><i class="fa fa-cart-plus mr-2"></i> Order Bundles</Link>
+                </div>
                   <p class="text-muted text-uppercase text-xs mb-0"><Link to={"/smoothies/categories/" + this.state.recipe.recipe_category.id} class="text-primary">{this.state.recipe.recipe_category.name}</Link></p>
                   <h2 class="card-title mb-2">
                     {this.state.recipe.title}
@@ -69,7 +72,7 @@ constructor(props){
                   <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-muted" />
                   <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted" />
                   <hr class="my-3" />
-                  <Link to="/plans" class="btn btn-primary"><i class="fa fa-cart-plus mr-2"></i> Order Now</Link>
+                   <Link to="/find_us" class="btn btn-primary">Find your local stokiest</Link>
                 </div>
               </div>
             </div>

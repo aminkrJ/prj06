@@ -69,8 +69,8 @@ class Products extends Component {
           <h2 class="text-center text-uppercase font-weight-bold my-0">
       Our Bundles
           </h2>
-          <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
-      Next day delivery
+          <h5 class="text-center font-weight-light mt-2 mb-0">
+            Next day delivery. Premium refrigerated delivery fee applies.
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">

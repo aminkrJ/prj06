@@ -5,7 +5,7 @@ import NProgress from 'nprogress';
 
 import Products from './Products';
 
-class Plans extends Component {
+class Bundle extends Component {
 
   constructor(props) {
     super(props)
@@ -29,8 +29,8 @@ class Plans extends Component {
   }
 }
 
-Plans.defaultProps = {
+Bundle.defaultProps = {
   products: [],
 }
 
-export default Plans
+export default Bundle
