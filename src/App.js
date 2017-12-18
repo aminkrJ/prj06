@@ -111,6 +111,7 @@ class App extends Component {
             <div className="nav nav-icons header-block order-12">
               <a href="https://www.facebook.com/LifeElixirAU" className="nav-link"> <i className="fa fa-facebook-square icon-1x"></i> <span className="sr-only">Facebook</span> </a>
               <a href="https://www.instagram.com/lifelixir" className="nav-link"> <i className="fa fa-instagram icon-1x"></i> <span className="sr-only">Instagram</span> </a>
+              <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" className="nav-link"> <i className="fa fa-youtube-play icon-1x"></i> <span className="sr-only">Instagram</span> </a>
             </div>
           </div>
         </div>

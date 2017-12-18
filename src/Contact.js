@@ -42,6 +42,33 @@ class Contact extends Component {
                     </form>
                   </div>
                   <div class="col-md-6">
+                <p>
+                  <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
+                  (02) 8005 7976
+                </p>
+                <p>
+                  <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
+                  support@lifelixir.com.au
+                </p>
+                <p>
+                  <abbr title="Address"><i class="fa fa-home"></i></abbr>
+                  15/12 Cecil St., Gordon, NSW, 2072
+                </p>
+
+              <h4 class="title-divider py-3">
+                <span>Social media</span>
+              </h4>
+              <ul class="list-unstyled social-media-branding">
+                <li>
+                  <a href="https://www.instagram.com/lifelixir/" class="social-link branding-instagram"><i class="fa fa-instagram fa-fw"></i> Instagram</a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/LifeElixirAU/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube-play fa-fw"></i> YouTube</a>
+                </li>
+              </ul>
                   </div>
                 </div>
               </div>

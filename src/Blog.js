@@ -89,7 +89,7 @@ class Blog extends Component {
                   <a href="https://www.facebook.com/LifeElixirAU/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
                 </li>
                 <li>
-                  <a href="#" class="social-link branding-youtube"><i class="fa fa-youtube-play fa-fw"></i> YouTube</a>
+                  <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube-play fa-fw"></i> YouTube</a>
                 </li>
               </ul>
             </div>

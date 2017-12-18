@@ -100,6 +100,14 @@ class Footer extends Component {
         <ul class="list-unstyled text-sm"> 
           <li> </li>
                 <li>
+                  <abbr title="Address"><i class="fa fa-home fa-fw text-white"></i></abbr>
+                  15/12 Cecil St., Gordon, NSW, 2072
+                </li>
+                <li>
+                  <abbr title="Phone"><i class="fa fa-phone fa-fw text-white"></i></abbr>
+                  (02) 8005 7976
+                </li>
+                <li>
                   <abbr title="Email"><i class="fa fa-envelope fa-fw text-white"></i></abbr>
                   support@lifelixir.com.au
                 </li>
@@ -134,7 +142,6 @@ class Footer extends Component {
                   <li><Link to="/about">About us</Link></li>
                   <li><Link to="/delivery">Delivery Info</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
-                  <li><Link to="/join">Join us</Link></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">
