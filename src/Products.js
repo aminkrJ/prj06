@@ -26,8 +26,7 @@ class Products extends Component {
     return (
       this.props.products.map((product, index) => {
         return (
-            <div class="col-md-4">
-              <div class="card bg-shadow text-center rounded">
+              <div class="card text-center mb-5">
                 <h3 class="card-title py-3 text-shadow">
           <Link to={"/products/" + product.slug} class="">
                   <span class="text-black text-capitalize">{product.name}</span>
@@ -35,19 +34,17 @@ class Products extends Component {
                 </h3>
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="card-body">
-                      <p class="text-muted">{product.short_description}</p>
-                    </div>
+          <img src={product.photo.original}></img>
                   </div>
                 </div>
                 <p class="price-banner bg-primary text-white border-primary card-body-overlap">
-                  <span class="price-currency">$</span>
+                  <span class="price-currency">from $</span>
                   <span class="price-digits">{product.price}<span></span></span>
                   <span class="price-extra"></span>
 
                 </p>
                 <div class="card-body">
-                  <p class="text-muted"></p>
+                  <p class="text-muted">{product.short_description}</p>
                   <ul class="text-left list-unstyled list-border-dots">
                     {this.renderRecipes(product)}
                   </ul>
@@ -55,7 +52,6 @@ class Products extends Component {
                   <Link to={"/products/" + product.slug} class="btn btn-link">Learn more</Link>
                 </div>
               </div>
-            </div>
         )
       })
     )
@@ -74,8 +70,8 @@ class Products extends Component {
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
-            {this.renderProducts()}
-            <div class="col-md-4">
+            <div class="card-group">
+              {this.renderProducts()}
             </div>
           </div>
         </div>
