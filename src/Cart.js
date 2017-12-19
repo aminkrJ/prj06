@@ -135,6 +135,7 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
+      <h6>Next day delivery only in selected suburbs in NSW.</h6>
                 </div>
                 <div class="col-md-8 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
