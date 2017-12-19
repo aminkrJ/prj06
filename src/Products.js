@@ -34,7 +34,7 @@ class Products extends Component {
                 </h3>
                 <div class="row">
                   <div class="col-md-12">
-          <img src={product.photo.original}></img>
+          <img src={product.photo.original} class="card-img img-fluid"></img>
                   </div>
                 </div>
                 <p class="price-banner bg-primary text-white border-primary card-body-overlap">
