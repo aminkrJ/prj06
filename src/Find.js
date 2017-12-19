@@ -82,6 +82,7 @@ class Find extends Component {
                 <h2 class="display-4 mb-3">
                   Find your <span class="font-weight-bold">Local stockist</span>
                 </h2>
+      <p>You can pick up your smoothies from selected venues in Sydney.</p>
                 <form class="row mb-2 w-auto w-lg-80 pos-relative align-items-center">
                   <div class="col-lg-9 mb-3">
                     <i class="fa fa-search icon-2x pos-absolute pos-l mt-2 ml-3 d-none d-lg-block"></i>

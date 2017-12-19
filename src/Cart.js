@@ -135,8 +135,6 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
-      <h5 class="mb-3">Find your local stockist</h5>
-      <p>You can pick up your smoothies from selected venues in Sydney. Simply, search for local stores in your vicinity <Link to="/find_us">here</Link>.</p>
                 </div>
                 <div class="col-md-8 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
