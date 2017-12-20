@@ -8,6 +8,7 @@ import _ from 'underscore';
 import Carousel from './Carousel';
 import Process from './Process';
 import Products from './Products';
+import sunshineBowl from './img/sunshine-smoothie-bowl.png';
 
 class Home extends Component {
 
@@ -61,7 +62,7 @@ class Home extends Component {
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/bundles">Order Now</Link>
                     <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Learn More</Link>
                   </div>
-                  <div class="col-md-6 padding-bottom-1x mb-3"><img class="cups d-block mx-auto" /></div>
+                  <div class="col-md-6 padding-bottom-1x mb-3"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
                 </div>
               </div>
             </div>
