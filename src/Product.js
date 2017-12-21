@@ -62,7 +62,7 @@ class Product extends Component {
                     {this.state.product.name}
                   </h2>
                   <h4 class="font-weight-bold text-primary">
-      ${this.state.product.price}
+      <span class="h6 price-currency">From $</span>{this.state.product.price}
                   </h4>
                   <hr class="my-3" />
                     <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />

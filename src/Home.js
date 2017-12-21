@@ -75,7 +75,7 @@ class Home extends Component {
             Our Menu
           </h2>
           <h5 className="text-center font-weight-light mt-2 mb-0">
-      Raw, probiotic, certified organic superfoods, nutritious and delicious
+      Raw, probiotics, certified organic superfoods, nutritious and delicious
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">
