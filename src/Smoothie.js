@@ -68,7 +68,7 @@ constructor(props){
                     {this.state.recipe.title}
                   </h2>
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-muted" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-muted text-lead" />
                   <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="text-muted" />
                   <hr class="my-3" />
                    <Link to="/bundles" class="btn btn-link"><i class="fa fa-cart-plus mr-2"></i> Order this smoothie in our bundles</Link>

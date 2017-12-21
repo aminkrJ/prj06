@@ -57,7 +57,7 @@ class Product extends Component {
             <div class="col-lg-7">
               <div class="card product-card mb-4">
                 <div class="card-body p-4 pos-relative">
-                  <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.tag}</span></p>
+                  <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary"></span></p>
                   <h2 class="card-title mb-2">
                     {this.state.product.name}
                   </h2>
@@ -65,6 +65,7 @@ class Product extends Component {
       <span class="h6 price-currency">From $</span>{this.state.product.price}
                   </h4>
                   <hr class="my-3" />
+                    <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-lead" />
                     <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="text-muted text-sm" />
                   <hr class="my-3" />
                   <dl class="">

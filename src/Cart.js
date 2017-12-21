@@ -3,6 +3,8 @@ import { Redirect, Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import NProgress from 'nprogress';
 
+import CustomButtonGroup from './CustomButtonGroup'
+
 class Cart extends Component {
   constructor(props) {
     super(props)
@@ -33,6 +35,13 @@ class Cart extends Component {
     })
     .catch((error) => {
       NProgress.done()
+    })
+  }
+
+  handleUnitPriceChange(percentage) {
+    var add = this.state.product.price * (percentage/100)
+    this.setState({
+      unitPrice: this.state.product.price * 1 + add
     })
   }
 
@@ -93,8 +102,11 @@ class Cart extends Component {
             <img class="cart-img img-fluid" src={this.state.product.photo.thumb} alt={this.state.product.name} />
           </a>
         </td>
-        <td> <span class="font-weight-bold">{this.state.product.name}</span> </td>
-        <td>${this.state.product.price}</td>
+        <td>
+          <span class="font-weight-bold">{this.state.product.name}</span>
+          <p dangerouslySetInnerHTML={{__html: this.state.product.nutrition_fact}} class="text-muted text-sm" />
+        </td>
+        <td>${this.state.unitPrice}</td>
         <td>
           <div class="input-group input-group-quantity" data-toggle="quantity">
             <span class="input-group-btn">
@@ -106,7 +118,7 @@ class Cart extends Component {
             </span>
           </div>
         </td>
-        <td class="text-md-right"><span class="font-weight-bold">${(this.state.product.price * this.state.quantity).toFixed(2)}</span></td>
+        <td class="text-md-right"><span class="font-weight-bold">${(this.state.unitPrice * this.state.quantity).toFixed(2)}</span></td>
       </tr>
     )
   }
@@ -135,7 +147,8 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
-      <h6>Next day delivery only in selected suburbs in NSW.</h6>
+          <h5 class="my-3">Customise your order</h5>
+          <CustomButtonGroup onUnitPriceChange={this.handleUnitPriceChange.bind(this)} />
                 </div>
                 <div class="col-md-8 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
