@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import NProgress from 'nprogress';
+import _ from 'underscore';
 
 import CustomButtonGroup from './CustomButtonGroup'
 
@@ -15,6 +16,9 @@ class Cart extends Component {
       shippingFee: 5,
       total: 0,
       isSending: false,
+      isVegan: false,
+      isActivated: false,
+      isOrganic: false,
       errors: {}
     }
   }
@@ -38,10 +42,23 @@ class Cart extends Component {
     })
   }
 
-  handleUnitPriceChange(percentage) {
+  handleUnitPriceChange(percentages) {
+    if(_.contains(percentages, 20)){
+      this.setState({isOrganic: true})
+    }
+    if(_.contains(percentages, 5)){
+      this.setState({isVegan: true})
+    }
+    if(_.contains(percentages, 10)){
+      this.setState({isActivated: true})
+    }
+
+    var percentage = _.reduce(percentages, function(memo, num){ return memo + num; }, 0)
     var add = this.state.product.price * (percentage/100)
+    var unitPrice = this.state.product.price * 1 + add
     this.setState({
-      unitPrice: this.state.product.price * 1 + add
+      unitPrice: unitPrice,
+      total: this.state.shippingFee + unitPrice * this.state.quantity
     })
   }
 
@@ -62,7 +79,10 @@ class Cart extends Component {
         ],
         total: this.state.total,
         shipping_fee: this.state.shippingFee,
-        subtotal: (this.state.quantity * this.state.unitPrice).toFixed(2)
+        subtotal: (this.state.quantity * this.state.unitPrice).toFixed(2),
+        vegan: this.state.isVegan,
+        activated_nuts: this.state.isActivated,
+        organic: this.state.isOrganic
       }
     })
     .then(function (response) {
@@ -160,7 +180,7 @@ class Cart extends Component {
                     </h4>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                     <h3>
-                      Total: <span class="text-primary">${(this.state.shippingFee + this.state.unitPrice * this.state.quantity)}</span>
+                      Total: <span class="text-primary">${this.state.total}</span>
                     </h3>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                   </div>

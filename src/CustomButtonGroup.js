@@ -8,40 +8,40 @@ class CustomButtonGroup extends Component {
   constructor(props){
     super(props)
     this.state = {
-      options: []
+      percentages: []
     }
   }
 
   handleClick(index, e){
     e.preventDefault()
 
-    if(_.contains(this.state.options, index)){
-        var newOptions = _.difference(this.state.options, [index])
+    if(_.contains(this.state.percentages, index)){
+        var newPercentages = _.difference(this.state.percentages, [index])
     }else{
-        var newOptions = _.union(this.state.options, [index])
+        var newPercentages = _.union(this.state.percentages, [index])
     }
 
-    this.setState({options: newOptions})
+    this.setState({percentages: newPercentages})
 
-    this.props.onUnitPriceChange(_.reduce(newOptions, function(memo, num){ return memo + num; }, 0))
+    this.props.onUnitPriceChange(newPercentages)
   }
 
   render() {
     return (
       <div class="list-group">
-          <a href="#" onClick={this.handleClick.bind(this, 20)} class={classnames("list-group-item", {active: _.contains(this.state.options, 20)})}>
+          <a href="#" onClick={this.handleClick.bind(this, 20)} class={classnames("list-group-item", {active: _.contains(this.state.percentages, 20)})}>
             <h6>Certified organic</h6>
             <p class="text-sm text-black">
             By choosing this option we use certified organic/pesticide free fruits and nuts in your smoothies.
             </p>
           </a>
-          <a href="#" onClick={this.handleClick.bind(this, 5)} class={classnames("list-group-item", {active: _.contains(this.state.options, 5)})}>
+          <a href="#" onClick={this.handleClick.bind(this, 5)} class={classnames("list-group-item", {active: _.contains(this.state.percentages, 5)})}>
             <h6>Vegan friendly</h6>
             <p class="text-sm text-black">
-      By choosing this option we use coconut yogurt with live culture in your smoothies.
+      By choosing this option we use plant-based yogurt with live culture in your smoothies.
             </p>
           </a>
-          <a href="#" onClick={this.handleClick.bind(this, 10)} class={classnames("list-group-item", {active: _.contains(this.state.options, 10)})}>
+          <a href="#" onClick={this.handleClick.bind(this, 10)} class={classnames("list-group-item", {active: _.contains(this.state.percentages, 10)})}>
             <h6>Activated nuts</h6>
             <p class="text-sm text-black">
       By choosing this options all the seeds and nuts in your smoothies are activated and easy to digest.
