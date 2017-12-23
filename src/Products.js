@@ -66,7 +66,7 @@ class Products extends Component {
       Our Bundles
           </h2>
           <h5 class="text-center font-weight-light mt-2 mb-0">
-            Next day delivery. Premium refrigerated delivery fee applies.
+            Next day delivery. Delivery fee applies.
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">

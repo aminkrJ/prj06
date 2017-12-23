@@ -1,37 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
+import AboutSideMenu from './AboutSideMenu'
 
-class About extends Component {
+class OurSmoothies extends Component {
 
   render() {
     return (
       <div className="">
-        <PageTitle title="About Us" location={ {title: "About Us", path:"/about"} } />
+        <PageTitle title="Our smoothies" location={ {title: "Our smoothies", path:"/our_smoothies"} } />
         <div id="content">
           <div class="container">
             <div class="row">
               <div class="col-md-3">
-                <div class="nav-section-menu">
-                  <div class="nav nav-list">
-                    <span class="nav-header">In This Section</span> 
-                    <Link to="/about" class="nav-link first active">
-                      Our smoothies
-                      <small>Carefully crafted</small>
-                      <i class="fa fa-angle-right"></i>
-                    </Link>
-                    <Link to="/delivery" class="nav-link">
-                      Delivery info
-                      <small>Menu or bundles</small>
-                      <i class="fa fa-angle-right"></i>
-                    </Link>
-                  </div>
-                </div>
+                <AboutSideMenu active={1} />
               </div>
               <div class="col-md-9">
-                <p class="lead">Food for high performers.</p>
-                <p>Food changes your physiology in cellular level which will effects your thoughts and consequently the actions you take in a daily basis.</p>
-                <h4>What you get?</h4>
                 <p>We have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and medicinal mushrooms to bring pioneering smoothies for you. Our smoothies offer more diverse flavors using natural ingredients only, providing consumers with new and amazing experiences. LifeElixir is all about quality, care, passion, great ingredients, effectiveness and most importantly pronounced flavors.
 </p>
   <p><b>Fruits.</b> Each smoothie comes with a main flavor. You can choose if you rather organic fruits or non oragnic ones.</p>
@@ -57,4 +41,4 @@ class About extends Component {
   }
 }
 
-export default About
+export default OurSmoothies

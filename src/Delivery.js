@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
+import AboutSideMenu from './AboutSideMenu'
 
 class Delivery extends Component {
   componentDidMount() {
@@ -15,27 +16,14 @@ class Delivery extends Component {
           <div class="container">
             <div class="row">
               <div class="col-md-3">
-                <div class="nav-section-menu">
-                  <div class="nav nav-list">
-                    <span class="nav-header">In This Section</span> 
-                    <Link to="/about" class="nav-link first">
-                      Our smoothies
-                      <small>Carefully crafted</small>
-                      <i class="fa fa-angle-right"></i>
-                    </Link>
-                    <Link to="/delivery" class="nav-link active">
-                      Delivery info
-                      <small>Menu or bundles</small>
-                      <i class="fa fa-angle-right"></i>
-                    </Link>
-                  </div>
-                </div>
+                <AboutSideMenu active={2} />
               </div>
               <div class="col-md-9">
-                <p class="lead">We utilize an innovative production and premium delivery solutions to deliver raw and fresh smoothies to your doorstep.</p>
+                <p class="lead">We utilize an innovative production and premium delivery solutions to deliver raw and fresh smoothies to your doorstep made at the same day.</p>
                 <p>We are committed to freshness. We managed to keep the price of the next day delivery $5 in selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney. Sign up to our newsletter to get the latest news about our mobile places and delivery suburbs in your inbox.</p>
                 <h4>Next day delivery</h4>
-                <p>Simply, <Link to="/bundles">choose your bundle</Link> and your desired delivery date and you will receive your smoothies and smoothie bowls in the selected date. You can always <Link to="/contact">contact us</Link> to discuss your customised packages and delivery times.</p>
+                <p>Simply, <Link to="/bundles">pick your bundle</Link>. Customise it and choose your delivery date and you will receive your smoothie bowls in the selected date.</p>
+                <p>Since our smoothies are homemade and customers can customise them we do not offer same day delivery at the moment.</p>
               </div>
             </div>
           </div>

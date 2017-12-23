@@ -9,7 +9,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 
 import Header from './Header';
 import Smoothies from './Smoothies';
-import About from './About';
+import OurSmoothies from './OurSmoothies';
 import Contact from './Contact';
 import Find from './Find';
 import Home from './Home';
@@ -24,6 +24,7 @@ import Confirmation from './Confirmation';
 import Blog from './Blog'
 import Post from './Post'
 import Delivery from './Delivery'
+import Company from './Company'
 import CustomModal from './Modal';
 
 import './App.css';
@@ -119,7 +120,7 @@ class App extends Component {
         <Header />
         <div className="">
           <Route exact path="/" component={() => <Home bundles={this.state.bundles} menu={this.state.menu} recipes={this.state.recipes}/>} />
-          <Route exact path="/about" component={About} />
+          <Route exact path="/about_us" component={Company} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
@@ -133,6 +134,7 @@ class App extends Component {
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
+          <Route exact path="/our_smoothies" component={OurSmoothies} />
           <Route exact path="/bundles" component={() => <Bundle products={this.state.bundles}/>} />
         </div>
         <Footer products={this.state.menu} recipes={this.state.recipes}/>
