@@ -5,6 +5,7 @@ import NProgress from 'nprogress';
 import _ from 'underscore';
 
 import CustomButtonGroup from './CustomButtonGroup'
+import CustomInput from './CustomInput';
 
 class Cart extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Cart extends Component {
       isVegan: false,
       isActivated: false,
       isOrganic: false,
-      errors: {}
+      errors: []
     }
   }
 
@@ -75,8 +76,11 @@ class Cart extends Component {
           {
             product_id: this.state.product.id,
             quantity: this.state.quantity
-          }
+          },
         ],
+          customer_attributes: {
+            email: $this.refs.email.state.value
+          },
         total: this.state.total,
         shipping_fee: this.state.shippingFee,
         subtotal: (this.state.quantity * this.state.unitPrice).toFixed(2),
@@ -170,7 +174,11 @@ class Cart extends Component {
           <h5 class="my-3">Customise your order</h5>
           <CustomButtonGroup onUnitPriceChange={this.handleUnitPriceChange.bind(this)} />
                 </div>
-                <div class="col-md-8 text-md-right mt-3 mt-md-0">
+                <div class="col-md-4">
+          <h5 class="my-3">Your email address</h5>
+                  <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
+                </div>
+                <div class="col-md-4 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
                     <h4 class="font-weight-light">
                       Subtotal: ${this.state.unitPrice * this.state.quantity}

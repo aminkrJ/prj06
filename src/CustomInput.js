@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MaskedInput from 'react-maskedinput';
 import classNames from 'classnames';
 import validate from 'validate.js';
+import _ from 'underscore'
 import PropTypes from 'prop-types';
 
 import './CustomInput.css';
@@ -38,7 +39,7 @@ class CustomInput extends Component {
         {this.props.label === undefined ? "" : label}
         { this.props.mask ?
         <MaskedInput { ...this.props } className='form-control' value={ this.state.value } onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } /> :
-        <input value={ this.state.value } { ...this.props } className='form-control' onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } />
+        <input value={ this.state.value } { ..._.omit(this.props, "required") } className='form-control' onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } />
         }
         <span class="text-danger"><small>{ messages }</small></span>
       </div>

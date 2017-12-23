@@ -16,7 +16,7 @@ class Checkout extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cart: {},
+      cart: {customer: {}},
       deliveryAt: moment().add(1, 'day'),
       errors: [],
       paymentError: '',
@@ -75,7 +75,6 @@ class Checkout extends Component {
                   suite_apt: address.suite_apt.state.value
                 }
               ],
-              email: self.refs.email.state.value,
               firstname: address.firstname.state.value,
               lastname: address.lastname.state.value,
             }
@@ -139,7 +138,7 @@ class Checkout extends Component {
             Customer Information
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
-            <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
+            <CustomInput ref='email' type='email' placeholder='Email' name='email' value={this.state.cart.customer.email} disabled/>
           </div>
 
           <h4>
