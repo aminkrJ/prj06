@@ -16,10 +16,14 @@ class Checkout extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cart: {customer: {}},
+      cart: {customer: {}, coupon: {}},
       deliveryAt: moment().add(1, 'day'),
       errors: [],
       paymentError: '',
+      coupon: {},
+      couponCode: "",
+      hasCoupon: false,
+      couponError: "",
       isSending: false
     }
   }
@@ -30,6 +34,78 @@ class Checkout extends Component {
 
   handleDeliveryDateChange(date) {
     this.setState({deliveryAt: date})
+  }
+
+  renderDiscount() {
+    if(this.state.hasCoupon) {
+      return (
+        <div class="row">
+        <div class="col-md-6">
+          <h4 class="font-weight-light text-danger">Discount</h4>
+        </div>
+        <div class="col-md-6 text-right">
+          <h4 class="font-weight-light text-danger">-${this.state.coupon.discount}</h4>
+        </div>
+        </div>
+      )
+    }
+  }
+
+  handleCouponChange(e) {
+    this.setState({couponCode: e.target.value})
+  }
+
+  handleRemoveCoupon(e){
+    this.setState({hasCoupon: false})
+  }
+
+  renderCoupon() {
+    if(this.state.hasCoupon){
+      return (
+          <div class="text-sm alert alert-info">
+          <button class="close text-danger" aria-label="Close" onClick={this.handleRemoveCoupon.bind(this)}>
+              <span aria-hidden="true">&times;</span>
+          </button>
+            <b>{this.state.coupon.code}</b> has been applied. <br/> {this.state.coupon.description}.
+          </div>
+      )
+    } else {
+      return (
+      <form>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Coupon code" onChange={this.handleCouponChange.bind(this)}/>
+          <span class="input-group-btn">
+            <button class="btn btn-primary" onClick={this.handleCouponApply.bind(this)} type="button">Apply</button>
+          </span>
+        </div>
+        <p class="text-sm text-danger">{this.state.couponError}</p>
+      </form>
+      )
+    }
+  }
+
+  handleCouponApply(e) {
+    e.preventDefault()
+    var self = this
+
+    NProgress.start()
+    axios.post(`/carts/${self.props.match.params.reference_number}/coupon`, {
+     cart: {coupon_attributes: {
+       code: this.state.couponCode
+     }}
+    }).then(function(response){
+      NProgress.done()
+      self.setState({
+        coupon: response.data.coupon,
+        hasCoupon: true,
+        couponError: ""
+      })
+    }).catch(function(error){
+      NProgress.done()
+      self.setState({
+        couponError: error.response.data.errors
+      })
+    })
   }
 
   handleSubmit(e){
@@ -43,7 +119,6 @@ class Checkout extends Component {
     var stripe = self.refs.Stripe.state
 
     this.setState({paymentError: ''})
-
 
     stripe.engine.createToken(stripe.card, {
     }).then(function(result) {
@@ -61,7 +136,9 @@ class Checkout extends Component {
           {
             cart: Object.assign({}, {
             stripe_token: self.state.stripeToken,
-              delivery_at: self.state.deliveryAt
+              delivery_at: self.state.deliveryAt,
+              discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
+              coupon_id: self.state.hasCoupon ? self.state.coupon.id : null,
           }, {
             customer_attributes: {
               addresses_attributes: [
@@ -75,6 +152,7 @@ class Checkout extends Component {
                   suite_apt: address.suite_apt.state.value
                 }
               ],
+              id: self.state.cart.customer.id,
               firstname: address.firstname.state.value,
               lastname: address.lastname.state.value,
             }
@@ -105,7 +183,8 @@ class Checkout extends Component {
       NProgress.done()
 
       this.setState({
-        cart: response.data
+        cart: response.data,
+        coupon: response.data.coupon
       })
 
     })
@@ -132,7 +211,7 @@ class Checkout extends Component {
                 minDate={moment().add(1, 'day')}
                 filterDate={this.isWeekday}
             />
-            <p class="text-muted mt-2"> LifeElixir only offers next day deliveries in selected suburbs in NSW.</p>
+            <p class="text-muted mt-2"> We only deliver to selected suburbs in NSW.</p>
           </div>
           <h4>
             Customer Information
@@ -182,13 +261,19 @@ class Checkout extends Component {
                 <h4 class="font-weight-light">${this.state.cart.shipping_fee}</h4>
               </div>
             </div>
+            {this.renderDiscount()}
+            <div class="row">
+              <div class="col-12 mt-3">
+                {this.renderCoupon()}
+              </div>
+            </div>
             <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />
             <div class="row">
               <div class="col-md-6">
                 <h3 class="">Total</h3>
               </div>
               <div class="col-md-6 text-right">
-                <h3 class="text-primary">${this.state.cart.total}</h3>
+                <h3 class="text-primary">${this.state.hasCoupon ? this.state.coupon.total : this.state.cart.total}</h3>
               </div>
             </div>
             <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />

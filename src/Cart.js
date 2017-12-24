@@ -175,7 +175,7 @@ class Cart extends Component {
           <CustomButtonGroup onUnitPriceChange={this.handleUnitPriceChange.bind(this)} />
                 </div>
                 <div class="col-md-4">
-          <h5 class="my-3">Your email address</h5>
+          <h5 class="my-3">Enter your email address</h5>
                   <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
                 </div>
                 <div class="col-md-4 text-md-right mt-3 mt-md-0">
