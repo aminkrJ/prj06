@@ -75,7 +75,9 @@ class Cart extends Component {
         cart_products_attributes: [
           {
             product_id: this.state.product.id,
-            quantity: this.state.quantity
+            quantity: this.state.quantity,
+            unit_price: this.state.unitPrice,
+            total_price: (this.state.quantity * this.state.unitPrice).toFixed(2)
           },
         ],
           customer_attributes: {
