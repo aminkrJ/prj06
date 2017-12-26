@@ -10,7 +10,10 @@
 .social-media-branding a{
   color: #464646
 }
-
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list{padding: 0}
+.react-datepicker__input-container, .react-datepicker-wrapper{
+  display: block
+}
 .nav-link img{
   max-width: 100%;
   max-height: 100%

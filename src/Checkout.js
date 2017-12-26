@@ -17,7 +17,7 @@ class Checkout extends Component {
     super(props)
     this.state = {
       cart: {customer: {}, coupon: {}},
-      deliveryAt: moment().add(1, 'day'),
+      deliveryAt: moment(),
       errors: [],
       paymentError: '',
       coupon: {},
@@ -210,13 +210,13 @@ class Checkout extends Component {
                 onChange={this.handleDeliveryDateChange.bind(this)}
                 locale="en-au"
       class="form-control"
-  //minTime={moment().hours(9).minutes(0)}
-  //maxTime={moment().hours(17).minutes(0)}
-                //showTimeSelect
-                //timeIntervals={60}
+  minTime={moment().hours(9).minutes(0)}
+  maxTime={moment().hours(17).minutes(0)}
+                showTimeSelect
+                timeIntervals={60}
                 className="form-control"
-                //dateFormat="LLL"
-                minDate={moment().add(1, 'day')}
+                dateFormat="LLL"
+                minDate={moment()}
                 filterDate={this.isWeekday}
             />
             <p class="text-muted mt-2"> We only deliver to selected suburbs in NSW.</p>
