@@ -138,8 +138,11 @@ class Checkout extends Component {
             stripe_token: self.state.stripeToken,
               delivery_at: self.state.deliveryAt,
               discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
-              coupon_id: self.state.hasCoupon ? self.state.coupon.id : null,
+              total: self.state.hasCoupon ? self.state.coupon.total : this.state.cart.total
           }, {
+            coupon_attributes: {
+              coupon_id: self.state.hasCoupon ? self.state.coupon.id : null,
+            },
             customer_attributes: {
               addresses_attributes: [
                 {
