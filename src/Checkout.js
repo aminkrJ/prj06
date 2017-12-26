@@ -138,7 +138,7 @@ class Checkout extends Component {
             stripe_token: self.state.stripeToken,
               delivery_at: self.state.deliveryAt,
               discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
-              total: self.state.hasCoupon ? self.state.coupon.total : this.state.cart.total,
+              total: self.state.hasCoupon ? self.state.coupon.total : self.state.cart.total,
               coupon_id: self.state.hasCoupon ? self.state.coupon.id : null
 
           }, {
@@ -210,6 +210,12 @@ class Checkout extends Component {
                 onChange={this.handleDeliveryDateChange.bind(this)}
                 locale="en-au"
       class="form-control"
+  //minTime={moment().hours(9).minutes(0)}
+  //maxTime={moment().hours(17).minutes(0)}
+                //showTimeSelect
+                //timeIntervals={60}
+                className="form-control"
+                //dateFormat="LLL"
                 minDate={moment().add(1, 'day')}
                 filterDate={this.isWeekday}
             />
