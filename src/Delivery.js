@@ -19,11 +19,11 @@ class Delivery extends Component {
                 <AboutSideMenu active={2} />
               </div>
               <div class="col-md-9">
-                <p class="lead">We utilize an innovative production and premium delivery solutions to deliver raw and fresh smoothies to your doorstep made at the same day.</p>
-                <p>We are committed to freshness. We managed to keep the price of the next day delivery $5 in selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney. Sign up to our newsletter to get the latest news about our mobile places and delivery suburbs in your inbox.</p>
-                <h4>Next day delivery</h4>
-                <p>Simply, <Link to="/bundles">pick your bundle</Link>. Customise it and choose your delivery date and you will receive your smoothie bowls in the selected date.</p>
-                <p>Since our smoothies are homemade and customers can customise them we do not offer same day delivery at the moment.</p>
+                <p class="lead">We deliver raw and fresh smoothies to your doorstep.</p>
+                <p>We are committed to freshness. We managed to keep the price of our delivery $8 in selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney. Sign up to our newsletter to get the latest news about our mobile places and delivery suburbs in your inbox.</p>
+                <h4>Customised delivery date and time</h4>
+                <p>Simply, <Link to="/bundles">pick your bundle</Link> and check for availability of your delivery time.</p>
+                <p>If you do not open the door or respond to telephonic correspondence within 10 minutes of our delivery drivers physically reaching your address, we reserve the right to leave the premises, and you will be charged for the smoothies.</p>
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ class Cart extends Component {
       product: {photo: {}},
       unitPrice: 0,
       quantity: 1,
-      shippingFee: 5,
+      shippingFee: 8,
       total: 0,
       isSending: false,
       isVegan: false,
