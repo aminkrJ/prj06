@@ -12,7 +12,7 @@ class Stripe extends Component {
   }
 
   initStripe() {
-    stripe = window.Stripe('pk_test_3xBMvv94iePdC12w62hXQ6sM')
+    stripe = window.Stripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY)
     elements = stripe.elements({
       fonts: [
         {
