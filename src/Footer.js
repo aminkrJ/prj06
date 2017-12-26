@@ -94,10 +94,10 @@ class Footer extends Component {
     return (
       <div>
       <footer id="footer">
-      <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-uppercase text-slab font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3> 
-      <p class="text-sm">Improving the quality of Australian lives by enhancing the quality of their food based on the latest scientific studies and researchers.</p>
-      <address> 
-        <ul class="list-unstyled text-sm"> 
+      <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-uppercase text-slab font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3>
+      <p class="text-sm">We love clean nutritious raw medicinal food without nonsense additives and preservatives.</p>
+      <address>
+        <ul class="list-unstyled text-sm">
           <li> </li>
                 <li>
                   <abbr title="Address"><i class="fa fa-home fa-fw text-white"></i></abbr>
@@ -148,7 +148,7 @@ class Footer extends Component {
                 <h4 class="text-uppercase text-white">
                   Newsletter
                 </h4>
-                <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+                <p>Be the first to know about our exclusive offers and deals, special events, and product releases!</p>
                 <form>
                   <div class="input-group">
                     <label class="sr-only" for="email-field">Email</label>
