@@ -20,10 +20,11 @@ class Company extends Component {
               </div>
               <div class="col-md-9">
                 <p class="lead">The first homemade food network with distributed kitchens.</p>
-                <p>In Life Elixir we believe a good food changes your physiology in cellular level which will affect your thoughts and consequently the actions you take.</p>
-
+      <p>
+We love food but we do not have enought time to think about it or make it ourselves. We tend to eat out or trust weekily meal programs online.  By studying the industry we realised that tones of nonsense additives, flavor enhancers and processes must be used to expand shelf life. Life Elixir is about homemade food without nasty additives and less processes to keep live anzymes.  
+</p>
                 <h4>Distributed kitchens</h4>
-                <p>we empower passionate individuals with education, equipment, the and market they need to start their own restaurant business quickly. Like to join our maker's community, <Link to="./contact">contact us</Link> and start making money soon.</p>
+                <p>we empower passionate individuals with education, equipment, the and market they need to start their own restaurant business quickly. Like to join our maker's community, <Link to="./contact">contact us</Link> and start making healthy foods.</p>
               </div>
             </div>
           </div>
