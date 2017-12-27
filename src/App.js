@@ -8,6 +8,7 @@ import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import Header from './Header';
+import Legal from './Legal';
 import Smoothies from './Smoothies';
 import OurSmoothies from './OurSmoothies';
 import Contact from './Contact';
@@ -135,6 +136,7 @@ class App extends Component {
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/our_smoothies" component={OurSmoothies} />
+          <Route exact path="/legal" component={Legal} />
           <Route exact path="/bundles" component={() => <Bundle products={this.state.bundles}/>} />
         </div>
         <Footer products={this.state.menu} recipes={this.state.recipes}/>

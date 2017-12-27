@@ -142,6 +142,7 @@ class Footer extends Component {
                   <li><Link to="/about_us">About us</Link></li>
                   <li><Link to="/delivery">Delivery Info</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
+                  <li><Link to="/legal">Legal</Link></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">
@@ -167,9 +168,8 @@ class Footer extends Component {
         <div class="subfooter text-sm text-center">
           <p>Copyright 2017 &copy; LifeElixir by Personalised Nutrition</p>
           <ul class="list-inline footer-links">
-            <li class="list-inline-item"><Link to="/about">About</Link></li>
-            <li class="list-inline-item"><Link to="/blog">Blog</Link></li>
-            <li class="list-inline-item"><Link to="/contact">Contact Us</Link></li>
+            <li class="list-inline-item"><Link to="/legal">Terms & conditions</Link></li>
+            <li class="list-inline-item"><Link to="/contact">Contact us</Link></li>
           </ul>
         </div>
       </div>
