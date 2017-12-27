@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import axios from 'axios';
+import { Route, Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import NProgress from 'nprogress';
+import axios from 'axios';
 import iziToast from 'izitoast';
 import _ from 'underscore';
 import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
+
+import { dropFromCart } from './actions/cartActions';
 
 import Header from './Header';
 import Legal from './Legal';
@@ -26,7 +30,7 @@ import Blog from './Blog'
 import Post from './Post'
 import Delivery from './Delivery'
 import Company from './Company'
-import CustomModal from './Modal';
+import CustomModal from './Modal'
 
 import './App.css';
 
@@ -146,4 +150,15 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  cart: state.cart,
+})
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  dropFromCart
+}, dispatch)
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App))

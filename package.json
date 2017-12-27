@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "appStrap": "git+https://d45b7b74db9addb4b0c5b3ab5abb0ceb66a6d05a:x-oauth-basic@github.com/aminkrJ/appStrap.git",
     "axios": "^0.17.0",
     "axios-cache-adapter": "^2.0.0",
     "bootstrap": "^4.0.0-beta",
@@ -18,9 +17,15 @@
     "react-datepicker": "^0.61.0",
     "react-dom": "^16.0.0",
     "react-maskedinput": "^4.0.0",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
     "react-sticky": "^6.0.1",
     "reactstrap": "^5.0.0-alpha.3",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-nprogress": "^1.0.2",
+    "redux-thunk": "^2.2.0",
     "underscore": "^1.8.3",
     "validate.js": "^0.12.0",
     "webfontloader": "^1.6.28"
