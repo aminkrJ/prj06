@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import CartWidget from './CartWidget.js'
 
 import logo from "./img/logo.png"
 
@@ -14,6 +15,7 @@ class Header extends Component {
       isOpen: false
     }
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -62,6 +64,7 @@ class Header extends Component {
                       </NavItem>
                     </Nav>
                   </Collapse>
+                <CartWidget />
                 </Navbar>
               </div>
             </header>

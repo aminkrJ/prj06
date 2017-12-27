@@ -14,6 +14,15 @@
 .react-datepicker__input-container, .react-datepicker-wrapper{
   display: block
 }
+.cart-dropdown-menu .cart-items .cart-remove{
+  font-size: 13px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.cart-dropdown-menu .cart-items .cart-items-item{
+  position: relative
+}
 .nav-link img{
   max-width: 100%;
   max-height: 100%
@@ -33,7 +42,7 @@
 }
 
 .header{
- z-index: 99999;
+ z-index: 1050;
  padding: 1px
 }
 
