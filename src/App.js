@@ -9,7 +9,7 @@ import _ from 'underscore';
 import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
 
-import { dropFromCart } from './actions/cartActions';
+import { addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
 
 import Header from './Header';
 import Legal from './Legal';
@@ -122,9 +122,9 @@ class App extends Component {
           </div>
         </div>
         <StickyContainer>
-        <Header />
+        <Header dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
         <div className="">
-          <Route exact path="/" component={() => <Home bundles={this.state.bundles} menu={this.state.menu} recipes={this.state.recipes}/>} />
+          <Route exact path="/" component={() => <Home dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} bundles={this.state.bundles} menu={this.state.menu} recipes={this.state.recipes}/>} />
           <Route exact path="/about_us" component={Company} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
@@ -134,14 +134,14 @@ class App extends Component {
           <Route path='/smoothies/categories/:id' component={Smoothies} />
           <Route exact path='/products/:slug' component={Product} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/order/:slug" component={Cart} />
+          <Route exact path="/cart" component={() => <Cart dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
           <Route exact path="/checkout/:reference_number" component={Checkout} />
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/our_smoothies" component={OurSmoothies} />
           <Route exact path="/legal" component={Legal} />
-          <Route exact path="/bundles" component={() => <Bundle products={this.state.bundles}/>} />
+          <Route exact path="/bundles" component={() => <Bundle products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.menu} recipes={this.state.recipes}/>
         </StickyContainer>
@@ -155,7 +155,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  dropFromCart
+  dropFromCart,
+  addToCart,
+  removeFromCart
 }, dispatch)
 
 export default withRouter(connect(

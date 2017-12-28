@@ -11,9 +11,6 @@ class Cart extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      product: {photo: {}},
-      unitPrice: 0,
-      quantity: 1,
       shippingFee: 8,
       total: 0,
       isSending: false,
@@ -25,22 +22,6 @@ class Cart extends Component {
   }
 
   componentDidMount() {
-    NProgress.start()
-
-    axios.get("/products/" + this.props.match.params.slug)
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        product: response.data,
-        unitPrice: parseFloat(response.data.price),
-        total: (parseFloat(response.data.price) + this.state.shippingFee).toFixed(2)
-      })
-
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
   }
 
   handleUnitPriceChange(percentages) {
@@ -104,48 +85,39 @@ class Cart extends Component {
     })
   }
 
-  handleDecQuantity() {
-    if(this.state.quantity > 1){
-      this.setState({
-        quantity: this.state.quantity - 1,
-      })
-    }
-  }
-
-  handleIncQuantity() {
-    this.setState({
-      quantity: this.state.quantity + 1,
-    })
-  }
-
-  renderProduct() {
+  renderCartProducts() {
     return(
-      <tr>
-        <td class="text-center align-middle">
-        </td>
-        <td class="text-center">
-          <a href="#">
-            <img class="cart-img img-fluid" src={this.state.product.photo.thumb} alt={this.state.product.name} />
-          </a>
-        </td>
-        <td>
-          <span class="font-weight-bold">{this.state.product.name}</span>
-          <p dangerouslySetInnerHTML={{__html: this.state.product.nutrition_fact}} class="text-muted text-sm" />
-        </td>
-        <td>${this.state.unitPrice}</td>
-        <td>
-          <div class="input-group input-group-quantity" data-toggle="quantity">
-            <span class="input-group-btn">
-              <input type="button" value="-" class="btn btn-secondary quantity-down" field="quantity" onClick={this.handleDecQuantity.bind(this)} />
-            </span>
-            <input type="text" name="quantity" value={this.state.quantity} class="quantity form-control" />
-            <span class="input-group-btn">
-              <input type="button" value="+" class="btn btn-secondary quantity-up" field="quantity" onClick={this.handleIncQuantity.bind(this)} />
-            </span>
-          </div>
-        </td>
-        <td class="text-md-right"><span class="font-weight-bold">${(this.state.unitPrice * this.state.quantity).toFixed(2)}</span></td>
-      </tr>
+      this.props.cart.map((p) => {
+        return(
+          <tr>
+            <td class="text-center align-middle">
+              <a href="#" class="close cart-remove" onClick={this.props.dropFromCart.bind(this, p)}> <i class="fa fa-times"></i> </a>
+            </td>
+            <td class="text-center">
+              <a href="#">
+                <img class="cart-img img-fluid" src={p.photo.thumb} alt={p.name} />
+              </a>
+            </td>
+            <td>
+              <span class="font-weight-bold">{p.name}</span>
+              <p dangerouslySetInnerHTML={{__html: p.nutrition_fact}} class="text-muted text-sm" />
+            </td>
+            <td>${p.price}</td>
+            <td>
+              <div class="input-group input-group-quantity" data-toggle="quantity">
+                <span class="input-group-btn">
+                  <input type="button" value="-" class="btn btn-secondary quantity-down" field="quantity" onClick={this.props.removeFromCart.bind(this, p)} />
+                </span>
+                <input type="text" name="quantity" value={p.quantity} class="quantity form-control" />
+                <span class="input-group-btn">
+                  <input type="button" value="+" class="btn btn-secondary quantity-up" field="quantity" onClick={this.props.addToCart.bind(this, p)} />
+                </span>
+              </div>
+            </td>
+            <td class="text-md-right"><span class="font-weight-bold">${(p.price * p.quantity).toFixed(2)}</span></td>
+          </tr>
+        )
+      })
     )
   }
 
@@ -166,35 +138,33 @@ class Cart extends Component {
                 </tr>
               </thead>
               <tbody >
-      {this.renderProduct()}
+      {this.renderCartProducts()}
               </tbody>
             </table>
             <hr class="my-4 hr-lg" />
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
-          <h5 class="my-3">Customise your order</h5>
-          <CustomButtonGroup onUnitPriceChange={this.handleUnitPriceChange.bind(this)} />
-                </div>
-                <div class="col-md-4">
-          <h5 class="my-3">Enter your email address</h5>
+                  <h5 class="my-3">Customise your order</h5>
+                  <CustomButtonGroup onUnitPriceChange={this.handleUnitPriceChange.bind(this)} />
+                  <h5 class="my-3">Enter your email address</h5>
                   <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
                 </div>
-                <div class="col-md-4 text-md-right mt-3 mt-md-0">
+                <div class="col-md-8 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
                     <h4 class="font-weight-light">
-                      Subtotal: ${this.state.unitPrice * this.state.quantity}
+                      Subtotal: ${0}
                     </h4>
                     <h4 class="font-weight-light">
                       Delivery fee: ${this.state.shippingFee}
                     </h4>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                     <h3>
-                      Total: <span class="text-primary">${this.state.total}</span>
+                      Total: <span class="text-primary">${0}</span>
                     </h3>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                   </div>
-                  <input type="button" disabled={this.state.isSending} class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)} value="Proceed To Checkout"></input>
+                  <a href="/menu" class="btn btn-outline-primary btn-rounded btn-lg">Continue Shopping</a> <a href="#" disabled={this.state.isSending} class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)}>Proceed to Checkout</a>
                 </div>
               </div>
             </div>

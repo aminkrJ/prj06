@@ -22,6 +22,12 @@ class Products extends Component {
     )
   }
 
+  handleOrderNow(product, e){
+    e.preventDefault()
+
+    this.props.addToCart(product)
+  }
+
   renderProducts() {
     return (
       this.props.products.map((product, index) => {
@@ -48,7 +54,7 @@ class Products extends Component {
                   <ul class="text-left list-unstyled list-border-dots">
                     {this.renderRecipes(product)}
                   </ul>
-                  <Link to={"/order/" + product.slug} class="btn btn-primary btn-block btn-rounded mt-4">Order Now</Link>
+                  <a class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
                   <Link to={"/products/" + product.slug} class="btn btn-link">Learn more</Link>
                 </div>
               </div>

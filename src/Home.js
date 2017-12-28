@@ -81,7 +81,7 @@ class Home extends Component {
           <div id="projects" className="container p-3 py-lg-1">
             { this.renderRecipes() }
           </div>
-          <Products products={this.props.bundles} />
+          <Products products={this.props.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">

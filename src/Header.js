@@ -64,7 +64,10 @@ class Header extends Component {
                       </NavItem>
                     </Nav>
                   </Collapse>
-                <CartWidget />
+                <CartWidget
+            dropFromCart={this.props.dropFromCart}
+            cart={this.props.cart} 
+                />
                 </Navbar>
               </div>
             </header>

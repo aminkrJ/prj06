@@ -21,7 +21,7 @@ class Bundle extends Component {
       <div class="">
         <div id="content" class="py-5">
           <div class="container">
-            <Products products={this.props.products} />
+            <Products products={this.props.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
           </div>
       </div>
     </div>
