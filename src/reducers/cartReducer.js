@@ -39,9 +39,10 @@ function decQuantity(state, action, step) {
       if(product.id === action.product.id){
         if(product.quantity === 1){
           //return dropFromCart(state, action)
+          return product
         }else{
           return Object.assign({}, product, {
-            quantity: product.quantity + step
+            quantity: product.quantity - step
           })
         }
       }else{

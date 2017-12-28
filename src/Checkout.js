@@ -154,7 +154,7 @@ class Checkout extends Component {
                   suite_apt: address.suite_apt.state.value
                 }
               ],
-              id: self.state.cart.customer.id,
+              email: self.state.cart.customer.email,
               firstname: address.firstname.state.value,
               lastname: address.lastname.state.value,
             }
@@ -225,7 +225,7 @@ class Checkout extends Component {
             Customer Information
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
-            <CustomInput ref='email' type='email' placeholder='Email' name='email' value={this.state.cart.customer.email} disabled/>
+            <CustomInput ref='email' type='email' placeholder='Email' name='email' value={this.state.cart.customer.email} />
           </div>
 
           <h4>

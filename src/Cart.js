@@ -4,7 +4,6 @@ import axios from 'axios';
 import NProgress from 'nprogress';
 import _ from 'underscore';
 
-import CustomButtonGroup from './CustomButtonGroup'
 import CustomInput from './CustomInput';
 
 class Cart extends Component {
@@ -14,34 +13,11 @@ class Cart extends Component {
       shippingFee: 8,
       total: 0,
       isSending: false,
-      isVegan: false,
-      isActivated: false,
-      isOrganic: false,
       errors: []
     }
   }
 
   componentDidMount() {
-  }
-
-  handleUnitPriceChange(percentages) {
-    if(_.contains(percentages, 20)){
-      this.setState({isOrganic: true})
-    }
-    if(_.contains(percentages, 5)){
-      this.setState({isVegan: true})
-    }
-    if(_.contains(percentages, 10)){
-      this.setState({isActivated: true})
-    }
-
-    var percentage = _.reduce(percentages, function(memo, num){ return memo + num; }, 0)
-    var add = this.state.product.price * (percentage/100)
-    var unitPrice = this.state.product.price * 1 + add
-    this.setState({
-      unitPrice: unitPrice,
-      total: this.state.shippingFee + unitPrice * this.state.quantity
-    })
   }
 
   handleProceedCheckout(e) {
@@ -61,15 +37,9 @@ class Cart extends Component {
             total_price: (this.state.quantity * this.state.unitPrice).toFixed(2)
           },
         ],
-          customer_attributes: {
-            email: $this.refs.email.state.value
-          },
         total: this.state.total,
         shipping_fee: this.state.shippingFee,
         subtotal: (this.state.quantity * this.state.unitPrice).toFixed(2),
-        vegan: this.state.isVegan,
-        activated_nuts: this.state.isActivated,
-        organic: this.state.isOrganic
       }
     })
     .then(function (response) {
@@ -106,15 +76,15 @@ class Cart extends Component {
             <td>
               <div class="input-group input-group-quantity" data-toggle="quantity">
                 <span class="input-group-btn">
-                  <input type="button" value="-" class="btn btn-secondary quantity-down" field="quantity" onClick={this.props.removeFromCart.bind(this, p)} />
+                  <input type="button" value="-" class="btn btn-secondary quantity-down" field="quantity" onClick={this.props.removeFromCart.bind(this, p, null)} />
                 </span>
                 <input type="text" name="quantity" value={p.quantity} class="quantity form-control" />
                 <span class="input-group-btn">
-                  <input type="button" value="+" class="btn btn-secondary quantity-up" field="quantity" onClick={this.props.addToCart.bind(this, p)} />
+                  <input type="button" value="+" class="btn btn-secondary quantity-up" field="quantity" onClick={this.props.addToCart.bind(this, p, null)} />
                 </span>
               </div>
             </td>
-            <td class="text-md-right"><span class="font-weight-bold">${(p.price * p.quantity).toFixed(2)}</span></td>
+            <td class="text-md-right"><span class="font-weight-bold">${p.price * p.quantity}</span></td>
           </tr>
         )
       })
@@ -145,10 +115,6 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-4">
-                  <h5 class="my-3">Customise your order</h5>
-                  <CustomButtonGroup onUnitPriceChange={this.handleUnitPriceChange.bind(this)} />
-                  <h5 class="my-3">Enter your email address</h5>
-                  <CustomInput ref='email' type='email' placeholder='Email' name='email' errors={this.state.errors["customer.email"]} required/>
                 </div>
                 <div class="col-md-8 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
