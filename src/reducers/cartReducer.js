@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action){
       return dropFromCart(state, action)
     case actions.REMOVE_FROM_CART:
       if(action.product.quantity === 1){
-        return dropFromCart(state, action)
+        //return dropFromCart(state, action)
       }else{
         return updateQuantity(state, action, -1)
       }

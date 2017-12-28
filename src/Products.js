@@ -26,6 +26,8 @@ class Products extends Component {
     e.preventDefault()
 
     this.props.addToCart(product)
+    // redirect to cart page
+    this.props.history.push('/cart')
   }
 
   renderProducts() {
@@ -54,7 +56,7 @@ class Products extends Component {
                   <ul class="text-left list-unstyled list-border-dots">
                     {this.renderRecipes(product)}
                   </ul>
-                  <a class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
+                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
                   <Link to={"/products/" + product.slug} class="btn btn-link">Learn more</Link>
                 </div>
               </div>
