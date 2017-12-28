@@ -36,7 +36,7 @@ class Products extends Component {
         return (
               <div class="card text-center mb-5">
                 <h3 class="card-title py-3 text-shadow">
-          <Link to={"/products/" + product.slug} class="">
+          <Link to={"/menu/" + product.slug} class="">
                   <span class="text-black text-capitalize">{product.name}</span>
           </Link>
                 </h3>
@@ -57,7 +57,8 @@ class Products extends Component {
                     {this.renderRecipes(product)}
                   </ul>
                   <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
-                  <Link to={"/products/" + product.slug} class="btn btn-link">Learn more</Link>
+                  { this.renderRecipes() }
+                  <Link to={"/menu/" + product.slug} class="btn btn-link">Learn more</Link>
                 </div>
               </div>
         )

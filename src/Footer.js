@@ -36,11 +36,11 @@ class Footer extends Component {
     })
   }
 
-  renderRecipes(){
+  renderProducts(){
     return(
-      this.props.recipes.map((recipe, index) => {
+      this.props.products.map((product, index) => {
        return(
-         <li key={index}><Link to={`/smoothies/${recipe.slug}`}>{recipe.title}</Link></li>
+         <li key={index}><Link to={`/menu/${product.slug}`}>{product.name}</Link></li>
        )
       })
     )
@@ -128,10 +128,10 @@ class Footer extends Component {
             <div class="row">
               <div class="col-6 col-md-3">
                 <h4 class="mt-0 text-slab">
-                  Our menu
+                  Our bundles
                 </h4>
                 <ul class="list-unstyled footer-links">
-                  {this.renderRecipes()}
+                  {this.renderProducts()}
                 </ul>
               </div>
               <div class="col-6 col-md-3">
@@ -166,10 +166,8 @@ class Footer extends Component {
         
         <hr class="my-4 hr-white op-1" />
         <div class="subfooter text-sm text-center">
-          <p>Copyright 2017 &copy; LifeElixir by Personalised Nutrition</p>
+          <p>Copyright 2018 &copy; LifeElixir by Personalised Nutrition</p>
           <ul class="list-inline footer-links">
-            <li class="list-inline-item"><Link to="/legal">Terms & conditions</Link></li>
-            <li class="list-inline-item"><Link to="/contact">Contact us</Link></li>
           </ul>
         </div>
       </div>
@@ -183,7 +181,7 @@ class Footer extends Component {
 
 Footer.defaultProps = {
   products: [],
-  recipes: [],
+  products: [],
 }
 
 export default Footer

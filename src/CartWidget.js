@@ -21,9 +21,9 @@ class CardWidget extends Component {
 
   renderCartItem() {
     return(
-      this.props.cart.map((p) => {
+      this.props.cart.map((p, index) => {
         return(
-          <div class="cart-items-item clearfix">
+          <div key={index} class="cart-items-item clearfix">
             <a href="#" class="cart-img mr-2 float-left">
               <img class="img-fluid" src={p.photo.thumb} alt={p.name} />
             </a>
@@ -42,7 +42,7 @@ class CardWidget extends Component {
 
   render() {
     return (
-      <div class="">
+      <div>
         <div class="header-divider d-none d-lg-block"></div>
         <a id="Popover1" onClick={this.toggle} class="btn btn-icon btn-dark btn-link float-right dropdown-toggle cart-link">
           <span class="cart-link-icon">

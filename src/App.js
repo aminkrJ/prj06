@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import NProgress from 'nprogress';
 import axios from 'axios';
-import iziToast from 'izitoast';
 import _ from 'underscore';
 import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
@@ -13,16 +12,13 @@ import { addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
 
 import Header from './Header';
 import Legal from './Legal';
-import Smoothies from './Smoothies';
 import OurSmoothies from './OurSmoothies';
 import Contact from './Contact';
 import Find from './Find';
 import Home from './Home';
 import Footer from './Footer';
-import Smoothie from './Smoothie';
 import Thanks from './Thanks';
 import Cart from './Cart';
-import Bundle from './Bundle';
 import Product from './Product';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
@@ -31,6 +27,8 @@ import Post from './Post'
 import Delivery from './Delivery'
 import Company from './Company'
 import CustomModal from './Modal'
+import Menu from './Menu';
+import MenuItem from './MenuItem';
 
 import './App.css';
 
@@ -41,9 +39,9 @@ class App extends Component {
     super(props)
     this.state = {
       email: "",
-      menu: [],
+      products: [],
       bundles: [],
-      recipes: []
+      menu: [],
     }
   }
 
@@ -65,22 +63,6 @@ class App extends Component {
     document.title = "Life Elixir, " + pageTitle;
   }
 
-  fetchRecipes() {
-    NProgress.start()
-
-    axios.get("/recipes/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        recipes: response.data
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
-  }
-
   fetchProducts() {
     NProgress.start()
 
@@ -89,6 +71,7 @@ class App extends Component {
       NProgress.done()
 
       this.setState({
+        products: response.data,
         bundles: _.filter(response.data, (r) => {return r.primary === true}),
         menu: _.filter(response.data, (r) => {return r.primary === false})
       })
@@ -100,7 +83,6 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchProducts()
-    this.fetchRecipes()
   }
 
   render() {
@@ -124,15 +106,10 @@ class App extends Component {
         <StickyContainer>
         <Header dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
         <div className="">
-          <Route exact path="/" component={() => <Home history={this.props.history} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} bundles={this.state.bundles} menu={this.state.menu} recipes={this.state.recipes}/>} />
+          <Route exact path="/" component={(props) => <Home {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} bundles={this.state.bundles} menu={this.state.menu} products={this.state.products}/>} />
           <Route exact path="/about_us" component={Company} />
-          <Route exact path="/find_us" component={Find} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
-          <Route exact path='/smoothies' component={Smoothies} />
-          <Route exact path='/smoothies/:slug' component={Smoothie} />
-          <Route path='/smoothies/categories/:id' component={Smoothies} />
-          <Route exact path='/products/:slug' component={Product} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/cart" component={() => <Cart dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
           <Route exact path="/checkout/:reference_number" component={Checkout} />
@@ -141,9 +118,11 @@ class App extends Component {
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/our_smoothies" component={OurSmoothies} />
           <Route exact path="/legal" component={Legal} />
-          <Route exact path="/bundles" component={() => <Bundle products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route path='/menu/categories/:id' component={Menu} />
+          <Route exact path='/menu' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/menu/:slug' component={(props) => <MenuItem {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
-        <Footer products={this.state.menu} recipes={this.state.recipes}/>
+        <Footer products={this.state.bundles}/>
         </StickyContainer>
       </div>
     );

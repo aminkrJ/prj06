@@ -21,16 +21,80 @@ class Home extends Component {
   componentWillMount() {
   }
 
-  renderRecipes() {
-    if (this.props.recipes.length) {
-      var recipes = this.props.recipes.map((recipe, index) => {
+  handleOrderNow(product, e){
+    e.preventDefault()
+
+    this.props.addToCart(product)
+    this.props.history.push('/cart')
+  }
+
+  renderBundleItems() {
+    return (
+      this.props.bundles.map((product, index) => {
+        return (
+          <div class="card text-center mb-5">
+            <h3 class="card-title py-3 text-shadow">
+              <Link to={"/menu/" + product.slug} class="">
+                <span class="text-black text-capitalize">{product.name}</span>
+              </Link>
+            </h3>
+            <div class="row">
+              <div class="col-md-12">
+                <Link to={"/menu/" + product.slug} class="">
+                  <img src={product.photo.original} class="card-img img-fluid"></img>
+                </Link>
+              </div>
+            </div>
+            <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+              <span class="price-currency">from $</span>
+              <span class="price-digits">{product.price}<span></span></span>
+              <span class="price-extra"></span>
+            </p>
+            <div class="card-body">
+              <p class="text-muted">{product.short_description}</p>
+              <ul class="text-left list-unstyled list-border-dots">
+              </ul>
+              <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
+              <Link to={"/menu/" + product.slug} class="btn btn-link">Learn more</Link>
+            </div>
+          </div>
+        )
+      })
+    )
+  }
+
+  renderBundles() {
+    return(
+      <div id="pricing" class="bg-faded">
+        <div class="container">
+          <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+          <h2 class="text-center text-uppercase font-weight-bold my-0">
+      Our Bundles
+          </h2>
+          <h5 class="text-center font-weight-light mt-2 mb-0">
+            Delivery fee applies.
+          </h5>
+          <hr class="mb-5 w-50 mx-auto" />
+          <div class="row pricing-stack">
+            <div class="card-group">
+              {this.renderBundleItems()}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  renderMenu() {
+    if (this.props.menu.length) {
+      var menu = this.props.menu.map((menuItem, index) => {
           return(
             <div key={index}>
-              <Link to={"/smoothies/" + recipe.slug} className="project overlay-hover">
-                <img src={recipe.photo.original} className="img-fluid" />
+              <Link to={"/menu/" + menuItem.slug} className="project overlay-hover">
+                <img src={menuItem.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
-                  <span class="h5 mt-4">{recipe.title}</span>
+                  <span class="h5 mt-4">{menuItem.name}</span>
                 </span>
               </Link>
             </div>
@@ -39,7 +103,7 @@ class Home extends Component {
 
       return (
         <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
-        {recipes}
+        {menu}
         </Carousel>
       )
     }
@@ -75,13 +139,13 @@ class Home extends Component {
             Our Menu
           </h2>
           <h5 className="text-center font-weight-light mt-2 mb-0">
-      Raw, probiotics, certified organic superfoods, nutritious and delicious
+      Nutritious and delicious.
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">
-            { this.renderRecipes() }
+      {this.renderMenu()}
           </div>
-          <Products history={this.props.history} products={this.props.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
+      {this.renderBundles()}
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h2 className="text-center text-uppercase font-weight-bold my-0">

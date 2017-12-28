@@ -3,21 +3,31 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
+import iziToast from 'izitoast';
 
-class Smoothie extends Component {
+class MenuItem extends Component {
 constructor(props){
     super(props)
     this.state = {
-      recipe: {photo: {original: ""}, ingredients: [], recipe_category: {}},
+      menuItem: {photo: {original: ""}, ingredients: [], product_category: {}},
       activeTabIndex: 1
     }
+  }
+  
+  addToShoppingCart(menuItem, e) {
+    this.props.addToCart(menuItem)
+    iziToast.success({
+      position: 'topRight',
+      title: menuItem.name,
+      message: "has been added to your cart."
+    })
   }
 
   renderIngredients() {
     return (
-     this.state.recipe.ingredients.map((ingredient, index) => {
+     this.state.menuItem.ingredients.map((ingredient, index) => {
        return(
-         <span class="" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.recipe.ingredients.length ? "" : ", " }</span>
+         <span class="" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.menuItem.ingredients.length ? "" : ", " }</span>
        )
      })
     )
@@ -32,15 +42,15 @@ constructor(props){
   componentDidMount() {
     NProgress.start()
 
-    axios.get("/recipes/" + this.props.match.params.slug)
+    axios.get("/products/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 
       this.setState({
-        recipe: response.data
+        menuItem: response.data
       })
 
-      document.title = "Life Elixir, " + response.data.title
+      document.title = "Life Elixir, " + response.data.name
     })
     .catch((error) => {
       NProgress.done()
@@ -55,7 +65,7 @@ constructor(props){
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
-                <img src={this.state.recipe.photo.original} alt={this.state.recipe.title} class="lazyOwl img-fluid" />
+                <img src={this.state.menuItem.photo.original} alt={this.state.menuItem.name} class="lazyOwl img-fluid" />
               </div>
             </div>
             <div class="col-lg-7">
@@ -63,17 +73,17 @@ constructor(props){
                 <div class="card-body p-4 pos-relative">
                 <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
                 </div>
-                  <p class="text-muted text-uppercase text-xs mb-0"><Link to={"/smoothies/categories/" + this.state.recipe.recipe_category.id} class="text-primary">{this.state.recipe.recipe_category.name}</Link></p>
                   <h2 class="card-title mb-2">
-                    {this.state.recipe.title}
+                    {this.state.menuItem.name}
                   </h2>
+                  <h4 class="font-weight-bold text-primary">
+      <span class="h6 price-currency">$</span>{this.state.menuItem.price}
+                  </h4>
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.short_description}} class="text-lead" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.description}} class="" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.menuItem.short_description}} class="text-lead" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.menuItem.description}} class="" />
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.recipe.how_to_cook}} class="text-sm text-muted" />
-                  <hr class="my-3" />
-                  <Link to="/bundles" class="btn btn-primary"><i class="fa fa-cart-plus mr-2"></i>Order Now</Link>
+                  <a href="#" onClick={this.addToShoppingCart.bind(this, this.state.menuItem)} class="btn btn-primary"><i class="fa fa-cart-plus mr-2"></i>Add to cart</a>
                 </div>
               </div>
             </div>
@@ -86,4 +96,4 @@ constructor(props){
   }
 }
 
-export default Smoothie
+export default MenuItem
