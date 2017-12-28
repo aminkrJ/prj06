@@ -3,14 +3,15 @@ import * as actions from '../constants/ActionTypes'
 export function removeFromCart(product) {
   return {
     type: actions.REMOVE_FROM_CART,
-    product
+    product,
   }
 }
 
-export function addToCart(product) {
+export function addToCart(product, quantity = 1) {
   return {
     type: actions.ADD_TO_CART,
-    product
+    product,
+    quantity
   }
 }
 

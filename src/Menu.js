@@ -5,12 +5,13 @@ import PageTitle from './PageTitle'
 import axios from 'axios';
 import NProgress from 'nprogress';
 import _ from 'underscore';
+import AddToCartButton from './AddToCartButton.js'
 
 class Menu extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      recipes: [],
+      products: [],
       categories: [],
       activeCategory: 0
     }
@@ -26,7 +27,7 @@ class Menu extends Component {
       NProgress.done()
 
       this.setState({
-        recipes: response.data,
+        products: response.data,
         activeCategory: category_id
       })
     })
@@ -60,8 +61,8 @@ class Menu extends Component {
     })
   }
 
-  renderRecipes() {
-    return this.state.recipes.map((product, index) => {
+  renderProducts() {
+    return this.state.products.map((product, index) => {
       return(
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
@@ -69,6 +70,7 @@ class Menu extends Component {
               <Link to={"/menu/" + product.slug}>
                 <img className="card-img-top img-fluid" src={product.photo.original} alt={product.name} />
               </Link>
+              <span class="badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist">${product.price}</span> 
             </div>
             <div className="card-body">
               <small className="text-muted text-uppercase">{product.category}</small>
@@ -79,6 +81,11 @@ class Menu extends Component {
               </Link>
               <p class="text-muted"><small>{product.short_description}</small></p>
               <p className="card-text"></p>
+            </div>
+            <div class="card-footer">
+              <div class="mt-auto">
+                <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary btn-sm" product={product} />
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +117,7 @@ class Menu extends Component {
             <div className="row">
               <div className="col-lg-9 order-lg-2">
                 <div className="row">
-                  {this.renderRecipes()}
+                  {this.renderProducts()}
                 </div>
               </div>
               <div className="col-lg-3 order-lg-1">

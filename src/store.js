@@ -14,6 +14,7 @@ const initialState = {
 }
 
 const enhancers = [autoRehydrate()]
+
 const middleware = [
   thunk,
   logger,

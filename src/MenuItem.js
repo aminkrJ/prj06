@@ -3,31 +3,22 @@ import { Link } from 'react-router-dom';
 import axios from 'axios'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
-import iziToast from 'izitoast';
+import AddToCartButton from './AddToCartButton.js';
 
 class MenuItem extends Component {
-constructor(props){
+  constructor(props){
     super(props)
     this.state = {
-      menuItem: {photo: {original: ""}, ingredients: [], product_category: {}},
+      product: {photo: {original: ""}, ingredients: [], product_category: {}},
       activeTabIndex: 1
     }
   }
   
-  addToShoppingCart(menuItem, e) {
-    this.props.addToCart(menuItem)
-    iziToast.success({
-      position: 'topRight',
-      title: menuItem.name,
-      message: "has been added to your cart."
-    })
-  }
-
   renderIngredients() {
     return (
-     this.state.menuItem.ingredients.map((ingredient, index) => {
+     this.state.product.ingredients.map((ingredient, index) => {
        return(
-         <span class="" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.menuItem.ingredients.length ? "" : ", " }</span>
+         <span class="" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.product.ingredients.length ? "" : ", " }</span>
        )
      })
     )
@@ -47,7 +38,7 @@ constructor(props){
       NProgress.done()
 
       this.setState({
-        menuItem: response.data
+        product: response.data
       })
 
       document.title = "Life Elixir, " + response.data.name
@@ -65,7 +56,7 @@ constructor(props){
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
-                <img src={this.state.menuItem.photo.original} alt={this.state.menuItem.name} class="lazyOwl img-fluid" />
+                <img src={this.state.product.photo.original} alt={this.state.product.name} class="lazyOwl img-fluid" />
               </div>
             </div>
             <div class="col-lg-7">
@@ -74,18 +65,18 @@ constructor(props){
                   <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
       
                   </div>
-<p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.menuItem.category}</span></p>
+<p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.category}</span></p>
                   <h2 class="card-title mb-2">
-                    {this.state.menuItem.name}
+                    {this.state.product.name}
                   </h2>
                   <h4 class="font-weight-bold text-primary">
-      <span class="h6 price-currency">$</span>{this.state.menuItem.price}
+      <span class="h6 price-currency">$</span>{this.state.product.price}
                   </h4>
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.menuItem.short_description}} class="text-lead" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.menuItem.description}} class="" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="text-lead" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
                   <hr class="my-3" />
-                  <a href="#" onClick={this.addToShoppingCart.bind(this, this.state.menuItem)} class="btn btn-primary"><i class="fa fa-cart-plus mr-2"></i>Add to cart</a>
+                  <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={this.state.product} />
                 </div>
               </div>
             </div>

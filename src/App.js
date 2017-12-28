@@ -118,9 +118,9 @@ class App extends Component {
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/our_smoothies" component={OurSmoothies} />
           <Route exact path="/legal" component={Legal} />
-          <Route path='/menu/categories/:id' component={Menu} />
+          <Route path='/menu/categories/:id' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/menu' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/menu/:slug' component={(props) => <MenuItem {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route exact path='/menu/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.bundles}/>
         </StickyContainer>
