@@ -94,12 +94,12 @@ class Cart extends Component {
               <a href="#" class="close cart-remove" onClick={this.props.dropFromCart.bind(this, p)}> <i class="fa fa-times"></i> </a>
             </td>
             <td class="text-center">
-              <a href="#">
+              <Link to={`/cart/${p.slug}`}>
                 <img class="cart-img img-fluid" src={p.photo.thumb} alt={p.name} />
-              </a>
+              </Link>
             </td>
             <td>
-              <span class="font-weight-bold">{p.name}</span>
+              <Link to={`/cart/${p.slug}`} class="font-weight-bold">{p.name}</Link>
               <p dangerouslySetInnerHTML={{__html: p.nutrition_fact}} class="text-muted text-sm" />
             </td>
             <td>${p.price}</td>

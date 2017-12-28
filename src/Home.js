@@ -123,7 +123,7 @@ class Home extends Component {
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black tagline">Healthy homemade smoothie bowls packed with superfoods, functional herbs, probiotics, and medicinal mushrooms.</h3>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/bundles">Order Now</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/menu">Order Now</Link>
                     <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/our_smoothies">Learn More</Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
