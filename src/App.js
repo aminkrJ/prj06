@@ -12,7 +12,6 @@ import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartAc
 
 import Header from './Header';
 import Legal from './Legal';
-import OurSmoothies from './OurSmoothies';
 import Contact from './Contact';
 import Find from './Find';
 import Home from './Home';
@@ -25,7 +24,7 @@ import Confirmation from './Confirmation';
 import Blog from './Blog'
 import Post from './Post'
 import Delivery from './Delivery'
-import Company from './Company'
+import About from './About'
 import CustomModal from './Modal'
 import Menu from './Menu';
 import MenuItem from './MenuItem';
@@ -107,7 +106,7 @@ class App extends Component {
         <Header dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
         <div className="">
           <Route exact path="/" component={(props) => <Home {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} bundles={this.state.bundles} menu={this.state.menu} products={this.state.products}/>} />
-          <Route exact path="/about_us" component={Company} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path="/contact" component={Contact} />
@@ -116,7 +115,6 @@ class App extends Component {
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
-          <Route exact path="/our_smoothies" component={OurSmoothies} />
           <Route exact path="/legal" component={Legal} />
           <Route path='/menu/categories/:id' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/menu' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />

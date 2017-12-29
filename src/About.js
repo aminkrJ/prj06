@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
 import AboutSideMenu from './AboutSideMenu'
 
-class OurSmoothies extends Component {
+class About extends Component {
 
   render() {
     return (
       <div className="">
-        <PageTitle title="Our smoothies" location={ {title: "Our smoothies", path:"/our_smoothies"} } />
+        <PageTitle title="About us" location={ {title: "About us", path:"/about"} } />
         <div id="content">
           <div class="container">
             <div class="row">
@@ -44,4 +44,4 @@ class OurSmoothies extends Component {
   }
 }
 
-export default OurSmoothies
+export default About

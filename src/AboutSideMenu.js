@@ -8,19 +8,14 @@ class AboutSideMenu extends Component {
       <div class="nav-section-menu">
         <div class="nav nav-list">
           <span class="nav-header">In This Section</span> 
-          <Link to="/our_smoothies" class={classnames("first nav-link", {active: this.props.active === 1})}>
-            Our smoothies
-            <small>Carefully crafted</small>
+          <Link to="/about" class={classnames("first nav-link", {active: this.props.active === 1})}>
+            About us
+            <small>Details matter</small>
             <i class="fa fa-angle-right"></i>
           </Link>
           <Link to="/delivery" class={classnames("nav-link", {active: this.props.active === 2})}>
-            Delivery info
-            <small>Next day delivery</small>
-            <i class="fa fa-angle-right"></i>
-          </Link>
-          <Link to="/about_us" class={classnames("nav-link", {active: this.props.active === 3})}>
-            About us
-            <small>Our mission</small>
+            Delivery information
+            <small>Premium delivery</small>
             <i class="fa fa-angle-right"></i>
           </Link>
         </div>
