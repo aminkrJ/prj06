@@ -21,3 +21,9 @@ export function dropFromCart(product) {
     product
   }
 }
+
+export function reset(){
+  return {
+    type: "RESET"
+  }
+}

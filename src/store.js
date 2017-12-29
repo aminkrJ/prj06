@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import { persistStore, autoRehydrate } from 'redux-persist'
+import reduxReset from 'redux-reset'
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import createHistory from 'history/createBrowserHistory';
@@ -13,7 +14,7 @@ export const history = createHistory()
 const initialState = {
 }
 
-const enhancers = [autoRehydrate()]
+const enhancers = [autoRehydrate(), reduxReset()]
 
 const middleware = [
   thunk,

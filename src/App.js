@@ -8,7 +8,7 @@ import _ from 'underscore';
 import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
 
-import { addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
+import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
 
 import Header from './Header';
 import Legal from './Legal';
@@ -111,8 +111,8 @@ class App extends Component {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/cart" component={(props) => <Cart {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
-          <Route exact path="/checkout/:reference_number" component={(props) => <Checkout {...props} />} />
+          <Route exact path="/cart" component={(props) => <Cart {...props} reset={this.props.reset} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
+          <Route exact path="/checkout/:reference_number" component={(props) => <Checkout {...props} reset={this.props.reset} />} />
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
@@ -136,7 +136,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators({
   dropFromCart,
   addToCart,
-  removeFromCart
+  removeFromCart,
+  reset
 }, dispatch)
 
 export default withRouter(connect(

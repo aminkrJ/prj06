@@ -165,6 +165,7 @@ class Checkout extends Component {
             self.setState({isSending: false})
 
             // clear cache for store
+            self.props.reset()
 
             self.props.history.push('/confirmation/' + self.props.match.params.reference_number)
           })
