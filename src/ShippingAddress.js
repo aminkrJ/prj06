@@ -39,7 +39,7 @@ export default class ShippingAddress extends React.Component {
                 <CustomInput type='text'
                       name='suite_apt'
                       ref="suite_apt"
-                      placeholder='Apt, suite, etc.'
+                      placeholder='Apt, unit etc. (optional)'
                       errors={this.props.errors["customer.addresses.suite_apt"]}
                       />
               </div>

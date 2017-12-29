@@ -154,7 +154,7 @@ class Checkout extends Component {
                   suite_apt: address.suite_apt.state.value
                 }
               ],
-              email: self.state.cart.customer.email,
+              email: self.refs.email.state.value,
               firstname: address.firstname.state.value,
               lastname: address.lastname.state.value,
             }
@@ -163,6 +163,8 @@ class Checkout extends Component {
           .then(function (data) {
             NProgress.done()
             self.setState({isSending: false})
+
+            // clear cache for store
 
             self.props.history.push('/confirmation/' + self.props.match.params.reference_number)
           })
@@ -210,12 +212,12 @@ class Checkout extends Component {
                 onChange={this.handleDeliveryDateChange.bind(this)}
                 locale="en-au"
       class="form-control"
-  minTime={moment().hours(9).minutes(0)}
-  maxTime={moment().hours(17).minutes(0)}
-                showTimeSelect
-                timeIntervals={60}
+  //minTime={moment().hours(9).minutes(0)}
+  //maxTime={moment().hours(17).minutes(0)}
+                //showTimeSelect
+                //timeIntervals={60}
                 className="form-control"
-                dateFormat="LLL"
+                dateFormat="LL"
                 minDate={moment()}
                 filterDate={this.isWeekday}
             />
@@ -225,11 +227,11 @@ class Checkout extends Component {
             Customer Information
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
-            <CustomInput ref='email' type='email' placeholder='Email' name='email' value={this.state.cart.customer.email} />
+            <CustomInput ref='email' type='email' placeholder='Email' name='email' />
           </div>
 
           <h4>
-            Delivery Options
+            Delivery Address
           </h4>
           <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
             <ShippingAddress ref='shippingAddress' errors={this.state.errors}/>
