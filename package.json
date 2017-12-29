@@ -6,7 +6,6 @@
     "axios": "^0.17.0",
     "axios-cache-adapter": "^2.0.0",
     "bootstrap": "^4.0.0-beta",
-    "cachios": "^1.0.7",
     "font-awesome": "^4.7.0",
     "izitoast": "^1.1.5",
     "moment-business": "^3.0.1",

@@ -40,11 +40,11 @@ class AddToCartButton extends Component {
 
   render() {
     return (
-      <a href="#" onClick={this.handleClick.bind(this)}
+      <span onClick={this.handleClick.bind(this)}
          class={classnames(this.props.class, {"btn-danger": this.state.isInCart})}>
            <i class="fa fa-cart-plus mr-2"></i> 
              {this.state.isInCart ? "Remove from Cart" : "Add to Cart" }
-      </a>
+      </span>
     )
   }
 }

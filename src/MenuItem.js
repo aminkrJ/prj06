@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'
+import api from './Api.js'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
 import AddToCartButton from './AddToCartButton.js';
@@ -33,7 +33,7 @@ class MenuItem extends Component {
   componentDidMount() {
     NProgress.start()
 
-    axios.get("/products/" + this.props.match.params.slug)
+    api.get("/products/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 

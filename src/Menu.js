@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames'
 import PageTitle from './PageTitle'
-import axios from 'axios';
+import api from './Api.js'
 import NProgress from 'nprogress';
 import _ from 'underscore';
 import AddToCartButton from './AddToCartButton.js'
@@ -20,7 +20,7 @@ class Menu extends Component {
   fetchRecipesInCategory(category_id) {
     NProgress.start()
 
-    axios.get("/products", {
+    api.get("/products", {
       params: category_id === 0 ? {} : { product_category_id: category_id}
     })
     .then((response) => {
@@ -48,7 +48,7 @@ class Menu extends Component {
     this.fetchRecipesInCategory(category_id)
 
     NProgress.start()
-    axios.get("/product_categories")
+    api.get("/product_categories")
     .then((response) => {
       NProgress.done()
 

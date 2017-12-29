@@ -3,7 +3,6 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import NProgress from 'nprogress';
-import axios from 'axios';
 import _ from 'underscore';
 import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
@@ -28,6 +27,7 @@ import About from './About'
 import CustomModal from './Modal'
 import Menu from './Menu';
 import MenuItem from './MenuItem';
+import api from "./Api.js"
 
 import './App.css';
 
@@ -65,7 +65,7 @@ class App extends Component {
   fetchProducts() {
     NProgress.start()
 
-    axios.get("/products/")
+    api.get("/products/")
     .then((response) => {
       NProgress.done()
 
