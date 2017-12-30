@@ -20,6 +20,13 @@
   top: 3px;
   right: 3px;
 }
+
+#highlighted h2{
+  line-height: 1.6em
+}
+#highlighted h1{
+
+}
 .cart-dropdown-menu .cart-items .cart-items-item{
   position: relative
 }

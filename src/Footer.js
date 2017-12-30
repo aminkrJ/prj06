@@ -94,8 +94,8 @@ class Footer extends Component {
     return (
       <div>
       <footer id="footer">
-      <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-uppercase text-slab font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3>
-      <p class="text-sm">We love clean nutritious raw medicinal food without nonsense additives and preservatives.</p>
+      <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-slab font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3>
+      <p class="text-sm">Wholesome meals packed with superfoods, functional herbs, probiotics, and medicinal mushrooms.</p>
       <address>
         <ul class="list-unstyled text-sm">
           <li> </li>
@@ -114,9 +114,9 @@ class Footer extends Component {
               </ul>
             </address>
             <div class="mt-3 mb-4 mb-lg-0">
-              <a href="#" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
+              <a href="https://www.instagram.com/lifelixir" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
               <a href="https://www.facebook.com/LifeElixirAU" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
-              <a href="https://www.instagram.com/lifelixir" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
+              <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
             </div>
 
               <div className="mt-4 mb-4 mb-lg-4">
@@ -127,15 +127,15 @@ class Footer extends Component {
           <div class="col-lg-7 offset-lg-1">
             <div class="row">
               <div class="col-6 col-md-3">
-                <h4 class="mt-0 text-slab">
-                  Our bundles
+                <h4 class="mt-0 text-uppercase text-white">
+                  Bundles
                 </h4>
                 <ul class="list-unstyled footer-links">
                   {this.renderProducts()}
                 </ul>
               </div>
               <div class="col-6 col-md-3">
-                <h4 class="mt-0 text-slab">
+                <h4 class="mt-0 text-uppercase text-white">
                   Company
                 </h4>
                 <ul class="list-unstyled footer-links">

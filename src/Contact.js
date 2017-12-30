@@ -15,10 +15,6 @@ class Contact extends Component {
                 </div>
               </div>
               <div class="col-md-9">
-                <h2 class="title-divider">
-                  <span>Contact <span class="font-weight-normal text-muted">Us</span></span>
-                  <small>Ways to get in touch</small>
-                </h2>
                 <div class="row">
                   <div class="col-md-6">
                     <form id="contact-form" action="https://formspree.io/support@lifelixir.com.au" method="POST" role="form">
@@ -44,31 +40,17 @@ class Contact extends Component {
                   <div class="col-md-6">
                 <p>
                   <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
-                  (02) 8005 7976
+                  &nbsp; (02) 8005 7976
                 </p>
                 <p>
                   <abbr title="Email"><i class="fa fa-envelope"></i></abbr>
-                  support@lifelixir.com.au
+                  &nbsp; support@lifelixir.com.au
                 </p>
                 <p>
                   <abbr title="Address"><i class="fa fa-home"></i></abbr>
-                  15/12 Cecil St., Gordon, NSW, 2072
+                  &nbsp; 15/12 Cecil St., Gordon, NSW, 2072
                 </p>
 
-              <h4 class="title-divider py-3">
-                <span>Social media</span>
-              </h4>
-              <ul class="list-unstyled social-media-branding">
-                <li>
-                  <a href="https://www.instagram.com/lifelixir/" class="social-link branding-instagram"><i class="fa fa-instagram fa-fw"></i> Instagram</a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/LifeElixirAU/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube-play fa-fw"></i> YouTube</a>
-                </li>
-              </ul>
                   </div>
                 </div>
               </div>

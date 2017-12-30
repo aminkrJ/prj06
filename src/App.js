@@ -90,15 +90,13 @@ class App extends Component {
         <div className="header-upper">
           <div className="header-inner container">
             <div className="header-block-flex order-1 mr-auto">
-              <nav className="nav nav-sm header-block-flex">
+              <nav className="text-xs rounded p-1 mb-1 mb-lg-0 ">
+      <i class="fa fa-truck" style={{fontSize: '1.3em'}}></i> &nbsp; Free shipping on orders over $50. Use code <span class="font-weight-bold">FDO50DF0</span>
               </nav>
-              <div className="dropdown dropdowns-no-carets">
-              </div>
             </div>
             <div className="nav nav-icons header-block order-12">
               <a href="https://www.facebook.com/LifeElixirAU" className="nav-link"> <i className="fa fa-facebook-square icon-1x"></i> <span className="sr-only">Facebook</span> </a>
               <a href="https://www.instagram.com/lifelixir" className="nav-link"> <i className="fa fa-instagram icon-1x"></i> <span className="sr-only">Instagram</span> </a>
-              <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" className="nav-link"> <i className="fa fa-youtube-play icon-1x"></i> <span className="sr-only">Instagram</span> </a>
             </div>
           </div>
         </div>

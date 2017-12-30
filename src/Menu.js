@@ -75,7 +75,7 @@ class Menu extends Component {
             <div className="card-body">
               <small className="text-muted text-uppercase">{product.category}</small>
               <Link className="text-grey-dark" to={"/menu/" + product.slug}>
-                <h4 className="card-title">
+                <h4 className="text-slab card-title">
                   {product.name}
                 </h4>
               </Link>
@@ -100,7 +100,7 @@ class Menu extends Component {
     return this.state.categories.map((category, index) => {
       return(
         <Link to={"/menu/categories/" + category.id} class={classnames("nav-link", {active: this.state.activeCategory === category.id})}>
-          {category.name}
+          <span class="text-slab">{category.name}</span>
           <small>{category.short_description}</small>
           <i class="fa fa-angle-right"></i>
         </Link>
@@ -125,7 +125,7 @@ class Menu extends Component {
               <div class="nav-section-menu">
                 <div class="nav nav-list">
                   <Link to="/menu" class={classnames("nav-link first", {active: this.state.activeCategory === 0})}>
-                    All items
+                    <span class="text-slab">NutriCombo</span>
                     <small>Carefully crafted</small>
                     <i class="fa fa-angle-right"></i>
                   </Link>

@@ -9,8 +9,8 @@ class AboutSideMenu extends Component {
         <div class="nav nav-list">
           <span class="nav-header">In This Section</span> 
           <Link to="/about" class={classnames("first nav-link", {active: this.props.active === 1})}>
-            About us
-            <small>Details matter</small>
+            About 
+            <small>NutriCombo</small>
             <i class="fa fa-angle-right"></i>
           </Link>
           <Link to="/delivery" class={classnames("nav-link", {active: this.props.active === 2})}>

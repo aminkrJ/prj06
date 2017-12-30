@@ -3,6 +3,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import api from './Api'
 import NProgress from 'nprogress'
 import moment from 'moment'
+import PageTitle from './PageTitle'
 
 class Blog extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class Blog extends Component {
 <span class="date-m bg-primary">{moment(article.updated_at).format("MMMM")}</span>
 <span class="date-d">{moment(article.updated_at).format("D")}</span> </div>
               <div class="tags"></div>
-              <h4 class="timeline-item-title">
+              <h4 class="text-slab timeline-item-title">
                 <Link to={"/blog/" + article.slug}>{article.title}</Link>
               </h4>
               <p class="timeline-item-description">{article.description}</p>
@@ -62,12 +63,10 @@ class Blog extends Component {
 
   render() {
     return (
+      <div>
+        <PageTitle title="Blog" location={ {title: "Blog", path:"/blog"} } />
     <div id="content">
       <div class="container">
-        <h2 class="title-divider">
-          <span>Company <span class="font-weight-normal text-muted">Blog</span></span>
-          <small></small>
-        </h2>
         <div class="row">
           <div class="col-md-9">
             <div class="blog-roll blog-grid">
@@ -89,13 +88,14 @@ class Blog extends Component {
                   <a href="https://www.facebook.com/LifeElixirAU/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube-play fa-fw"></i> YouTube</a>
+                  <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube fa-fw"></i> YouTube</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
     )
   }

@@ -35,7 +35,7 @@ class Home extends Component {
           <div class="card text-center mb-5">
             <h3 class="card-title py-3 text-shadow">
               <Link to={"/menu/" + product.slug} class="">
-                <span class="text-black text-capitalize">{product.name}</span>
+                <span class="text-slab text-black text-capitalize">{product.name}</span>
               </Link>
             </h3>
             <div class="row">
@@ -68,9 +68,9 @@ class Home extends Component {
       <div id="pricing" class="bg-faded">
         <div class="container">
           <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h2 class="text-center text-uppercase font-weight-bold my-0">
+          <h3 class="text-center text-slab font-weight-bold my-0">
       Our Bundles
-          </h2>
+          </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0">
             Delivery fee applies.
           </h5>
@@ -113,18 +113,20 @@ class Home extends Component {
     return (
       <div className="">
         <div id="highlighted">
-          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-5 py-lg-8 flex-valign">
+          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-2 py-lg-5 flex-valign">
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-uppercase text-black mb-2 pt-1">Elevated Smoothie bowls</h1>
+                      <h1 className="font-weight-bold h2 text-black mb-2 pt-1 text-slab">It gives you the fuel</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <h3 class="tp-caption mb-4 pb-1 font-weight-light text-black tagline">Healthy homemade smoothie bowls packed with superfoods, functional herbs, probiotics, and medicinal mushrooms.</h3>
+                      <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
+      Go against excessive fatigue, headache, poor memory, lack of focus, chronical pains and leaky gut with <span class="font-weight-bold text-slab">NutriCombo</span> collection packed with superfoods, functional hebrs, probiotics and medicinal mushrooms.
+      </h2>
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/menu">Order Now</Link>
-                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Learn More</Link>
+                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Find out more</Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
                 </div>
@@ -135,9 +137,9 @@ class Home extends Component {
         <div id="content" className="p-0">
           <Process />
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h2 className="text-center text-uppercase font-weight-bold my-0">
+          <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu
-          </h2>
+          </h3>
           <h5 className="text-center font-weight-light mt-2 mb-0">
       Nutritious and delicious.
           </h5>
@@ -148,48 +150,48 @@ class Home extends Component {
       {this.renderBundles()}
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h2 className="text-center text-uppercase font-weight-bold my-0">
+            <h3 className="text-center text-slab font-weight-bold my-0">
               Why us?
-            </h2>
+            </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
             </h5>
             <hr className="mb-5 w-50 mx-auto" />
             <div className="row text-center">
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
+                <h4 className="text-slab mt-2">
                   Freshness
                 </h4>
                 <p>Fresh ingredients are at the heart of our philosophy</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
+                <h4 className="mt-2 text-slab">
                   Premium Ingredients
                 </h4>
                 <p>Seasonal, pesticide-free, and certified organic ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
+                <h4 className="mt-2 text-slab">
                   No Added Sugar
                 </h4>
                 <p>Enjoy the naturally occurring sweetness of ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
+                <h4 className="text-slab mt-2">
                   No Preservative
                 </h4>
                 <p>No process or additives to expand the shelf-life</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
-                  Nutritious n Delicious
+                <h4 className="mt-2 text-slab">
+                  Probiotics
                 </h4>
-                <p>Carefully crafted to hero nutritions and flavor</p>
+                <p>Good bacterias for healthy gut</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2">
-                  Natural Remedies
+                <h4 className="mt-2 text-slab">
+                  Low carbs
                 </h4>
-                <p>With natural medicinal agents it is more than a meal</p>
+                <p>Low carbs and suger but high in healthy fats</p>
               </div>
             </div>
           </div>

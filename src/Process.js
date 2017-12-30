@@ -25,9 +25,9 @@ class Process extends Component {
     return (
       <div class="container">
           <hr class="hr-lg w-10 mx-auto hr-primary" />
-          <h2 class="text-center text-uppercase font-weight-bold my-0">
-      details matter
-          </h2>
+          <h3 class="text-center text-slab font-weight-bold my-0">
+      How we make them?
+          </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
           </h5>
           <hr class="mb-0 w-50 mx-auto" />
@@ -35,7 +35,7 @@ class Process extends Component {
           <ul class="nav nav-steps nav-steps-circles flex-column flex-lg-row justify-content-around w-80 mx-auto">
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}>
-        <img src={water} />
+        <img src={blueberries} />
       </a>
             </li>
             <li class="nav-item">
@@ -45,39 +45,39 @@ class Process extends Component {
             </li>
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 3})} data-toggle="tab" onClick={this.activate.bind(this, 3)}>
-        <img src={blueberries} />
+        <img src={brain} />
       </a>
             </li>
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}>
-        <img src={brain} />
+        <img src={water} />
       </a>
             </li>
           </ul>
           <div class="tab-content text-center pb-2 px-md-6">
-            <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps1">
-              <h3>
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 4}, {active: this.state.selected === 4})} id="tab-steps1">
+              <h4 class="text-slab">
                 Filtered and electrolyte-enhanced water
-              </h3>
-              <p>Electrolyte-enhanced waters have things like potassium and sodium added to them, which help your body absorb the water more quickly. These electrolytes are helpful in preventing dehydration, so they're especially useful during and after intense workouts.</p>
+              </h4>
+              <p>Electrolyte enhanced water is water that has electrically charged minerals, or electrolytes, added to it. The most common electrolytes found in the body are sodium, potassium, chloride, phosphate, calcium, magnesium, and bicarbonate.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps2">
-              <h3>
+              <h4 class="text-slab">
                 Activate, insecticide free nuts and seeds
-              </h3>
-              <p>We use activated and insecticide free nuts and seeds in our smoothies. This process increases the nutrient value of the nuts and seeds along with breaking down the problematic compounds that help enhance their digestibility.</p>
+              </h4>
+              <p>Activated nuts have been soaked in water and salt for a period of time, which starts off the germination or sprouting process, then dehydrated at a low temperature. Soaking increases the nutrient value of the nuts along with breaking down the problematic compounds that help enhance their digestibility.</p>
+            </div>
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps4">
+              <h4 class="text-slab">
+                Superfoods
+              </h4>
+              <p>Superfoods do more than just help you meet your vitamin and mineral needs or aid in shedding a few extra pounds when it comes time for swimsuit season. In fact, these foods can help you achieve better health, prevent chronic disease, and improve the way you feel day in and day out — and they’re some of the top anti-aging foods around.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 3}, {active: this.state.selected === 3})} id="tab-steps3">
-              <h3>
-                Fruits and vegetables
-              </h3>
-              <p>We harness the power of seasonal organic fruits and vegtables to enhance the taste, natural sweetness, and nutritions in our smoothies.</p>
-            </div>
-            <div class={classNames("tab-pane fade", {show: this.state.selected === 4}, {active: this.state.selected === 4})} id="tab-steps4">
-              <h3>
-                Superfood and mushrooms
-              </h3>
-              <p>Certified organic nutrition-dense superfoods and natural nootropics mushrooms, smart drugs, high in antioxidant, vitamin and minerals from all around the world in our smoothies to bring them to another level.</p>
+              <h4 class="text-slab">
+               Medicinal mushrooms 
+              </h4>
+              <p>When it comes to sticking to a healthy diet, disease-fighting mushrooms check off all the boxes. They’re low in carbohydrates and calories, but a great source of B vitamins, trace minerals, fiber and even protein. They also an anti-inflammatory food, containing high levels of beta-glucans compounds that keep immune cells alert, plus a powerful antioxidant called ergothioneine that helps lower bodywide inflammation.</p>
             </div>
           </div>
         </div>

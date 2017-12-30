@@ -63,10 +63,9 @@ class MenuItem extends Component {
               <div class="card product-card mb-4">
                 <div class="card-body p-4 pos-relative">
                   <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
-      
                   </div>
 <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.category}</span></p>
-                  <h2 class="card-title mb-2">
+                  <h2 class="text-slab card-title mb-2">
                     {this.state.product.name}
                   </h2>
                   <h4 class="font-weight-bold text-primary">
