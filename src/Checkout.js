@@ -19,7 +19,7 @@ class Checkout extends Component {
       cart: {customer: {}, coupon: {}},
       deliveryAt: moment(),
       errors: [],
-      paymentError: '',
+      cardError: '',
       coupon: {},
       couponCode: "",
       hasCoupon: false,
@@ -118,7 +118,10 @@ class Checkout extends Component {
     var address = self.refs.shippingAddress.refs
     var stripe = self.refs.Stripe.state
 
-    this.setState({paymentError: ''})
+    this.setState({
+      cardError: '',
+      errors: []
+    })
 
     stripe.engine.createToken(stripe.card, {
     }).then(function(result) {
@@ -127,7 +130,7 @@ class Checkout extends Component {
         NProgress.done()
         self.setState({
           isSending: false,
-          paymentError: result.error.message
+          cardError: result.error.message
         })
       } else {
         self.setState({stripeToken: result.token.id})
@@ -249,7 +252,7 @@ class Checkout extends Component {
               <div class="collapse show" id="credit-card">
                 <div class="stripe-container form-control bg-white mt-2 pos-relative">
                   <Stripe ref="Stripe" />
-                  <small class='text-danger'>{this.state.errors ? this.state.errors['stripe'] : null}</small>
+                  <small class='text-danger'>{this.state.cardError}{this.state.errors ? this.state.errors['stripe'] : null}</small>
                 </div>
               </div>
             </div>
