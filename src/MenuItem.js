@@ -48,6 +48,38 @@ class MenuItem extends Component {
     })
   }
 
+  renderRecipes() {
+    return(
+      this.state.product.recipes.map((r, index) => {
+        return (
+          <span key={r.id}>
+            <span>{r.description} </span>
+            <Link to={`/menu/${r.slug}`} class="text-black">{r.title}</Link>
+            {index + 1 === this.state.product.recipes.length ? null : <span>, &nbsp;</span>}
+          </span>
+        )
+      })
+    )
+  }
+
+  renderIngredients() {
+    if(this.state.product.category === "Bundle"){
+      return(
+        <div class="text-xs text-muted">
+         <hr class="my-3" />
+         <span class="font-weight-bold"></span> {this.renderRecipes()}
+        </div>
+      )
+    } else {
+      return(
+        <div class="text-xs text-muted">
+          <hr class="my-3" />
+          <span class="font-weight-bold">Ingredients: </span>
+          {this.state.product.ingredients.map((i) => {return i.name}).join(', ')}
+        </div>
+      )
+    }
+  }
 
   render() {
     return (
@@ -72,8 +104,9 @@ class MenuItem extends Component {
       <span class="h6 price-currency">$</span>{this.state.product.price}
                   </h4>
                   <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="text-lead" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="lead" />
                   <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
+      {this.renderIngredients()}
                   <hr class="my-3" />
                   <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={this.state.product} />
                 </div>

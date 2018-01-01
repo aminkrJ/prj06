@@ -113,7 +113,7 @@ class Home extends Component {
     return (
       <div className="">
         <div id="highlighted">
-          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-2 py-lg-5 flex-valign">
+          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-3 py-lg-5 flex-valign">
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
