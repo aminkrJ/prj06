@@ -63,7 +63,7 @@ class MenuItem extends Component {
   }
 
   renderIngredients() {
-    if(this.state.product.category === "Bundle"){
+    if(this.state.product.category === "Bundles"){
       return(
         <div class="text-xs text-muted">
          <hr class="my-3" />
