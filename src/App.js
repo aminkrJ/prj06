@@ -31,7 +31,7 @@ import api from "./Api.js"
 
 import './App.css';
 
-var pageTitle = "Healthy smoothies packed with superfoods, functional herbs, and medicinal mushrooms"
+var pageTitle = "Healthy raw wholesome meals packed with superfoods, functional herbs, and medicinal mushrooms"
 
 class App extends Component {
   constructor(props){

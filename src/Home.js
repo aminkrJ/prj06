@@ -122,7 +122,7 @@ class Home extends Component {
                       <h1 className="font-weight-bold h2 text-black mb-2 pt-1 text-slab">It gives you the fuel</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
-      Go against excessive fatigue, headache, poor memory, lack of focus, chronical pains and leaky gut with <span class="font-weight-bold text-slab">NutriCombo</span> collection packed with superfoods, functional hebrs, probiotics and medicinal mushrooms.
+      Go against fatigue, headache, poor memory, lack of focus, chronic pains and leaky gut with <span class="font-weight-bold text-slab">NutriCombo</span> collection packed with superfoods, functional hebrs, probiotics and medicinal mushrooms.
       </h2>
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/menu">Order Now</Link>
