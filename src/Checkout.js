@@ -247,8 +247,9 @@ class Checkout extends Component {
                 Credit Card <i class="fa fa-credit-card-alt"></i>
               </label>
               <div class="collapse show" id="credit-card">
-                <div class="bg-white p-3 mt-2 rounded pos-relative">
+                <div class="stripe-container form-control bg-white mt-2 pos-relative">
                   <Stripe ref="Stripe" />
+                  <small class='text-danger'>{this.state.errors ? this.state.errors['stripe'] : null}</small>
                 </div>
               </div>
             </div>
