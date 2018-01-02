@@ -22,9 +22,11 @@ class Delivery extends Component {
                 <p class="lead">We deliver fresh food to your doorstep.</p>
                 <p>We are committed to freshness. We managed to keep the price of our delivery $8 in selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney. Sign up to our newsletter to get the latest news about our mobile places and delivery suburbs in your inbox.</p>
 
-                <h4 class="text-slab">Customised delivery date</h4>
-                <p>Simply, <Link to="/menu">pick your favorites</Link> and check for availability of your delivery date.</p>
-                <p class="text-sm text-muted">Note: If you do not open the door or respond to telephonic correspondence within 10 minutes of our delivery drivers physically reaching your address, we reserve the right to leave the premises, and you will be charged for the order.</p>
+                <h4 class="text-slab">Customisable delivery date and time</h4>
+                <p>Simply, <Link to="/menu">pick your favorites</Link> and check for availability of your delivery date and time in checkout page.</p>
+
+                <h4 class="text-slab">Delivery hours</h4>
+                <p>At the moment, you have two options for delivery time in each day, from 12PM to 14PM and from 17PM to 19PM. You can only choose 17PM to 19PM if you put your order after 12PM on the same day otherwise you can choose our next day delivery. </p>
               </div>
             </div>
           </div>

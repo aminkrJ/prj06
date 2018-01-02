@@ -19,13 +19,6 @@ class DeliveryTime extends Component {
     var deliveryDate = moment(this.props.deliveryAt)
     var startOfDay = deliveryDate.startOf('day').add(1, 'm')
     var deliveryDateTime = deliveryDate.add(this.props.period, 'h')
-
-    if(!this.state.isDisabled){
-      this.setState({
-        isChecked: !this.state.isChecked
-      })
-    }
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -52,9 +45,9 @@ class DeliveryTime extends Component {
   render() {
     return (
       <FormGroup onClick={this.handleTimeChange.bind(this)} disabled={this.state.isDisabled} check>
-        <Label check={this.state.isChecked} check>
-          <Input type="radio" disabled={this.state.isDisabled} checked={this.state.isChecked} />{' '}
-  {this.props.value}
+        <Label class="text-sm" check={this.state.isChecked} check>
+          <Input type="radio" disabled={this.state.isDisabled} />{' '}
+  {this.props.value} <span class="text-danger text-xs">{this.state.isDisabled ? " - Not Available. Change date to find availability." : null}</span>
         </Label>
       </FormGroup>
     )

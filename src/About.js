@@ -22,9 +22,9 @@ class About extends Component {
           <div class="col-md-7 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">NutriCombo.</h2>
-            <p>Tired of excessive fatigue, headaches, poor memory, lack of focus, chronical pains, and gut problems we have harnessed the power of organic fruits and vegetables, superfoods, functional herbs and medicinal mushrooms to make our pioneering raw healthy homemade meals with pronounced flavor. </p>
             <p>
-            </p>
+      We live in polluted and stressful environments these days. Food is the only protection for our body and mind. Unfortunately, our old eating habits are not effective anymore which leads to lots of modern diseases such as cancer, diabetes, cardiovascular diseases, depression, anxiety and so on. NutriCombo collectin is your ally in fight against fatigue, craving, headaches, poor memory, lack of focus, chronic pains, depression, anxiety, and gut problems.
+      </p>
           </div>
         </div>
         <hr />
@@ -64,6 +64,17 @@ class About extends Component {
           </div>
         </div>
         <hr />
+       <div class="row align-items-center padding-top-2x padding-bottom-2x">
+          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto"/></div>
+          <div class="col-md-7 order-md-1 text-md-left text-center">
+            <div class="mt-30 hidden-md-up"></div>
+            <h2 class="h3 text-slab">Brain enhancer.</h2>
+            <p>
+      Our human brain needs fuel to make smart decision during a day otherwise we tend to stick to our old habits or what we call it autopilot. That's why it is hard for us discipline ourselves to exercise, be on a diet, stand up in the meetings, make the call and so on.
+      </p>
+          </div>
+        </div>
+        <hr />
       </div>
               </div>
             </div>
@@ -75,4 +86,6 @@ class About extends Component {
   }
 }
 
+      <p>
+      </p>
 export default About
