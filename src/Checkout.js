@@ -8,6 +8,7 @@ import business from 'moment-business'
 import Stripe from './Stripe';
 import CustomInput from './CustomInput';
 import ShippingAddress from './ShippingAddress';
+import DeliveryTime from './DeliveryTime'
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -207,10 +208,10 @@ class Checkout extends Component {
         <div class="row">
 
         <div class="col-md-8">
-          <h4>
-            Delivery Date
+          <h4 class="text-slab">
+            Delivery Date and Time
           </h4>
-          <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
+          <div class="mb-2 bg-faded p-3 rounded" id="">
         <DatePicker
                 selected={this.state.deliveryAt}
                 onChange={this.handleDeliveryDateChange.bind(this)}
@@ -225,22 +226,25 @@ class Checkout extends Component {
                 minDate={moment()}
                 filterDate={this.isWeekday}
             />
-            <p class="text-muted mt-2"> We only deliver to selected suburbs in NSW.</p>
+          <div class="mt-2 px-4">
+            <DeliveryTime value="12PM - 14PM" start={12} end={14} deliveryAt={this.state.deliveryAt} />
+            <DeliveryTime value="17PM - 20PM" start={17} end={19} deliveryAt={this.state.deliveryAt} />
           </div>
-          <h4>
+          </div>
+          <h4 class="text-slab">
             Customer Information
           </h4>
-          <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
+          <div class="mb-2 bg-faded p-3 rounded" id="">
             <CustomInput ref='email' type='email' placeholder='Email' name='email' />
           </div>
 
-          <h4>
+          <h4 class="text-slab">
             Delivery Address
           </h4>
-          <div class="mb-4 bg-faded p-3 rounded mb-4" id="">
+          <div class="mb-2 bg-faded p-3 rounded" id="">
             <ShippingAddress ref='shippingAddress' errors={this.state.errors}/>
           </div>
-          <h4>
+          <h4 class="text-slab">
             Payment Options
           </h4>
           <div id="payment-options" class="bg-faded p-3 rounded">
@@ -285,7 +289,7 @@ class Checkout extends Component {
             <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />
             <div class="row">
               <div class="col-md-6">
-                <h3 class="">Total</h3>
+                <h3 class="text-slab">Total</h3>
               </div>
               <div class="col-md-6 text-right">
                 <h3 class="text-primary">${this.state.hasCoupon ? this.state.coupon.total : this.state.cart.total}</h3>

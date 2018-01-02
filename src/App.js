@@ -91,7 +91,7 @@ class App extends Component {
           <div className="header-inner container">
             <div className="header-block-flex order-1 mr-auto">
               <nav className="text-xs rounded p-1 mb-1 mb-lg-0 ">
-      <i class="fa fa-truck" style={{fontSize: '1.3em'}}></i> &nbsp; Free shipping on orders over $50. Use code <span class="font-weight-bold">FDO50DF0</span>
+      <i class="fa fa-truck" style={{fontSize: '1.3em'}}></i> &nbsp; Free delivery on orders over $50. Use code <span class="font-weight-bold">FDO50DF0</span>
               </nav>
             </div>
             <div className="nav nav-icons header-block order-12">
