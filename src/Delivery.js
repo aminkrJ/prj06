@@ -26,7 +26,7 @@ class Delivery extends Component {
                 <p>Simply, <Link to="/menu">pick your favorites</Link> and check for availability of your delivery date and time in checkout page.</p>
 
                 <h4 class="text-slab">Delivery hours</h4>
-                <p>At the moment, you have two options for delivery time in each day, from 12PM to 14PM and from 17PM to 19PM. You can only choose 17PM to 19PM if you put your order after 12PM on the same day otherwise you can choose our next day delivery. </p>
+                <p>At the moment, you have two options for delivery time in each day,  12PM - 14 PM and  17PM - 19 PM. You can only choose 17 PM - 19 PM if you put your order after 12 PM on the same day otherwise you can choose our delivery in next days. </p>
               </div>
             </div>
           </div>
