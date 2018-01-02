@@ -13,12 +13,12 @@ import DeliveryTime from './DeliveryTime'
 import 'react-datepicker/dist/react-datepicker.css';
 
 class Checkout extends Component {
-
   constructor(props) {
     super(props)
     this.state = {
       cart: {customer: {}, coupon: {}},
       deliveryAt: moment(),
+      deliveryTime: '',
       errors: [],
       cardError: '',
       coupon: {},
@@ -27,6 +27,12 @@ class Checkout extends Component {
       couponError: "",
       isSending: false
     }
+  }
+
+  onDeliveryTimeChange(deliveryTime) {
+    this.setState({
+      deliveryTime: deliveryTime
+    })
   }
 
   isWeekday(date) {
@@ -141,6 +147,7 @@ class Checkout extends Component {
             cart: Object.assign({}, {
             stripe_token: self.state.stripeToken,
               delivery_at: self.state.deliveryAt,
+              delivery_time: self.state.deliveryTime,
               discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
               total: self.state.hasCoupon ? self.state.coupon.total : self.state.cart.total,
               coupon_id: self.state.hasCoupon ? self.state.coupon.id : null
@@ -216,6 +223,7 @@ class Checkout extends Component {
                 selected={this.state.deliveryAt}
                 onChange={this.handleDeliveryDateChange.bind(this)}
                 locale="en-au"
+      name="delivery_time"
       class="form-control"
   //minTime={moment().hours(9).minutes(0)}
   //maxTime={moment().hours(17).minutes(0)}
@@ -227,8 +235,9 @@ class Checkout extends Component {
                 filterDate={this.isWeekday}
             />
           <div class="mt-2 px-4">
-            <DeliveryTime value="12PM - 14PM" start={12} end={14} deliveryAt={this.state.deliveryAt} />
-            <DeliveryTime value="17PM - 20PM" start={17} end={19} deliveryAt={this.state.deliveryAt} />
+            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="12PM - 14PM" start={12} end={14} deliveryAt={this.state.deliveryAt} />
+            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="17PM - 20PM" start={17} end={19} deliveryAt={this.state.deliveryAt} />
+            <div class="text-danger">{this.state.errors ? this.state.errors['delivery_time'] : null}</div>
           </div>
           </div>
           <h4 class="text-slab">
