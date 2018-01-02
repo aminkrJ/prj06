@@ -17,7 +17,6 @@ import Home from './Home';
 import Footer from './Footer';
 import Thanks from './Thanks';
 import Cart from './Cart';
-import Product from './Product';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import Blog from './Blog'

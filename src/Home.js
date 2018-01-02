@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import NProgress from 'nprogress';
 import iziToast from 'izitoast';
 import _ from 'underscore';
 
 import Carousel from './Carousel';
 import Process from './Process';
-import Products from './Products';
 import sunshineBowl from './img/sunshine-smoothie-bowl.png';
 
 class Home extends Component {
