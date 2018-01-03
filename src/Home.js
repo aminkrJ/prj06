@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NProgress from 'nprogress';
 import iziToast from 'izitoast';
+import axios from 'axios'
 import _ from 'underscore';
 
 import Carousel from './Carousel';
@@ -13,11 +14,40 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      postcode: ''
     }
   }
 
   componentWillMount() {
   }
+
+  handlePostcodeChange(e) {
+    this.setState({postcode: e.target.value})
+  }
+
+ handlePostcodeSearch() {
+   if(this.state.postcode !== ''){
+     NProgress.start()
+     axios.get("/dropoff_locations/search?postcode=" + this.state.postcode)
+      .then((response) => {
+        NProgress.done()
+        if(response.data.length === 0){
+          iziToast.error({
+            position: 'topRight',
+            message: `We do not deliver to your postcode.`
+          })
+        }else{
+          iziToast.success({
+            position: 'topRight',
+            message: "We deliver to your postcode."
+          })
+        }
+      })
+      .catch((error) => {
+        NProgress.done()
+     })
+   }
+ }
 
   handleOrderNow(product, e){
     e.preventDefault()
@@ -133,7 +163,26 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           {this.renderBundles()}
-          <Process />
+          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+          <h3 className="text-center text-slab font-weight-bold my-0">
+            Home or office delivery
+          </h3>
+          <h5 className="text-center font-weight-light mt-2 mb-0">
+      Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area.
+          </h5>
+          <div id="delivery" className="text-center container p-3 py-lg-1">
+              <div class="row justify-content-center mt-3">
+                <div class="col-lg-5">
+                  <i class="fa fa-search icon-2x pos-absolute pos-l mt-2 ml-3 d-none d-lg-block"></i>
+                  <input onChange={this.handlePostcodeChange.bind(this)} class="form-control form-control-lg form-control-transparent text-center text-lg-left pl-lg-5" type="text" placeholder="Postcode"></input>
+                  <hr class="hr-inverse hr-lg mx-auto mt-1 mb-2" />
+                </div>
+              <div class="col-lg-2">
+                <input type="button" value="Find" class="btn btn-secondary btn-rounded btn-lg px-5 py-lg-3 px-lg-5" onClick={this.handlePostcodeSearch.bind(this)}></input> 
+              </div>
+            </div>
+          </div>
+          <hr className="mb-5 w-50 mx-auto" />
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu
@@ -145,6 +194,7 @@ class Home extends Component {
           <div id="projects" className="container p-3 py-lg-1">
       {this.renderMenu()}
           </div>
+          <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-slab font-weight-bold my-0">
