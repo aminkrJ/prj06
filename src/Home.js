@@ -70,7 +70,6 @@ class Home extends Component {
       Our Bundles
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0">
-            Delivery fee applies.
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
@@ -133,6 +132,7 @@ class Home extends Component {
           </div>
         </div>
         <div id="content" className="p-0">
+          {this.renderBundles()}
           <Process />
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-slab font-weight-bold my-0">
@@ -145,7 +145,6 @@ class Home extends Component {
           <div id="projects" className="container p-3 py-lg-1">
       {this.renderMenu()}
           </div>
-      {this.renderBundles()}
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-slab font-weight-bold my-0">
