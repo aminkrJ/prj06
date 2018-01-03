@@ -18,19 +18,20 @@ class About extends Component {
               <div class="col-md-9">
 <div class="container padding-bottom-2x mb-2">
         <div class="row align-items-center padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 text-md-left text-center">
+          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto"/></div>
+          <div class="col-md-7 order-md-1 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">NutriCombo.</h2>
+            <h2 class="h3 text-slab">Snack smart.</h2>
             <p>
-We all live in a polluted and stressful environment these days. Good fuel is imperative to shield and defend our body and mind. Unfortunately, modern diseases such as cancer, diabetes,  depression and so on are evidences that our traditional eating habits are not effective anymore. NutriCombo collectin is your ally in the battle against fatigue, craving, headaches, poor memory, lack of focus, chronic pains, depression, anxiety, and gut problems.
+      We all live in a polluted and stressful environment these days. Good fuel is imperative to shield our body. Unfortunately, modern diseases are evidences that our traditional eating habits are not effective anymore. NutriCombo has designed to give you the fuel and protect your body.
+
       </p>
           </div>
         </div>
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
+          <div class="col-md-5"><img class="d-block w-270 m-auto" /></div>
+          <div class="col-md-7 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">Weight loss.</h2>
             <p>
@@ -40,23 +41,22 @@ NutriCombo has been designed to have low carbs and high in healthy fats. When yo
         </div>
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 text-md-left text-center">
+          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
+          <div class="col-md-7 order-md-1 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">Healthy guts.</h2>
             <p class="mb-4"> 
-
 Probiotics when taken in sufficient amounts, they can help restore the natural balance of gut bacteria. As a result, health benefits may follow. NutriCombo benefits from a layer of beautiful yogurt with live culture to support and enhance your good bacteria in your guts and enhance your digestion.
       </p>
           </div>
         </div>
         <hr />
        <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
+          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
+          <div class="col-md-7 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">
-Sounder digestion and absorption.
+Better digestion.
 </h2>
             <p>
 While you might think otherwise, cooked foods are usually harder to digest than raw foods, plus cooking nutrient-dense foods tends to destabilize some of their valuable enzymes and destroy certain antioxidants and vitamins. Raw foods also help alkalize the body, reduce acidity, and have less of a chance of fermenting in the gut and causing inflammation/autoimmune reactions.
@@ -65,8 +65,8 @@ While you might think otherwise, cooked foods are usually harder to digest than 
         </div>
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 text-md-left text-center">
+          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
+          <div class="col-md-7 order-md-1 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">Healing and anti-aging.</h2>
             <p class="mb-4">
@@ -76,9 +76,9 @@ While you might think otherwise, cooked foods are usually harder to digest than 
         </div>
         <hr />
        <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto"/></div>
+          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
           <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
+            <div class="mt-30"></div>
             <h2 class="h3 text-slab">Smart decisions.</h2>
             <p>
       Our human brain needs fuel to make smart decisions every seconds of our lives otherwise we tend to stick to our old habits or what we call it autopilot syndrome. That's why we procrastinate and it is difficult for us to discipline ourselves to exercise, be on a diet, stand up in the meetings, make the call and so on.
