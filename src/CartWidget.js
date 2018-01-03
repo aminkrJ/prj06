@@ -63,7 +63,7 @@ class CardWidget extends Component {
                 <h5 class="font-weight-bold">
                   Subtotal: <span class="text-primary">${_.reduce(this.props.cart, (memo, p) => {return memo + (p.price * p.quantity)}, 0)}</span>
                 </h5>
-                <Link to="/cart" class="btn btn-outline-primary btn-sm btn-rounded mx-2">View Cart</Link> <Link to="/cart" tabindex="-1" class="btn btn-primary btn-sm btn-rounded mx-2">Checkout</Link>
+                 <Link to="/cart" tabindex="-1" class="btn btn-primary btn-sm btn-rounded mx-2">View Cart</Link>
               </div>
             </div>
           </PopoverBody>
