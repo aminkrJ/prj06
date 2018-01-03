@@ -30,7 +30,7 @@ import api from "./Api.js"
 
 import './App.css';
 
-var pageTitle = "Healthy raw wholesome meals packed with superfoods, functional herbs, and medicinal mushrooms"
+var pageTitle = "Healthy superfood snacks"
 
 class App extends Component {
   constructor(props){
