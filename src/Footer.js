@@ -114,8 +114,8 @@ class Footer extends Component {
               </ul>
             </address>
             <div class="mt-3 mb-4 mb-lg-0">
-              <a href="https://www.instagram.com/lifelixir" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
-              <a href="https://www.facebook.com/LifeElixirAU" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
+              <a href="https://www.instagram.com/LifelixirSnacks" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
+              <a href="https://www.facebook.com/LifelixirSnacks" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
               <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
             </div>
 

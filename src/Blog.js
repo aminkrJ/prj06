@@ -82,10 +82,10 @@ class Blog extends Component {
               </h4>
               <ul class="list-unstyled social-media-branding">
                 <li>
-                  <a href="https://www.instagram.com/lifelixir/" class="social-link branding-instagram"><i class="fa fa-instagram fa-fw"></i> Instagram</a>
+                  <a href="https://www.instagram.com/LifelixirSnacks/" class="social-link branding-instagram"><i class="fa fa-instagram fa-fw"></i> Instagram</a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/LifeElixirAU/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
+                  <a href="https://www.facebook.com/LifelixirSnacks/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
                 </li>
                 <li>
                   <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube fa-fw"></i> YouTube</a>
