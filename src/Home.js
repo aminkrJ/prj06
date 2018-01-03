@@ -149,7 +149,7 @@ class Home extends Component {
                       <h1 className="font-weight-bold text-black mb-2 pt-1 text-slab">Snack Smart.</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
-      Snacks to fight against fatigue, headache, poor memory, lack of focus, poor immune system, chronic pains and leaky gut all day every day. <span class="font-weight-bold text-slab">NutriCombo</span> low carbs collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
+      Snacks that fight against fatigue, headaches, poor memory, lack of focus, poor immune system, chronic pain and leaky gut all day every day. <span class="font-weight-bold text-slab">NutriCombo</span> is raw, plant-based, and low carbs packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
       </h2>
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/menu">Order Now</Link>
@@ -220,7 +220,7 @@ class Home extends Component {
                 <h4 className="mt-2 text-slab">
                   No Added Sugar
                 </h4>
-                <p>Enjoy the naturally occurring sweetness of ingredients</p>
+                <p>Enjoy the naturally occurring sweetness of our ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="text-slab mt-2">
@@ -232,13 +232,13 @@ class Home extends Component {
                 <h4 className="mt-2 text-slab">
                   Probiotics
                 </h4>
-                <p>Good bacterias for healthy gut</p>
+                <p>Good bacteria for a healthy gut</p>
               </div>
               <div className="col-lg-4 py-2">
                 <h4 className="mt-2 text-slab">
                   Low carbs
                 </h4>
-                <p>Low carbs and suger but high in healthy fats</p>
+                <p>Low carbs and suger, high in healthy fats</p>
               </div>
             </div>
           </div>
