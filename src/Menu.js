@@ -67,14 +67,14 @@ class Menu extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <Link to={"/menu/" + product.slug}>
+              <Link to={"/snacks/" + product.slug}>
                 <img className="card-img-top img-fluid" src={product.photo.original} alt={product.name} />
               </Link>
               <span class="badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist">${product.price}</span> 
             </div>
             <div className="card-body">
               <small className="text-muted text-uppercase">{product.category}</small>
-              <Link className="text-grey-dark" to={"/menu/" + product.slug}>
+              <Link className="text-grey-dark" to={"/snacks/" + product.slug}>
                 <h4 className="text-slab card-title">
                   {product.name}
                 </h4>
@@ -99,7 +99,7 @@ class Menu extends Component {
   renderCategories() {
     return this.state.categories.map((category, index) => {
       return(
-        <Link to={"/menu/categories/" + category.id} class={classnames("nav-link", {active: this.state.activeCategory === category.id})}>
+        <Link to={"/snacks/categories/" + category.id} class={classnames("nav-link", {active: this.state.activeCategory === category.id})}>
           <span class="text-slab">{category.name}</span>
           <small>{category.short_description}</small>
           <i class="fa fa-angle-right"></i>
@@ -111,7 +111,7 @@ class Menu extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Menu" location={ {title: "Menu", path:"/menu"} } />
+        <PageTitle title="Menu" location={ {title: "Menu", path:"/snacks"} } />
         <div id="content" className="py-3 py-lg-6">
           <div className="container">
             <div className="row">
@@ -124,7 +124,7 @@ class Menu extends Component {
 
               <div class="nav-section-menu">
                 <div class="nav nav-list">
-                  <Link to="/menu" class={classnames("nav-link first", {active: this.state.activeCategory === 0})}>
+                  <Link to="/snacks" class={classnames("nav-link first", {active: this.state.activeCategory === 0})}>
                     <span class="text-slab">NutriCombo</span>
                     <small>Carefully crafted</small>
                     <i class="fa fa-angle-right"></i>

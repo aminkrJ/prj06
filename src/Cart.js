@@ -92,12 +92,12 @@ class Cart extends Component {
               <a href="#" class="close cart-remove" onClick={this.props.dropFromCart.bind(this, p)}> <i class="fa fa-times"></i> </a>
             </td>
             <td class="text-center">
-              <Link to={`/menu/${p.slug}`}>
+              <Link to={`/snacks/${p.slug}`}>
                 <img class="cart-img img-fluid" src={p.photo.thumb} alt={p.name} />
               </Link>
             </td>
             <td>
-              <Link to={`/menu/${p.slug}`} class="font-weight-bold">{p.name}</Link>
+              <Link to={`/snacks/${p.slug}`} class="font-weight-bold">{p.name}</Link>
               <p dangerouslySetInnerHTML={{__html: p.nutrition_fact}} class="text-muted text-sm" />
             </td>
             <td>${p.price}</td>
@@ -158,7 +158,7 @@ class Cart extends Component {
                     </h3>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                   </div>
-                  <a href="/menu" class="btn btn-outline-primary btn-rounded btn-lg">Continue Shopping</a> <a href="#" disabled={this.state.isSending} class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)}>Proceed to Checkout</a>
+                  <a href="/snacks" class="btn btn-outline-primary btn-rounded btn-lg">Continue Shopping</a> <a href="#" disabled={this.state.isSending} class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)}>Proceed to Checkout</a>
                 </div>
               </div>
             </div>

@@ -113,9 +113,9 @@ class App extends Component {
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/legal" component={Legal} />
-          <Route path='/menu/categories/:id' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/menu' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/menu/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route path='/snacks/categories/:id' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/snacks' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/snacks/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.bundles}/>
         </StickyContainer>

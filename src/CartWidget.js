@@ -24,7 +24,7 @@ class CardWidget extends Component {
       this.props.cart.map((p, index) => {
         return(
           <div key={index} class="cart-items-item clearfix">
-            <Link to={`/menu/${p.slug}`} class="cart-img mr-2 float-left">
+            <Link to={`/snacks/${p.slug}`} class="cart-img mr-2 float-left">
               <img class="img-fluid" src={p.photo.thumb} alt={p.name} />
             </Link>
             <div class="float-left">

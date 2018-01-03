@@ -40,7 +40,7 @@ class Footer extends Component {
     return(
       this.props.products.map((product, index) => {
        return(
-         <li key={index}><Link to={`/menu/${product.slug}`}>{product.name}</Link></li>
+         <li key={index}><Link to={`/snacks/${product.slug}`}>{product.name}</Link></li>
        )
       })
     )

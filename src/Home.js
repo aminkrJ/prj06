@@ -62,13 +62,13 @@ class Home extends Component {
         return (
           <div class="card text-center mb-5">
             <h3 class="card-title py-3 text-shadow">
-              <Link to={"/menu/" + product.slug} class="">
+              <Link to={"/snacks/" + product.slug} class="">
                 <span class="text-slab text-black text-capitalize">{product.name}</span>
               </Link>
             </h3>
             <div class="row">
               <div class="col-md-12">
-                <Link to={"/menu/" + product.slug} class="">
+                <Link to={"/snacks/" + product.slug} class="">
                   <img src={product.photo.original} class="card-img img-fluid"></img>
                 </Link>
               </div>
@@ -83,7 +83,7 @@ class Home extends Component {
               <ul class="text-left list-unstyled list-border-dots">
               </ul>
               <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
-              <Link to={"/menu/" + product.slug} class="btn btn-link">Learn more</Link>
+              <Link to={"/snacks/" + product.slug} class="btn btn-link">Learn more</Link>
             </div>
           </div>
         )
@@ -117,7 +117,7 @@ class Home extends Component {
       var menu = this.props.menu.map((menuItem, index) => {
           return(
             <div key={index}>
-              <Link to={"/menu/" + menuItem.slug} className="project overlay-hover">
+              <Link to={"/snacks/" + menuItem.slug} className="project overlay-hover">
                 <img src={menuItem.photo.original} className="img-fluid" />
                 <span class="overlay-hover-content">
                   <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
@@ -152,7 +152,7 @@ class Home extends Component {
       Snacks that fight against fatigue, headaches, poor memory, lack of focus, poor immune system, chronic pain and leaky gut all day every day. <span class="font-weight-bold text-slab">NutriCombo</span> is raw, plant-based, and low carbs packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/menu">Order Now</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/snacks">Order Now</Link>
                     <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Find out more</Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
