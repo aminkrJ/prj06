@@ -18,28 +18,15 @@ class CustomModal extends Component {
     })
   }
 
-  handleSubscribe(e) {
-    this.props.onSubscribe(this.props.campaign.id)
-  }
-  handleEmailChange(e) {
-    this.props.onEmailChange(e)
-  }
-
   render() {
     return (
       <Modal isOpen={this.state.modal} toggle={this.toggle.bind(this)} backdrop={this.state.backdrop}>
         <ModalHeader toggle={this.toggle.bind(this)}>
-          {this.props.campaign.name}
+          {this.props.title}
         </ModalHeader>
         <ModalBody>
-          <p>Thanks for choosing this program. You will be notified when the program is ready to be published.</p>
-          <Form inline>
-            <FormGroup className="">
-              <Label for="email" className="mr-1">Email</Label>
-              <Input className="form-control-rounded mr-1" type="email" name="email" id="email" onChange={this.handleEmailChange.bind(this)} placeholder="Your email address" />
-            </FormGroup>
-            <Button className="form-control-rounded btn btn-teal" onClick={this.handleSubscribe.bind(this)}>Subscribe</Button>
-          </Form>
+          <p>{this.props.description}</p>
+          {this.props.children}
         </ModalBody>
       </Modal>
     )

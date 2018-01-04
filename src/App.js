@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import NProgress from 'nprogress';
 import _ from 'underscore';
-import {render} from 'react-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
@@ -41,20 +40,6 @@ class App extends Component {
       bundles: [],
       menu: [],
     }
-  }
-
-  handleSubscribe(campaign, e) {
-    e.preventDefault()
-
-    render(
-      <CustomModal campaign={campaign} onSubscribe={this.subscribe.bind(this)} onEmailChange={this.handleEmailChange.bind(this)} />
-      , document.getElementById('modal')).toggle()
-  }
-
-  handleEmailChange(e) {
-    this.setState({
-      email: e.target.value
-    })
   }
 
   componentWillMount() {

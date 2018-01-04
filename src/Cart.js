@@ -3,7 +3,10 @@ import { Redirect, Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import NProgress from 'nprogress';
 import _ from 'underscore';
+import {render} from 'react-dom';
 
+import Modal from './Modal'
+import DeliverySearch from './DeliverySearch'
 import CustomInput from './CustomInput';
 
 class Cart extends Component {
@@ -45,6 +48,16 @@ class Cart extends Component {
     this.setState({
       subtotal: this.calcSubtotal(),
     })
+  }
+
+  openDeliverySearchModal(e) {
+    e.preventDefault()
+
+    render(
+      <Modal description="Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area." title="Home or Office Delivery">
+        <DeliverySearch />
+      </Modal>
+      , document.getElementById('modal')).toggle()
   }
 
   handleProceedCheckout(e) {
@@ -139,12 +152,15 @@ class Cart extends Component {
       {this.renderCartProducts()}
               </tbody>
             </table>
-            <hr class="my-4 hr-lg" />
+            <hr class="mt-4 mb-0 hr-lg" />
             <div class="cart-content-footer">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
+<p class="text-sm text-muted">
+Now delivering to selected suburbs in Sydney. <br />
+<a href="#" onClick={this.openDeliverySearchModal.bind(this)}>Find out if we deliver to your area.</a></p>
                 </div>
-                <div class="col-md-8 text-md-right mt-3 mt-md-0">
+                <div class="col-md-6 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">
                     <h4 class="font-weight-light">
                       Subtotal: ${this.state.subtotal}

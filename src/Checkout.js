@@ -5,10 +5,14 @@ import NProgress from 'nprogress';
 import moment from 'moment'
 import DatePicker from 'react-datepicker'
 import business from 'moment-business'
+import {render} from 'react-dom';
+
 import Stripe from './Stripe';
 import CustomInput from './CustomInput';
+import Modal from './Modal'
 import ShippingAddress from './ShippingAddress';
 import DeliveryTime from './DeliveryTime'
+import DeliverySearch from './DeliverySearch'
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -27,6 +31,16 @@ class Checkout extends Component {
       couponError: "",
       isSending: false
     }
+  }
+
+  openDeliverySearchModal(e) {
+    e.preventDefault()
+
+    render(
+      <Modal description="Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area." title="Home or Office Delivery">
+        <DeliverySearch />
+      </Modal>
+      , document.getElementById('modal')).toggle()
   }
 
   onDeliveryTimeChange(deliveryTime) {
@@ -219,6 +233,9 @@ class Checkout extends Component {
             Delivery Date and Time
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
+
+<p class="text-sm">
+Now delivering to selected suburbs in Sydney. <a href="#" onClick={this.openDeliverySearchModal.bind(this)}>Find out if we deliver to your area.</a></p>
         <DatePicker
                 selected={this.state.deliveryAt}
                 onChange={this.handleDeliveryDateChange.bind(this)}
