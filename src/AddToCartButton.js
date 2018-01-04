@@ -39,13 +39,23 @@ class AddToCartButton extends Component {
   }
 
   render() {
-    return (
-      <span onClick={this.handleClick.bind(this)}
-         class={classnames(this.props.class, {"btn-danger": this.state.isInCart})}>
-           <i class="fa fa-cart-plus mr-2"></i> 
+    if(this.state.isInCart){
+     return (
+      <a href="#" onClick={this.handleClick.bind(this)}
+         class={classnames(this.props.class, "btn-danger btn-link")}>
+           <i class="fa fa-minus mr-2"></i>
              {this.state.isInCart ? "Remove from Cart" : "Add to Cart" }
-      </span>
-    )
+      </a>
+     )
+    }else{
+      return(
+      <a href="#" onClick={this.handleClick.bind(this)}
+         class={classnames(this.props.class)}>
+           <i class="fa fa-plus mr-2"></i>
+             {this.state.isInCart ? "Remove from Cart" : "Add to Cart" }
+      </a>
+      )
+    }
   }
 }
 

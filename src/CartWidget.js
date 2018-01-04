@@ -20,24 +20,40 @@ class CardWidget extends Component {
   }
 
   renderCartItem() {
-    return(
-      this.props.cart.map((p, index) => {
+      if(this.props.cart.length > 0){
         return(
-          <div key={index} class="cart-items-item clearfix">
-            <Link to={`/snacks/${p.slug}`} class="cart-img mr-2 float-left">
-              <img class="img-fluid" src={p.photo.thumb} alt={p.name} />
-            </Link>
-            <div class="float-left">
-              <h5 class="mb-0">
-          {p.name}
-              </h5>
-              <p class="mb-0">${p.price} / x{p.quantity}</p>
-              <a href="#" class="close cart-remove text-primary" onClick={this.props.dropFromCart.bind(this, p)}> <i class="fa fa-times"></i> </a>
+        this.props.cart.map((p, index) => {
+          return(
+            <div key={index} class="cart-items-item clearfix">
+              <Link to={`/snacks/${p.slug}`} class="cart-img mr-2 float-left">
+                <img class="img-fluid" src={p.photo.thumb} alt={p.name} />
+              </Link>
+              <div class="float-left">
+                <h5 class="mb-0">
+            {p.name}
+                </h5>
+                <p class="mb-0">${p.price} / x{p.quantity}</p>
+                <a href="#" class="close cart-remove text-primary" onClick={this.props.dropFromCart.bind(this, p)}> <i class="fa fa-times"></i> </a>
+              </div>
             </div>
-          </div>
+          )
+        })
         )
-      })
-    )
+      }else{
+        return <span class="text-sm text-danger">Cart is empty!</span>
+      }
+  }
+
+  renderNavigation(){
+    if(this.props.cart.length > 0){
+      return(
+         
+         <div>
+         <Link to="/cart" tabindex="-1" class="btn btn-primary btn-sm btn-rounded mx-2">View Cart</Link>
+         <Link to="/checkout" tabindex="-1" class="btn btn-primary btn-sm btn-rounded mx-2">Checkout</Link>
+         </div>
+      )
+    }
   }
 
   render() {
@@ -63,7 +79,7 @@ class CardWidget extends Component {
                 <h5 class="font-weight-bold">
                   Subtotal: <span class="text-primary">${_.reduce(this.props.cart, (memo, p) => {return memo + (p.price * p.quantity)}, 0)}</span>
                 </h5>
-                 <Link to="/cart" tabindex="-1" class="btn btn-primary btn-sm btn-rounded mx-2">View Cart</Link>
+                {this.renderNavigation()}
               </div>
             </div>
           </PopoverBody>
