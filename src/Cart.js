@@ -174,7 +174,8 @@ Now delivering to selected suburbs in Sydney. <br />
                     </h3>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                   </div>
-                  <a href="/snacks" class="btn btn-outline-primary btn-rounded btn-lg">Continue Shopping</a> <a href="#" disabled={this.state.isSending} class="btn btn-primary btn-rounded btn-lg" onClick={this.handleProceedCheckout.bind(this)}>Proceed to Checkout</a>
+                  <Link to="/snacks" class="btn btn-outline-primary btn-rounded btn-lg mr-1 mb-sm-1">Continue Shopping</Link>
+                  <Link to="/checkout" class="btn btn-primary btn-rounded btn-lg">Proceed to Checkout</Link>
                 </div>
               </div>
             </div>

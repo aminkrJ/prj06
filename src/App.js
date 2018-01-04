@@ -93,7 +93,7 @@ class App extends Component {
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/cart" component={(props) => <Cart {...props} reset={this.props.reset} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
-          <Route exact path="/checkout/:reference_number" component={(props) => <Checkout {...props} reset={this.props.reset} />} />
+          <Route exact path="/checkout" component={(props) => <Checkout {...props} reset={this.props.reset} cart={this.props.cart} />} />
           <Route exact path="/confirmation/:reference_number" component={Confirmation} />
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />

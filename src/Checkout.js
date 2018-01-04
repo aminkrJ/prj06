@@ -6,6 +6,7 @@ import moment from 'moment'
 import DatePicker from 'react-datepicker'
 import business from 'moment-business'
 import {render} from 'react-dom';
+import _ from 'underscore';
 
 import Stripe from './Stripe';
 import CustomInput from './CustomInput';
@@ -25,6 +26,8 @@ class Checkout extends Component {
       deliveryTime: '',
       errors: [],
       cardError: '',
+      shippingFee: 8,
+      subtotal: 0,
       coupon: {},
       couponCode: "",
       hasCoupon: false,
@@ -110,8 +113,12 @@ class Checkout extends Component {
     var self = this
 
     NProgress.start()
-    axios.post(`/carts/${self.props.match.params.reference_number}/coupon`, {
-     cart: {coupon_attributes: {
+    axios.post('/carts/coupon', {
+     cart: {
+       subtotal: this.state.subtotal,
+       total: this.calcTotal(),
+       shipping_fee: this.state.shippingFee,
+       coupon_attributes: {
        code: this.state.couponCode
      }}
     }).then(function(response){
@@ -139,6 +146,15 @@ class Checkout extends Component {
     var address = self.refs.shippingAddress.refs
     var stripe = self.refs.Stripe.state
 
+    var cart_products = this.props.cart.map((p) => {
+      return ({
+        product_id: p.id,
+        quantity: p.quantity,
+        unit_price: p.price,
+        total_price: p.price * p.quantity
+      })
+    })
+
     this.setState({
       cardError: '',
       errors: []
@@ -156,17 +172,20 @@ class Checkout extends Component {
       } else {
         self.setState({stripeToken: result.token.id})
 
-        axios.post(`/carts/${self.props.match.params.reference_number}/checkout`,
+        axios.post('/carts/checkout',
           {
             cart: Object.assign({}, {
             stripe_token: self.state.stripeToken,
               delivery_at: self.state.deliveryAt,
+              subtotal: self.state.subtotal,
+              shipping_fee: self.state.shippingFee,
               delivery_time: self.state.deliveryTime,
               discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
-              total: self.state.hasCoupon ? self.state.coupon.total : self.state.cart.total,
+              total: self.calcTotal(),
               coupon_id: self.state.hasCoupon ? self.state.coupon.id : null
 
           }, {
+            cart_products_attributes: cart_products,
             customer_attributes: {
               addresses_attributes: [
                 {
@@ -185,14 +204,14 @@ class Checkout extends Component {
             }
             })
           })
-          .then(function (data) {
+          .then(function (response) {
             NProgress.done()
             self.setState({isSending: false})
 
             // clear cache for store
             self.props.reset()
 
-            self.props.history.push('/confirmation/' + self.props.match.params.reference_number)
+            self.props.history.push('/confirmation/' + response.data.reference_number)
           })
           .catch(function (error) {
             NProgress.done()
@@ -206,22 +225,23 @@ class Checkout extends Component {
   }
 
   componentDidMount() {
-    NProgress.start()
-
-    axios.get("/carts/" + this.props.match.params.reference_number)
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        cart: response.data,
-        coupon: response.data.coupon
-      })
-
-    })
-    .catch((error) => {
-      NProgress.done()
+    this.setState({
+      subtotal: this.calcSubtotal()
     })
   }
+
+  calcSubtotal() {
+    return _.reduce(this.props.cart, (memo, p) => { return memo + (p.quantity * p.price)}, 0)
+  }
+
+  calcTotal() {
+    if(this.state.hasCoupon){
+      return this.state.coupon.total
+    } else{
+      return this.state.subtotal + this.state.shippingFee
+    }
+  }
+
   render() {
     return (
     <div id="content" class="py-5">
@@ -295,7 +315,7 @@ Now delivering to selected suburbs in Sydney. <a href="#" onClick={this.openDeli
                 <h4 class="font-weight-light">Subtotal</h4>
               </div>
               <div class="col-md-6 text-right">
-                <h4 class="font-weight-light">${this.state.cart.subtotal}</h4>
+                <h4 class="font-weight-light">${this.state.subtotal}</h4>
               </div>
             </div>
             <div class="row">
@@ -303,7 +323,7 @@ Now delivering to selected suburbs in Sydney. <a href="#" onClick={this.openDeli
                 <h4 class="font-weight-light">Delivery fee</h4>
               </div>
               <div class="col-md-6 text-right">
-                <h4 class="font-weight-light">${this.state.cart.shipping_fee}</h4>
+                <h4 class="font-weight-light">${this.state.shippingFee}</h4>
               </div>
             </div>
             {this.renderDiscount()}
@@ -318,7 +338,7 @@ Now delivering to selected suburbs in Sydney. <a href="#" onClick={this.openDeli
                 <h3 class="text-slab">Total</h3>
               </div>
               <div class="col-md-6 text-right">
-                <h3 class="text-primary">${this.state.hasCoupon ? this.state.coupon.total : this.state.cart.total}</h3>
+                <h3 class="text-primary">${this.calcTotal()}</h3>
               </div>
             </div>
             <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />

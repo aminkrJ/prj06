@@ -13,7 +13,7 @@ class Confirmation extends Component {
                 Your order has been successfully placed!
               </h3>
               <h4 class="font-weight-normal">
-Your order number is: <span class="text-primary">{this.props.match.params.reference_number}</span>
+Your order reference number is: <span class="text-primary">{this.props.match.params.reference_number}</span>
               </h4>
       <p>
       A confirmation email has been sent to your email address.
