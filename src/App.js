@@ -7,6 +7,7 @@ import _ from 'underscore';
 import { StickyContainer, Sticky } from 'react-sticky';
 
 import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
+import { fetchProducts } from './actions/productsActions';
 
 import Header from './Header';
 import Legal from './Legal';
@@ -64,8 +65,16 @@ class App extends Component {
     })
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      products: this.props.products.entities,
+      bundles: _.filter(this.props.products.entities, (p) => {return p.category.name === "Bundles"}),
+      menu: _.filter(this.props.products.entities, (p) => {return p.category.name !== "Bundles"}),
+    })
+  }
+
   componentDidMount() {
-    this.fetchProducts()
+    this.props.fetchProducts()
   }
 
   render() {
@@ -87,7 +96,13 @@ class App extends Component {
         <StickyContainer>
         <Header dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
         <div className="">
-          <Route exact path="/" component={(props) => <Home {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} bundles={this.state.bundles} menu={this.state.menu} products={this.state.products}/>} />
+          <Route exact path="/" component={(props) => <Home {...props} 
+            dropFromCart={this.props.dropFromCart}
+            cart={this.props.cart} addToCart={this.props.addToCart}
+            removeFromCart={this.props.removeFromCart}
+            bundles={this.state.bundles.slice(0, 3)}
+            menu={this.state.menu}
+            products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
@@ -98,8 +113,9 @@ class App extends Component {
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/legal" component={Legal} />
-          <Route path='/snacks/categories/:id' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/snacks' component={(props) => <Menu {...props} products={this.state.bundles} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/snacks' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/snacks/categories/:category_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/snacks/tags/:tag_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/snacks/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.bundles}/>
@@ -111,12 +127,14 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   cart: state.cart,
+  products: state.products
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   dropFromCart,
   addToCart,
   removeFromCart,
+  fetchProducts,
   reset
 }, dispatch)
 
