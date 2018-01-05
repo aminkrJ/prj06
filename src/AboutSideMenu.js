@@ -10,12 +10,12 @@ class AboutSideMenu extends Component {
           <span class="nav-header">In This Section</span> 
           <Link to="/about" class={classnames("first nav-link", {active: this.props.active === 1})}>
             NutriCombo
-            <small>Snack Smart.</small>
+            <small>Snack Smart</small>
             <i class="fa fa-angle-right"></i>
           </Link>
           <Link to="/delivery" class={classnames("nav-link", {active: this.props.active === 2})}>
-            Delivery information
-            <small>Premium delivery</small>
+            Delivery
+            <small>Same day delivery</small>
             <i class="fa fa-angle-right"></i>
           </Link>
         </div>

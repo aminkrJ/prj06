@@ -134,17 +134,17 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           {this.renderBundles()}
-          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h3 className="text-center text-slab font-weight-bold my-0">
-            Home or office delivery
-          </h3>
-          <h5 className="text-center font-weight-light mt-2 mb-0">
-      Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area.
-          </h5>
-          <div id="delivery" className="text-center container py-lg-1 px-lg-10">
-            <DeliverySearch />
+          <div class="bg-primary bg-op-5 py-4 py-lg-6">
+            <h3 className="text-center text-slab font-weight-bold my-0">
+              Home or office delivery
+            </h3>
+            <h5 className="text-center font-weight-light mt-2 mb-0">
+        Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area.
+            </h5>
+            <div id="delivery" className="text-center container py-lg-1 px-lg-10">
+              <DeliverySearch />
+            </div>
           </div>
-          <hr className="mb-5 w-50 mx-auto" />
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu

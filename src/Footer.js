@@ -140,7 +140,7 @@ class Footer extends Component {
                 </h4>
                 <ul class="list-unstyled footer-links">
                   <li><Link to="/about">About us</Link></li>
-                  <li><Link to="/delivery">Delivery Info</Link></li>
+                  <li><Link to="/delivery">Delivery</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
                 </ul>
               </div>

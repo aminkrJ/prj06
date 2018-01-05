@@ -28,7 +28,7 @@ class DeliveryTime extends Component {
     var now = moment()
     var deliveryDate = moment(props.deliveryAt)
     var startOfDay = deliveryDate.startOf('day').add(1, 'm')
-    var selectedDateTime = startOfDay.add(props.start, 'h')
+    var selectedDateTime = startOfDay.add(props.start - 2, 'h')
 
     if(now.isBefore(selectedDateTime)){
       this.setState({isDisabled: false})
