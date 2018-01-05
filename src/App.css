@@ -21,6 +21,10 @@
   right: 3px;
 }
 
+#content{
+  min-height: 300px
+}
+
 #highlighted h2{
   line-height: 1.6em
 }

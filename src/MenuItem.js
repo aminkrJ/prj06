@@ -4,13 +4,15 @@ import api from './Api.js'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
 import AddToCartButton from './AddToCartButton.js';
+import Loader from 'react-loader';
 
 class MenuItem extends Component {
   constructor(props){
     super(props)
     this.state = {
       product: {photo: {original: ""}, ingredients: [], product_category: {}},
-      activeTabIndex: 1
+      activeTabIndex: 1,
+      loaded: false
     }
   }
   
@@ -38,7 +40,8 @@ class MenuItem extends Component {
       NProgress.done()
 
       this.setState({
-        product: response.data
+        product: response.data,
+        loaded: true
       })
 
       document.title = "Life Elixir, " + response.data.name
@@ -85,6 +88,7 @@ class MenuItem extends Component {
     return (
       <div id="content" class="pt-3 pt-lg-6 pb-lg-0">
         <div class="container">
+      <Loader loaded={this.state.loaded}>
           <div class="row">
             <div class="col-lg-5">
               <div class="product-gallery pos-relative">
@@ -115,6 +119,7 @@ class MenuItem extends Component {
           </div>
           <div class="col-lg-12">
           </div>
+      </Loader>
         </div>
       </div>
     )
