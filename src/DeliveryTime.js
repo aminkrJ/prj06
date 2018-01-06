@@ -46,7 +46,7 @@ class DeliveryTime extends Component {
       <FormGroup onClick={this.handleTimeChange.bind(this)} disabled={this.state.isDisabled} check>
         <Label class="text-sm" check={this.state.isChecked} check>
           <Input name="deliverytime" type="radio" disabled={this.state.isDisabled} />{' '}
-  {this.props.value} <span class="text-danger text-xs">{this.state.isDisabled ? " Not Available for this day." : null}</span>
+  {this.props.value} <span class="text-danger text-xs">{this.state.isDisabled ? " Not Available for today." : null}</span>
         </Label>
       </FormGroup>
     )
