@@ -120,7 +120,7 @@ class Home extends Component {
                       <h1 className="font-weight-bold text-black mb-2 pt-1 text-slab">Snack Smart.</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
-      Snacks that fight against fatigue, headaches, poor memory, lack of focus, poor immune system, chronic pain and leaky gut all day every day. <span class="font-weight-bold text-slab">NutriCombo</span> is raw, plant-based, and low carbs packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
+      Snacks that fight fatigue, poor memory, lack of focus, poor immune system, chronic pains and leaky guts all day every day. <span class="font-weight-bold text-slab">NutriCombo</span> is raw and plant-based packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
       </h2>
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/snacks">Order Now</Link>
