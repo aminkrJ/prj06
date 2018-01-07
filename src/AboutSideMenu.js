@@ -7,13 +7,18 @@ class AboutSideMenu extends Component {
     return (
       <div class="nav-section-menu">
         <div class="nav nav-list">
-          <span class="nav-header">In This Section</span> 
+          <span class="nav-header">In This Section</span>
           <Link to="/about" class={classnames("first nav-link", {active: this.props.active === 1})}>
-            NutriCombo
-            <small>Snack Smart</small>
+            About
+            <small>Snack smart</small>
             <i class="fa fa-angle-right"></i>
           </Link>
-          <Link to="/delivery" class={classnames("nav-link", {active: this.props.active === 2})}>
+          <Link to="/nutricombo" class={classnames("first nav-link", {active: this.props.active === 2})}>
+            NutriCombo
+            <small>Smart breakfast</small>
+            <i class="fa fa-angle-right"></i>
+          </Link>
+          <Link to="/delivery" class={classnames("nav-link", {active: this.props.active === 3})}>
             Delivery
             <small>Same day delivery</small>
             <i class="fa fa-angle-right"></i>

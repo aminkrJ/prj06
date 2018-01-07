@@ -4,6 +4,9 @@ import PageTitle from './PageTitle'
 import AboutSideMenu from './AboutSideMenu'
 
 class About extends Component {
+  componentDidMount(){
+    document.title = "Healthy snack recipes and plans to your doorstep | Snack Smart"
+  }
 
   render() {
     return (
@@ -16,77 +19,57 @@ class About extends Component {
                 <AboutSideMenu active={1} />
               </div>
               <div class="col-md-9">
-<div class="container padding-bottom-2x mb-2">
-        <div class="row align-items-center padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">Snack smart.</h2>
-            <p>
-     With more toxins in the environment than ever, it is imperative to integrate healthy nutrient dense foods into our diet. Unfortunately, modern diseases are evidences that our traditional eating habits are not effective anymore. NutriCombo has designed to give you the fuel and protect your body. It is low in carbs, plant-based and raw.
-
-      </p>
-          </div>
-        </div>
-        <hr />
-        <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">Weight loss.</h2>
-            <p>
-NutriCombo has been designed to have low carbs and be high in healthy fats. When you overload your body with fats and take away carbohydrates, it will begin to burn ketones, the breakdown of fats in the liver, as the primary energy source. Optimal ketone levels offer many health, weight loss, physical and mental performance benefits.
-      </p>
-          </div>
-        </div>
-        <hr />
-        <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">Healthy guts.</h2>
-            <p class="mb-4"> 
-Probiotics when taken in sufficient amount, can help restore the natural balance of gut bacteria. As a result, health benefits may follow. NutriCombo benefits from a layer of beautiful yogurt with live culture to support and enhance the good bacteria in your gut and improve your digestion.
-      </p>
-          </div>
-        </div>
-        <hr />
-       <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">
-Better digestion.
-</h2>
-            <p>
-While you might think otherwise, cooked foods are usually harder to digest than raw foods, plus cooking nutrient-dense foods tends to destabilize some of their valuable enzymes and destroy certain antioxidants and vitamins. Raw foods also help alkalize the body, reduce acidity, and have less of a chance of fermenting in the gut and causing inflammation/autoimmune reactions.
-      </p>
-          </div>
-        </div>
-        <hr />
-        <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">Healing and anti-aging.</h2>
-            <p class="mb-4">
-      Air pollution, alcohol intake, toxins, high blood sugar, stress, and so on promote the excessive free radical formation and oxidative stress which can sometimes lead to cell death. Antioxidant in our NutriCombo collection will help our body fight against excessive free radicals.
-      </p>
-          </div>
-        </div>
-        <hr />
-       <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30"></div>
-            <h2 class="h3 text-slab">Smart decisions.</h2>
-            <p>
-      Our human brain needs fuel to make smart decisions every second of our lives, otherwise we tend to stick to our old habits or what we call Autopilot Syndrome. That's why we procrastinate and it is difficult for us to discipline ourselves to exercise, be on a diet, stand up in meetings, make the call and so on.
-      </p>
-          </div>
-        </div>
-        <hr />
+      <div class="about-bg p-5 py-lg-6 overlay overlay-gradient overlay-op-5 rounded mb-4 mb-lg-0 flex-ew flex-valign clickable-element bg-img blazy-bg b-loaded">
+          
+              <h2 class="mb-0 text-slab">
+                Snack Smart.
+              </h2>
+              <p class="mb-0">Healthy snack recipes and plans to your doorstep.</p>
+              <hr class="hr-lg w-100  hr-primary" />
       </div>
+          <div data-animate="fadeIn" data-animate-duration="0.8">
+            <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+            <h2 class="text-center text-uppercase font-weight-bold my-0 text-slab">
+              So, how does it work?
+            </h2>
+            <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
+            </h5>
+            <hr class="mb-5 w-50 mx-auto" />
+          </div>
+          <div class="row">
+            <div class="col-md-6" data-animate="fadeIn" data-animate-delay="0.4" data-animate-offset="100%">
+              <p class="lead">Healthy snack recipes and plans made with love to your doorstep.</p>
+              <p>Friends hang out, kids snack box, company parties with healthier and wholesome snack options has never been easier. 
+      <br /> <br /><Link class="btn text-sm btn-primary" to="/snacks">Order Yours Today</Link>
+      </p>
+              <p class="mb-0"></p>
+            </div>
+            <div class="col-md-6">
+              <ul class="fa-ul list-unstyled mt-4 mt-md-0">
+                <li class="mb-4">
+                  <i class="fa-li fa fa-check text-primary"></i> 
+                  <h4 class="mb-1 text-slab">
+                    You choose your snacks
+                  </h4>
+                  You choose your healthy snacks and plans from well known nutritionist and chefs.
+                </li>
+                <li class="mb-3">
+                  <i class="fa-li fa fa-check text-primary"></i> 
+                  <h4 class="mb-1 text-slab">
+                    We make them
+                  </h4>
+                  We make them for you on demand.
+                </li>
+                <li>
+                  <i class="fa-li fa fa-check text-primary"></i> 
+                  <h4 class="mb-1 text-slab">
+                    We deliver them
+                  </h4>
+                 We deliver freshness to your doorstep.
+                </li>
+              </ul>
+            </div>
+          </div>
               </div>
             </div>
           </div>
@@ -97,6 +80,4 @@ While you might think otherwise, cooked foods are usually harder to digest than 
   }
 }
 
-      <p>
-      </p>
 export default About

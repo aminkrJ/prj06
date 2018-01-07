@@ -25,6 +25,7 @@ import Delivery from './Delivery'
 import About from './About'
 import CustomModal from './Modal'
 import Menu from './Menu';
+import NutriCombo from './NutriCombo';
 import MenuItem from './MenuItem';
 import api from "./Api.js"
 
@@ -104,6 +105,7 @@ class App extends Component {
             menu={this.state.menu}
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/nutricombo" component={NutriCombo} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path="/contact" component={Contact} />
