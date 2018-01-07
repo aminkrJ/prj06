@@ -124,7 +124,7 @@ class Home extends Component {
       </h2>
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/snacks">Order Now</Link>
-                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/about">Find out more</Link>
+                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3" to="/nutricombo">Find out more</Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
                 </div>
