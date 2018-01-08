@@ -29,9 +29,9 @@ class About extends Component {
       </div>
           <div data-animate="fadeIn" data-animate-duration="0.8">
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h2 class="text-center text-uppercase font-weight-bold my-0 text-slab">
+            <h3 class="text-center text-uppercase font-weight-bold my-0 text-slab">
               So, how does it work?
-            </h2>
+            </h3>
             <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
             </h5>
             <hr class="mb-5 w-50 mx-auto" />
