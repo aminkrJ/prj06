@@ -16,7 +16,7 @@ class Delivery extends Component {
           <div class="container">
             <div class="row">
               <div class="col-md-3">
-                <AboutSideMenu active={2} />
+                <AboutSideMenu active={3} />
               </div>
               <div class="col-md-9">
                 <p class="lead">We deliver freshness to your doorstep.</p>
