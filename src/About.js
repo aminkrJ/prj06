@@ -51,21 +51,21 @@ class About extends Component {
                   <h4 class="mb-1 text-slab">
                     You choose your snacks
                   </h4>
-                  You choose your healthy snacks and plans from well known nutritionist and chefs.
+                  You choose your healthy snacks and plans from nutritionists and chefs.
                 </li>
                 <li class="mb-3">
                   <i class="fa-li fa fa-check text-primary"></i> 
                   <h4 class="mb-1 text-slab">
                     We make them
                   </h4>
-                  We make them for you on demand.
+                  We make them for you in our kitchens.
                 </li>
                 <li>
                   <i class="fa-li fa fa-check text-primary"></i> 
                   <h4 class="mb-1 text-slab">
                     We deliver them
                   </h4>
-                 We deliver freshness to your doorstep.
+                 We deliver them fresh to your doorstep either on the same day or the following days.
                 </li>
               </ul>
             </div>
