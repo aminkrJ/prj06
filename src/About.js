@@ -24,7 +24,7 @@ class About extends Component {
               <h2 class="mb-0 text-slab">
                 Snack Smart.
               </h2>
-              <p class="mb-0">Healthy snack recipes and plans to your doorstep.</p>
+              <p class="mb-0">Healthy snacks to your doorstep.</p>
               <hr class="hr-lg w-100  hr-primary" />
       </div>
           <div data-animate="fadeIn" data-animate-duration="0.8">
