@@ -7,6 +7,7 @@ import Carousel from './Carousel';
 import Process from './Process';
 import sunshineBowl from './img/sunshine-smoothie-bowl.png';
 import DeliverySearch from './DeliverySearch'
+import AddToCartButton from './AddToCartButton'
 
 class Home extends Component {
 
@@ -87,14 +88,19 @@ class Home extends Component {
     if (this.props.menu.length) {
       var menu = this.props.menu.map((menuItem, index) => {
           return(
-            <div key={index}>
-              <Link to={"/snacks/" + menuItem.slug} className="project overlay-hover">
-                <img src={menuItem.photo.original} className="img-fluid" />
-                <span class="overlay-hover-content">
-                  <i class="fa fa-arrow-circle-right icon-3x text-white"></i>
-                  <span class="h5 mt-4">{menuItem.name}</span>
-                </span>
+            <div class="card" key={index}>
+              <Link to={"/snacks/" + menuItem.slug}>
+                <img src={menuItem.photo.original} className="card-img-top img-fluid" />
               </Link>
+              <div class="card-body">
+                <Link to={"/snacks/" + menuItem.slug}>
+                  <h4 class="text-slab card-title">{menuItem.name}</h4>
+                </Link>
+                <p class="text-xs">
+                <b>Ingredients: </b>  {menuItem.ingredients.map((i) => {return i.name}).join(', ')}
+                </p>
+                <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={menuItem} />
+              </div>
             </div>
           )
         })
