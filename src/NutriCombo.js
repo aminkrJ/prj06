@@ -13,10 +13,7 @@ class NutriCombo extends Component {
         <div id="content">
           <div class="container">
             <div class="row">
-              <div class="col-md-3">
-                <AboutSideMenu active={2} />
-              </div>
-              <div class="col-md-9">
+              <div class="col-md-12">
 <div class="container padding-bottom-2x mb-2">
         <div class="row align-items-center padding-bottom-2x">
           <div class="col-md-12 order-md-1 text-md-left text-center">

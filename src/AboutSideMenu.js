@@ -13,11 +13,6 @@ class AboutSideMenu extends Component {
             <small>Snack smart</small>
             <i class="fa fa-angle-right"></i>
           </Link>
-          <Link to="/nutricombo" class={classnames("first nav-link", {active: this.props.active === 2})}>
-            NutriCombo
-            <small>Smart breakfast</small>
-            <i class="fa fa-angle-right"></i>
-          </Link>
           <Link to="/delivery" class={classnames("nav-link", {active: this.props.active === 3})}>
             Delivery
             <small>Same day delivery</small>
