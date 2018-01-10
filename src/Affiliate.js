@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import classnames from 'classnames'
 import PageTitle from './PageTitle'
 
+import nutritionist from './img/nutritionist.png'
+import trainer from './img/trainer.png'
+
 class Affiliate extends Component {
   render() {
     return (
@@ -22,7 +25,7 @@ class Affiliate extends Component {
 
   <div class="row my-5">
     <div class="col-md-6 order-md-2">
-      <img src="assets/img/homes/gym-pt-1.jpg" alt="Personal Trainer 1" class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle" />
+      <img src={trainer} class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle" />
     </div>
     <div class="col-md-6 flex-valign text-md-right">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
@@ -35,7 +38,7 @@ class Affiliate extends Component {
   </div>
   <div class="row my-5">
     <div class="col-md-6 text-md-right">
-      <img src="assets/img/homes/gym-pt-2.jpg" alt="Personal Trainer 2" class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle" />
+      <img src={nutritionist} class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle" />
     </div>
     <div class="col-md-6 flex-valign">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
