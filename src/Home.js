@@ -97,7 +97,7 @@ class Home extends Component {
                   <h4 class="text-slab card-title">{menuItem.name}</h4>
                 </Link>
                 <p class="text-xs">
-                {menuItem.ingredients.map((i) => {return i.name}).join(', ')}
+                {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n"}
                 </p>
                 <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={menuItem} />
               </div>
