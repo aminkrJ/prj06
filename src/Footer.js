@@ -40,7 +40,7 @@ class Footer extends Component {
     return(
       this.props.products.map((product, index) => {
        return(
-         <li key={index}><Link to={`/snacks/${product.slug}`}>{product.name}</Link></li>
+         <li key={index}><Link to={`/shop/${product.slug}`}>{product.name}</Link></li>
        )
       })
     )
@@ -95,7 +95,9 @@ class Footer extends Component {
       <div>
       <footer id="footer">
       <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-slab font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3>
-      <p class="text-sm">Wholesome meals packed with superfoods, functional herbs, probiotics, and medicinal mushrooms.</p>
+      <p class="text-sm">
+Nutrition that your competitors consume to be one step ahead of you in the game.
+</p>
       <address>
         <ul class="list-unstyled text-sm">
           <li> </li>
@@ -114,8 +116,8 @@ class Footer extends Component {
               </ul>
             </address>
             <div class="mt-3 mb-4 mb-lg-0">
-              <a href="https://www.instagram.com/LifelixirSnacks" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
-              <a href="https://www.facebook.com/LifelixirSnacks" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
+              <a href="https://www.instagram.com/lifelixirnutrition" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-instagram"></i> <span class="sr-only">Instagram</span> </a>
+              <a href="https://www.facebook.com/lifelixirnutrition" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
               <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="mr-1 btn btn-icon btn-inverse btn-invert btn-rounded"> <i class="fa fa-youtube"></i> <span class="sr-only">YouTube</span> </a>
             </div>
 
@@ -142,6 +144,8 @@ class Footer extends Component {
                   <li><Link to="/about">About us</Link></li>
                   <li><Link to="/delivery">Delivery</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
+                  <li><Link to="/join">Join us</Link></li>
+                  <li><Link to="/affiliate">Affiliate program</Link></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">

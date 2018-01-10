@@ -20,7 +20,7 @@ class NutriCombo extends Component {
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">Smart breakfast.</h2>
             <p>
-     With more toxins in the environment than ever, it is imperative to integrate healthy nutrient dense foods into our diet. NutriCombo breakfast collection gives you the fuel to start the day and nutritions to protect and nourish your body and your mind.
+     Leaner, stronger and more focused with our breakfast collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
       </p>
           </div>
         </div>

@@ -57,7 +57,7 @@ class MenuItem extends Component {
         return (
           <span key={r.id}>
             <span>{r.description} </span>
-            <Link to={`/snacks/${r.slug}`} class="text-black">{r.title}</Link>
+            <Link to={`/shop/${r.slug}`} class="text-black">{r.title}</Link>
             {index + 1 === this.state.product.recipes.length ? null : <span>, &nbsp;</span>}
           </span>
         )

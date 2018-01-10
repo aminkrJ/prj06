@@ -34,13 +34,13 @@ class Home extends Component {
         return (
           <div class="card text-center mb-5">
             <h3 class="card-title py-3 text-shadow">
-              <Link to={"/snacks/" + product.slug} class="">
+              <Link to={"/shop/" + product.slug} class="">
                 <span class="text-slab text-black text-capitalize">{product.name}</span>
               </Link>
             </h3>
             <div class="row">
               <div class="col-md-12">
-                <Link to={"/snacks/" + product.slug} class="">
+                <Link to={"/shop/" + product.slug} class="">
                   <img src={product.photo.original} class="card-img img-fluid"></img>
                 </Link>
               </div>
@@ -55,7 +55,7 @@ class Home extends Component {
               <ul class="text-left list-unstyled list-border-dots">
               </ul>
               <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
-              <Link to={"/snacks/" + product.slug} class="btn btn-link">Learn more</Link>
+              <Link to={"/shop/" + product.slug} class="btn btn-link">Learn more</Link>
             </div>
           </div>
         )
@@ -89,15 +89,15 @@ class Home extends Component {
       var menu = this.props.menu.map((menuItem, index) => {
           return(
             <div class="card" key={index}>
-              <Link to={"/snacks/" + menuItem.slug}>
+              <Link to={"/shop/" + menuItem.slug}>
                 <img src={menuItem.photo.original} className="card-img-top img-fluid" />
               </Link>
               <div class="card-body">
-                <Link to={"/snacks/" + menuItem.slug}>
+                <Link to={"/shop/" + menuItem.slug}>
                   <h4 class="text-slab card-title">{menuItem.name}</h4>
                 </Link>
                 <p class="text-xs">
-                <b>Ingredients: </b>  {menuItem.ingredients.map((i) => {return i.name}).join(', ')}
+                {menuItem.ingredients.map((i) => {return i.name}).join(', ')}
                 </p>
                 <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={menuItem} />
               </div>
@@ -123,13 +123,13 @@ class Home extends Component {
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-black mb-2 pt-1 text-slab">Snack Smart.</h1>
+                      <h1 className="font-weight-bold text-black mb-2 pt-1 text-slab">Nutrition for top performers</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
-      Fight fatigue, poor memory, lack of focus, poor immune system, chronic pains and leaky guts with superfood, raw, and plant-based snacks packed with superfoods, functional herbs, probiotics and medicinal mushrooms.
+Be one step ahead of the game with freshly made healthy superfoods designed with nutritionists and healthy chefs for high performers delivered to your home or office.
       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/snacks">Shop Now</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Shop Now</Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
                 </div>

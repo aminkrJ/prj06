@@ -105,12 +105,12 @@ class Cart extends Component {
               <a href="#" class="close cart-remove" onClick={this.props.dropFromCart.bind(this, p)}> <i class="fa fa-times"></i> </a>
             </td>
             <td class="text-center">
-              <Link to={`/snacks/${p.slug}`}>
+              <Link to={`/shop/${p.slug}`}>
                 <img class="cart-img img-fluid" src={p.photo.thumb} alt={p.name} />
               </Link>
             </td>
             <td>
-              <Link to={`/snacks/${p.slug}`} class="font-weight-bold">{p.name}</Link>
+              <Link to={`/shop/${p.slug}`} class="font-weight-bold">{p.name}</Link>
               <p dangerouslySetInnerHTML={{__html: p.nutrition_fact}} class="text-muted text-sm" />
             </td>
             <td>${p.price}</td>
@@ -174,7 +174,7 @@ Now delivering to selected suburbs in Sydney. <br />
                     </h3>
                     <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
                   </div>
-                  <Link to="/snacks" class="btn btn-outline-primary btn-rounded btn-lg mr-1 mb-sm-1">Continue Shopping</Link>
+                  <Link to="/shop" class="btn btn-outline-primary btn-rounded btn-lg mr-1 mb-sm-1">Continue Shopping</Link>
                   <Link to="/checkout" class="btn btn-primary btn-rounded btn-lg">Proceed to Checkout</Link>
                 </div>
               </div>

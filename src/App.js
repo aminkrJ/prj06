@@ -26,12 +26,14 @@ import About from './About'
 import CustomModal from './Modal'
 import Menu from './Menu';
 import NutriCombo from './NutriCombo';
+import Join from './Join';
+import Affiliate from './Affiliate';
 import MenuItem from './MenuItem';
 import api from "./Api.js"
 
 import './App.css';
 
-var pageTitle = "Healthy superfood snacks | Leaner, stronger and more focused"
+var pageTitle = "| Nutrition for top performers"
 
 class App extends Component {
   constructor(props){
@@ -45,7 +47,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    document.title = "Life Elixir, " + pageTitle;
+    document.title = "Life Elixir " + pageTitle;
   }
 
   fetchProducts() {
@@ -89,8 +91,8 @@ class App extends Component {
               </nav>
             </div>
             <div className="nav nav-icons header-block order-12">
-              <a href="https://www.facebook.com/LifelixirSnacks" className="nav-link"> <i className="fa fa-facebook-square icon-1x"></i> <span className="sr-only">Facebook</span> </a>
-              <a href="https://www.instagram.com/LifelixirSnacks" className="nav-link"> <i className="fa fa-instagram icon-1x"></i> <span className="sr-only">Instagram</span> </a>
+              <a href="https://www.facebook.com/lifelixirnutrition" className="nav-link"> <i className="fa fa-facebook-square icon-1x"></i> <span className="sr-only">Facebook</span> </a>
+              <a href="https://www.instagram.com/lifelixirnutrition" className="nav-link"> <i className="fa fa-instagram icon-1x"></i> <span className="sr-only">Instagram</span> </a>
             </div>
           </div>
         </div>
@@ -106,6 +108,8 @@ class App extends Component {
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/nutricombo" component={NutriCombo} />
+          <Route exact path="/join" component={Join} />
+          <Route exact path="/affiliate" component={Affiliate} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path="/contact" component={Contact} />
@@ -115,10 +119,10 @@ class App extends Component {
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/legal" component={Legal} />
-          <Route exact path='/snacks' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/snacks/categories/:category_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/snacks/tags/:tag_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/snacks/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route exact path='/shop' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/shop/categories/:category_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/shop/tags/:tag_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/shop/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.bundles}/>
         </StickyContainer>

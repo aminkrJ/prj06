@@ -11,14 +11,11 @@ class Delivery extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Delivery info" location={ {title: "Delivery info", path:"/delivery"} } />
+        <PageTitle title="Delivery" location={ {title: "Delivery", path:"/delivery"} } />
         <div id="content">
           <div class="container">
             <div class="row">
-              <div class="col-md-3">
-                <AboutSideMenu active={3} />
-              </div>
-              <div class="col-md-9">
+              <div class="col-md-12">
                 <p class="lead">We deliver freshness to your doorstep.</p>
                 <p>We are committed to freshness. We managed to keep the price of our delivery $8 in selected suburbs in Sydney. We are aiming to expand our network across all suburbs in Sydney. Sign up to our newsletter to get the latest news about our mobile places and delivery suburbs in your inbox.</p>
 

@@ -62,14 +62,14 @@ class Menu extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <Link to={"/snacks/" + product.slug}>
+              <Link to={"/shop/" + product.slug}>
                 <img className="card-img-top img-fluid" src={product.photo.original} alt={product.name} />
               </Link>
               <span class="badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist">${product.price}</span> 
             </div>
             <div className="card-body">
               <small className="text-muted text-uppercase">{product.category.name}</small>
-              <Link className="text-grey-dark" to={"/snacks/" + product.slug}>
+              <Link className="text-grey-dark" to={"/shop/" + product.slug}>
                 <h4 className="text-slab card-title">
                   {product.name}
                 </h4>
@@ -94,7 +94,7 @@ class Menu extends Component {
   renderTags() {
     return this.state.tags.map((tag, index) => {
       return(
-        <Link to={"/snacks/tags/" + tag.id} class={classnames("nav-link", {active: this.state.activeTag === tag.id})}>
+        <Link to={"/shop/tags/" + tag.id} class={classnames("nav-link", {active: this.state.activeTag === tag.id})}>
           <span class="text-slab">{tag.name}</span>
           <small>{tag.short_description}</small>
           <i class="fa fa-angle-right"></i>
@@ -107,7 +107,7 @@ class Menu extends Component {
     return this.state.categories.map((category, index) => {
       return(
         <li class="nav-item">
-          <Link to={"/snacks/categories/" + category.id} class={classnames("nav-link text-center text-uppercase font-weight-bold px-3 px-lg-4 py-2",
+          <Link to={"/shop/categories/" + category.id} class={classnames("nav-link text-center text-uppercase font-weight-bold px-3 px-lg-4 py-2",
             {active: category.id === this.state.activeCategory}
           )}>{category.name}</Link>
         </li>
@@ -118,7 +118,7 @@ class Menu extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Menu" location={ {title: "Menu", path:"/snacks"} } />
+        <PageTitle title="Shop" location={ {title: "Shop", path:"/shop"} } />
         <div id="content">
           <div className="container">
             <div className="row">

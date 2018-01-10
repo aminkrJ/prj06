@@ -15,16 +15,12 @@ class About extends Component {
         <div id="content">
           <div class="container">
             <div class="row">
-              <div class="col-md-3">
-                <AboutSideMenu active={1} />
-              </div>
-              <div class="col-md-9">
+              <div class="col-md-12">
       <div class="p-5 py-lg-6 overlay overlay-op-3 rounded mb-4 mb-lg-0 flex-ew flex-valign clickable-element bg-img blazy-bg b-loaded">
-          
               <h2 class="mb-0 text-slab">
-                Snack Smart.
+                Nutrition for top performers
               </h2>
-              <p class="mb-0">Healthy snacks delivered to your doorstep.</p>
+              <p class="mb-0">Freshly made healthy superfoods delivered to your doorstep.</p>
               <hr class="hr-lg w-100  hr-primary" />
       </div>
           <div data-animate="fadeIn" data-animate-duration="0.8">
@@ -40,34 +36,31 @@ class About extends Component {
             <div class="col-md-6" data-animate="fadeIn" data-animate-delay="0.4" data-animate-offset="100%">
               <p class="lead"></p>
               <p>
-Believe in the holistic power of food in healing and enhancing mind, body, and soul? but you cannot find fresh and nutritious meals anywhere or you are busy to make them at home, don't worry, we make them for you.
+Life Elixir enables busy professionals eat like millionaires by having personal chef and nutritionist at their disposal.
               </p>
       <p>
-We examine healthy nutritious recipes from nutritionists and chefs around the world, we scrutinize all the modern scientific researchers and diets, we categorise and list them based on their benefits and we make and deliver them to your doorstep.
+It is proven that right foods and develop healthy eating habits can make an individual more focussed, energised and driven which makes food more than just a source of fuel.
       </p>
-              <p class=""><Link class="btn text-sm btn-primary" to="/snacks">Shop Now</Link></p>
       <p>
-<span class="font-weight-bold text-slab">NutriCombo</span> is our first raw and plant-based breakfast collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms. <Link class="text-sm" to="/nutricombo">Learn More</Link>
+Be one step ahead of the game with freshly made healthy super foods designed with nutritionists and healthy chefs for high performers delivered to your home or office.
       </p>
+              <p class=""><Link class="btn text-sm btn-primary" to="/shop">Shop Now</Link></p>
             </div>
             <div class="col-md-6">
               <ul class="fa-ul list-unstyled mt-4 mt-md-0">
                 <li class="mb-4">
-                  <i class="fa-li fa fa-check text-primary"></i> 
                   <h4 class="mb-1 text-slab">
-                    You choose your snacks
+                    Choose your bundles
                   </h4>
-                  You choose your healthy snacks and snack plans from nutritionists and chefs.
+                    Choose your favorites among various collections and bundles.
                 </li>
                 <li class="mb-3">
-                  <i class="fa-li fa fa-check text-primary"></i> 
                   <h4 class="mb-1 text-slab">
                     We make them
                   </h4>
-                  We make them for you in our kitchens with premium ingredients and no B.S.
+                  We make them for you with premium ingredients.
                 </li>
                 <li>
-                  <i class="fa-li fa fa-check text-primary"></i> 
                   <h4 class="mb-1 text-slab">
                     We deliver them
                   </h4>
