@@ -15,30 +15,20 @@ class Affiliate extends Component {
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-            <div class="p-5 py-lg-6 overlay overlay-op-3 rounded mb-4 mb-lg-0 flex-ew flex-valign clickable-element bg-img blazy-bg b-loaded">
-              <h2 class="mb-0 text-slab">
-                Affiliate referrals made easy
-              </h2>
-              <p class="mb-0"></p>
-              <hr class="hr-lg w-100  hr-primary" />
-            </div>
-
   <div class="row my-5">
     <div class="col-md-6 order-md-2">
-      <img src={trainer} class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle" />
     </div>
     <div class="col-md-6 flex-valign text-md-right">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
-        Chefs and fitness gurus
+        Fitness gurus
       </h3>
       <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3" />
-      <p>Share your recipes online to market your books or your products? Why not make money from that recipe itself with our affiliate program?</p>
-      <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us to learn more</Link>
+      <p>We enable you to make money from your online recipes and diet plans with our affiliate program.</p>
+      <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us</Link>
     </div>
   </div>
   <div class="row my-5">
     <div class="col-md-6 text-md-right">
-      <img src={nutritionist} class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle" />
     </div>
     <div class="col-md-6 flex-valign">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
@@ -47,7 +37,19 @@ class Affiliate extends Component {
       <hr class="hr-primary w-70 ml-0 mb-3" />
       <p>Design a bundle in our website and share it with your tribe to earn money from each sale by our affiliate program.</p>
       <p></p>
-      <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us to learn more</Link>
+      <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us</Link>
+    </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-md-6 order-md-2">
+    </div>
+    <div class="col-md-6 flex-valign text-md-right">
+      <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
+        Chefs
+      </h3>
+      <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3" />
+      <p>We enable you to make money from your online recipes and diet plans with our affiliate program.</p>
+      <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us</Link>
     </div>
   </div>
               </div>
