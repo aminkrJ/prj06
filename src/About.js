@@ -34,10 +34,7 @@ class About extends Component {
           </div>
           <div class="row">
             <div class="col-md-6" data-animate="fadeIn" data-animate-delay="0.4" data-animate-offset="100%">
-              <p class="lead"></p>
-              <p>
-Life Elixir enables busy professionals eat like millionaires by having personal chef and nutritionist at their disposal.
-              </p>
+              <p class="lead">We enables busy professionals eat like millionaires by delivering fresh food from chefs, nutritionists, fitness gurus and personal trainers.</p>
       <p>
 It is proven that right foods and develop healthy eating habits can make an individual more focussed, energised and driven which makes food more than just a source of fuel.
       </p>
