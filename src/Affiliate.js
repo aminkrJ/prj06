@@ -20,7 +20,7 @@ class Affiliate extends Component {
     </div>
     <div class="col-md-6 flex-valign text-md-right">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
-        Fitness gurus
+        Health coaches
       </h3>
       <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3" />
       <p>We enable you to make money from your online recipes and diet plans with our affiliate program.</p>
@@ -32,23 +32,11 @@ class Affiliate extends Component {
     </div>
     <div class="col-md-6 flex-valign">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
-       Nutritionists
+        Chefs and cooks
       </h3>
       <hr class="hr-primary w-70 ml-0 mb-3" />
-      <p>Design a bundle in our website and share it with your tribe to earn money from each sale by our affiliate program.</p>
+      <p>We enable you to make money from your online recipes with our affiliate program.</p>
       <p></p>
-      <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us</Link>
-    </div>
-  </div>
-  <div class="row my-5">
-    <div class="col-md-6 order-md-2">
-    </div>
-    <div class="col-md-6 flex-valign text-md-right">
-      <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
-        Chefs
-      </h3>
-      <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3" />
-      <p>We enable you to make money from your online recipes and diet plans with our affiliate program.</p>
       <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us</Link>
     </div>
   </div>

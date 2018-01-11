@@ -19,10 +19,13 @@ class Join extends Component {
     </div>
     <div class="col-md-6 flex-valign text-md-right">
       <h3 class="text-slab mt-0 mb-1 text-inverse font-weight-bold">
-        Aspiring cooks and chefs
+        Chefs and cooks
       </h3>
       <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3" />
-      <p>We enable you to cook without the need to open a costly shopfront. Furthermore, we manage sales, packaging, labeling, marketing, accounting, distribution and logistics so that you can focus on what you love.
+      <p>We enable aspiring cooks and chefs to cook without the need to open a costly shopfront. Furthermore, we manage sales, packaging, labeling, marketing, accounting, distribution and logistics so that you can focus on what you love.
+      </p>
+      <p>
+        Share your recipes in our cooks network. We get orders. You get paid if you make it. You get paid when other cooks make it.
       </p>
       <Link to="/contact" class="text-sm font-weight-bold"><i class="fa fa-chevron-right text-xs "></i> Contact us</Link>
     </div>
