@@ -96,8 +96,11 @@ class Home extends Component {
                 <Link to={"/shop/" + menuItem.slug}>
                   <h4 class="text-slab card-title">{menuItem.name}</h4>
                 </Link>
+                <p>
+                  {menuItem.short_description}
+                </p>
                 <p class="text-xs">
-                {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n"}
+                {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
                 </p>
                 <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={menuItem} />
               </div>
@@ -138,18 +141,6 @@ Be one step ahead of the game with freshly made healthy superfoods designed with
           </div>
         </div>
         <div id="content" className="p-0">
-          {this.renderBundles()}
-          <div class="bg-primary bg-op-5 py-4 py-lg-6">
-            <h3 className="text-center text-slab font-weight-bold my-0">
-              Home or office delivery
-            </h3>
-            <h5 className="text-center font-weight-light mt-2 mb-0">
-        Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area.
-            </h5>
-            <div id="delivery" className="text-center container py-lg-1 px-lg-10">
-              <DeliverySearch />
-            </div>
-          </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu
@@ -161,6 +152,18 @@ Be one step ahead of the game with freshly made healthy superfoods designed with
           <div id="projects" className="container p-3 py-lg-1">
       {this.renderMenu()}
           </div>
+          <div class="bg-primary bg-op-5 py-4 py-lg-6">
+            <h3 className="text-center text-slab font-weight-bold my-0">
+              Home or office delivery
+            </h3>
+            <h5 className="text-center font-weight-light mt-2 mb-0">
+        Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area.
+            </h5>
+            <div id="delivery" className="text-center container py-lg-1 px-lg-10">
+              <DeliverySearch />
+            </div>
+          </div>
+          {this.renderBundles()}
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
