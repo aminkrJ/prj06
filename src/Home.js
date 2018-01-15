@@ -102,7 +102,9 @@ class Home extends Component {
                 <p class="text-xs">
                 {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
                 </p>
-                <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={menuItem} />
+                <div class="text-center text-sm card-footer">
+            <Link to={"/shop/" + menuItem.slug}>Learn More</Link>
+                </div>
               </div>
             </div>
           )
