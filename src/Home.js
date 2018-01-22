@@ -102,8 +102,8 @@ class Home extends Component {
                 <p class="text-xs">
                 {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
                 </p>
-                <div class="text-center text-sm card-footer">
-            <Link to={"/shop/" + menuItem.slug}>Learn More</Link>
+                <div class="text-center text-sm">
+            <Link to={"/shop/" + menuItem.slug} class="d-block">Learn More</Link>
                 </div>
               </div>
             </div>
@@ -136,7 +136,8 @@ Be one step ahead of the game with freshly made healthy superfoods designed with
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Shop Now</Link>
                   </div>
-                  <div class="col-md-6 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-5 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
                 </div>
               </div>
             </div>
