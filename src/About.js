@@ -5,7 +5,7 @@ import AboutSideMenu from './AboutSideMenu'
 
 class About extends Component {
   componentDidMount(){
-    document.title = "Healthy snack recipes and plans to your doorstep | Snack Smart"
+    document.title = "The journey"
   }
 
   render() {
@@ -15,53 +15,43 @@ class About extends Component {
         <div id="content">
           <div class="container">
             <div class="row">
-              <div class="col-md-12">
-      <div class="p-5 py-lg-6 overlay overlay-op-3 rounded mb-4 mb-lg-0 flex-ew flex-valign clickable-element bg-img blazy-bg b-loaded">
-              <h2 class="mb-0 text-slab">
-                Nutrition for top performers
-              </h2>
-              <p class="mb-0">Freshly made healthy superfoods delivered to your doorstep.</p>
-              <hr class="hr-lg w-100  hr-primary" />
-      </div>
-          <div data-animate="fadeIn" data-animate-duration="0.8">
+            <div>
+          <div>
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 class="text-center font-weight-bold my-0 text-slab">
-              So, how does it work?
+              Nutrition for top performers
             </h3>
             <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
             </h5>
             <hr class="mb-5 w-50 mx-auto" />
           </div>
           <div class="row">
-            <div class="col-md-6" data-animate="fadeIn" data-animate-delay="0.4" data-animate-offset="100%">
-              <p class="lead">We enables busy professionals eat like millionaires by delivering fresh food from chefs, nutritionists, fitness gurus and personal trainers.</p>
-      <p>
-It is proven that right foods and develop healthy eating habits can make an individual more focussed, energised and driven which makes food more than just a source of fuel.
-      </p>
-      <p>
-Be one step ahead of the game with freshly made healthy super foods designed with nutritionists and healthy chefs for high performers delivered to your home or office.
-      </p>
-              <p class=""><Link class="btn text-sm btn-primary" to="/shop">Shop Now</Link></p>
+            <div class="col-md-6">
+              <p class="lead">
+      Lifelixir is the resource for plant-sourced alchemy to nourish and elevate body, beauty and consciousness.
+              </p>
+              <p>
+            Lifelixir is the resource for plant-sourced alchemy to nourish and elevate body, beauty and consciousness. We celebrate the unadulterated, exquisite flavors and healing force of raw vegetables, fruits, petals, herbs, roots, nuts and seaweeds as daily nourishment, beauty tools and high-powered natural remedies.
+              </p>
+              <p>
+Our products are not only to taste extraordinary, but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level.
+              </p>
+              <p class=""><Link class="btn btn-primary text-sm" to="/shop">Shop now</Link></p>
             </div>
             <div class="col-md-6">
               <ul class="fa-ul list-unstyled mt-4 mt-md-0">
                 <li class="mb-4">
                   <h4 class="mb-1 text-slab">
-                    Choose your bundles
                   </h4>
-                    Choose your favorites among various collections and bundles.
+
                 </li>
                 <li class="mb-3">
                   <h4 class="mb-1 text-slab">
-                    We make them
                   </h4>
-                  We make them for you with premium ingredients.
                 </li>
                 <li>
                   <h4 class="mb-1 text-slab">
-                    We deliver them
                   </h4>
-                 We deliver them fresh to your doorstep either on the same day or on the following days.
                 </li>
               </ul>
             </div>
