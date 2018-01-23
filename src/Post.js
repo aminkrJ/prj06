@@ -3,6 +3,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import api from './Api'
 import NProgress from 'nprogress'
 import moment from 'moment'
+import {Helmet} from "react-helmet"
 
 class Post extends Component {
   constructor(props){
@@ -22,8 +23,6 @@ class Post extends Component {
       this.setState({
         post: response.data
       })
-
-      document.title = "Life Elixir, " + response.data.title
     })
     .catch((error) => {
       NProgress.done()
@@ -34,6 +33,11 @@ class Post extends Component {
     return (
 
     <div id="content">
+      <Helmet>
+        <title>{this.state.post.title}</title>
+        <meta name="description" content={this.state.post.title}/>
+        <meta name="keywords" content={this.state.post.category}/>
+      </Helmet>
       <div class="container">
         <div class="row">
           <div class="col-md-9">

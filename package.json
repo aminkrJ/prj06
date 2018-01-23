@@ -16,6 +16,7 @@
     "react-async-script-loader": "^0.3.0",
     "react-datepicker": "^0.61.0",
     "react-dom": "^16.0.0",
+    "react-helmet": "^5.2.0",
     "react-loader": "^2.4.2",
     "react-maskedinput": "^4.0.0",
     "react-overlay-loading": "^1.0.3",
