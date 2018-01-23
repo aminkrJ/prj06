@@ -131,7 +131,7 @@ class Home extends Component {
                       <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-slab">Nutrition for top performers</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
-      Nutrition to nourish and elevate body and consciousness to fight brain weakness and fatigue for peak performance.
+      Nutrition to nourish and elevate body and consciousness by fighting brain weakness and fatigue for peak performance and higher vibration.
                       </h2>
                     </div>
                     <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Shop Now</Link>
