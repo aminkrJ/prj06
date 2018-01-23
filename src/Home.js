@@ -167,7 +167,59 @@ class Home extends Component {
               <DeliverySearch />
             </div>
           </div>
-          {this.renderBundles()}
+          <div class="bg-faded">
+            <div class="container">
+              <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+              <h3 class="text-center text-slab font-weight-bold my-0">
+          Catering services
+              </h3>
+              <h5 class="text-center font-weight-light mt-2 mb-0">
+      We love to be with you
+              </h5>
+              <hr class="mb-5 w-50 mx-auto" />
+              <div class="row pricing-stack">
+                <div class="card-group">
+                  <div class="card text-center mb-5">
+                    <h3 class="card-title py-3 text-shadow">
+                      <span class="text-slab text-black text-capitalize">Education centres</span>
+                    </h3>
+                    <p class="bg-primary text-white border-primary card-body-overlap">
+                    </p>
+                    <div class="card-body">
+                      <p class="">Events and functions for a great schools, colleges, universities and education centres in and around Sydney. Contact us to get more information.</p>
+
+                      <p class=""></p>
+                      <Link to="/contact" class="btn btn-primary d-block">Contact us</Link>
+                    </div>
+                  </div>
+                  <div class="card text-center mb-5">
+                    <h3 class="card-title py-3 text-shadow">
+                      <span class="text-slab text-black text-capitalize">Retreats</span>
+                    </h3>
+                    <p class="bg-primary text-white border-primary card-body-overlap">
+                    </p>
+                    <div class="card-body">
+                      <p class="">We have a complete understanding of how important right nutrition is to people on retreat. Contact us to get more information.</p>
+                      <p class=""></p>
+                      <Link to="/contact" class="btn d-block btn-primary">Contact us</Link>
+                    </div>
+                  </div>
+                  <div class="card text-center mb-5">
+                    <h3 class="card-title py-3 text-shadow">
+                      <span class="text-slab text-black text-capitalize">Fitness centres</span>
+                    </h3>
+                    <p class="bg-primary text-white border-primary card-body-overlap">
+                    </p>
+                    <div class="card-body">
+                      <p class="">Indulge your customers with healthy and nutritious foods with our delivery and catering service to gyms, and fitness centers. Contact us to get more information.</p>
+                      <p class=""></p>
+                      <Link to="/contact" class="btn btn-primary d-block">Contact us</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />

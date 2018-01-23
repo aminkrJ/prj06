@@ -50,24 +50,6 @@ class App extends Component {
     document.title = "Life Elixir " + pageTitle;
   }
 
-  fetchProducts() {
-    NProgress.start()
-
-    api.get("/products/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        products: response.data,
-        bundles: _.filter(response.data, (r) => {return r.primary === true}),
-        menu: _.filter(response.data, (r) => {return r.primary === false})
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
-  }
-
   componentWillReceiveProps(nextProps) {
     this.setState({
       products: this.props.products.entities,
@@ -124,7 +106,7 @@ class App extends Component {
           <Route exact path='/shop/tags/:tag_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/shop/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
-        <Footer products={this.state.bundles}/>
+        <Footer products={this.state.products}/>
         </StickyContainer>
       </div>
     );

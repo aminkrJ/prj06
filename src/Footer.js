@@ -36,11 +36,13 @@ class Footer extends Component {
     })
   }
 
-  renderProducts(){
+  renderCollections(){
+    var collections = this.props.products.map((p) => {return p.category})
+
     return(
-      this.props.products.map((product, index) => {
+      collections.map((category, index) => {
        return(
-         <li key={index}><Link to={`/shop/${product.slug}`}>{product.name}</Link></li>
+         <li key={index}><Link to={`/shop/categories/${category.id}`}>{category.name}</Link></li>
        )
       })
     )
@@ -131,10 +133,10 @@ Nutritions your competitors consume to be one step ahead in the game.
             <div class="row">
               <div class="col-6 col-md-3">
                 <h4 class="mt-0 text-uppercase text-white">
-                  Bundles
+                  Collections
                 </h4>
                 <ul class="list-unstyled footer-links">
-                  {this.renderProducts()}
+                  {this.renderCollections()}
                 </ul>
               </div>
               <div class="col-6 col-md-3">
