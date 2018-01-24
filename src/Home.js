@@ -85,6 +85,25 @@ class Home extends Component {
     )
   }
 
+  renderTags() {
+    var tags = this.props.products.map((p) => {
+      return p.tags
+    })
+
+    tags = _.flatten(tags)
+
+    return(
+      tags.map((tag) => {
+        return (
+          <div class="ml-lg-10 text-secondary">
+          <h5 class="text-slab"><Link class="text-black" to={"/shop/tags/" + tag.id}>{tag.name}</Link></h5>
+          <p>{tag.short_description}</p>
+          </div>
+        )
+      })
+    )
+  }
+
   renderMenu() {
     if (this.props.menu.length) {
       var menu = this.props.menu.map((menuItem, index) => {
@@ -123,7 +142,7 @@ class Home extends Component {
     return (
       <div className="">
         <div id="highlighted">
-          <div className="bg-white main-bg overlay overlay-primary overlay-op-2 px-3 py-3 py-lg-5 flex-valign">
+          <div className="bg-white main-bg px-3 py-3 py-lg-5 flex-valign">
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
@@ -135,9 +154,10 @@ class Home extends Component {
       {globals.description}
                       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Shop Now</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Order Online</Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0">
+      {this.renderTags()}
                   </div>
                 </div>
               </div>
