@@ -127,7 +127,7 @@ class Home extends Component {
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-7 col-md-7 padding-bottom-1x text-md-left text-center">
+                  <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
                       <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-slab">{globals.tagline}</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
@@ -135,10 +135,9 @@ class Home extends Component {
       {globals.description}
                       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Our Menu</Link>
-                    <Link class="text-secondary btn btn-default btn-rounded py-lg-3 px-lg-3" to="/about">Learn more</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Shop Now</Link>
                   </div>
-                  <div class="col-md-5 mt-3 mt-md-0">
+                  <div class="col-md-6 mt-3 mt-md-0">
                   </div>
                 </div>
               </div>
@@ -159,7 +158,7 @@ Integrated menu specialised in various dietary requirements
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
-      Delivery and pickup locations
+      Pickup locations
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0">
         Now providing service for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.

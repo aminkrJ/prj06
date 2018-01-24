@@ -1,9 +1,9 @@
 const globals = {
-  tagline: "Your body, your meals!",
-  title: "Freshly made meals for your specific dietary plan, everywhere",
-  description: "Freshly made meals for your specific dietary plan - enhancing memory and focus, boosting endurance, expanding consciousness, losing weight, detoxing body, having a healthy pregnancy, having a healthy skin, and having a healthy gut - everywhere.",
-  mission: "We make personalised meals readily available everywhere.",
-  keywords: ""
+  tagline: "Juice and healthy smoothie bar",
+  title: "Juice and healthy smoothie bar",
+  description: "Elixirs, juices and nutritious healthy smoothies packed with superfoods, functional herbs, medicinal mushrooms to not only taste extraordinary but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level.",
+  mission: "",
+  keywords: "juice, healthy smoothies, healthy breakfast"
 }
 export default globals
 
