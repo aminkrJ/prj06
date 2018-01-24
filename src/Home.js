@@ -8,6 +8,7 @@ import Process from './Process';
 import sunshineBowl from './img/sunshine-smoothie-bowl.png';
 import DeliverySearch from './DeliverySearch'
 import AddToCartButton from './AddToCartButton'
+import globals from './globals'
 
 class Home extends Component {
 
@@ -126,19 +127,19 @@ class Home extends Component {
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
+                  <div class="col-lg-7 col-md-7 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-slab">Nutrition for top performers</h1>
+                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-slab">{globals.tagline}</h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
-      Nutrition to nourish and elevate body and consciousness by fighting brain weakness and fatigue for peak performance and higher vibration.
+      {globals.description}
                       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Shop Now</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Our Menu</Link>
                     <Link class="text-secondary btn btn-default btn-rounded py-lg-3 px-lg-3" to="/about">Learn more</Link>
                   </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-5 mt-3 mt-md-0"><img src={sunshineBowl} class="cups d-block mx-auto" /></div>
+                  <div class="col-md-5 mt-3 mt-md-0">
+                  </div>
                 </div>
               </div>
             </div>
@@ -150,7 +151,7 @@ class Home extends Component {
             Our Menu
           </h3>
           <h5 className="text-center font-weight-light mt-2 mb-0">
-      Nutritious and delicious.
+Integrated menu specialised in various dietary requirements
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">
@@ -158,66 +159,13 @@ class Home extends Component {
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
-              Home or office delivery
+      Delivery and pickup locations
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0">
-        Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area.
+        Now providing service for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.
             </h5>
             <div id="delivery" className="text-center container py-lg-1 px-lg-10">
               <DeliverySearch />
-            </div>
-          </div>
-          <div class="bg-faded">
-            <div class="container">
-              <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-              <h3 class="text-center text-slab font-weight-bold my-0">
-          Catering services
-              </h3>
-              <h5 class="text-center font-weight-light mt-2 mb-0">
-      We love to be with you
-              </h5>
-              <hr class="mb-5 w-50 mx-auto" />
-              <div class="row pricing-stack">
-                <div class="card-group">
-                  <div class="card text-center mb-5">
-                    <h3 class="card-title py-3 text-shadow">
-                      <span class="text-slab text-black text-capitalize">Education centres</span>
-                    </h3>
-                    <p class="bg-primary text-white border-primary card-body-overlap">
-                    </p>
-                    <div class="card-body">
-                      <p class="">Events and functions for a great schools, colleges, universities and education centres in and around Sydney. Contact us to get more information.</p>
-
-                      <p class=""></p>
-                      <Link to="/contact" class="btn btn-primary d-block">Contact us</Link>
-                    </div>
-                  </div>
-                  <div class="card text-center mb-5">
-                    <h3 class="card-title py-3 text-shadow">
-                      <span class="text-slab text-black text-capitalize">Retreats</span>
-                    </h3>
-                    <p class="bg-primary text-white border-primary card-body-overlap">
-                    </p>
-                    <div class="card-body">
-                      <p class="">We have a complete understanding of how important right nutrition is to people on retreat. Contact us to get more information.</p>
-                      <p class=""></p>
-                      <Link to="/contact" class="btn d-block btn-primary">Contact us</Link>
-                    </div>
-                  </div>
-                  <div class="card text-center mb-5">
-                    <h3 class="card-title py-3 text-shadow">
-                      <span class="text-slab text-black text-capitalize">Fitness centres</span>
-                    </h3>
-                    <p class="bg-primary text-white border-primary card-body-overlap">
-                    </p>
-                    <div class="card-body">
-                      <p class="">Indulge your customers with healthy and nutritious foods with our delivery and catering service to gyms, and fitness centers. Contact us to get more information.</p>
-                      <p class=""></p>
-                      <Link to="/contact" class="btn btn-primary d-block">Contact us</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <Process />

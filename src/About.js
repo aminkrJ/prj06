@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from './PageTitle'
 import AboutSideMenu from './AboutSideMenu'
+import globals from './globals'
 
 class About extends Component {
   componentDidMount(){
@@ -19,47 +20,41 @@ class About extends Component {
           <div>
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 class="text-center font-weight-bold my-0 text-slab">
-              Nutrition for top performers
+      {globals.tagline}
             </h3>
             <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
+      {globals.title}
             </h5>
             <hr class="mb-5 w-50 mx-auto" />
           </div>
           <div class="row">
             <div class="col-md-6">
               <p class="lead">
-      Lifelixir is the resource for plant-sourced alchemy to nourish and elevate body, beauty and consciousness.
+              Restaurants with integrated menu specialised in various dietary requirements, everywhere for everyone!
               </p>
               <p>
-            Lifelixir is the resource for plant-sourced alchemy to nourish and elevate body, beauty and consciousness. We celebrate the unadulterated, exquisite flavors and healing force of raw vegetables, fruits, petals, herbs, roots, nuts and seaweeds as daily nourishment, beauty tools and high-powered natural remedies.
+Let me tell you a secret. Food and diet plans forge our reality. Yes, it does. That being said, it is not a quick process. it demands time and patience. However, in our busy lifestyle, food is not our first priority or we cannot stick to a dietary plan since it is nearly impossible to make all the meals at home. Moreover, dining out is not an option since today restaurants are designed to serve the public with affordable places. Not you with your personalised dietary plans. As a result, we do not get the result and give up.
               </p>
+      <p>
+In lifelixir, we found this growing need and we built an integrated menu for various dietary requirements like enhancing memory and focus, boosting endurance, expanding consciousness, losing weight, detoxing body, having a healthy pregnancy, having healthy skin, and having a healthy gut and make it available in selected restaurants.
+      </p>
               <p>
-Our products are not only to taste extraordinary, but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level.
+               We make the personalised meals readily available everywhere for all dietary requirments.
               </p>
-              <p class=""><Link class="btn btn-primary text-sm" to="/shop">Shop now</Link></p>
+              <p class=""><Link class="btn btn-primary text-sm" to="/shop">Our Menu</Link></p>
             </div>
             <div class="col-md-6">
               <ul class="fa-ul list-unstyled mt-4 mt-md-0">
                 <li class="mb-4">
                   <h4 class="mb-1 text-slab">
+Food as medicine
                   </h4>
-
-                </li>
-                <li class="mb-3">
-                  <h4 class="mb-1 text-slab">
-                  </h4>
-                </li>
-                <li>
-                  <h4 class="mb-1 text-slab">
-                  </h4>
+                  <p>
+We believe in food as medicine. Our menu is not only to taste extraordinary but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level.
+                  </p>
                 </li>
               </ul>
             </div>
-  <p>
-  </p>
-
-  <p>
-  </p>
           </div>
               </div>
             </div>

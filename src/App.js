@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import NProgress from 'nprogress';
 import _ from 'underscore';
 import { StickyContainer, Sticky } from 'react-sticky';
+import {Helmet} from "react-helmet"
 
 import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
 import { fetchProducts } from './actions/productsActions';
@@ -30,6 +31,7 @@ import Join from './Join';
 import Affiliate from './Affiliate';
 import MenuItem from './MenuItem';
 import api from "./Api.js"
+import globals from "./globals.js"
 
 import './App.css';
 
@@ -65,6 +67,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Helmet>
+          <title>{globals.title}</title>
+          <meta name="description" content={globals.description}/>
+          <meta name="keywords" content={globals.keywords}/>
+        </Helmet>
         <div className="header-upper">
           <div className="header-inner container">
             <div className="header-block-flex order-1 mr-auto">
