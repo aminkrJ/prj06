@@ -101,7 +101,7 @@ class Home extends Component {
                   {menuItem.short_description}
                 </p>
                 <p class="text-xs">
-                {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
+                {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{50}[^\s]*).*/, "$1") + "\n ..."}
                 </p>
                 <div class="text-center text-sm">
             <Link to={"/shop/" + menuItem.slug} class="d-block">Learn More</Link>
