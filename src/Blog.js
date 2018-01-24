@@ -77,20 +77,6 @@ class Blog extends Component {
           </div>
           <div class="col-md-3 sidebar-right">
             <div class="mb-4">
-              <h4 class="title-divider">
-                <span>Follow Us On</span>
-              </h4>
-              <ul class="list-unstyled social-media-branding">
-                <li>
-                  <a href="https://www.instagram.com/lifelixirnutrition/" class="social-link branding-instagram"><i class="fa fa-instagram fa-fw"></i> Instagram</a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/lifelixirnutrition/" class="social-link branding-facebook"><i class="fa fa-facebook-square fa-fw"></i> Facebook</a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/channel/UCJ4Hs8y51ixuzRHniphYPNQ" class="social-link branding-youtube"><i class="fa fa-youtube fa-fw"></i> YouTube</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

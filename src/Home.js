@@ -170,7 +170,7 @@ class Home extends Component {
             Our Menu
           </h3>
           <h5 className="text-center font-weight-light mt-2 mb-0">
-Integrated menu specialised in various dietary requirements
+      Nutritious and Delicious
           </h5>
           <hr className="mb-5 w-50 mx-auto" />
           <div id="projects" className="container p-3 py-lg-1">
