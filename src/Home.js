@@ -181,7 +181,7 @@ class Home extends Component {
       Pickup locations
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0">
-        Now providing service for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.
+        Now service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.
             </h5>
             <div id="delivery" className="text-center container py-lg-1 px-lg-10">
               <DeliverySearch />

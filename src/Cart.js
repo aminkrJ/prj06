@@ -13,7 +13,7 @@ class Cart extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      shippingFee: 8,
+      shippingFee: 0,
       subtotal: 0,
       isSending: false,
       errors: []
@@ -54,7 +54,7 @@ class Cart extends Component {
     e.preventDefault()
 
     render(
-      <Modal description="Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area." title="Home or Office Delivery">
+      <Modal description="Now service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area." title="Pickup Locations">
         <DeliverySearch />
       </Modal>
       , document.getElementById('modal')).toggle()
@@ -156,9 +156,10 @@ class Cart extends Component {
             <div class="cart-content-footer">
               <div class="row">
                 <div class="col-md-6">
-<p class="text-sm text-muted">
-Now delivering to selected suburbs in Sydney. <br />
-<a href="#" onClick={this.openDeliverySearchModal.bind(this)}>Find out if we deliver to your area.</a></p>
+                <p class="text-sm text-muted">
+Now service is available for selected suburbs in Sydney. <br/>
+                  <a href="#" onClick={this.openDeliverySearchModal.bind(this)}>Find the closest pickup venue in your area.</a>
+                </p>
                 </div>
                 <div class="col-md-6 text-md-right mt-3 mt-md-0">
                   <div class="cart-content-totals">

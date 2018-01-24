@@ -26,7 +26,7 @@ class Checkout extends Component {
       deliveryTime: '',
       errors: [],
       cardError: '',
-      shippingFee: 8,
+      shippingFee: 0,
       subtotal: 0,
       coupon: {},
       couponCode: "",
@@ -40,7 +40,7 @@ class Checkout extends Component {
     e.preventDefault()
 
     render(
-      <Modal description="Now delivering to selected suburbs in Sydney. Enter your postcode below to see if we deliver to your area." title="Home or Office Delivery">
+      <Modal description="Now service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area." title="Pickup Locations">
         <DeliverySearch />
       </Modal>
       , document.getElementById('modal')).toggle()
@@ -250,46 +250,42 @@ class Checkout extends Component {
 
         <div class="col-md-8">
           <h4 class="text-slab">
-            Delivery Date and Time
-          </h4>
-          <div class="mb-2 bg-faded p-3 rounded" id="">
-
-<p class="text-sm">
-Now delivering to selected suburbs in Sydney. <a href="#" onClick={this.openDeliverySearchModal.bind(this)}>Find out if we deliver to your area.</a></p>
-        <DatePicker
-                selected={this.state.deliveryAt}
-                onChange={this.handleDeliveryDateChange.bind(this)}
-                locale="en-au"
-      name="delivery_time"
-      class="form-control"
-  //minTime={moment().hours(9).minutes(0)}
-  //maxTime={moment().hours(17).minutes(0)}
-                //showTimeSelect
-                //timeIntervals={60}
-                className="form-control"
-                dateFormat="LL"
-                minDate={moment()}
-                filterDate={this.isWeekday}
-            />
-          <div class="mt-2 px-4">
-            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="12PM - 14PM" start={12} end={14} deliveryAt={this.state.deliveryAt} />
-            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="17PM - 20PM" start={17} end={19} deliveryAt={this.state.deliveryAt} />
-            <div class="text-danger">{this.state.errors ? this.state.errors['delivery_time'] : null}</div>
-          </div>
-          </div>
-          <h4 class="text-slab">
             Customer Information
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
             <CustomInput ref='email' type='email' placeholder='Email' name='email' />
           </div>
-
           <h4 class="text-slab">
-            Delivery Address
+            Pickup Venue
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
-            <ShippingAddress ref='shippingAddress' errors={this.state.errors}/>
           </div>
+          <h4 class="text-slab">
+            Pickup Date and Time
+          </h4>
+          <div class="mb-2 bg-faded p-3 rounded" id="">
+            <DatePicker
+                    selected={this.state.deliveryAt}
+                    onChange={this.handleDeliveryDateChange.bind(this)}
+                    locale="en-au"
+          name="delivery_time"
+          class="form-control"
+      //minTime={moment().hours(9).minutes(0)}
+      //maxTime={moment().hours(17).minutes(0)}
+                    //showTimeSelect
+                    //timeIntervals={60}
+                    className="form-control"
+                    dateFormat="LL"
+                    minDate={moment()}
+                    filterDate={this.isWeekday}
+                />
+          <div class="mt-2 px-4">
+            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="12PM - 14PM" start={12} end={14} deliveryAt={this.state.deliveryAt} />
+            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="15PM - 17PM" start={17} end={19} deliveryAt={this.state.deliveryAt} />
+            <div class="text-danger">{this.state.errors ? this.state.errors['delivery_time'] : null}</div>
+          </div>
+          </div>
+          
           <h4 class="text-slab">
             Payment Options
           </h4>
