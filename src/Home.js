@@ -90,7 +90,7 @@ class Home extends Component {
       return p.tags
     })
 
-    tags = _.flatten(tags)
+    tags = _.uniq(_.flatten(tags), (t) => {return t.id})
 
     return(
       tags.map((tag) => {
