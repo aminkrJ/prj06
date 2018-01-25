@@ -5,7 +5,6 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
 import CartWidget from './CartWidget.js'
 import Modal from './Modal'
 import {render} from 'react-dom';
-import GetTen from './GetTen'
 import Find from './Find'
 
 import logo from "./img/logo.png"
@@ -41,7 +40,6 @@ class Header extends Component {
 
     render(
       <Modal description="" title="This is where your friends come in...">
-        <GetTen />
       </Modal>
       , document.getElementById('modal')).toggle()
   }
