@@ -26,7 +26,7 @@ class Process extends Component {
       <div class="container">
           <hr class="mt-0 hr-lg w-10 mx-auto hr-primary" />
           <h3 class="text-center text-slab font-weight-bold my-0">
-      Carefully crafted
+      Carefully Crafted
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
           </h5>

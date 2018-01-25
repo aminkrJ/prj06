@@ -3,6 +3,10 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import { StickyContainer, Sticky } from 'react-sticky';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import CartWidget from './CartWidget.js'
+import Modal from './Modal'
+import {render} from 'react-dom';
+import GetTen from './GetTen'
+import Find from './Find'
 
 import logo from "./img/logo.png"
 
@@ -20,6 +24,26 @@ class Header extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     })
+  }
+
+  find(e) {
+    e.preventDefault()
+
+    render(
+      <Modal description="" title="Find Us">
+        <Find />
+      </Modal>
+      , document.getElementById('modal')).toggle()
+  }
+
+  getTen(e) {
+    e.preventDefault()
+
+    render(
+      <Modal description="" title="This is where your friends come in...">
+        <GetTen />
+      </Modal>
+      , document.getElementById('modal')).toggle()
   }
 
   render() {
@@ -49,12 +73,6 @@ class Header extends Component {
                       </NavItem>
                       <NavItem>
                         <NavLink href="/shop">Menu</NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink href="/blog">Blog</NavLink>
-                      </NavItem>
-                      <NavItem>
-                        <NavLink href="/contact">Contact Us</NavLink>
                       </NavItem>
                     </Nav>
                   </Collapse>

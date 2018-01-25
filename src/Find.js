@@ -15,6 +15,9 @@ class Find extends Component {
     }
   }
 
+  componentDidMount() {
+  }
+
   handlePostcodeChange(e) {
     this.setState({postcode: e.target.value})
   }
@@ -38,14 +41,6 @@ class Find extends Component {
     .catch((error) => {
       NProgress.done()
     })
-  }
-
-  renderSearchHeader() {
-    if (this.state.locations.length > 0){
-      return (
-        <hr class="hr-lg mt-0 mb-2 w-10 ml-0 hr-primary" />
-      )
-    }
   }
 
   renderLocations(){
@@ -75,41 +70,7 @@ class Find extends Component {
   render() {
     return (
       <div className="">
-        <div id="content">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2 class="display-4 mb-3">
-                  Find your <span class="font-weight-bold">Local stockist</span>
-                </h2>
-      <p>You can pick up your smoothies from selected venues in Sydney.</p>
-                <form class="row mb-2 w-auto w-lg-80 pos-relative align-items-center">
-                  <div class="col-lg-9 mb-3">
-                    <i class="fa fa-search icon-2x pos-absolute pos-l mt-2 ml-3 d-none d-lg-block"></i>
-                    <input onChange={this.handlePostcodeChange.bind(this)} class="form-control form-control-lg form-control-transparent text-center text-lg-left pl-lg-5" type="text" placeholder="Postcode e.x 2072"></input>
-                    <hr class="hr-inverse hr-lg mx-auto mt-1 mb-0" />
-                  </div>
-                <div class="col-lg-3">
-                  <input type="button" value="Search" class="btn btn-inverse btn-rounded btn-lg px-5 py-lg-3 px-lg-5 d-lg-block" onClick={this.handleSearch.bind(this)}></input> 
-                </div>
-                <h5 class="text-sm my-2 mx-3 font-weight-normal">
-                  <Link to="delivery">You can buy our smoothies from selected stores in NSW. </Link>
-                </h5>
-                </form>
-              </div>
-              <div class="col-md-3">
-                <div class="nav-section-menu">
-                </div>
-              </div>
-              <div class="col-md-9">
-                {this.renderSearchHeader()}
-      {this.renderLocations()}
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+        {this.renderLocations()}
       </div>
     )
   }

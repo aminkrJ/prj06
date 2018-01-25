@@ -95,9 +95,9 @@ class Home extends Component {
     return(
       tags.map((tag) => {
         return (
-          <div class="ml-lg-10 text-secondary">
-          <h5 class="text-slab"><Link class="text-black" to={"/shop/tags/" + tag.id}>{tag.name}</Link></h5>
-          <p>{tag.short_description}</p>
+          <div class="text-sm ml-lg-10 text-secondary">
+          <h5 class="mb-1 text-slab"><Link class="text-black" to={"/shop/tags/" + tag.id}>{tag.name}</Link></h5>
+          <p class="mb-2">{tag.short_description}</p>
           </div>
         )
       })
@@ -178,7 +178,7 @@ class Home extends Component {
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
-      Pickup locations
+      Pickup Locations
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0">
         Now service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.
@@ -191,7 +191,7 @@ class Home extends Component {
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-slab font-weight-bold my-0">
-              Why us?
+              Why Us?
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
             </h5>

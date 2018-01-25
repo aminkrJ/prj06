@@ -144,6 +144,7 @@ Nutritions your competitors consume to be one step ahead in the game.
                   Company
                 </h4>
                 <ul class="list-unstyled footer-links">
+                  <li><Link to="/blog">Blog</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
                 </ul>
               </div>
