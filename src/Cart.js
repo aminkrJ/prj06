@@ -54,7 +54,7 @@ class Cart extends Component {
     e.preventDefault()
 
     render(
-      <Modal description="Now service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area." title="Pickup Locations">
+      <Modal title="Pickup Locations">
         <DeliverySearch />
       </Modal>
       , document.getElementById('modal')).toggle()

@@ -259,6 +259,7 @@ class Checkout extends Component {
             Pickup Venue
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
+            <DeliverySearch />
           </div>
           <h4 class="text-slab">
             Pickup Date and Time

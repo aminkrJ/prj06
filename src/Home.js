@@ -154,7 +154,8 @@ class Home extends Component {
       {globals.description}
                       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5" to="/shop">Order Online</Link>
+                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5 text-uppercase" to="/shop">Order Online</Link>
+                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3 text-uppercase" to="/find_us"> <u>And pick it up in your area</u></Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0">
       {this.renderTags()}
@@ -178,12 +179,9 @@ class Home extends Component {
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
-      Pickup Locations
+      Pickup Venues
             </h3>
-            <h5 className="text-center font-weight-light mt-2 mb-0">
-        Now service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.
-            </h5>
-            <div id="delivery" className="text-center container py-lg-1 px-lg-10">
+            <div className="text-center container py-lg-1 px-lg-10">
               <DeliverySearch />
             </div>
           </div>

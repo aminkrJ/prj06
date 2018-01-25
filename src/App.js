@@ -13,7 +13,6 @@ import { fetchProducts } from './actions/productsActions';
 import Header from './Header';
 import Legal from './Legal';
 import Contact from './Contact';
-import Find from './Find';
 import Home from './Home';
 import Footer from './Footer';
 import Thanks from './Thanks';
@@ -30,6 +29,7 @@ import NutriCombo from './NutriCombo';
 import Join from './Join';
 import Affiliate from './Affiliate';
 import MenuItem from './MenuItem';
+import Find from './Find';
 import api from "./Api.js"
 import globals from "./globals.js"
 
@@ -95,6 +95,7 @@ class App extends Component {
             menu={this.state.menu}
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/find_us" component={Find} />
           <Route exact path="/nutricombo" component={NutriCombo} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/affiliate" component={Affiliate} />

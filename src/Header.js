@@ -72,6 +72,9 @@ class Header extends Component {
                       <NavItem>
                         <NavLink href="/shop">Menu</NavLink>
                       </NavItem>
+                      <NavItem>
+                        <NavLink href="/find_us">Find us</NavLink>
+                      </NavItem>
                     </Nav>
                   </Collapse>
                 <CartWidget

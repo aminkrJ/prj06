@@ -25,7 +25,6 @@ class CustomModal extends Component {
           {this.props.title}
         </ModalHeader>
         <ModalBody>
-          <p>{this.props.description}</p>
           {this.props.children}
         </ModalBody>
       </Modal>
