@@ -5,7 +5,6 @@ import _ from 'underscore';
 
 import Carousel from './Carousel';
 import Process from './Process';
-import sunshineBowl from './img/sunshine-smoothie-bowl.png';
 import DeliverySearch from './DeliverySearch'
 import AddToCartButton from './AddToCartButton'
 import globals from './globals'
@@ -29,34 +28,42 @@ class Home extends Component {
     this.props.history.push('/cart')
   }
 
+  renderRecipes(product) {
+    return(
+      product.recipes.map((r, index) => {
+        return (
+          <ul key={r.id}>
+            <span>{r.description} </span>
+            {r.title}
+          </ul>
+        )
+      })
+    )
+  }
+
   renderBundleItems() {
     return (
       this.props.bundles.map((product, index) => {
         return (
           <div class="card text-center mb-5">
             <h3 class="card-title py-3 text-shadow">
-              <Link to={"/shop/" + product.slug} class="">
                 <span class="text-slab text-black text-capitalize">{product.name}</span>
-              </Link>
             </h3>
             <div class="row">
               <div class="col-md-12">
-                <Link to={"/shop/" + product.slug} class="">
-                  <img src={product.photo.original} class="card-img img-fluid"></img>
-                </Link>
               </div>
             </div>
             <p class="price-banner bg-primary text-white border-primary card-body-overlap">
-              <span class="price-currency">from $</span>
+              <span class="price-currency">$</span>
               <span class="price-digits">{product.price}<span></span></span>
               <span class="price-extra"></span>
             </p>
             <div class="card-body">
               <p class="text-muted">{product.short_description}</p>
               <ul class="text-left list-unstyled list-border-dots">
+          {this.renderRecipes(product)}
               </ul>
               <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
-              <Link to={"/shop/" + product.slug} class="btn btn-link">Learn more</Link>
             </div>
           </div>
         )
@@ -85,7 +92,29 @@ class Home extends Component {
     )
   }
 
-  renderTags() {
+  renderTags(product) {
+    return (
+      product.tags.map((tag) => {
+        return (
+          <span class='p-2 mr-1 font-weight-light badge badge-primary'>
+            {tag.name}
+          </span>
+        )
+      })
+    )
+  }
+
+  renderIngredients(product) {
+    return (
+      product.ingredients.map((ingredient) => {
+        return (
+          ingredient.name
+        )
+      }).join(', ')
+    )
+  }
+
+  renderUniqTags() {
     var tags = this.props.products.map((p) => {
       return p.tags
     })
@@ -105,36 +134,32 @@ class Home extends Component {
   }
 
   renderMenu() {
-    if (this.props.menu.length) {
-      var menu = this.props.menu.map((menuItem, index) => {
-          return(
-            <div class="card" key={index}>
-              <Link to={"/shop/" + menuItem.slug}>
-                <img src={menuItem.photo.original} className="card-img-top img-fluid" />
-              </Link>
-              <div class="card-body">
-                <Link to={"/shop/" + menuItem.slug}>
-                  <h4 class="text-slab card-title">{menuItem.name}</h4>
-                </Link>
-                <p>
-                  {menuItem.short_description}
-                </p>
-                <p class="text-xs">
-                {menuItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{50}[^\s]*).*/, "$1") + "\n ..."}
-                </p>
-                <div class="text-center text-sm">
-            <Link to={"/shop/" + menuItem.slug} class="d-block">Learn More</Link>
-                </div>
-              </div>
+    if(this.props.menu.length > 0){
+    return (
+      this.props.menu.map((product, index) => {
+        return (
+          <div class='col-sm-4'>
+          <div key={index} class="card product">
+            <div class='card-body'>
+            <span class="text-xs text-primary text-uppercase">{product.category.name}</span>
+            <div class='card-title'>
+            <h4 class='text-uppercase'>{product.name}</h4>
             </div>
-          )
-        })
-
-      return (
-        <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
-        {menu}
-        </Carousel>
-      )
+            <div class='card-subtitle'>
+            <p class="text-muted">{product.short_description}</p>
+            </div>
+            <p class='text-xs'>
+              {this.renderIngredients(product)}
+            </p>
+            <p class='text-sm m-0'>
+              {this.renderTags(product)}
+            </p>
+            </div>
+          </div>
+          </div>
+        )
+      })
+    )
     }
   }
 
@@ -148,17 +173,12 @@ class Home extends Component {
                 <div class="row justify-content-center align-items-center">
                   <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-slab">{globals.tagline}</h1>
-                      <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
       {globals.description}
                       </h2>
                     </div>
-                    <Link class="btn btn-primary btn-rounded py-lg-3 px-lg-5 text-uppercase" to="/shop">Order Online</Link>
-                    <Link class="btn btn-link btn-rounded py-lg-3 px-lg-3 text-uppercase" to="/find_us"> <u>And pick it up in your area</u></Link>
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0">
-      {this.renderTags()}
                   </div>
                 </div>
               </div>
@@ -173,9 +193,11 @@ class Home extends Component {
           <h5 className="text-center font-weight-light mt-2 mb-0">
       Nutritious and Delicious
           </h5>
-          <hr className="mb-5 w-50 mx-auto" />
-          <div id="projects" className="container p-3 py-lg-1">
+          <hr className="mb-2 w-50 mx-auto" />
+          <div class="container">
+          <div className="row p-3 py-lg-1">
       {this.renderMenu()}
+          </div>
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
@@ -185,6 +207,8 @@ class Home extends Component {
               <DeliverySearch />
             </div>
           </div>
+      {this.renderBundles()}
+          <hr className="mb-2 w-50 mx-auto" />
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />

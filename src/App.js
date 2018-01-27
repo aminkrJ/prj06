@@ -35,8 +35,6 @@ import globals from "./globals.js"
 
 import './App.css';
 
-var pageTitle = "| Nutrition for top performers"
-
 class App extends Component {
   constructor(props){
     super(props)
@@ -49,7 +47,6 @@ class App extends Component {
   }
 
   componentWillMount() {
-    document.title = "Life Elixir " + pageTitle;
   }
 
   componentWillReceiveProps(nextProps) {

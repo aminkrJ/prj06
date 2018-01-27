@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import App3 from './App3';
 import registerServiceWorker from './registerServiceWorker';
 
 import { Provider } from 'react-redux';
@@ -28,7 +27,7 @@ WebFont.load({
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App3 />
+      <App />
     </ConnectedRouter>
   </Provider>
   , document.getElementById('root'))

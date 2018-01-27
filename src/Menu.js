@@ -62,31 +62,55 @@ class Menu extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
-              <Link to={"/shop/" + product.slug}>
-                <img className="card-img-top img-fluid" src={product.photo.original} alt={product.name} />
-              </Link>
-              <span class="badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist">${product.price}</span> 
             </div>
             <div className="card-body">
-              <small className="text-muted text-uppercase">{product.category.name}</small>
-              <Link className="text-grey-dark" to={"/shop/" + product.slug}>
+              <small className="text-primary text-uppercase">{product.category.name}</small>
                 <h4 className="text-slab card-title">
                   {product.name}
                 </h4>
-              </Link>
-              <p class="text-muted"><small>{product.short_description}</small></p>
-              <p className="card-text"></p>
-            </div>
-            <div class="card-footer">
-              <div class="mt-auto">
-                <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary btn-sm" product={product} />
-              </div>
+              <p class=""><small>{product.short_description}</small></p>
+              <p className="card-text">
+      {this.renderIngredients(product)}
+        </p>
             </div>
           </div>
         </div>
       )
     })
   }
+
+  renderRecipes(product) {
+    return(
+      this.state.product.recipes.map((r, index) => {
+        return (
+          <span key={r.id}>
+            <span>{r.description} </span>
+            {r.title}
+            {index + 1 === product.recipes.length ? null : <span>, &nbsp;</span>}
+          </span>
+        )
+      })
+    )
+  }
+
+
+  renderIngredients(product) {
+    if(product.category === "Bundles"){
+      return(
+        <div class="text-xs text-muted">
+         <span class="font-weight-bold"></span> {this.renderRecipes(product)}
+        </div>
+      )
+    } else {
+      return(
+        <div class="text-xs text-muted">
+          {product.ingredients.map((i) => {return i.name}).join(', ')}
+        </div>
+      )
+    }
+  }
+
+
 
   componentDidUpdate(prevProps, prevState) {
   }
@@ -118,7 +142,7 @@ class Menu extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Shop" location={ {title: "Shop", path:"/shop"} } />
+        <PageTitle title="Our Menu" location={ {title: "Our Menu", path:"/shop"} } />
         <div id="content">
           <div className="container">
             <div className="row">
