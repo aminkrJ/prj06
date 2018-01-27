@@ -148,7 +148,7 @@ class Menu extends Component {
             <div className="row">
               <div className="col-lg-9 order-lg-2">
                 <div class="row">
-                  <div class="col-lg-6 mb-3 mb-lg-0">
+                  <div class="mb-3 mb-lg-0">
                     <ul class="mb-3 nav nav-pills nav-pills-border-bottom-inside nav-justified flex-row justify-md-content-center">
                       {this.renderCategories()}
                     </ul>
