@@ -1,9 +1,10 @@
 const globals = {
-  tagline: "Juice and healthy smoothie bar",
-  title: "Juice and healthy smoothie bar",
-  description: "Elixirs, juices and nutritious healthy smoothies packed with superfoods, functional herbs, medicinal mushrooms to not only taste extraordinary but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level.",
+  brand: "NutriCombo",
+  tagline: "Smoothies for fitness and wellbeing",
+  title: "NutriCombo | Smoothies for fitness and wellbeing",
+  description: "Elixirs to not only taste extraordinary but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level packed with superfoods, functional herbs, medicinal mushrooms.",
   mission: "",
-  keywords: "juice, healthy smoothies, healthy breakfast"
+  keywords: "juice, smoothie bar, healthy smoothies"
 }
 export default globals
 
