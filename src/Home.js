@@ -46,9 +46,9 @@ class Home extends Component {
       this.props.bundles.map((product, index) => {
         return (
           <div class="card text-center mb-5">
-            <h3 class="card-title py-3 text-shadow">
+            <h4 class="card-title py-3">
                 <span class="text-slab text-black text-capitalize">{product.name}</span>
-            </h3>
+            </h4>
             <div class="row">
               <div class="col-md-12">
               </div>
@@ -73,7 +73,7 @@ class Home extends Component {
 
   renderBundles() {
     return(
-      <div id="pricing" class="bg-faded">
+      <div class="bg-faded">
         <div class="container">
           <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 class="text-center text-slab font-weight-bold my-0">
@@ -208,7 +208,6 @@ class Home extends Component {
             </div>
           </div>
       {this.renderBundles()}
-          <hr className="mb-2 w-50 mx-auto" />
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
