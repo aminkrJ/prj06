@@ -30,7 +30,7 @@ class Home extends Component {
 
   renderRecipes(product) {
     return(
-      product.recipes.map((r, index) => {
+      _sortBy(product.recipes, 'order').reverse().map((r, index) => {
         return (
           <ul key={r.id}>
             <span>{r.description} </span>
