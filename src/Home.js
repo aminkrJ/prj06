@@ -231,7 +231,6 @@ class Home extends Component {
               <DeliverySearch />
             </div>
           </div>
-      {this.renderBundles()}
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
