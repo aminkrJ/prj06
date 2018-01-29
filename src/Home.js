@@ -9,6 +9,8 @@ import DeliverySearch from './DeliverySearch'
 import AddToCartButton from './AddToCartButton'
 import globals from './globals'
 
+import Bowl from './img/sunshine-smoothie-bowl.png'
+
 class Home extends Component {
 
   constructor(props) {
@@ -202,7 +204,8 @@ class Home extends Component {
                       </h2>
                     </div>
                   </div>
-                  <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="col-md-6 mt-3 mt-md-0 text-center">
+      <img src={Bowl} class='img-fluid' style={{width: '60%'}} />
                   </div>
                 </div>
               </div>
