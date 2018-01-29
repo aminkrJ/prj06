@@ -96,7 +96,7 @@ class Home extends Component {
     return (
       product.tags.map((tag) => {
         return (
-          <span class='p-2 mr-1 font-weight-light badge badge-primary'>
+          <span class='mb-sm-1 p-2 mr-1 font-weight-light badge badge-primary'>
             {tag.name}
           </span>
         )
@@ -133,20 +133,20 @@ class Home extends Component {
     )
   }
 
-  renderMenu() {
-    if(this.props.menu.length > 0){
+  renderProductsInCategory(categoryId) {
+    var productsInCatgory = _.filter(this.props.menu, (p) => {return p.category.id === categoryId})
+
     return (
-      this.props.menu.map((product, index) => {
+      productsInCatgory.map((product, index) => {
         return (
           <div class='col-sm-4'>
-          <div key={index} class="card product">
+          <div key={index} class="product">
             <div class='card-body'>
-            <span class="text-xs text-primary text-uppercase">{product.category.name}</span>
             <div class='card-title'>
-            <h4 class='text-uppercase'>{product.name}</h4>
+            <h5 class='text-uppercase'>{product.name}</h5>
             </div>
             <div class='card-subtitle'>
-            <p class="text-muted">{product.short_description}</p>
+            <p class="text-sm text-muted">{product.short_description}</p>
             </div>
             <p class='text-xs'>
               {this.renderIngredients(product)}
@@ -156,6 +156,30 @@ class Home extends Component {
             </p>
             </div>
           </div>
+          </div>
+        )
+      })
+    )
+  }
+
+  renderMenu() {
+    if(this.props.menu.length > 0){
+
+    var categories = this.props.menu.map((p) => {
+      return p.category
+    })
+
+    categories = _.uniq(categories, (i) =>{ return i.id })
+
+    return (
+      categories.map((category, index) => {
+        return (
+          <div key={index} class="">
+            <h4 class="text-center text-primary text-uppercase">{category.name}</h4>
+            <hr className="mb-2 w-30 mx-auto" />
+            <div class="row">
+            {this.renderProductsInCategory(category.id)}
+            </div>
           </div>
         )
       })
@@ -190,9 +214,6 @@ class Home extends Component {
           <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu
           </h3>
-          <h5 className="text-center font-weight-light mt-2 mb-0">
-      Nutritious and Delicious
-          </h5>
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
           <div className="row p-3 py-lg-1">
