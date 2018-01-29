@@ -26,7 +26,7 @@ class Find extends Component {
           <div class="col-lg-7">
   <hr class="hr-lg mt-0 mb-2 w-10 ml-0 hr-primary" />
   <h3 class="mb-3 font-weight-bold text-uppercase">
-              Pickup venues
+              Find Us
             </h3>
             <DeliverySearch />
           </div>

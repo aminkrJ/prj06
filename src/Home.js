@@ -225,7 +225,7 @@ class Home extends Component {
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
-      Pickup Venues
+     Find Us
             </h3>
             <div className="text-center container py-lg-1 px-lg-10">
               <DeliverySearch />
