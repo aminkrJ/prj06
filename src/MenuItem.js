@@ -5,12 +5,13 @@ import classnames from 'classnames'
 import NProgress from 'nprogress'
 import AddToCartButton from './AddToCartButton.js';
 import Loader from 'react-loader';
+import {Helmet} from "react-helmet"
 
 class MenuItem extends Component {
   constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}, ingredients: [], product_category: {}},
+      product: {photo: {original: ""}, tags: [], ingredients: [], category: {}},
       activeTabIndex: 1,
       loaded: false
     }
@@ -44,11 +45,23 @@ class MenuItem extends Component {
         loaded: true
       })
 
-      document.title = "Life Elixir, " + response.data.name
+      document.title = response.data.name
     })
     .catch((error) => {
       NProgress.done()
     })
+  }
+
+  renderTags() {
+    return (
+      this.state.product.tags.map((tag) => {
+        return (
+          <span class='mb-sm-1 p-2 mr-1 font-weight-light badge badge-primary'>
+            {tag.name}
+          </span>
+        )
+      })
+    )
   }
 
   renderRecipes() {
@@ -85,41 +98,44 @@ class MenuItem extends Component {
   }
 
   render() {
+    var tags = this.state.product.tags.map((p) => {return p.name})
+
     return (
       <div id="content" class="pt-3 pt-lg-6 pb-lg-0">
+        <Helmet>
+          <title>{this.state.product.name}</title>
+          <meta name="description" content={this.state.product.short_description}/>
+          <meta name="keywords" content={tags.join(', ')}/>
+        </Helmet>
         <div class="container">
-      <Loader loaded={this.state.loaded}>
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="product-gallery pos-relative">
-                <img src={this.state.product.photo.original} alt={this.state.product.name} class="lazyOwl img-fluid" />
+          <Loader loaded={this.state.loaded}>
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="product-gallery pos-relative">
+                </div>
               </div>
-            </div>
-            <div class="col-lg-7">
-              <div class="card product-card mb-4">
-                <div class="card-body p-4 pos-relative">
-                  <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
+              <div class="col-lg-7">
+                <div class="card product-card mb-4">
+                  <div class="card-body p-4 pos-relative">
+                    <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
+                    </div>
+  <p class="text-muted text-uppercase text-xs mb-0"><Link to={'/shop/categories/' + this.state.product.category.id} class="text-primary">{this.state.product.category.name}</Link></p>
+                    <h2 class="text-slab card-title mb-2">
+                      {this.state.product.name}
+                    </h2>
+                    <hr class="my-3" />
+                    <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="lead" />
+                    <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
+        {this.renderIngredients()}
+                    <hr class="my-3" />
+        {this.renderTags()}
                   </div>
-<p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">{this.state.product.category}</span></p>
-                  <h2 class="text-slab card-title mb-2">
-                    {this.state.product.name}
-                  </h2>
-                  <h4 class="font-weight-bold text-primary">
-      <span class="h6 price-currency">$</span>{this.state.product.price}
-                  </h4>
-                  <hr class="my-3" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="lead" />
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
-      {this.renderIngredients()}
-                  <hr class="my-3" />
-                  <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={this.state.product} />
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-12">
-          </div>
-      </Loader>
+            <div class="col-lg-12">
+            </div>
+          </Loader>
         </div>
       </div>
     )

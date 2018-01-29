@@ -145,7 +145,9 @@ class Home extends Component {
           <div key={index} class="product">
             <div class='card-body'>
             <div class='card-title'>
-            <h5 class='text-uppercase'>{product.name}</h5>
+            <Link class="text-black" to={"/shop/" + product.slug}>
+              <h5 class='text-uppercase'>{product.name}</h5>
+            </Link>
             </div>
             <div class='card-subtitle'>
             <p class="text-sm text-muted">{product.short_description}</p>

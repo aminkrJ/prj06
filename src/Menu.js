@@ -64,10 +64,11 @@ class Menu extends Component {
             <div className="pos-relative">
             </div>
             <div className="card-body">
-              <small className="text-primary text-uppercase">{product.category.name}</small>
-                <h4 className="text-slab card-title">
-                  {product.name}
-                </h4>
+              <Link to={'/shop/' + product.slug}>
+              <h5 className="text-black text-uppercase card-title">
+                {product.name}
+              </h5>
+              </Link>
               <p class=""><small>{product.short_description}</small></p>
               <p className="card-text">
       {this.renderIngredients(product)}
@@ -119,8 +120,8 @@ class Menu extends Component {
     return this.state.tags.map((tag, index) => {
       return(
         <Link to={"/shop/tags/" + tag.id} class={classnames("nav-link", {active: this.state.activeTag === tag.id})}>
-          <span class="text-slab">{tag.name}</span>
-          <small>{tag.short_description}</small>
+          <span class="text-capitalize text-slab">{tag.name}</span>
+          <small class="text-capitalize">{tag.short_description}</small>
           <i class="fa fa-angle-right"></i>
         </Link>
       )
@@ -131,7 +132,7 @@ class Menu extends Component {
     return this.state.categories.map((category, index) => {
       return(
         <li class="nav-item">
-          <Link to={"/shop/categories/" + category.id} class={classnames("nav-link text-center text-uppercase font-weight-bold px-3 px-lg-4 py-2",
+          <Link to={"/shop/categories/" + category.id} class={classnames("nav-link text-center text-slab text-uppercase font-weight-bold px-3 px-lg-4 py-2",
             {active: category.id === this.state.activeCategory}
           )}>{category.name}</Link>
         </li>
