@@ -5,7 +5,9 @@
   background-size:  cover;
   background-color: #999;
 }
-
+.blog-content{
+  font-size: 1.1em
+}
 .social-media-branding a{
   color: #464646
 }

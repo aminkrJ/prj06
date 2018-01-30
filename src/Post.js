@@ -45,8 +45,6 @@ class Post extends Component {
                 <div class="col-md-1 date-md">
                   <div class="date-wrapper"> <span class="date-m bg-primary">{moment(this.state.post.updated_at).format("MMMM")}</span> <span class="date-d">{moment(this.state.post.updated_at).format("DD")}</span>
         </div>
-                  <p class="text-muted"> 
-        </p>
                 </div>
                 <div class="col-md-11">
                   <div class="media-body">
@@ -54,18 +52,12 @@ class Post extends Component {
                     <h3 class="title media-heading">
               {this.state.post.title}
                     </h3>
-                    
-                    <ul class="list-inline meta text-muted">
-                      <li class="list-inline-item"><i class="fa fa-calendar"></i> Mon 7th Jan 2013</li>
-                      <li class="list-inline-item"><i class="fa fa-user"></i> <a href="#">Erin</a></li>
-                    </ul>
-                    
                     <div class="blog-content">
                       <div class="blog-media">
                         <img src={this.state.post.photo.original} alt={this.state.post.title} class="img-fluid" />
                       </div>
                       <p class="lead">{this.state.post.description}</p>
-                      <p dangerouslySetInnerHTML={{__html: this.state.post.content}} class="text-muted text-sm" />
+                      <p dangerouslySetInnerHTML={{__html: this.state.post.content}} class="" />
                     </div>
                     
                     <div class="tag-cloud post-tag-cloud">
