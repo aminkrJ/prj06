@@ -11,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="About" location={ {title: "About", path:"/about"} } />
+        <PageTitle title="Our Story" location={ {title: "Our Story", path:"/about"} } />
         <div id="content">
           <div class="container">
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
@@ -36,7 +36,11 @@ We all know about our mind-body connection and how our thoughts, beliefs, and st
                 <ul class="fa-ul list-unstyled mt-4 mt-md-0">
                   <li class="mb-4">
                     <h4 class="mb-1 text-slab">
+      About our founder
                     </h4>
+                    <p>
+Life Elixir was created by Armin Karaji: software engineer and entrepreneur. Armin had a great awakening when he discovers how thoughts and beliefs change our behaviour and consequently our outcome. Soon enough he realised that it is not a one-way road. Our body can massively impact the mind, our conciseness, our thoughts and even our values. Lifelixir is Armin's journey of discovering nutritions to hack, heal, and boost your biology to get the peak performance of your body and brain.
+                    </p>
                   </li>
                 </ul>
               </div>
