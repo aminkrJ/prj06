@@ -178,7 +178,7 @@ class Home extends Component {
     return (
       categories.map((category, index) => {
         return (
-          <div key={index} class="">
+          <div key={index} class="col-12">
             <h4 class="text-center text-primary text-uppercase">{category.name}</h4>
             <hr className="mb-2 w-30 mx-auto" />
             <div class="row">
