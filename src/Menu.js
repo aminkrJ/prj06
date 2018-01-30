@@ -69,7 +69,7 @@ class Menu extends Component {
                 {product.name}
               </h5>
               </Link>
-              <p class=""><small>{product.short_description}</small></p>
+              <p style={{"line-height": "1em"}}><small>{product.short_description}</small></p>
               <p className="card-text">
       {this.renderIngredients(product)}
         </p>
@@ -120,7 +120,7 @@ class Menu extends Component {
     return this.state.tags.map((tag, index) => {
       return(
         <Link to={"/shop/tags/" + tag.id} class={classnames("nav-link", {active: this.state.activeTag === tag.id})}>
-          <span class="text-capitalize text-slab">{tag.name}</span>
+          <span class="text-uppercase text-sm">{tag.name}</span>
           <small class="text-capitalize">{tag.short_description}</small>
           <i class="fa fa-angle-right"></i>
         </Link>
@@ -132,7 +132,7 @@ class Menu extends Component {
     return this.state.categories.map((category, index) => {
       return(
         <li class="nav-item">
-          <Link to={"/shop/categories/" + category.id} class={classnames("nav-link text-center text-slab text-uppercase font-weight-bold px-3 px-lg-4 py-2",
+          <Link to={"/shop/categories/" + category.id} class={classnames("nav-link text-center text-uppercase font-weight-bold px-3 px-lg-4 py-2",
             {active: category.id === this.state.activeCategory}
           )}>{category.name}</Link>
         </li>
