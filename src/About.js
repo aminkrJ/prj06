@@ -36,10 +36,10 @@ We all know about our mind-body connection and how our thoughts, beliefs, and st
                 <ul class="fa-ul list-unstyled mt-4 mt-md-0">
                   <li class="mb-4">
                     <h4 class="mb-1 text-slab">
-      About our founder
+      A word from our founder
                     </h4>
                     <p>
-Life Elixir was created by Armin Karaji: software engineer and entrepreneur. Armin had a great awakening when he discovers how thoughts and beliefs change our behaviour and consequently our outcome. Soon enough he realised that it is not a one-way road. Our body can massively impact the mind, our conciseness, our thoughts and even our values. Lifelixir is Armin's journey of discovering nutritions to hack, heal, and boost your biology to get the peak performance of your body and brain.
+Life Elixir was created by Armin Karaji: software engineer and entrepreneur. Armin had a great awakening when he discovered how thoughts and beliefs change our behaviour and consequently our reality. Soon enough he realised that this is not only a one-way road. In fact, uur body can massively impact the mind, our conciseness, our thoughts and even our values. Lifelixir is Armin's journey of discovering nutritions to hack, heal, and boost your biology to get the peak performance of your body and brain.
                     </p>
                   </li>
                 </ul>
