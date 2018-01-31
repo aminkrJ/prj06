@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet"
 import classnames from 'classnames'
-import PageTitle from './PageTitle'
-import api from './Api.js'
-import NProgress from 'nprogress';
 import _ from 'underscore';
-import AddToCartButton from './AddToCartButton.js'
 
-class Menu extends Component {
+import globals from './globals'
+
+class Shop extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -62,9 +61,10 @@ class Menu extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
+        <img src={product.photo.original} class='img-fluid'/>
             </div>
             <div className="card-body">
-              <Link to={'/menu/' + product.slug}>
+              <Link to={'/shop/' + product.slug}>
               <h5 className="text-black text-uppercase card-title">
                 {product.name}
               </h5>
@@ -80,38 +80,13 @@ class Menu extends Component {
     })
   }
 
-  renderRecipes(product) {
+  renderIngredients(product) {
     return(
-      this.state.product.recipes.map((r, index) => {
-        return (
-          <span key={r.id}>
-            <span>{r.description} </span>
-            {r.title}
-            {index + 1 === product.recipes.length ? null : <span>, &nbsp;</span>}
-          </span>
-        )
-      })
+      <div class="text-xs text-muted">
+        {product.ingredients.map((i) => {return i.name}).join(', ')}
+      </div>
     )
   }
-
-
-  renderIngredients(product) {
-    if(product.category === "Bundles"){
-      return(
-        <div class="text-xs text-muted">
-         <span class="font-weight-bold"></span> {this.renderRecipes(product)}
-        </div>
-      )
-    } else {
-      return(
-        <div class="text-xs text-muted">
-          {product.ingredients.map((i) => {return i.name}).join(', ')}
-        </div>
-      )
-    }
-  }
-
-
 
   componentDidUpdate(prevProps, prevState) {
   }
@@ -119,7 +94,7 @@ class Menu extends Component {
   renderTags() {
     return this.state.tags.map((tag, index) => {
       return(
-        <Link to={"/menu/tags/" + tag.id} class={classnames("nav-link", {active: this.state.activeTag === tag.id})}>
+        <Link to={"/shop/tags/" + tag.id} class={classnames("nav-link", {active: this.state.activeTag === tag.id})}>
           <span class="text-uppercase text-sm">{tag.name}</span>
           <small class="text-capitalize">{tag.short_description}</small>
           <i class="fa fa-angle-right"></i>
@@ -128,42 +103,22 @@ class Menu extends Component {
     })
   }
 
-  renderCategories() {
-    return this.state.categories.map((category, index) => {
-      return(
-        <li class="nav-item">
-          <Link to={"/menu/categories/" + category.id} class={classnames("nav-link text-center text-uppercase font-weight-bold px-3 px-lg-4 py-2",
-            {active: category.id === this.state.activeCategory}
-          )}>{category.name}</Link>
-        </li>
-      )
-    })
-  }
-
   render() {
     return (
-      <div className="">
-        <div id="content"> <div className="container">
-            <div className="row">
-              <div className="col-lg-9 order-lg-2">
-                <div class="row">
-                  <div class="mb-3 mb-lg-0">
-                    <ul class="mb-3 nav nav-pills nav-pills-border-bottom-inside nav-justified flex-row justify-md-content-center">
-                      {this.renderCategories()}
-                    </ul>
-                  </div>
-                </div>
-                <div className="row">
-                  {this.renderProducts()}
-                </div>
+      <div id="content">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9 order-lg-2">
+              <div className="row">
+                {this.renderProducts()}
               </div>
-              <div className="mt-5 col-lg-3 order-lg-1">
-              <div class="nav-section-menu">
-                <div class="nav nav-list">
-                 {this.renderTags()}
-                </div>
+            </div>
+            <div className="mt-5 col-lg-3 order-lg-1">
+            <div class="nav-section-menu">
+              <div class="nav nav-list">
+               {this.renderTags()}
               </div>
-              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -172,8 +127,9 @@ class Menu extends Component {
   }
 }
 
-Menu.defaultProps = {
+Shop.defaultProps = {
   products: [],
 }
 
-export default Menu
+export default Shop
+

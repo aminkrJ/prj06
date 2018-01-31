@@ -35,19 +35,11 @@ export default class ShippingAddress extends React.Component {
             </div>
 
             <div className='row'>
-              <div className='col-md-4'>
-                <CustomInput type='text'
-                      name='suite_apt'
-                      ref="suite_apt"
-                      placeholder='Apt, unit etc. (optional)'
-                      errors={this.props.errors["customer.addresses.suite_apt"]}
-                      />
-              </div>
-              <div className='col-md-8'>
+              <div className='col-md-12'>
                 <CustomInput type='text'
                       name='street_address'
                       ref="street_address"
-                      placeholder='Street address'
+                      placeholder='Address'
                       errors={this.props.errors["customer.addresses.street_address"]}
                       required/>
               </div>
@@ -74,8 +66,15 @@ export default class ShippingAddress extends React.Component {
             <div className='row'>
               <div className='col-md-6 col-sm-6'>
                 <div className='form-group'>
-                  <select name="state" className='form-control' disabled>
-                    <option name="nsw">NSW</option>
+                  <select ref="state" name="state" className='form-control'>
+                    <option value="ACT">Australian Capital Territory</option>
+                    <option value="NSW">New South Wales</option>
+                    <option value="NT ">Northern Territory</option>
+                    <option value="QLD">Queensland</option>
+                    <option value="SA ">South Australia</option>
+                    <option value="TAS">Tasmania</option>
+                    <option value="VIC">Victoria</option>
+                    <option value="WA ">Western Australia</option>
                   </select>
                 </div>
               </div>
@@ -100,4 +99,5 @@ export default class ShippingAddress extends React.Component {
 }
 
 ShippingAddress.defaultProps = {
+  errors: {}
 }

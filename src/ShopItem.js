@@ -7,7 +7,7 @@ import AddToCartButton from './AddToCartButton.js';
 import Loader from 'react-loader';
 import {Helmet} from "react-helmet"
 
-class MenuItem extends Component {
+class ShopItem extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -112,15 +112,18 @@ class MenuItem extends Component {
             <div class="row">
               <div class="col-lg-5">
                 <div class="product-gallery pos-relative">
+        <img src={this.state.product.photo.original} class='img-fluid'/>
                 </div>
+                <p class='mt-3'>
+                {this.renderTags()}
+                </p>
               </div>
               <div class="col-lg-7">
                 <div class="card product-card mb-4">
                   <div class="card-body p-4 pos-relative">
                     <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
                     </div>
-  <p class="text-muted text-uppercase text-xs mb-0"><Link to={'/menu/categories/' + this.state.product.category.id} class="text-primary">{this.state.product.category.name}</Link></p>
-                    <h2 class="text-slab card-title mb-2">
+                    <h2 class="text-capitalize text-slab card-title mb-2">
                       {this.state.product.name}
                     </h2>
                     <hr class="my-3" />
@@ -128,7 +131,7 @@ class MenuItem extends Component {
                     <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
         {this.renderIngredients()}
                     <hr class="my-3" />
-        {this.renderTags()}
+                    <AddToCartButton class='btn btn-primary' product={this.state.product} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
                   </div>
                 </div>
               </div>
@@ -142,4 +145,4 @@ class MenuItem extends Component {
   }
 }
 
-export default MenuItem
+export default ShopItem

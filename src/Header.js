@@ -73,7 +73,10 @@ class Header extends Component {
                         <NavLink href="/nutricombo">NutriCombo</NavLink>
                       </NavItem>
                       <NavItem>
-                        <NavLink href="/shop">Menu</NavLink>
+                        <NavLink href="/menu">Menu</NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink href="/shop">Shop</NavLink>
                       </NavItem>
                       <NavItem>
                         <NavLink href="/find_us">Find us</NavLink>

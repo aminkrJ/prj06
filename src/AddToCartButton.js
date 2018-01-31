@@ -28,6 +28,13 @@ class AddToCartButton extends Component {
 
     if(this.state.isInCart){
       this.props.dropFromCart(this.props.product)
+      iziToast.success({
+        position: 'topRight',
+        color: 'yellow',
+        title: this.state.product.name,
+        message: "has been removed from your cart."
+      })
+
     }else{
       this.props.addToCart(this.props.product)
       iziToast.success({

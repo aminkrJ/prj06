@@ -26,7 +26,7 @@ class Checkout extends Component {
       deliveryTime: '',
       errors: [],
       cardError: '',
-      shippingFee: 0,
+      shippingFee: 8,
       subtotal: 0,
       coupon: {},
       couponCode: "",
@@ -179,7 +179,7 @@ class Checkout extends Component {
               delivery_at: self.state.deliveryAt,
               subtotal: self.state.subtotal,
               shipping_fee: self.state.shippingFee,
-              delivery_time: self.state.deliveryTime,
+              //delivery_time: self.state.deliveryTime,
               discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
               total: self.calcTotal(),
               coupon_id: self.state.hasCoupon ? self.state.coupon.id : null
@@ -191,11 +191,11 @@ class Checkout extends Component {
                 {
                   country: "Australia",
                   city: "Sydney",
-                  state: "NSW",
+                  state: address.state.options[address.state.selectedIndex].value,
                   zip: address.postcode.state.value,
                   suburb: address.suburb.state.value,
                   street_address: address.street_address.state.value,
-                  suite_apt: address.suite_apt.state.value
+                  //suite_apt: address.suite_apt.state.value
                 }
               ],
               email: self.refs.email.state.value,
@@ -256,37 +256,11 @@ class Checkout extends Component {
             <CustomInput ref='email' type='email' placeholder='Email' name='email' />
           </div>
           <h4 class="text-slab">
-            Pickup Venue
+            Delivery Address
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
-            <DeliverySearch />
+            <ShippingAddress ref='shippingAddress' errors={this.state.errors} />
           </div>
-          <h4 class="text-slab">
-            Pickup Date and Time
-          </h4>
-          <div class="mb-2 bg-faded p-3 rounded" id="">
-            <DatePicker
-                    selected={this.state.deliveryAt}
-                    onChange={this.handleDeliveryDateChange.bind(this)}
-                    locale="en-au"
-          name="delivery_time"
-          class="form-control"
-      //minTime={moment().hours(9).minutes(0)}
-      //maxTime={moment().hours(17).minutes(0)}
-                    //showTimeSelect
-                    //timeIntervals={60}
-                    className="form-control"
-                    dateFormat="LL"
-                    minDate={moment()}
-                    filterDate={this.isWeekday}
-                />
-          <div class="mt-2 px-4">
-            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="12PM - 14PM" start={12} end={14} deliveryAt={this.state.deliveryAt} />
-            <DeliveryTime onDeliveryTimeChange={this.onDeliveryTimeChange.bind(this)} value="15PM - 17PM" start={17} end={19} deliveryAt={this.state.deliveryAt} />
-            <div class="text-danger">{this.state.errors ? this.state.errors['delivery_time'] : null}</div>
-          </div>
-          </div>
-          
           <h4 class="text-slab">
             Payment Options
           </h4>

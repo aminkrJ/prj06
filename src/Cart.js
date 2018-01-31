@@ -13,7 +13,7 @@ class Cart extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      shippingFee: 0,
+      shippingFee: 8,
       subtotal: 0,
       isSending: false,
       errors: []
@@ -157,8 +157,6 @@ class Cart extends Component {
               <div class="row">
                 <div class="col-md-6">
                 <p class="text-sm text-muted">
-Now service is available for selected suburbs in Sydney. <br/>
-                  <a href="#" onClick={this.openDeliverySearchModal.bind(this)}>Find the closest pickup venue in your area.</a>
                 </p>
                 </div>
                 <div class="col-md-6 text-md-right mt-3 mt-md-0">

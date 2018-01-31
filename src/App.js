@@ -25,10 +25,12 @@ import Delivery from './Delivery'
 import About from './About'
 import CustomModal from './Modal'
 import Menu from './Menu';
+import Shop from './Shop';
 import NutriCombo from './NutriCombo';
 import Join from './Join';
 import Affiliate from './Affiliate';
 import MenuItem from './MenuItem';
+import ShopItem from './ShopItem';
 import Find from './Find';
 import api from "./Api.js"
 import globals from "./globals.js"
@@ -53,7 +55,8 @@ class App extends Component {
     this.setState({
       products: this.props.products.entities,
       bundles: _.filter(this.props.products.entities, (p) => {return p.category.name === "Bundles"}),
-      menu: _.filter(this.props.products.entities, (p) => {return p.category.name !== "Bundles"}),
+      menu: _.filter(this.props.products.entities, (p) => {return p.category.name !== "Bundles" && p.category.name !== "Shop"}),
+      shop: _.filter(this.props.products.entities, (p) => {return p.category.name === "Shop"})
     })
   }
 
@@ -105,10 +108,14 @@ class App extends Component {
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/legal" component={Legal} />
-          <Route exact path='/shop' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/shop/categories/:category_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/shop/tags/:tag_id' component={(props) => <Menu {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/shop/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route exact path='/menu' component={(props) => <Menu {...props} products={this.state.menu} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/menu/categories/:category_id' component={(props) => <Menu {...props} products={this.state.menu} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/menu/tags/:tag_id' component={(props) => <Menu {...props} products={this.state.menu} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/menu/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route exact path='/shop' component={(props) => <Shop {...props} products={this.state.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/shop/categories/:category_id' component={(props) => <Shop {...props} products={this.state.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/shop/tags/:tag_id' component={(props) => <Shop {...props} products={this.state.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
+          <Route exact path='/shop/:slug' component={(props) => <ShopItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.products}/>
         </StickyContainer>

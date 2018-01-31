@@ -38,6 +38,7 @@ class Footer extends Component {
 
   renderCollections(){
     var collections = _.uniq(this.props.products.map((p) => {return p.category}), (c) => { return c.id })
+    collections = _.filter(collections, (c) => {return c.name !== "Shop"})
 
     return(
       collections.map((category, index) => {
