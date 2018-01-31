@@ -4,7 +4,11 @@ const globals = {
   title: "Tonics & elixirs for high performers",
   description: "Elixirs to not only taste extraordinary but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level to improve your performance packed with superfoods, functional herbs, medicinal mushrooms.",
   mission: "",
-  keywords: "juice bar, smoothie bar, healthy smoothies, elixir of life"
+  keywords: "nutricombo, juice bar, smoothie bar, healthy smoothies, elixir of life",
+  nutricombo: {
+    title: "Life Elixir | NutriCombo breakfast",
+    description: "Leaner, stronger and more focused and productive with our healthy raw breakfast collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms."
+  }
 }
 export default globals
 

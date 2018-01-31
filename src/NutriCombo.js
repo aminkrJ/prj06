@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet"
+
 import PageTitle from './PageTitle'
-import AboutSideMenu from './AboutSideMenu'
+import globals from './globals'
 
 class NutriCombo extends Component {
-  
-
   render() {
     return (
-      <div className="">
+      <div class="">
+        <Helmet>
+          <title>{globals.nutricombo.title}</title>
+          <meta name="description" content={globals.nutricombo.description}/>
+        </Helmet>
         <PageTitle title="NutriCombo" location={ {title: "NutriCombo", path:"/about"} } />
         <div id="content">
           <div class="container">
