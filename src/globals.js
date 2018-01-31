@@ -7,7 +7,7 @@ const globals = {
   keywords: "nutricombo, juice bar, smoothie bar, healthy smoothies, elixir of life",
   nutricombo: {
     title: "Life Elixir | NutriCombo superfood healthy breakfast",
-    description: "Leaner, stronger and more focused and productive with our healthy raw breakfast collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms."
+    description: "Leaner, stronger and more focused and productive with our plant-based, healthy, and raw breakfast collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms."
   }
 }
 export default globals

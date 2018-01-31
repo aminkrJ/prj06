@@ -22,7 +22,7 @@ class NutriCombo extends Component {
             <div class="mt-30 hidden-md-up"></div>
             <h1 class="h2 text-slab">NutriCombo superfood healthy breakfast.</h1>
             <p>
-      {globals.nutricombo.description}
+      Looking for healthier and smarter breakfast ideas? {globals.nutricombo.description}
       </p>
           </div>
           <div class="col-md-6">
