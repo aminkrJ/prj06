@@ -37,9 +37,6 @@ import globals from "./globals.js"
 
 import './App.css';
 
-//For SEO
-import 'babel-polyfill'
-
 class App extends Component {
   constructor(props){
     super(props)
