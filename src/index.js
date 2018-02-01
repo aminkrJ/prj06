@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, hydrate } from 'react-snap';
+import { render, hydrate } from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
