@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-snapshot';
+import { render, hydrate } from 'react-snap';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -26,6 +26,17 @@ WebFont.load({
 
 
 const rootElement = document.getElementById('root');
+
+if (rootElement.hasChildNodes()) {
+hydrate(
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
+  </Provider>
+  , rootElement)
+
+}else{
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
@@ -33,4 +44,5 @@ render(
     </ConnectedRouter>
   </Provider>
   , rootElement)
+}
 registerServiceWorker()
