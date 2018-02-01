@@ -37,11 +37,11 @@ class Post extends Component {
         <title>{this.state.post.title}</title>
         <meta name="description" content={this.state.post.title}/>
         <meta name="keywords" content={this.state.post.category}/>
-        <meta property="og:url" content={"https://www.lifelixir.com.au/blog/" + this.state.post.slug} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={this.state.post.title} />
-        <meta property="og:description" content={this.state.post.description} />
-        <meta property="og:image" content={this.state.post.photo.original} />
+        <meta name="og:url" content={"https://www.lifelixir.com.au/blog/" + this.state.post.slug} />
+        <meta name="og:type" content="article" />
+        <meta name="og:title" content={this.state.post.title} />
+        <meta name="og:description" content={this.state.post.description} />
+        <meta name="og:image" content={this.state.post.photo.original} />
       </Helmet>
       <div class="container">
         <div class="row">
