@@ -40,7 +40,8 @@
     "react-scripts": "1.0.14"
   },
   "reactSnap": {
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "cacheAjaxRequests": true
   },
   "scripts": {
     "start": "react-scripts start",
