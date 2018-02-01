@@ -142,7 +142,8 @@ class Home extends Component {
       productsInCatgory.map((product, index) => {
         return (
           <div class='col-sm-4'>
-          <div key={index} class="product">
+          <div key={index} class="card product border-0">
+            <img src={product.photo.original} class='card-img-top img-fluid'/>
             <div class='card-body'>
             <div class='card-title'>
             <Link class="text-black" to={"/shop/" + product.slug}>

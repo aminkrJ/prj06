@@ -62,6 +62,7 @@ class Menu extends Component {
         <div key={index} className="col-lg-4">
           <div className="card product-card overlay-hover mb-4">
             <div className="pos-relative">
+        <img src={product.photo.original} class='img-fluid'/>
             </div>
             <div className="card-body">
               <Link to={'/menu/' + product.slug}>
