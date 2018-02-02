@@ -76,7 +76,7 @@ class Home extends Component {
   renderProducts() {
     var menu = this.props.shop.map((shopItem, index) => {
         return(
-          <div class="card" key={index}>
+          <div class="card border-0" key={index}>
             <Link to={"/shop/" + shopItem.slug}>
               <img src={shopItem.photo.original} className="card-img-top img-fluid" />
             </Link>
