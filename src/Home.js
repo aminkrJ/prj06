@@ -146,7 +146,7 @@ class Home extends Component {
             <img src={product.photo.original} class='card-img-top img-fluid'/>
             <div class='card-body'>
             <div class='card-title'>
-            <Link class="text-black" to={"/shop/" + product.slug}>
+            <Link class="text-black" to={"/menu/" + product.slug}>
               <h5 class='text-uppercase'>{product.name}</h5>
             </Link>
             </div>
