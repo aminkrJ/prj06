@@ -220,6 +220,9 @@ class Home extends Component {
           <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu
           </h3>
+            <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
+      Now available in cafes and restaurants in your area. <Link to='/find'>Find us.</Link>
+            </h5>
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
           <div className="row p-3 py-lg-1">

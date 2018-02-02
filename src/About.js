@@ -11,7 +11,7 @@ class About extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="Our Story" location={ {title: "Our Story", path:"/about"} } />
+        <PageTitle title="About us" location={ {title: "About us", path:"/about"} } />
         <div id="content">
           <div class="container">
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
@@ -22,26 +22,46 @@ class About extends Component {
             <div class="row">
               <div class="col-md-6">
                 <p class="lead">
-      We design tonics and elixirs to heal and improve your body which eventually leads to high brain and cognitive performance.
+      We design tonics and elixirs to heal and improve your body which eventually leads to higher cognitive function.
                 </p>
                 <p class="">
-      There is a direct connection between what we eat and how we feel. However, our brain constantly makes a new normal for us. We may feel having occasional headaches, joint pain, bloating, brain fog, chronic fatigue, leaky guts, depression, insomnia, being moody, having eczema and acne are normal but it is not. When you put a frog into cold water and turn the heat up, they boil to death. Whereas, when you throw a frog in boiling water, they jump right out. 
+      There is a direct connection between what we eat and how we feel. We may feel having occasional headaches, joint pains, bloating, brain fogs, chronic fatigues, leaky guts, depression, insomnia, being moody are normal but it is not. In fact it is our brain defence system for creating a new normal to burn less energy. When you put a frog into cold water and turn the heat up, they boil to death. Whereas, when you throw a frog in boiling water, they jump right out.
 </p>
 <p>
-We all know about our mind-body connection and how our thoughts, beliefs, and stress can impact our biology. But body mind affects is another side of the coin. What we eat,  our sleep, our stress level, our nutrient level,  our gut flora, infections to name a few will change the way our brain function.
+We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection  is another side of the coin. What we eat, our sleep, our nutrient level, our gut flora, infections to name a few will change the way our brain function.
 </p>
-      <Link class="btn btn-primary text-sm" to="/shop">Our Menu</Link>
+                    <h4 class="mb-1 text-slab">
+      About our founder
+                    </h4>
+                    <p>
+Life Elixir was created by Amin Karaji: a software engineer and an entrepreneur. Amin had a great awakening when he discovered how our thoughts and beliefs change human behaviour and consequently our reality.
+  </p>
+  <p>
+  Soon enough he realised that this is not only a one-way road. In fact, our body can massively impact our mind, conciseness, thoughts and even our values. Lifelixir is a journey of discovering nutritions to hack, heal, and boost your biology to get the peak performance of your body and brain.
+                    </p>
+ 
+
               </div>
               <div class="col-md-6">
                 <ul class="fa-ul list-unstyled mt-4 mt-md-0">
                   <li class="mb-4">
                     <h4 class="mb-1 text-slab">
-      About our founder
+      How to get our products
                     </h4>
-                    <p>
-Life Elixir was created by Amin Karaji: software engineer and entrepreneur. Amin had a great awakening when he discovered how our thoughts and beliefs change our behaviour and consequently our reality. Soon enough he realised that this is not only a one-way road. In fact, our body can massively impact our mind, conciseness, thoughts and even our values. Lifelixir is Amin's journey of discovering nutritions to hack, heal, and boost your biology to get the peak performance of your body and brain.
-                    </p>
-                  </li>
+      <p>
+        <ul>
+          <li>
+        Order it in your favorite cafe and restaurants in your area. <Link to='/find'>Find us in your area.</Link>
+          </li>
+          <li>
+       Pick up our <Link to='/nutricombo'>NutriCombo</Link> in health food stores in your area. <Link to='/find'>Find us in your area.</Link>
+          </li>
+      <li>
+      Order our concoctions online. <Link to='/shop'>Shop Now!</Link>
+      </li>
+      </ul>
+      </p>
+                 </li>
                 </ul>
               </div>
             </div>
