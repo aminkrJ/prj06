@@ -2,9 +2,39 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet"
 
+import Carousel from './Carousel';
 import globals from './globals'
 
 class NutriCombo extends Component {
+  renderProducts() {
+    var items = this.props.nutricombo.map((nc, index) => {
+        return(
+          <div class="card border-0" key={index}>
+            <Link to={"/menu/" + nc.slug}>
+              <img src={nc.photo.original} className="card-img-top img-fluid" />
+            </Link>
+            <div class="card-body">
+              <Link to={"/menu/" + nc.slug}>
+                <h4 class="text-slab card-title">{nc.name}</h4>
+              </Link>
+              <p>
+                {nc.short_description}
+              </p>
+              <p class="text-xs">
+              {nc.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
+              </p>
+            </div>
+          </div>
+        )
+      })
+
+    return (
+      <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
+      {items}
+      </Carousel>
+    )
+  }
+
   render() {
     return (
       <div class="">
@@ -32,6 +62,8 @@ class NutriCombo extends Component {
 	          </div>
           </div>
         </div>
+        <hr />
+      {this.renderProducts()}
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
           <div class="col-md-5"><img class="d-block w-270 m-auto" /></div>
@@ -99,6 +131,11 @@ NutriCombo healthy breakfasts are raw. While you might think otherwise, cooked f
       </div>
     )
   }
+}
+
+NutriCombo.defaultProps = {
+  products: [],
+  nutricombo: [],
 }
 
 export default NutriCombo

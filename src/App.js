@@ -45,6 +45,7 @@ class App extends Component {
       products: [],
       bundles: [],
       menu: [],
+      nutricombo: [],
     }
   }
 
@@ -56,7 +57,8 @@ class App extends Component {
       products: nextProps.products.entities,
       bundles: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Bundles"}),
       menu: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Bundles" && p.category.name !== "Shop"}),
-      shop: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop"})
+      shop: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop"}),
+      nutricombo: _.filter(nextProps.products.entities, (p) => {return p.category.name === "NutriCombo"})
     })
   }
 
@@ -97,7 +99,7 @@ class App extends Component {
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
-          <Route exact path="/nutricombo" component={NutriCombo} />
+          <Route exact path="/nutricombo" component={(props) => <NutriCombo {...props} products={this.state.products} nutricombo={this.state.nutricombo} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/affiliate" component={Affiliate} />
           <Route exact path="/blog" component={Blog} />
