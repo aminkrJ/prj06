@@ -93,6 +93,7 @@ class App extends Component {
             removeFromCart={this.props.removeFromCart}
             bundles={this.state.bundles.slice(0, 3)}
             menu={this.state.menu}
+            shop={this.state.shop}
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />

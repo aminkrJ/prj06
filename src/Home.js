@@ -73,6 +73,36 @@ class Home extends Component {
     )
   }
 
+  renderProducts() {
+    var menu = this.props.shop.map((shopItem, index) => {
+        return(
+          <div class="card" key={index}>
+            <Link to={"/shop/" + shopItem.slug}>
+              <img src={shopItem.photo.original} className="card-img-top img-fluid" />
+            </Link>
+            <div class="card-body">
+              <Link to={"/shop/" + shopItem.slug}>
+                <h4 class="text-slab card-title">{shopItem.name}</h4>
+              </Link>
+              <p>
+                {shopItem.short_description}
+              </p>
+              <p class="text-xs">
+              {shopItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
+              </p>
+              <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={shopItem} />
+            </div>
+          </div>
+        )
+      })
+
+    return (
+      <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
+      {menu}
+      </Carousel>
+    )
+  }
+
   renderBundles() {
     return(
       <div class="bg-faded">
@@ -237,6 +267,16 @@ class Home extends Component {
               <DeliverySearch />
             </div>
           </div>
+          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+            <h3 className="text-center text-slab font-weight-bold my-0">
+     Featured products
+            </h3>
+          <hr className="mb-2 w-50 mx-auto" />
+          <div class="container">
+          <div className="row p-3 py-lg-1">
+      {this.renderProducts()}
+          </div>
+          </div>
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
@@ -294,7 +334,8 @@ class Home extends Component {
 
 Home.defaultProps = {
   bundles: [],
-  recipes: []
+  recipes: [],
+  shop: []
 }
 
 export default Home
