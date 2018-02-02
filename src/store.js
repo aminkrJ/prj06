@@ -36,22 +36,11 @@ const composedEnhancers = compose(
   ...enhancers
 )
 
-// Grab the state from a global variable injected into the server-generated HTML
-//const preloadedState = window.__PRELOADED_STATE__
-// Allow the passed state to be garbage-collected
-//delete window.__PRELOADED_STATE__
-
 const store = createStore(
   rootReducer,
-  //preloadedState || initialState,
   initialState,
   composedEnhancers
 )
-
-// Tell react-snap how to save Redux state
-//window.snapSaveState = () => ({
-  //"__PRELOADED_STATE__": store.getState()
-//});
 
 persistStore(store)
 

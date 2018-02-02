@@ -53,10 +53,10 @@ class App extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      products: this.props.products.entities,
-      bundles: _.filter(this.props.products.entities, (p) => {return p.category.name === "Bundles"}),
-      menu: _.filter(this.props.products.entities, (p) => {return p.category.name !== "Bundles" && p.category.name !== "Shop"}),
-      shop: _.filter(this.props.products.entities, (p) => {return p.category.name === "Shop"})
+      products: nextProps.products.entities,
+      bundles: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Bundles"}),
+      menu: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Bundles" && p.category.name !== "Shop"}),
+      shop: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop"})
     })
   }
 
