@@ -47,6 +47,13 @@ class DeliverySearch extends Component {
    }
  }
 
+ renderContactUs() {
+   var notFound = <span class='text-sm'>Could not find us in your area? <Link to='/contact'>Contact us</Link> we make it works.</span>
+   return (
+     this.state.venues.length === 0 ? notFound : null
+   )
+ }
+
  renderVenues(){
     return this.state.venues.map((venue, index) => {
       return (
@@ -93,6 +100,7 @@ class DeliverySearch extends Component {
       <div class="text-left mt-3">
         {this.renderVenues()}
       </div>
+      {this.renderContactUs()}
       </div>
     )
   }
