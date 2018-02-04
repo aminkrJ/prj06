@@ -8,6 +8,10 @@ const globals = {
   nutricombo: {
     title: "Life Elixir | NutriCombo superfood healthy breakfast",
     description: "Leaner, stronger and more focused and productive with our plant-based, healthy, and raw breakfast collection packed with superfoods, functional herbs, probiotics and medicinal mushrooms."
+  },
+  blog: {
+    title: "Life Elixir | Blog",
+    description: "Methods and strategies to hack your biology and be in the zone every single day"
   }
 }
 export default globals

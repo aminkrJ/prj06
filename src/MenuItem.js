@@ -44,8 +44,6 @@ class MenuItem extends Component {
         product: response.data,
         loaded: true
       })
-
-      document.title = response.data.name
     })
     .catch((error) => {
       NProgress.done()

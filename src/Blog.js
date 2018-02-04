@@ -4,6 +4,8 @@ import api from './Api'
 import NProgress from 'nprogress'
 import moment from 'moment'
 import PageTitle from './PageTitle'
+import {Helmet} from "react-helmet"
+import globals from './globals'
 
 class Blog extends Component {
   constructor(props) {
@@ -64,6 +66,10 @@ class Blog extends Component {
   render() {
     return (
       <div>
+      <Helmet>
+        <title>{globals.blog.title}</title>
+        <meta name="description" content={globals.blog.description}/>
+      </Helmet>
         <PageTitle title="Blog" location={ {title: "Blog", path:"/blog"} } />
     <div id="content">
       <div class="container">
