@@ -124,6 +124,7 @@ class ShopItem extends Component {
                     <h2 class="text-capitalize text-slab card-title mb-2">
                       {this.state.product.name}
                     </h2>
+                    <h4 class='font-weight-bold text-primary'>${this.state.product.price}</h4>
                     <hr class="my-3" />
                     <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="lead" />
                     <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
