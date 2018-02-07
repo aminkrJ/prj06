@@ -247,6 +247,11 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+            <h3 className="text-center text-slab font-weight-bold my-0">
+    Popular products
+            </h3>
+          <hr className="mb-2 w-50 mx-auto" />
+          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-slab font-weight-bold my-0">
             Our Menu
           </h3>
@@ -267,11 +272,6 @@ class Home extends Component {
               <DeliverySearch />
             </div>
           </div>
-          <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h3 className="text-center text-slab font-weight-bold my-0">
-     Featured products
-            </h3>
-          <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
           <div className="row p-3 py-lg-1">
       {this.renderProducts()}
