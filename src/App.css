@@ -5,6 +5,26 @@
   background-size:  cover;
   background-color: #999;
 }
+.ef-bg-01{
+  background-image: url(./img/ef-bg-01.png);
+  background-size: cover;
+  background-repeat: no-repeat
+}
+.ef-bg-02{
+  background-image: url(./img/ef-bg-02.png);
+  background-size: cover;
+  background-repeat: no-repeat
+}
+.ef-bg-03{
+  background-image: url(./img/ef-bg-03.png);
+  background-size: cover;
+  background-repeat: no-repeat
+}
+.ef-bg-04{
+  background-image: url(./img/ef-bg-04.png);
+  background-size: cover;
+  background-repeat: no-repeat
+}
 .blog-content{
   font-size: 1.1em
 }

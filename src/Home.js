@@ -246,6 +246,59 @@ class Home extends Component {
           </div>
         </div>
         <div id="content" className="p-0">
+          <div class="container">
+          <div class="row">
+          <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
+            <h2 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
+              Effective formulas for health and fitness
+            </h2>
+            <hr class="hr-primary w-15 hr-xl ml-0 mb-5" />
+            <p>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection  is another side of the coin. What we eat, our sleep, our nutrient level, our gut flora, infections to name a few will change the way our brain function.</p>
+            <p>Our effective formulas are to heal and enhance your beauty, brain, body and spirit at the deepest level.</p>
+          </div>
+          <div class="col-lg-8 col-xl-7">
+            <div class="row no-gutters text-center mb-4">
+              <div class="col-md-6 d-lg-flex p-2">
+                <div class="py-6 ef-bg-01 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+      10X more done
+                  </h3>
+                  <p class="text-white text-sm mb-0">Unlock your brain potentials</p>
+                  <a href="/shop/tags/2" class='text-xs mt-3'>Shop Now</a>
+                </div>
+              </div>
+              <div class="col-md-6 d-lg-flex p-2">
+                <div class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative" data-bg-img="assets/img/homes/gym-7.jpg" data-url="shop-product.html">
+                  <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+      The second brain
+                  </h3>
+                  <p class="text-white text-sm mb-0">It is smarter than what you think</p>
+                  <a href="/shop/tags/5" class='text-xs mt-3'>Shop Now</a>
+                </div>
+              </div>
+              <div class="col-md-6 d-lg-flex p-2">
+                <div class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative" data-bg-img="assets/img/homes/gym-6.jpeg" data-css='{"background-position":"right bottom"}' data-url="shop-product.html">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+                    Chakra healing
+                  </h3>
+                  <p class="text-white text-sm mb-0">Connect to your higher self</p>
+                  <a href="/shop/tags/7" class='text-xs mt-3'>Shop Now</a>
+                </div>
+              </div>
+              <div class="col-md-6 d-lg-flex p-2">
+                <div class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative" data-bg-img="assets/img/homes/gym-1.jpg" data-css='{"background-position":"right bottom"}' data-url="shop-product.html">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+      Fat burn
+                  </h3>
+                  <p class="text-white text-sm mb-0">Pre and post workout nutritions</p>
+                  <a href="/shop/tags/9" class='text-xs mt-3'>Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-slab font-weight-bold my-0">
     Popular products
