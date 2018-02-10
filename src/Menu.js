@@ -65,11 +65,9 @@ class Menu extends Component {
         <img src={product.photo.original} class='img-fluid'/>
             </div>
             <div className="card-body">
-              <Link to={'/menu/' + product.slug}>
               <h5 className="text-black text-uppercase card-title">
                 {product.name}
               </h5>
-              </Link>
               <p style={{"line-height": "1em"}}><small>{product.short_description}</small></p>
               <p className="card-text">
       {this.renderIngredients(product)}
