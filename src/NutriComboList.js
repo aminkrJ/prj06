@@ -44,7 +44,6 @@ class NutriComboList extends Component {
             <div class='text-xs' dangerouslySetInnerHTML={{__html: product.nutrition_fact}}>
             </div>
             <p class='text-sm m-0'>
-              {this.renderTags(product)}
             </p>
             </div>
           </div>
