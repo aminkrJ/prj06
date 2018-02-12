@@ -31,7 +31,7 @@ class NutriComboList extends Component {
     return (
       productsInCatgory.map((product, index) => {
         return (
-          <div class='col-sm-4'>
+          <div class='col-md-3'>
           <div key={index} class="card product border-0">
             <img src={product.photo.original} class='card-img-top img-fluid'/>
             <div class='card-body'>
