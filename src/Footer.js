@@ -134,10 +134,8 @@ Nutritions your competitors consume to be one step ahead in the game.
             <div class="row">
               <div class="col-6 col-md-3">
                 <h4 class="mt-0 text-uppercase text-white">
-                  Collections
                 </h4>
                 <ul class="list-unstyled footer-links">
-                  {this.renderCollections()}
                 </ul>
               </div>
               <div class="col-6 col-md-3">
