@@ -56,9 +56,9 @@ class App extends Component {
     this.setState({
       products: nextProps.products.entities,
       bundles: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Bundles"}),
-      menu: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Bundles" && p.category.name !== "Shop" && p.category.name !== "NutriCombo"}),
+      menu: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Shop"}),
       shop: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop"}),
-      nutricombo: _.filter(nextProps.products.entities, (p) => {return p.category.name === "NutriCombo"})
+      nutricombo: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Shop"})
     })
   }
 

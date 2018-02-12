@@ -8,6 +8,7 @@ import Process from './Process';
 import DeliverySearch from './DeliverySearch'
 import AddToCartButton from './AddToCartButton'
 import globals from './globals'
+import NutriComboList from './NutriComboList'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
 
@@ -124,102 +125,6 @@ class Home extends Component {
     )
   }
 
-  renderTags(product) {
-    return (
-      product.tags.map((tag) => {
-        return (
-          <span class='mb-sm-1 p-2 mr-1 font-weight-light badge badge-primary'>
-            {tag.name}
-          </span>
-        )
-      })
-    )
-  }
-
-  renderIngredients(product) {
-    return (
-      product.ingredients.map((ingredient) => {
-        return (
-          ingredient.name
-        )
-      }).join(', ')
-    )
-  }
-
-  renderUniqTags() {
-    var tags = this.props.products.map((p) => {
-      return p.tags
-    })
-
-    tags = _.uniq(_.flatten(tags), (t) => {return t.id})
-
-    return(
-      tags.map((tag) => {
-        return (
-          <div class="text-sm ml-lg-10 text-secondary">
-          <h5 class="mb-1 text-slab"><Link class="text-black" to={"/shop/tags/" + tag.id}>{tag.name}</Link></h5>
-          <p class="mb-2">{tag.short_description}</p>
-          </div>
-        )
-      })
-    )
-  }
-
-  renderProductsInCategory(categoryId) {
-    var productsInCatgory = _.filter(this.props.menu, (p) => {return p.category.id === categoryId})
-
-    return (
-      productsInCatgory.map((product, index) => {
-        return (
-          <div class='col-sm-4'>
-          <div key={index} class="card product border-0">
-            <img src={product.photo.original} class='card-img-top img-fluid'/>
-            <div class='card-body'>
-            <div class='card-title'>
-            <h5 class='text-uppercase'>{product.name}</h5>
-            </div>
-            <div class='card-subtitle'>
-            <p class="text-sm text-muted">{product.short_description}</p>
-            </div>
-            <p class='text-xs'>
-              {this.renderIngredients(product)}
-            </p>
-            <p class='text-sm m-0'>
-              {this.renderTags(product)}
-            </p>
-            </div>
-          </div>
-          </div>
-        )
-      })
-    )
-  }
-
-  renderMenu() {
-    if(this.props.menu.length > 0){
-
-    var categories = this.props.menu.map((p) => {
-      return p.category
-    })
-
-    categories = _.uniq(categories, (i) =>{ return i.id })
-
-    return (
-      categories.map((category, index) => {
-        return (
-          <div key={index} class="col-12">
-            <h4 class="text-center text-primary text-uppercase">{category.name}</h4>
-            <hr className="mb-2 w-30 mx-auto" />
-            <div class="row">
-            {this.renderProductsInCategory(category.id)}
-            </div>
-          </div>
-        )
-      })
-    )
-    }
-  }
-
   render() {
     return (
       <div className="">
@@ -307,15 +212,15 @@ class Home extends Component {
           </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-slab font-weight-bold my-0">
-            Our Menu
+            NutriCombo
           </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-      Now available in cafes and restaurants in your area. <Link to='/find'>Find us.</Link>
+      {globals.nutricombo.tagline}
             </h5>
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
           <div className="row p-3 py-lg-1">
-      {this.renderMenu()}
+      <NutriComboList products={this.props.menu} />
           </div>
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
