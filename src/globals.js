@@ -7,8 +7,8 @@ const globals = {
   keywords: "nutricombo, juice bar, smoothie bar, healthy smoothies, elixir of life, life elixir",
   nutricombo: {
     title: "Life Elixir | NutriCombo everywhere",
-    tagline: "NutriCombo everywhere",
-    description: "Leaner, stronger and more focused with NutriCombo packed with superfood, functional herbs, probiotics, and medicinal mushrooms available in selected health stores, cafes and restaurants near you."
+    tagline: "NutriCombo freshly made, everywhere!",
+    description: "Leaner, stronger and more focused with NutriCombo packed with superfood, functional herbs, probiotics, and medicinal mushrooms available in selected cafes and restaurants near you."
   },
   about: {
     title: "10X more done!"
