@@ -78,6 +78,7 @@ class App extends Component {
           <div className="header-inner container">
             <div className="header-block-flex order-1 mr-auto">
               <nav className="text-xs rounded p-1 mb-1 mb-lg-0 ">
+      <span class='fa fa-asterisk'></span> Free delivery on orders over $100
               </nav>
             </div>
             <div className="nav nav-icons header-block order-12">

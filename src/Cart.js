@@ -8,6 +8,7 @@ import {render} from 'react-dom';
 import Modal from './Modal'
 import DeliverySearch from './DeliverySearch'
 import CustomInput from './CustomInput';
+import Totals from './Totals'
 
 class Cart extends Component {
   constructor(props) {
@@ -28,10 +29,6 @@ class Cart extends Component {
 
   calcSubtotal() {
     return _.reduce(this.props.cart, (memo, p) => { return memo + (p.quantity * p.price)}, 0)
-  }
-
-  calcTotal() {
-    return this.state.subtotal + this.state.shippingFee
   }
 
   incQuantity(p) {
@@ -58,42 +55,6 @@ class Cart extends Component {
         <DeliverySearch />
       </Modal>
       , document.getElementById('modal')).toggle()
-  }
-
-  handleProceedCheckout(e) {
-    e.preventDefault()
-
-    NProgress.start()
-    this.setState({isSending: true})
-
-    var cart_products = this.props.cart.map((p) => {
-      return ({
-        product_id: p.id,
-        quantity: p.quantity,
-        unit_price: p.price,
-        total_price: p.price * p.quantity
-      })
-    })
-
-    axios.post('/carts', {
-      cart: {
-        cart_products_attributes: cart_products,
-        total: this.calcTotal(),
-        shipping_fee: this.state.shippingFee,
-        subtotal: this.state.subtotal,
-      }
-    })
-    .then((response) => {
-      NProgress.done()
-      this.props.history.push('/checkout/' + response.data.reference_number)
-    })
-    .catch((error) => {
-      NProgress.done()
-      this.setState({
-        isSending: false,
-        errors: error.response.data.errors
-      })
-    })
   }
 
   renderCartProducts() {
@@ -160,19 +121,7 @@ class Cart extends Component {
                 </p>
                 </div>
                 <div class="col-md-6 text-md-right mt-3 mt-md-0">
-                  <div class="cart-content-totals">
-                    <h4 class="font-weight-light">
-                      Subtotal: ${this.state.subtotal}
-                    </h4>
-                    <h4 class="font-weight-light">
-                      Delivery fee: ${this.state.shippingFee}
-                    </h4>
-                    <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
-                    <h3>
-                      Total: <span class="text-primary">${this.calcTotal()}</span>
-                    </h3>
-                    <hr class="my-3 w-50 ml-0 ml-md-auto mr-md-0" />
-                  </div>
+                  <Totals ref="Totals" subtotal={this.state.subtotal}/>
                   <Link to="/shop" class="btn btn-outline-primary btn-rounded btn-lg mr-1 mb-sm-1">Continue Shopping</Link>
                   <Link to="/checkout" class="btn btn-primary btn-rounded btn-lg">Proceed to Checkout</Link>
                 </div>

@@ -14,6 +14,7 @@ import Modal from './Modal'
 import ShippingAddress from './ShippingAddress';
 import DeliveryTime from './DeliveryTime'
 import DeliverySearch from './DeliverySearch'
+import Totals from './Totals'
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -60,21 +61,6 @@ class Checkout extends Component {
     this.setState({deliveryAt: date})
   }
 
-  renderDiscount() {
-    if(this.state.hasCoupon) {
-      return (
-        <div class="row">
-        <div class="col-md-6">
-          <h4 class="font-weight-light text-danger">Discount</h4>
-        </div>
-        <div class="col-md-6 text-right">
-          <h4 class="font-weight-light text-danger">-${this.state.coupon.discount}</h4>
-        </div>
-        </div>
-      )
-    }
-  }
-
   handleCouponChange(e) {
     this.setState({couponCode: e.target.value})
   }
@@ -90,7 +76,7 @@ class Checkout extends Component {
           <button class="close text-danger" aria-label="Close" onClick={this.handleRemoveCoupon.bind(this)}>
               <span aria-hidden="true">&times;</span>
           </button>
-            <b>{this.state.coupon.code}</b> has been applied. <br/> {this.state.coupon.description}.
+            <b>{this.state.coupon.code}</b> has been applied. <br/> {this.state.coupon.description}
           </div>
       )
     } else {
@@ -116,7 +102,7 @@ class Checkout extends Component {
     axios.post('/carts/coupon', {
      cart: {
        subtotal: this.state.subtotal,
-       total: this.calcTotal(),
+       total: self.refs.totals.state.total,
        shipping_fee: this.state.shippingFee,
        coupon_attributes: {
        code: this.state.couponCode
@@ -178,10 +164,10 @@ class Checkout extends Component {
             stripe_token: self.state.stripeToken,
               delivery_at: self.state.deliveryAt,
               subtotal: self.state.subtotal,
-              shipping_fee: self.state.shippingFee,
+              shipping_fee: self.refs.totals.state.shippingFee,
               //delivery_time: self.state.deliveryTime,
               discount: self.state.hasCoupon ? self.state.coupon.discount : 0,
-              total: self.calcTotal(),
+              total: self.refs.totals.state.total,
               coupon_id: self.state.hasCoupon ? self.state.coupon.id : null
 
           }, {
@@ -234,14 +220,6 @@ class Checkout extends Component {
     return _.reduce(this.props.cart, (memo, p) => { return memo + (p.quantity * p.price)}, 0)
   }
 
-  calcTotal() {
-    if(this.state.hasCoupon){
-      return this.state.coupon.total
-    } else{
-      return this.state.subtotal + this.state.shippingFee
-    }
-  }
-
   render() {
     return (
     <div id="content" class="py-5">
@@ -280,40 +258,12 @@ class Checkout extends Component {
           </div>
         </div>
         <div class="col-md-4">
-          <div class="cart-content-totals">
-            <div class="row">
-              <div class="col-md-6">
-                <h4 class="font-weight-light">Subtotal</h4>
-              </div>
-              <div class="col-md-6 text-right">
-                <h4 class="font-weight-light">${this.state.subtotal}</h4>
-              </div>
+          <div class="row">
+            <div class="col-12 mt-3">
+              {this.renderCoupon()}
             </div>
-            <div class="row">
-              <div class="col-md-6">
-                <h4 class="font-weight-light">Delivery fee</h4>
-              </div>
-              <div class="col-md-6 text-right">
-                <h4 class="font-weight-light">${this.state.shippingFee}</h4>
-              </div>
-            </div>
-            {this.renderDiscount()}
-            <div class="row">
-              <div class="col-12 mt-3">
-                {this.renderCoupon()}
-              </div>
-            </div>
-            <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="text-slab">Total</h3>
-              </div>
-              <div class="col-md-6 text-right">
-                <h3 class="text-primary">${this.calcTotal()}</h3>
-              </div>
-            </div>
-            <hr class="my-3 w-100 ml-0 ml-md-auto mr-md-0" />
           </div>
+          <Totals ref="totals" hasCoupon={this.state.hasCoupon} coupon={this.state.coupon} subtotal={this.state.subtotal}/>
           <input type="button" class="btn btn-primary btn-rounded btn-lg" disabled={this.state.isSending} value="Make Payment" onClick={this.handleSubmit.bind(this)}></input>
         </div>
       </div>
