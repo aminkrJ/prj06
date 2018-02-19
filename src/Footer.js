@@ -146,6 +146,7 @@ Nutritions your competitors consume to be one step ahead in the game.
                   <li><Link to="/about">About us</Link></li>
                   <li><Link to="/blog">Blog</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
+                  <li><Link to="https://business.lifelixir.com.au">NutriCombo Frequent X</Link></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">
