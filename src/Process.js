@@ -26,7 +26,7 @@ class Process extends Component {
       <div class="container">
           <hr class="mt-0 hr-lg w-10 mx-auto hr-primary" />
           <h3 class="text-center text-slab font-weight-bold my-0">
-      Carefully Crafted
+      Why NutriCombo?
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
           </h5>
@@ -35,39 +35,39 @@ class Process extends Component {
           <ul class="nav nav-steps nav-steps-circles flex-column flex-lg-row justify-content-around w-80 mx-auto">
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 1})} data-toggle="tab" onClick={this.activate.bind(this, 1)}>
-        <img src={blueberries} />
+      <span class="display-4">1</span>
       </a>
             </li>
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 2})} data-toggle="tab" onClick={this.activate.bind(this, 2)}>
-        <img src={almond} />
+      <span class="display-4">2</span>
       </a>
             </li>
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 3})} data-toggle="tab" onClick={this.activate.bind(this, 3)}>
-        <img src={brain} />
+      <span class="display-4">3</span>
       </a>
             </li>
             <li class="nav-item">
               <a class={classNames("nav-link", {active: this.state.selected === 4})} data-toggle="tab" onClick={this.activate.bind(this, 4)}>
-        <img src={water} />
+      <span class="display-4">4</span>
       </a>
             </li>
           </ul>
           <div class="tab-content text-center pb-2 px-md-6">
-            <div class={classNames("tab-pane fade", {show: this.state.selected === 4}, {active: this.state.selected === 4})} id="tab-steps1">
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps1">
               <h4 class="text-slab">
-                Filtered and electrolyte-enhanced water
+                Electrolyte-enhanced water
               </h4>
               <p>Electrolyte enhanced water is water that has electrically charged minerals, or electrolytes, added to it. The most common electrolytes found in the body are sodium, potassium, chloride, phosphate, calcium, magnesium, and bicarbonate.</p>
             </div>
-            <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps2">
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps2">
               <h4 class="text-slab">
-                Activate, insecticide free nuts and seeds
+                Ancient and Adaptogen herbs
               </h4>
-              <p>Activated nuts have been soaked in water and salt for a period of time, which starts off the germination or sprouting process, then dehydrated at a low temperature. Soaking increases the nutrient value of the nuts along with breaking down the problematic compounds that help enhance their digestibility.</p>
+              <p>Adaptogens, unique class of healing plants, are a natural ally in dealing with persistent, long-term and chronic stress and fatigue because they work with regulating important hormones. People who experience the fight-or-flight responses on a regular basis, many times a day, may experience a state of constant stress, which can burn out your adrenal glands, stress your digestive tract and cause you to age more rapidly. Adaptogens can help balance, restore and protect the body.</p>
             </div>
-            <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps4">
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 4}, {active: this.state.selected === 4})} id="tab-steps4">
               <h4 class="text-slab">
                 Superfoods
               </h4>

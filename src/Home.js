@@ -172,15 +172,15 @@ class Home extends Component {
                 </a>
               </div>
               <div class="col-md-6 d-lg-flex p-2">
-                <a href="/shop/tags/5" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative" data-bg-img="assets/img/homes/gym-7.jpg" data-url="shop-product.html">
+                <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      The second brain
+      Adaptogens
                   </h3>
-                  <p class="text-white text-sm mb-0">It is smarter than what you think</p>
+                  <p class="text-white text-sm mb-0">Help reduce stress</p>
                 </a>
               </div>
               <div class="col-md-6 d-lg-flex p-2">
-                <a href="/shop/tags/7" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative" data-bg-img="assets/img/homes/gym-6.jpeg" data-css='{"background-position":"right bottom"}' data-url="shop-product.html">
+                <a href="/shop/tags/7" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
                     Chakra healing
                   </h3>
@@ -188,7 +188,7 @@ class Home extends Component {
                 </a>
               </div>
               <div class="col-md-6 d-lg-flex p-2">
-                <a href="/shop/tags/9" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative" data-bg-img="assets/img/homes/gym-1.jpg" data-css='{"background-position":"right bottom"}' data-url="shop-product.html">
+                <a href="/shop/tags/9" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Fat burn
                   </h3>

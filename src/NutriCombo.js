@@ -5,6 +5,7 @@ import {Helmet} from "react-helmet"
 import Carousel from './Carousel';
 import globals from './globals'
 import NutriComboList from './NutriComboList'
+import Process from './Process'
 
 class NutriCombo extends Component {
   render() {
@@ -34,6 +35,7 @@ class NutriCombo extends Component {
 	          </div>
           </div>
         </div>
+        <Process />
         <hr />
         <NutriComboList products={this.props.nutricombo} />
         <hr />
