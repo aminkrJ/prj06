@@ -53,9 +53,14 @@ class Process extends Component {
       <span class="display-4">4</span>
       </a>
             </li>
+            <li class="nav-item">
+              <a class={classNames("nav-link", {active: this.state.selected === 5})} data-toggle="tab" onClick={this.activate.bind(this, 5)}>
+      <span class="display-4">5</span>
+      </a>
+            </li>
           </ul>
           <div class="tab-content text-center pb-2 px-md-6">
-            <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps1">
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 5}, {active: this.state.selected === 5})} id="tab-steps1">
               <h4 class="text-slab">
                 Electrolyte-enhanced water
               </h4>
@@ -72,6 +77,12 @@ class Process extends Component {
                 Superfoods
               </h4>
               <p>Superfoods do more than just help you meet your vitamin and mineral needs or aid in shedding a few extra pounds when it comes time for swimsuit season. In fact, these foods can help you achieve better health, prevent chronic disease, and improve the way you feel day in and day out — and they’re some of the top anti-aging foods around.</p>
+            </div>
+            <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps4">
+              <h4 class="text-slab">
+                Medium-chain fatty acids
+              </h4>
+              <p>A form of saturated fatty acids which are believed to be largely missing from the diets of people eating "standard Western" diets that has numerous health benefits, ranging from improved cognitive function to better weight management.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 3}, {active: this.state.selected === 3})} id="tab-steps3">
               <h4 class="text-slab">
