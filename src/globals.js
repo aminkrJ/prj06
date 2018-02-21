@@ -6,9 +6,9 @@ const globals = {
   mission: "",
   keywords: "nutricombo, juice bar, smoothie bar, healthy smoothies, elixir of life, life elixir",
   nutricombo: {
-    title: "NutriCombo trusted consistent quality, everywhere!",
-    tagline: "NutriCombo freshly made, everywhere!",
-    description: "NutriCombo freshly-made tonics packed with micronutrients that you do not get in your normal diet - superfoods, functional herbs, probiotics, and medicinal mushrooms - are available in selected cafes in NSW."
+    title: "NutriCombo micronutrient-rich tonics and elixirs",
+    tagline: "NutriCombo, micronutrient-rich tonics.",
+    description: "NutriCombo micronutrient-rich tonics and elixirs packed with superfoods, functional herbs, probiotics, and medicinal mushrooms are available in selected cafes in NSW."
   },
   about: {
     title: "10X more done!"
