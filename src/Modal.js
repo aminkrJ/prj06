@@ -12,6 +12,10 @@ class CustomModal extends Component {
     }
   }
 
+  handleClose() {
+    this.setState({modal: false})
+  }
+
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -19,13 +23,19 @@ class CustomModal extends Component {
   }
 
   render() {
+    const { children } = this.props;
+
+    var childrenWithProps = React.Children.map(children, (child) =>
+      React.cloneElement(child, { handleClose: this.handleClose.bind(this) })
+    )
+
     return (
       <Modal isOpen={this.state.modal} toggle={this.toggle.bind(this)} backdrop={this.state.backdrop}>
         <ModalHeader toggle={this.toggle.bind(this)}>
           {this.props.title}
         </ModalHeader>
         <ModalBody>
-          {this.props.children}
+          {childrenWithProps}
         </ModalBody>
       </Modal>
     )

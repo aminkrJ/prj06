@@ -6,6 +6,10 @@ import NProgress from 'nprogress'
 import AddToCartButton from './AddToCartButton.js';
 import Loader from 'react-loader';
 import {Helmet} from "react-helmet"
+import {render} from 'react-dom';
+
+import Modal from './Modal'
+import Subscribe from './Subscribe'
 
 class ShopItem extends Component {
   constructor(props){
@@ -54,11 +58,22 @@ class ShopItem extends Component {
     return (
       this.state.product.tags.map((tag) => {
         return (
-          <Link to={"/shop/tags/" + tag.id} class='mb-sm-1 p-2 mr-1 font-weight-light badge badge-primary'>
+          <Link to={"/shop/tags/" + tag.id} class='text-sm mb-sm-1 mr-3 text-uppercase font-weight-light'>
             {tag.name}
           </Link>
         )
       })
+    )
+  }
+
+  renderProps() {
+    return (
+      <div class='row justify-content-center text-sm'>
+      {this.state.product.vegan ? <div class='col-2'>Vegan</div> : null}
+      {this.state.product.gluten_free ? <div class='col-2'>Gluten Free</div> : null}
+      {this.state.product.non_gmo ? <div class='col-2'>Non GMO</div> : null}
+      {this.state.product.organic ? <div class='col-2'>Organic</div> : null}
+      </div>
     )
   }
 
@@ -93,6 +108,18 @@ class ShopItem extends Component {
     }
   }
 
+  handleSubscribe(e) {
+    e.preventDefault()
+
+    render(
+      <Modal title="Newsletter">
+<p class='text-sm'><span class="font-weight-bold text-uppercase">Receive 20% off your first order</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
+        <Subscribe />
+      </Modal>
+      , document.getElementById('modal')).toggle()
+
+  }
+
   render() {
     var tags = this.state.product.tags.map((p) => {return p.name})
 
@@ -107,12 +134,14 @@ class ShopItem extends Component {
           <Loader loaded={this.state.loaded}>
             <div class="row">
               <div class="col-lg-5">
+                <p class="text-center text-uppercase text-primary mb-4 text-xs"> Get 20% off your first order. <a class='font-weight-bold' href="#" onClick={this.handleSubscribe.bind(this)}> Join the mailing list now!</a></p>
                 <div class="product-gallery pos-relative">
         <img src={this.state.product.photo.original} class='img-fluid'/>
                 </div>
-                <p class='mt-3'>
-                {this.renderTags()}
-                </p>
+                <div class='mt-3'>
+                <div class='mb-3 text-uppercase'>{this.renderProps()}</div>
+                <p class='text-center'>{this.renderTags()}</p>
+                </div>
               </div>
               <div class="col-lg-7">
                 <div class="product-card mb-4">

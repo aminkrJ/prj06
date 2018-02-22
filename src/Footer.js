@@ -7,33 +7,17 @@ import iziToast from 'izitoast';
 import _ from 'underscore';
 
 import PaymentMethods from './img/card-brands.svg'
+import Subscribe from './Subscribe'
 
 class Footer extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      campaigns: [],
-      subscribeCampaign: {},
-      email: ""
     }
   }
 
   componentWillMount() {
-    NProgress.start()
-
-    api.get("/campaigns/")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        campaigns: response.data,
-        subscribeCampaign: _.find(response.data, (c) => { return c.name === "Subscribe" })
-      })
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
   }
 
   renderCollections(){
@@ -48,50 +32,6 @@ class Footer extends Component {
       })
     )
   }
-
-  handleEmailChange(e) {
-    this.setState({
-      email: e.target.value
-    })
-  }
-
-  handleSubscribe(campaign, e) {
-    e.preventDefault()
-    var campaignId = e.target.getAttribute("data-campaign_id")
-
-    this.subscribe(campaignId)
-  }
-
-  subscribe(campaignId) {
-    NProgress.start()
-    axios.post("/campaigns/" + campaignId + "/subscribers", {
-      subscriber: {
-        email: this.state.email
-      }
-    })
-    .then((response) => {
-      NProgress.done()
-
-      iziToast.success({
-        position: 'topRight',
-        message: "You have subscribed successfully.",
-        title: "Congratulation!"
-      })
-
-      this.setState({email: ""})
-    })
-    .catch((error) => {
-      NProgress.done()
-
-      iziToast.error({
-        position: 'topRight',
-        message: "Email " + error.response.data.email[0]
-      })
-    })
-  }
-
-
-
 
   render() {
     return (
@@ -153,16 +93,8 @@ Nutritions your competitors consume to be one step ahead in the game.
                 <h4 class="text-uppercase text-white">
                   Newsletter
                 </h4>
-                <p>Be the first to know about our exclusive offers and deals, special events, and product releases!</p>
-                <form>
-                  <div class="input-group">
-                    <label class="sr-only" for="email-field">Email</label>
-                    <input type="text" class="form-control" id="email-field" placeholder="Email" onChange={this.handleEmailChange.bind(this)}/>
-                    <span class="input-group-btn">
-                      <button class="btn btn-primary" data-campaign_id={this.state.subscribeCampaign.id} onClick={this.handleSubscribe.bind(this, this.state.subscribeCampaign)} type="button">Go!</button>
-                    </span>
-                  </div>
-                </form>
+                <p class='text-sm'><span class='font-weight-bold text-uppercase'>Get 20% off from your first order.</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
+<Subscribe />
               </div>
             </div>
           </div>
