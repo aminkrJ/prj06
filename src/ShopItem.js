@@ -72,7 +72,7 @@ class ShopItem extends Component {
       {this.state.product.vegan ? <span>Vegan, </span> : null}
       {this.state.product.gluten_free ? <span>Gluten Free, </span> : null}
       {this.state.product.non_gmo ? <span>Non GMO, </span> : null}
-      {this.state.product.organic ? <span>Organic</span> : null}
+      {this.state.product.organic ? <span>Certified Organic Ingredients</span> : null}
       </div>
     )
   }
