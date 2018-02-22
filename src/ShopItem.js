@@ -68,11 +68,11 @@ class ShopItem extends Component {
 
   renderProps() {
     return (
-      <div class='row justify-content-center text-sm'>
-      {this.state.product.vegan ? <div class='col-2'>Vegan</div> : null}
-      {this.state.product.gluten_free ? <div class='col-2'>Gluten Free</div> : null}
-      {this.state.product.non_gmo ? <div class='col-2'>Non GMO</div> : null}
-      {this.state.product.organic ? <div class='col-2'>Organic</div> : null}
+      <div class=''>
+      {this.state.product.vegan ? <span>Vegan, </span> : null}
+      {this.state.product.gluten_free ? <span>Gluten Free, </span> : null}
+      {this.state.product.non_gmo ? <span>Non GMO, </span> : null}
+      {this.state.product.organic ? <span>Organic</span> : null}
       </div>
     )
   }
@@ -139,7 +139,6 @@ class ShopItem extends Component {
         <img src={this.state.product.photo.original} class='img-fluid'/>
                 </div>
                 <div class='mt-3'>
-                <div class='mb-3 text-uppercase'>{this.renderProps()}</div>
                 <p class='text-center'>{this.renderTags()}</p>
                 </div>
               </div>
@@ -188,6 +187,8 @@ class ShopItem extends Component {
                         </div>
                       </div>
                     </div>
+
+                <div class='my-3 text-xs font-weight-bold text-uppercase'>{this.renderProps()}</div>
 <div class='text-xs my-2 text-muted'>* This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
                   </div>
                 </div>
