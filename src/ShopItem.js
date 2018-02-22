@@ -197,12 +197,14 @@ class ShopItem extends Component {
               </div>
             </div>
             <div class="col-lg-12">
-<hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h3 className="text-center text-slab font-weight-bold my-0">
-    You might also like
-            </h3>
-          <hr className="mb-2 w-50 mx-auto" />
-      <ProductsCarousel shop={_.filter(this.props.shop, (i) => {i.id === this.state.product.id})} withAddBtn={false} />
+              <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+              <h3 className="text-center text-slab font-weight-bold my-0">
+      You might also like
+              </h3>
+              <hr className="mb-2 w-50 mx-auto" />
+              <ProductsCarousel shop={_.filter(this.props.shop, (i) => {
+                return i.id === this.state.product.id
+              })} withAddBtn={false} />
             </div>
           </Loader>
         </div>
