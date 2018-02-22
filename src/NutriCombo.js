@@ -27,7 +27,7 @@ class NutriCombo extends Component {
             <p>
       {globals.nutricombo.description}
       </p>
-          <p><Link to="./find_us">Now available in selected stores in Sydney.</Link></p>
+          <p><Link to="./find_us">Find a cafe near you.</Link></p>
           </div>
           <div class="col-md-6">
           	<div class="embed-responsive embed-responsive-16by9">
