@@ -7,6 +7,7 @@ import AddToCartButton from './AddToCartButton.js';
 import Loader from 'react-loader';
 import {Helmet} from "react-helmet"
 import {render} from 'react-dom';
+import _ from 'underscore'
 
 import Modal from './Modal'
 import Subscribe from './Subscribe'
@@ -201,7 +202,7 @@ class ShopItem extends Component {
     You might also like
             </h3>
           <hr className="mb-2 w-50 mx-auto" />
-      <ProductsCarousel shop={this.props.shop} withAddBtn={false} />
+      <ProductsCarousel shop={_.filter(this.props.shop, (i) => {i.id === this.state.product.id})} withAddBtn={false} />
             </div>
           </Loader>
         </div>
