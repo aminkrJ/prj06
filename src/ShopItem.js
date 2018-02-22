@@ -10,6 +10,7 @@ import {render} from 'react-dom';
 
 import Modal from './Modal'
 import Subscribe from './Subscribe'
+import ProductsCarousel from './ProductsCarousel'
 
 class ShopItem extends Component {
   constructor(props){
@@ -195,6 +196,12 @@ class ShopItem extends Component {
               </div>
             </div>
             <div class="col-lg-12">
+<hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
+            <h3 className="text-center text-slab font-weight-bold my-0">
+    You might also like
+            </h3>
+          <hr className="mb-2 w-50 mx-auto" />
+      <ProductsCarousel shop={this.props.shop} withAddBtn={false} />
             </div>
           </Loader>
         </div>

@@ -119,7 +119,12 @@ class App extends Component {
           <Route exact path='/shop' component={(props) => <Shop {...props} products={this.state.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/shop/categories/:category_id' component={(props) => <Shop {...props} products={this.state.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/shop/tags/:tag_id' component={(props) => <Shop {...props} products={this.state.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
-          <Route exact path='/shop/:slug' component={(props) => <ShopItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route exact path='/shop/:slug' component={(props) => <ShopItem {...props} 
+            shop={this.state.shop}
+            dropFromCart={this.props.dropFromCart}
+            cart={this.props.cart}
+            addToCart={this.props.addToCart}
+            removeFromCart={this.props.removeFromCart}/>} />
         </div>
         <Footer products={this.state.products}/>
         </StickyContainer>

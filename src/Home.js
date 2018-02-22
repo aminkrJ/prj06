@@ -9,6 +9,7 @@ import DeliverySearch from './DeliverySearch'
 import AddToCartButton from './AddToCartButton'
 import globals from './globals'
 import NutriComboList from './NutriComboList'
+import ProductsCarousel from './ProductsCarousel'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
 
@@ -71,36 +72,6 @@ class Home extends Component {
           </div>
         )
       })
-    )
-  }
-
-  renderProducts() {
-    var menu = this.props.shop.map((shopItem, index) => {
-        return(
-          <div class="card border-0" key={index}>
-            <Link to={"/shop/" + shopItem.slug}>
-              <img src={shopItem.photo.original} className="card-img-top img-fluid" />
-            </Link>
-            <div class="card-body">
-              <Link to={"/shop/" + shopItem.slug}>
-                <h4 class="text-slab card-title">{shopItem.name}</h4>
-              </Link>
-              <p>
-                {shopItem.short_description}
-              </p>
-              <p class="text-xs">
-              {shopItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
-              </p>
-              <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={shopItem} />
-            </div>
-          </div>
-        )
-      })
-
-    return (
-      <Carousel id="featured-carousel" margin={2} responsive={ {"0": {"items": 1}, "576": {"items": 2}, "768": {"items": 3}, "991": {"items": 4}, "1200": {"items": 4}} }>
-      {menu}
-      </Carousel>
     )
   }
 
@@ -207,7 +178,7 @@ class Home extends Component {
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
             <div className="row p-3 py-lg-1">
-        {this.renderProducts()}
+              <ProductsCarousel shop={this.props.shop} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
             </div>
           </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
