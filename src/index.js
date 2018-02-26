@@ -1,7 +1,8 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+//import { render } from 'react-dom'
+import { render } from 'react-snapshot'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
 
 import { Provider } from 'react-redux';
 import store, { history } from './store';
