@@ -57,7 +57,11 @@
       "/",
       "/nutricombo",
       "/shop",
-      "/shop/**",
+      "/shop/green-energy",
+      "/shop/healthy-guts",
+      "/shop/clean-chocolate",
+      "/shop/fight-cancer-and-ageing",
+      "/shop/pre-workout",
       "find_us"
     ],
     "exclude": [
