@@ -62,6 +62,6 @@
     ],
     "exclude": [
     ],
-    "snapshotDelay": 300
+    "snapshotDelay": 1000
   }
 }
