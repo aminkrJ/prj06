@@ -156,7 +156,7 @@ class ShopItem extends Component {
                     <hr class="my-3" />
                     <div class='row'>
                       <div class='col-auto mr-auto'>
-                        <h4 class='font-weight-light my-2 text-primary'>${this.state.product.price}</h4>
+                        <h4 class='font-weight-light my-2 text-primary'>${this.state.product.price} <span class='text-black text-xs'>~ {Math.round(this.state.product.weight / this.state.product.serving_size)} servings</span></h4>
                       </div>
                       <div class='col-auto'>
                         <h4 class='font-weight-light my-2'>{this.state.product.weight}g</h4>
