@@ -4,11 +4,11 @@ const globals = {
   title: "Life Elixir | Elixirs for health, fitness and beauty",
   description: "Elixirs to not only taste extraordinary but also to work synergistically to heal and enhance your beauty, brain, body and spirit at the deepest level packed with superfoods, functional herbs, medicinal mushrooms.",
   mission: "",
-  keywords: "nutricombo, juice bar, smoothie bar, healthy smoothies, elixir of life, life elixir",
+  keywords: "nutricombo, life elixir, food for brain",
   nutricombo: {
-    tagline: "Leaner, stronger and more focused with NutriCombo",
-    title: "NutriCombo | Leaner, stronger and more focused",
-    description: "Looking for healthy options but do not have time to make it at home? NutriCombo menu is available in selected cafes in NSW."
+    tagline: "Leaner, stronger and more focused",
+    title: "NutriCombo | Recipes for being Leaner, stronger and more focused",
+    description: "NutriCombo recipes packed with superfoods, functional herbs, medicinal mushrooms, probiotics and healthy fats to heal and enhance your body and unlock your brain potentials to to make the most of every day."
   },
   about: {
     title: "10X more done!"

@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet"
+import {render} from 'react-dom';
 
 import Carousel from './Carousel';
 import globals from './globals'
 import NutriComboList from './NutriComboList'
 import Process from './Process'
 
+import Modal from './Modal'
+import Subscribe from './Subscribe'
+
 class NutriCombo extends Component {
+  handleSubscribe(e) {
+    e.preventDefault()
+
+    render(
+      <Modal title="Newsletter">
+<p class='text-sm'><span class="font-weight-bold text-uppercase">Sign up to receive more recipes and info.</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
+        <Subscribe />
+      </Modal>
+      , document.getElementById('modal')).toggle()
+
+  }
+
   render() {
     return (
       <div class="">
@@ -22,17 +38,17 @@ class NutriCombo extends Component {
 <div class="container padding-bottom-2x mb-2">
         <div class="row align-items-center padding-bottom-2x">
           <div class="col-md-6 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
+          	<div class="embed-responsive embed-responsive-16by9">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KGzT8CMoBQc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	          </div>
+          <p></p>
+          </div>
+          <div class="col-md-6">
             <h1 class="h2 text-slab">{globals.nutricombo.tagline}</h1>
             <p>
       {globals.nutricombo.description}
       </p>
-          <p><Link to="./find_us">Find a cafe near you.</Link></p>
-          </div>
-          <div class="col-md-6">
-          	<div class="embed-responsive embed-responsive-16by9">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KGzT8CMoBQc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	          </div>
+      <p><a href="#" class='text-sm' onClick={this.handleSubscribe.bind(this)}>Sign up to receive more recipes and info</a></p>
           </div>
         </div>
         <Process />
@@ -40,8 +56,13 @@ class NutriCombo extends Component {
         <NutriComboList products={this.props.nutricombo} />
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 text-md-left text-center">
+          <div class="col-md-6">
+            <h2 class="h3 text-slab">Smart decisions.</h2>
+                  <p>
+            Our human brain needs fuel to make smart decisions every second of our lives, otherwise we tend to stick to our old habits or what we call Autopilot mode. That's why we procrastinate and it is difficult for us to discipline ourselves to exercise, be on a diet, stand up in meetings, make the call and so on. NutriCombo makes sure you get all the nutritions for your peak performance.
+            </p>
+         </div>
+          <div class="col-md-6 text-md-left text-center">
             <div class="mt-30 hidden-md-up"></div>
             <h2 class="h3 text-slab">Weight loss.</h2>
             <p>
@@ -51,33 +72,26 @@ NutriCombo is low in carbs and high in healthy fats. When you overload your body
         </div>
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
-            <h2 class="h3 text-slab">Healthy gut.</h2>
+          <div class="col-md-6 order-md-2">
+      <h2 class="h3 text-slab">Healthy gut.</h2>
             <p class="mb-4">
 Probiotics when taken in sufficient amount, can help restore the natural balance of gut bacteria. As a result, health benefits may follow. NutriCombo benefits from a layer of beautiful yogurt with live culture to support and enhance the good bacteria in your gut and improve your digestion.
       </p>
+
           </div>
-        </div>
-        <hr />
-       <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
+          <div class="col-md-6 order-md-1 text-md-left text-center">
             <h2 class="h3 text-slab">
-Better digestion.
-</h2>
-            <p>
-NutriCombo is raw. While you might think otherwise, cooked foods are usually harder to digest than raw foods, plus cooking nutrient-dense foods tends to destabilize some of their valuable enzymes and destroy certain antioxidants and vitamins. Raw foods also help alkalize the body, reduce acidity, and have less of a chance of fermenting in the gut and causing inflammation/autoimmune reactions.
-      </p>
+            Better digestion.
+            </h2>
+                        <p>
+            NutriCombo is raw. While you might think otherwise, cooked foods are usually harder to digest than raw foods, plus cooking nutrient-dense foods tends to destabilize some of their valuable enzymes and destroy certain antioxidants and vitamins. Raw foods also help alkalize the body, reduce acidity, and have less of a chance of fermenting in the gut and causing inflammation/autoimmune reactions.
+                  </p>
           </div>
         </div>
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5 order-md-2"><img class="d-block w-270 m-auto" /></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30 hidden-md-up"></div>
+          <div class="col-md-6 order-md-2"><img class="d-block w-270 m-auto" /></div>
+          <div class="col-md-6 order-md-1 text-md-left text-center">
             <h2 class="h3 text-slab">Healing and anti-aging.</h2>
             <p class="mb-4">
       Air pollution, alcohol intake, toxins, high blood sugar, stress, and so on promote the excessive free radical formation and oxidative stress which can sometimes lead to cell death. Antioxidant in our NutriCombo will help our body fight against excessive free radicals.
@@ -85,17 +99,7 @@ NutriCombo is raw. While you might think otherwise, cooked foods are usually har
           </div>
         </div>
         <hr />
-       <div class="row align-items-center padding-top-2x padding-bottom-2x">
-          <div class="col-md-5"><img class="d-block w-270 m-auto"/></div>
-          <div class="col-md-7 order-md-1 text-md-left text-center">
-            <div class="mt-30"></div>
-            <h2 class="h3 text-slab">Smart decisions.</h2>
-            <p>
-      Our human brain needs fuel to make smart decisions every second of our lives, otherwise we tend to stick to our old habits or what we call Autopilot mode. That's why we procrastinate and it is difficult for us to discipline ourselves to exercise, be on a diet, stand up in meetings, make the call and so on. NutriCombo makes sure you get all the nutritions for your peak performance.
-      </p>
-          </div>
-        </div>
-        <hr />
+       
       </div>
               </div>
             </div>

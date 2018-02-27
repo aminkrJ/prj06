@@ -5,6 +5,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
 import CartWidget from './CartWidget.js'
 import Modal from './Modal'
 import {render} from 'react-dom';
+import Contact from './Contact'
 import Find from './Find'
 
 import logo from "./img/logo.png"
@@ -76,7 +77,7 @@ class Header extends Component {
                         <NavLink href="/shop">Shop</NavLink>
                       </NavItem>
                       <NavItem>
-                        <NavLink href="/find_us">Find us</NavLink>
+                        <NavLink href="/Contact">Contact us</NavLink>
                       </NavItem>
                     </Nav>
                   </Collapse>

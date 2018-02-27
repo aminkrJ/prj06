@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
+import globals from './globals'
 
 import classNames from 'classnames'
-
-import water from './img/water.png'
-import brain from './img/brain.png'
-import blueberries from './img/blueberries.png'
-import almond from './img/almond.png'
 
 class Process extends Component {
 
@@ -29,6 +25,7 @@ class Process extends Component {
       Why NutriCombo?
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
+      {globals.nutricombo.tagline}
           </h5>
           <hr class="mb-0 w-50 mx-auto" />
         <div class="py-3 py-lg-3">
@@ -68,7 +65,7 @@ class Process extends Component {
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps2">
               <h4 class="text-slab">
-                Ancient and Adaptogen herbs
+                Adaptogen herbs
               </h4>
               <p>Adaptogens, unique class of healing plants, are a natural ally in dealing with persistent, long-term and chronic stress and fatigue because they work with regulating important hormones. People who experience the fight-or-flight responses on a regular basis, many times a day, may experience a state of constant stress, which can burn out your adrenal glands, stress your digestive tract and cause you to age more rapidly. Adaptogens can help balance, restore and protect the body.</p>
             </div>
