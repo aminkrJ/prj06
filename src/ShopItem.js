@@ -9,8 +9,8 @@ import {Helmet} from "react-helmet"
 import {render} from 'react-dom';
 import _ from 'underscore'
 
-import Modal from './Modal'
 import Subscribe from './Subscribe'
+import Modal from './Modal'
 import ProductsCarousel from './ProductsCarousel'
 
 class ShopItem extends Component {

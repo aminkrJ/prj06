@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet"
 import classnames from 'classnames'
 import _ from 'underscore';
+import {render} from 'react-dom';
 
 import globals from './globals'
+import Modal from './Modal'
+import Subscribe from './Subscribe'
 
 import Banner from './img/banner.jpg'
 
@@ -93,6 +96,18 @@ class Shop extends Component {
   componentDidUpdate(prevProps, prevState) {
   }
 
+  handleDiscount(e) {
+    e.preventDefault()
+
+    render(
+      <Modal title="Newsletter">
+<p class='text-sm'><span class="font-weight-bold text-uppercase">Receive 20% off your first order</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
+        <Subscribe />
+      </Modal>
+      , document.getElementById('modal')).toggle()
+
+  }
+
   renderTags() {
     return this.state.tags.map((tag, index) => {
       return(
@@ -113,8 +128,36 @@ class Shop extends Component {
             <div className="col-lg-9 order-lg-2">
               <div className="row">
                 <div class='mb-2 col-12'>
+      <img src={Banner} class="img-fluid" />
                 </div>
                 {this.renderProducts()}
+            <div class="row no-gutters text-center mb-4">
+              <div class="col-md-7 d-lg-flex p-2">
+                <a href="#" onClick={this.handleDiscount.bind(this)} class="py-6 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold">
+      20% OFF
+                  </h3>
+                  <p class="text-white text-sm mb-0 text-uppercase">20% discount on your first order</p>
+                </a>
+              </div>
+              <div class="col-md-4 d-lg-flex p-2">
+                <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+                  <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+      Adaptogens
+                  </h3>
+                  <p class="text-white text-sm mb-0 text-uppercase">Help reduce stress</p>
+                </a>
+              </div>
+              <div class="col-md-5 d-lg-flex p-2">
+                <a href="/shop/tags/7" class="py-6 ef-bg-01 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+                    All Day, Every day
+                  </h3>
+                  <p class="text-white text-sm mb-0 text-uppercase">ON Shrooms</p>
+                </a>
+              </div>
+            </div>
+
               </div>
             </div>
             <div className="mt-5 col-lg-3 order-lg-1">
