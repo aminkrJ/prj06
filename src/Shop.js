@@ -113,14 +113,13 @@ class Shop extends Component {
             <div className="col-lg-9 order-lg-2">
               <div className="row">
                 <div class='mb-2 col-12'>
-                <img src={Banner} class='img-fluid' />
                 </div>
                 {this.renderProducts()}
               </div>
             </div>
             <div className="mt-5 col-lg-3 order-lg-1">
             <div class="nav-section-menu">
-              <div class='text-xs text-center text-primary'>
+              <div class='text-xs text-center text-uppercase font-weight-bold text-primary'>
                 <span class='fa'> </span> Flat $8 delivery in Australia
               </div>
               <div class="nav nav-list">
