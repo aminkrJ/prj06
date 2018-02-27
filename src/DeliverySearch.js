@@ -28,7 +28,7 @@ class DeliverySearch extends Component {
           iziToast.error({
             position: 'topRight',
             title: 'Sorry!',
-            message: 'We do not cover your area.'
+            message: 'There is no stockist in your area at the moment.'
           })
 
           this.setState({
@@ -86,7 +86,7 @@ class DeliverySearch extends Component {
   render() {
     return (
       <div class="">
-        <p>Now our service is available for selected suburbs in Sydney. Enter your postcode below to see if we have service in your area.</p>
+        <p>Enter your postcode below to find stockists in your area.</p>
         <div class="row justify-content-center mt-3">
           <div class="col-lg-8">
             <i class="fa fa-search icon-2x pos-absolute pos-l mt-2 ml-3 d-none d-lg-block"></i>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NProgress from 'nprogress';
+import {render} from 'react-dom';
 import _ from 'underscore';
 
 import Carousel from './Carousel';
@@ -10,8 +11,11 @@ import AddToCartButton from './AddToCartButton'
 import globals from './globals'
 import NutriComboList from './NutriComboList'
 import ProductsCarousel from './ProductsCarousel'
+import Subscribe from './Subscribe'
+import Modal from './Modal'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
+import EffectiveFormula from './img/effective-formula.png'
 
 class Home extends Component {
 
@@ -96,6 +100,20 @@ class Home extends Component {
     )
   }
 
+  handleDownloadPdf(e) {
+    e.preventDefault()
+
+    render(
+      <Modal title="The 10 most effective bio-hacks">
+        <p class='text-sm'>
+          <span class="font-weight-bold text-uppercase"></span>
+          <p></p>
+        </p>
+        <Subscribe campaign="Dowload10Hacks"/>
+      </Modal>
+      , document.getElementById('modal')).toggle()
+  }
+
   render() {
     return (
       <div className="">
@@ -104,18 +122,22 @@ class Home extends Component {
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
+                  <div class="col-lg-5 col-md-5 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-slab">{globals.tagline}</h1>
+                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
+      <p dangerouslySetInnerHTML={{__html: globals.tagline}}></p></h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
       {globals.description}
                       </h2>
-      <h3 class="h5 tp-caption font-weight-light text-uppercase">Plant-based, gluten free, and Effective formulas.</h3>
+                      <p>
+                        <Link class='btn btn-primary text-uppercase' to='/nutricombo'>NutriCombo recipes</Link>
+                        <a href='#' onClick={this.handleDownloadPdf.bind(this)} class='text-uppercase btn btn-link text-primary'>The 10 most effective bio-hacks</a>
+                      </p>
                     </div>
                   </div>
-                  <div class="col-md-6 mt-3 mt-md-0 text-center">
-      <img src={Bowl} class='img-fluid' style={{width: '60%'}} />
+                  <div class="col-md-7 mt-3 mt-md-0 text-center">
+      <img src={EffectiveFormula} class='img-fluid' style={{width: '60%'}} />
                   </div>
                 </div>
               </div>
@@ -130,7 +152,9 @@ class Home extends Component {
             </h2>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-5" />
             <p>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection  is another side of the coin. What we eat, our sleep, our nutrient level, our gut flora will change the way our brain function.</p>
-            <p>Our effective formulas are to heal and enhance your beauty, brain, body and spirit at the deepest level.</p>
+            <p class='text-uppercase font-weight-bold'>
+            Download the 10 most effective bio-hacks to enhance your life today.</p>
+            <p><a href='#' onClick={this.handleDownloadPdf.bind(this)} class='btn btn-primary'>Download PDF</a></p>
           </div>
           <div class="col-lg-8 col-xl-7">
             <div class="row no-gutters text-center mb-4">
@@ -196,13 +220,12 @@ class Home extends Component {
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-slab font-weight-bold my-0">
-     Find Us
+     Product Locator
             </h3>
             <div className="text-center container py-lg-1 px-lg-10">
               <DeliverySearch />
             </div>
           </div>
-          
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />

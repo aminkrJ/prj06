@@ -26,7 +26,7 @@ class Subscribe extends Component {
 
     var $this = this
 
-    axios.post("/campaigns/" + "Subscribe" + "/subscribers", {
+    axios.post("/campaigns/" + this.props.campaign + "/subscribers", {
       subscriber: {
         email: this.state.email
       }
@@ -72,5 +72,10 @@ class Subscribe extends Component {
     )
   }
 }
+
+Subscribe.defaultProps = {
+  campaign: "Subscribe",
+}
+
 
 export default Subscribe

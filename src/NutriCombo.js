@@ -17,7 +17,7 @@ class NutriCombo extends Component {
 
     render(
       <Modal title="Newsletter">
-<p class='text-sm'><span class="font-weight-bold text-uppercase">Sign up to receive more recipes and info.</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
+<p class='text-sm'><span class="font-weight-bold text-uppercase">Sign up to receive more hacks.</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
         <Subscribe />
       </Modal>
       , document.getElementById('modal')).toggle()
@@ -48,7 +48,7 @@ class NutriCombo extends Component {
             <p>
       {globals.nutricombo.description}
       </p>
-      <p><a href="#" class='text-sm' onClick={this.handleSubscribe.bind(this)}>Sign up to receive more recipes and info</a></p>
+      <p><a href="#" class='text-sm text-uppercase' onClick={this.handleSubscribe.bind(this)}>Sign up to receive more hacks</a></p>
           </div>
         </div>
         <Process />
