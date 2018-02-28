@@ -64,7 +64,8 @@ class Shop extends Component {
     return products.map((product, index) => {
       return(
         <div key={index} className="col-lg-4">
-          <div className="card product-card overlay-hover mb-4">
+          <div style={{border: 0}} className="card product-card overlay-hover mb-4">
+          {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-info text-white text-uppercase'>On Sale</div> : null}
             <div className="pos-relative">
         <img src={product.photo.original} class='img-fluid'/>
             </div>
@@ -73,6 +74,8 @@ class Shop extends Component {
               <h5 className="text-black text-uppercase card-title">
                 {product.name}
               </h5>
+{product.before_discount_price !== 0 ? <span> <del class='op-5'>${product.before_discount_price}</del> / </span> : null}
+                ${product.price}
               </Link>
               <p style={{"line-height": "1em"}}><small>{product.short_description}</small></p>
               <p className="card-text">
