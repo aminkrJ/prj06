@@ -215,7 +215,7 @@ class Home extends Component {
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
           <div className="row p-3 py-lg-1">
-      <NutriComboList products={this.props.menu} />
+      <NutriComboList products={this.props.nutricombo} />
           </div>
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">

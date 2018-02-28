@@ -98,6 +98,7 @@ class App extends Component {
             bundles={this.state.bundles.slice(0, 3)}
             menu={this.state.menu}
             featured={this.state.featured}
+            nutricombo={this.state.recipes}
             shop={this.state.shop}
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
