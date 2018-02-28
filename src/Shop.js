@@ -120,6 +120,26 @@ class Shop extends Component {
     })
   }
 
+  renderTagInfo() {
+    var activeTag = this.state.activeTag
+    if(activeTag === 0){
+      return (
+        <div></div> 
+      )
+    }else{
+      var tag = _.find(this.state.tags, (t) => {return t.id === activeTag})
+      if(tag){
+      return (
+        <div class='col-12 text-center'>
+          <h4 class='text-slab'>{tag.short_description}</h4>
+          <p dangerouslySetInnerHTML={{__html: tag.description}} />
+          <hr />
+        </div>
+      )
+      }
+    }
+  }
+
   render() {
     return (
       <div id="content">
@@ -130,6 +150,7 @@ class Shop extends Component {
                 <div class='mb-2 col-12'>
       <img src={Banner} class="img-fluid" />
                 </div>
+                {this.renderTagInfo()}
                 {this.renderProducts()}
             <div class="row no-gutters text-center mb-4">
               <div class="col-md-7 d-lg-flex p-2">

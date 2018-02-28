@@ -23,16 +23,6 @@ class ShopItem extends Component {
     }
   }
   
-  renderIngredients() {
-    return (
-     this.state.product.ingredients.map((ingredient, index) => {
-       return(
-         <span class="" key={ingredient.id}>{ingredient.name}{index + 1 === this.state.product.ingredients.length ? "" : ", " }</span>
-       )
-     })
-    )
-  }
-
   handleTabChange(index) {
     this.setState({
       activeTabIndex: index
@@ -94,17 +84,23 @@ class ShopItem extends Component {
   }
 
   renderIngredients() {
-    if(this.state.product.category === "Bundles"){
+    if(this.state.product.category.name === "Bundles"){
       return(
-        <div class="text-xs text-muted">
-         <hr class="my-3" />
-         <span class="font-weight-bold"></span> {this.renderRecipes()}
-        </div>
+        <div></div>
       )
     } else {
       return(
-        <div class="text-sm">
-          {this.state.product.ingredients.map((i) => {return i.name}).join(', ')}
+        <div class="card">
+          <div class='text-sm text-uppercase font-weight-bold my-2 card-header py-0 px-0'>
+            Ingredients
+          </div>
+          <div class='collapse show'>
+            <div class='mb-2'>
+              <div class="text-sm">
+                {this.state.product.ingredients.map((i) => {return i.name}).join(', ')}
+              </div>
+            </div>
+          </div>
         </div>
       )
     }
@@ -156,10 +152,14 @@ class ShopItem extends Component {
                     <hr class="my-3" />
                     <div class='row'>
                       <div class='col-auto mr-auto'>
-                        <h4 class='font-weight-light my-2 text-primary'>${this.state.product.price} <span class='text-black text-xs'>~ {Math.round(this.state.product.weight / this.state.product.serving_size)} servings</span></h4>
+                        <h4 class='font-weight-light my-2 text-primary'>
+                          {this.state.product.before_discount_price !== 0 ? <span><del class='text-danger'>${this.state.product.before_discount_price}</del> / </span> : null}
+                          ${this.state.product.price}
+      {this.state.product.category.name === 'Bundles' ? null : <span class='text-black text-xs'>~ {Math.round(this.state.product.weight / this.state.product.serving_size)} servings</span>}
+                        </h4>
                       </div>
                       <div class='col-auto'>
-                        <h4 class='font-weight-light my-2'>{this.state.product.weight}g</h4>
+                        <h4 class='font-weight-light my-2'>{this.state.product.category.name === 'Bundles' ? null : <span>{this.state.product.weight}g</span>}</h4>
                       </div>
                       <div class='col-auto'>
                         <AddToCartButton class='btn btn-primary m-0' product={this.state.product} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
@@ -168,16 +168,7 @@ class ShopItem extends Component {
                     <hr class="my-3" />
                     <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
                     <div class="card-accordion card-accordion-list-style card-accordion-icons-left" role="tablist" aria-multiselectable="true">
-                      <div class="card">
-                        <div class='text-sm text-uppercase font-weight-bold my-2 card-header py-0 px-0'>
-                        Ingredients
-                        </div>
-                        <div class='collapse show'>
-                          <div class='mb-2'>
-                            {this.renderIngredients()}
-                          </div>
-                        </div>
-                      </div>
+                      {this.renderIngredients()}
                       <div class="card">
                         <div class='text-sm text-uppercase font-weight-bold my-2 card-header py-0 px-0'>
                         How to use

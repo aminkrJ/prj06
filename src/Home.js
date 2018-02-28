@@ -53,25 +53,24 @@ class Home extends Component {
     return (
       this.props.bundles.map((product, index) => {
         return (
-          <div class="card text-center mb-5">
-            <h4 class="card-title py-3">
-                <span class="text-slab text-black text-capitalize">{product.name}</span>
-            </h4>
-            <div class="row">
-              <div class="col-md-12">
-              </div>
+          <div class="card product-card mb-5">
+          {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-info text-white text-uppercase'>On Sale</div> : null}
+            <div class="pos-relative">
+              <img src={product.photo.original} class='card-img-top img-fluid'/>
+              <span class='badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist'>
+          {product.before_discount_price !== 0 ? <span> <del class='op-5'>${product.before_discount_price}</del> / </span> : null}
+                ${product.price}
+              </span>
             </div>
-            <p class="price-banner bg-primary text-white border-primary card-body-overlap">
-              <span class="price-currency">$</span>
-              <span class="price-digits">{product.price}<span></span></span>
-              <span class="price-extra"></span>
-            </p>
             <div class="card-body">
-              <p class="text-muted">{product.short_description}</p>
-              <ul class="text-left list-unstyled list-border-dots">
-          {this.renderRecipes(product)}
-              </ul>
-              <a href="#" class="btn btn-primary btn-block btn-rounded mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
+              <Link to={'/shop/' + product.slug} class="card-title h4">
+                <span class="text-capitalize">{product.name}</span>
+              </Link>
+              <div class='card-text text-sm'>
+              <p class="font-weight-light">{product.short_description}</p>
+              <p dangerouslySetInnerHTML={{__html: product.description}} />
+              </div>
+              <a href="#" class="btn btn-primary btn-block mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
             </div>
           </div>
         )
@@ -194,6 +193,7 @@ class Home extends Component {
           </div>
         </div>
         </div>
+        {this.renderBundles()}
 
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-slab font-weight-bold my-0">
