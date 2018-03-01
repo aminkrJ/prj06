@@ -99,3 +99,55 @@
   background-position: center bottom;
   background-attachment: fixed;
 }
+
+/** Mixins */
+/** Animations */
+/** Single div box-breathing */
+.box-breathing-wrapper{
+  height: 300px
+}
+.box-breathing {
+  width: 180px;
+  height: 180px;
+  margin-top: -80px;
+  margin-left: -90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 4px solid #708090;
+}
+.box-breathing::after {
+  width: 160px;
+  height: 160px;
+  margin-top: -80px;
+  margin-left: -80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  content: '';
+  background: #87cefa;
+  -webkit-animation: box-breath 16s infinite;
+          animation: box-breath 16s infinite;
+}
+@-webkit-keyframes box-breath {
+  0%, 75%, 100% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  25%, 50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes box-breath {
+  0%, 75%, 100% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  25%, 50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}

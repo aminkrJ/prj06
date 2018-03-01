@@ -59,7 +59,7 @@ class NutriCombo extends Component {
           <div class="col-md-6">
             <h2 class="h3 text-slab">Smart decisions.</h2>
                   <p>
-            Our human brain needs fuel to make smart decisions every second of our lives, otherwise we tend to stick to our old habits or what we call Autopilot mode. That's why we procrastinate and it is difficult for us to discipline ourselves to exercise, be on a diet, stand up in meetings, make the call and so on. NutriCombo makes sure you get all the nutritions for your peak performance.
+            Our human brain needs fuel to make smart decisions every second of our lives, otherwise we tend to stick to our old habits. That's why we procrastinate and it is difficult for us to discipline ourselves to exercise, be on a diet, stand up in meetings, make the call and so on. NutriCombo makes sure you get all the nutritions for your peak performance.
             </p>
          </div>
           <div class="col-md-6 text-md-left text-center">

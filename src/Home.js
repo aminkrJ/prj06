@@ -108,7 +108,7 @@ class Home extends Component {
           <p>Biohacking is maximising our biological potentials.
           In order to hack our biology we have to hack our mitochondria, energy producer of our cells our energy powerhouse, to produce more energy which happens by exposing our body to short bouts of healthy stress.
          </p>
-          <p> In this PDF you will learn science-based and most effective methods for biohacking which improves your overal health and performance.
+          <p> In this PDF you will find the most effective methods for biohacking which improves your overal health and performance.
          </p>
         </p>
         <Subscribe campaign="Dowload10Hacks"/>
@@ -145,15 +145,20 @@ class Home extends Component {
         </div>
         <div id="content" className="p-0">
           <div class="container">
-          <div class="row">
+          <div class="row mt-4">
           <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
-            <h2 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
-            </h2>
-            <hr class="hr-primary w-15 hr-xl ml-0 mb-5" />
-            <p>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection  is another side of the coin. What we eat, our sleep, our nutrient level, our gut flora will change the way our brain function.</p>
-            <p class='text-uppercase font-weight-bold'>
-            Download the 10 most effective bio-hacks to enhance your life today.</p>
-            <p><a href='#' onClick={this.handleDownloadPdf.bind(this)} class='btn btn-primary'>Download PDF</a></p>
+            <h3 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
+      The body's powerhouse
+            </h3>
+            <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
+            <p class='text-sm'>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection is another side of the coin. <a href="#" onClick={this.handleDownloadPdf.bind(this)} class='font-weight-bold'>
+                  Download the 10 most effective bio-hacks to enhance your life today.</a></p>
+            <div class='box-breathing-wrapper pos-relative'>
+              <div class='box-breathing'></div>
+              <p class='text-xs'>
+Breathing box technique is a small hack to manage your stress before a meeting, presentation, job interview or any stressful situations to stay in the zone. Inhale, hold, exhale, hold and repeat until you are feeling back in control.
+</p>
+            </div>
           </div>
           <div class="col-lg-8 col-xl-7">
             <div class="row no-gutters text-center mb-4">
