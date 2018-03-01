@@ -151,11 +151,11 @@ class Home extends Component {
       The body's powerhouse
             </h3>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
-            <p class='text-sm'>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection is another side of the coin. <a href="#" onClick={this.handleDownloadPdf.bind(this)} class='font-weight-bold'>
+            <p class='text-sm'>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection is another side of the coin.</p> <p class='text-uppercase'><a href="#" onClick={this.handleDownloadPdf.bind(this)} class='font-weight-bold'>
                   Download the 10 most effective bio-hacks to enhance your life today.</a></p>
             <div class='box-breathing-wrapper pos-relative'>
               <div class='box-breathing'></div>
-              <p class='text-xs'>
+              <p class='text-sm'>
 Breathing box is a technique to manage your stress in any stressful situations. <span class='font-weight-bold text-uppercase'>Inhale, hold, exhale, hold and repeat</span> until you are feeling back in control.
 </p>
             </div>
