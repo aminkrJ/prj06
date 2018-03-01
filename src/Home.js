@@ -106,7 +106,7 @@ class Home extends Component {
       <Modal title="The 10 most effective bio-hacks">
         <p class='text-sm'>
           <p>Biohacking is maximising our biological potentials.
-          In order to hack our biology we have to hack our mitochondria, our energy powerhouse, to produce more energy which happens.
+          In order to hack our biology we have to hack our mitochondria, our energy powerhouse, to produce more energy.
          </p>
           <p> In this PDF you will find the most effective methods for biohacking which improves your overal health and performance.
          </p>
@@ -156,7 +156,7 @@ class Home extends Component {
             <div class='box-breathing-wrapper pos-relative'>
               <div class='box-breathing'></div>
               <p class='text-xs'>
-Breathing box technique is a small hack to manage your stress before a meeting, presentation, job interview or any stressful situations to stay in the zone. Inhale, hold, exhale, hold and repeat until you are feeling back in control.
+Breathing box is a technique to manage your stress in any stressful situations. <span class='font-weight-bold text-uppercase'>Inhale, hold, exhale, hold and repeat</span> until you are feeling back in control.
 </p>
             </div>
           </div>
