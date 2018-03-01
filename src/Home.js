@@ -105,8 +105,11 @@ class Home extends Component {
     render(
       <Modal title="The 10 most effective bio-hacks">
         <p class='text-sm'>
-          <span class="font-weight-bold text-uppercase"></span>
-          <p></p>
+          <p>Biohacking is maximising our biological potentials.
+          In order to hack our biology we have to hack our mitochondria, energy producer of our cells our energy powerhouse, to produce more energy which happens by exposing our body to short bouts of healthy stress.
+         </p>
+          <p> In this PDF you will learn science-based and most effective methods for biohacking which improves your overal health and performance.
+         </p>
         </p>
         <Subscribe campaign="Dowload10Hacks"/>
       </Modal>
@@ -121,21 +124,18 @@ class Home extends Component {
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-5 col-md-5 padding-bottom-1x text-md-left text-center">
+                  <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
-                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
-      <p dangerouslySetInnerHTML={{__html: globals.tagline}}></p></h1>
-                      <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
       {globals.description}
                       </h2>
                       <p>
-                        <Link class='btn btn-primary text-uppercase' to='/nutricombo'>NutriCombo recipes</Link>
+                        <Link class='btn btn-primary text-uppercase' to='/nutricombo'>NutriCombo</Link>
                         <a href='#' onClick={this.handleDownloadPdf.bind(this)} class='text-uppercase btn btn-link text-primary'>The 10 most effective bio-hacks</a>
                       </p>
                     </div>
                   </div>
-                  <div class="col-md-7 mt-3 mt-md-0 text-center">
+                  <div class="col-md-6 mt-3 mt-md-0 text-center">
       <img src={EffectiveFormula} class='img-fluid' style={{width: '60%'}} />
                   </div>
                 </div>
