@@ -106,7 +106,7 @@ class Home extends Component {
       <Modal title="The 10 most effective bio-hacks">
         <p class='text-sm'>
           <p>Biohacking is maximising our biological potentials.
-          In order to hack our biology we have to hack our mitochondria, energy producer of our cells our energy powerhouse, to produce more energy which happens by exposing our body to short bouts of healthy stress.
+          In order to hack our biology we have to hack our mitochondria, our energy powerhouse, to produce more energy which happens.
          </p>
           <p> In this PDF you will find the most effective methods for biohacking which improves your overal health and performance.
          </p>
