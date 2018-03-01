@@ -2,7 +2,7 @@ const globals = {
   brand: "Lifelixir",
   tagline: "Feel the result",
   title: "Life Elixir | Science-based nutritions and methods to improve your mental and emotional well-being",
-  description: "Science-based nutritions and methods to help individuals rise above stress, overwhelm, and challenges and promote your mental acuteness and overall performance and replace stressful thoughts and emotional patterns with more positive perceptions and emotions.",
+  description: "Science-based nutritions and methods to help individuals rise above stress, overwhelm, and challenges, promote mental acuteness and overall performance, and replace stressful thoughts and emotional patterns with more positive perceptions and emotions.",
   mission: "",
   keywords: "nutricombo, life elixir, food for brain, fitness, health",
   nutricombo: {
