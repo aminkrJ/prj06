@@ -111,7 +111,7 @@ class Home extends Component {
           <p> In this PDF you will find the most effective methods for biohacking which improves your overal health and performance.
          </p>
         </p>
-        <Subscribe campaign="Dowload10Hacks"/>
+        <Subscribe campaign="Download10Hacks"/>
       </Modal>
       , document.getElementById('modal')).toggle()
   }
