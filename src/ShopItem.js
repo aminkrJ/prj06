@@ -182,7 +182,7 @@ class ShopItem extends Component {
                     </div>
 
                 <div class='my-3 text-xs font-weight-bold text-uppercase'>{this.renderProps()}</div>
-<div class='text-xs my-2 text-muted'>* This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
+<div class='text-xs my-2 text-muted'>* If you are pregnant, have any health condition or are taking any medications, it is recommended that you consult your health care professional before using. This product is not intended to diagnose, treat, cure, or prevent any disease.</div>
                   </div>
                 </div>
               </div>
