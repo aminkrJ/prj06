@@ -46,8 +46,8 @@ class Blog extends Component {
             </div>
             <div class="mt-4">
               <div class="date-wrapper date-wrapper-horizontal">
-<span class="date-m bg-primary">{moment(article.updated_at).format("MMMM")}</span>
-<span class="date-d">{moment(article.updated_at).format("D")}</span> </div>
+<span class="date-m bg-primary">{moment(article.created_at).format("MMMM")}</span>
+<span class="date-d">{moment(article.created_at).format("D")}</span> </div>
               <div class="tags"></div>
               <h4 class="text-slab timeline-item-title">
                 <Link to={"/blog/" + article.slug}>{article.title}</Link>
