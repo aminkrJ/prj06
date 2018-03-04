@@ -1,8 +1,8 @@
 const globals = {
   brand: "Lifelixir",
   tagline: "Feel the result",
-  title: "Life Elixir | Nutritions to improve your mental and physical well-being",
-  description: "Nutritions to help individuals rise above stress, overwhelm, and life challenges and promote mental acuteness and overall well being and performance.",
+  title: "Life Elixir | Nutrition and tech to improve your mental and physical well-being",
+  description: "Nutrition and tech to help individuals rise above stress, overwhelm, and life challenges and promote mental acuteness and overall well being and performance.",
   mission: "",
   keywords: "nutricombo, life elixir, food for brain, fitness, health",
   nutricombo: {
