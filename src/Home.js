@@ -87,6 +87,7 @@ class Home extends Component {
       Our Bundles
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0">
+      Make ultimate brain&#43; all-in-one smoothies at home
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
@@ -204,6 +205,9 @@ Breathing box is a technique to manage your stress in any stressful situations. 
             <h3 className="text-center text-slab font-weight-bold my-0">
     Popular products
             </h3>
+            <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
+            Certified organic, healthy and delicious
+            </h5>
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
             <div className="row p-3 py-lg-1">
