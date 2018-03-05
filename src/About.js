@@ -22,11 +22,11 @@ class About extends Component {
             <div class="row">
               <div class="col-md-6">
                 <p class="lead">
-      We design tonics and elixirs to heal and improve your body and your brain.
+      {globals.description}
                 </p>
-                <p></p>
+                <p>Our mission is to help busy professionals feel, think, perform and live better using scientifically proven and pure nutrition. Health is important but going through all studies and researchers is overwhelming. In Life Elixir we collect the best quality ingredients, design tasty recipes for health and fitness (<Link to="/nutricombo">NutriCombo</Link>) and deliver it to you.</p>
                 <p class="">
-      There is a direct connection between what we eat and how we feel. We may feel having occasional headaches, joint pains, bloating, brain fogs, chronic fatigues, leaky guts, depression, insomnia, being moody are normal but it is not. In fact it is our brain defence system for creating a new normal to burn less energy.
+      There is a direct connection between what we eat and how we feel. We may feel having occasional headaches, joint pains, bloating, brain fogs, chronic fatigues, leaky guts, depression, insomnia, being moody are normal but it is not.
 </p>
 <p>
 We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection  is another side of the coin. What we eat, our sleep, our nutrient level, our gut flora, infections to name a few will change the way our brain function.
