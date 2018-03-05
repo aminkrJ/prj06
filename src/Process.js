@@ -21,7 +21,7 @@ class Process extends Component {
     return (
       <div class="container">
           <hr class="mt-0 hr-lg w-10 mx-auto hr-primary" />
-          <h3 class="text-center text-slab font-weight-bold my-0">
+          <h3 class="text-center text-uppercase font-weight-bold my-0">
       Why NutriCombo?
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0 text-muted">
@@ -58,31 +58,31 @@ class Process extends Component {
           </ul>
           <div class="tab-content text-center pb-2 px-md-6">
             <div class={classNames("tab-pane fade", {show: this.state.selected === 5}, {active: this.state.selected === 5})} id="tab-steps1">
-              <h4 class="text-slab">
+              <h4 class="text-uppercase">
                 Electrolyte-enhanced water
               </h4>
               <p>Electrolyte enhanced water is water that has electrically charged minerals, or electrolytes, added to it. The most common electrolytes found in the body are sodium, potassium, chloride, phosphate, calcium, magnesium, and bicarbonate.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps2">
-              <h4 class="text-slab">
+              <h4 class="text-uppercase">
                 Adaptogen herbs
               </h4>
               <p>Adaptogens, unique class of healing plants, are a natural ally in dealing with persistent, long-term and chronic stress and fatigue because they work with regulating important hormones. People who experience the fight-or-flight responses on a regular basis, many times a day, may experience a state of constant stress, which can burn out your adrenal glands, stress your digestive tract and cause you to age more rapidly. Adaptogens can help balance, restore and protect the body.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 4}, {active: this.state.selected === 4})} id="tab-steps4">
-              <h4 class="text-slab">
+              <h4 class="text-uppercase">
                 Superfoods
               </h4>
               <p>Superfoods do more than just help you meet your vitamin and mineral needs or aid in shedding a few extra pounds when it comes time for swimsuit season. In fact, these foods can help you achieve better health, prevent chronic disease, and improve the way you feel day in and day out — and they’re some of the top anti-aging foods around.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 2}, {active: this.state.selected === 2})} id="tab-steps4">
-              <h4 class="text-slab">
+              <h4 class="text-uppercase">
                 Medium-chain fatty acids
               </h4>
               <p>A form of saturated fatty acids which are believed to be largely missing from the diets of people eating "standard Western" diets that has numerous health benefits, ranging from improved cognitive function to better weight management.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 3}, {active: this.state.selected === 3})} id="tab-steps3">
-              <h4 class="text-slab">
+              <h4 class="text-uppercase">
                Medicinal mushrooms 
               </h4>
               <p>When it comes to sticking to a healthy diet, disease-fighting mushrooms check off all the boxes. They’re low in carbohydrates and calories, but a great source of B vitamins, trace minerals, fiber and even protein. They also an anti-inflammatory food, containing high levels of beta-glucans compounds that keep immune cells alert, plus a powerful antioxidant called ergothioneine that helps lower bodywide inflammation.</p>

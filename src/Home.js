@@ -15,6 +15,7 @@ import Subscribe from './Subscribe'
 import Modal from './Modal'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
+import Instruction from './img/instructions.png'
 import EffectiveFormula from './img/effective-formula.png'
 
 class Home extends Component {
@@ -83,7 +84,7 @@ class Home extends Component {
       <div class="bg-faded">
         <div class="container">
           <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h3 class="text-center text-slab font-weight-bold my-0">
+          <h3 class="text-center text-uppercase font-weight-bold my-0">
       Our Bundles
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0">
@@ -200,9 +201,26 @@ Breathing box is a technique to manage your stress in any stressful situations. 
         </div>
         </div>
         {this.renderBundles()}
-
+        <div class='bg-light py-1 py-lg-3'>
+          <hr class='hr-lg mt-0 mb-3 w-10 mx-auto hr-primary' />
+          <div class='container'>
+            <h3 class='text-center text-uppercase font-weight-bold my-0'>
+                Serving instructions
+            </h3>
+            <h5></h5>
+            <div class='row'>
+              <div class='col-4'>
+              </div>
+              <div class='col-4'>
+      <img src={Instruction} class='img-fluid' />
+              </div>
+              <div class='col-4'>
+              </div>
+            </div>
+          </div>
+        </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h3 className="text-center text-slab font-weight-bold my-0">
+            <h3 className="text-center text-uppercase font-weight-bold my-0">
     Popular products
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
@@ -215,7 +233,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
             </div>
           </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h3 className="text-center text-slab font-weight-bold my-0">
+          <h3 className="text-center text-uppercase font-weight-bold my-0">
             NutriCombo
           </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
@@ -228,7 +246,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
-            <h3 className="text-center text-slab font-weight-bold my-0">
+            <h3 className="text-center text-uppercase font-weight-bold my-0">
      Product Locator
             </h3>
             <div className="text-center container py-lg-1 px-lg-10">
@@ -238,7 +256,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           <Process />
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h3 className="text-center text-slab font-weight-bold my-0">
+            <h3 className="text-center text-uppercase font-weight-bold my-0">
               Why Us?
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
@@ -246,37 +264,37 @@ Breathing box is a technique to manage your stress in any stressful situations. 
             <hr className="mb-5 w-50 mx-auto" />
             <div className="row text-center">
               <div className="col-lg-4 py-2">
-                <h4 className="text-slab mt-2">
+                <h4 className="text-uppercase mt-2">
                   Freshness
                 </h4>
                 <p>Fresh ingredients are at the heart of our philosophy</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-slab">
+                <h4 className="mt-2 text-uppercase">
                   Premium Ingredients
                 </h4>
                 <p>Seasonal, pesticide-free, and certified organic ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-slab">
+                <h4 className="mt-2 text-uppercase">
                   No Added Sugar
                 </h4>
                 <p>Enjoy the naturally occurring sweetness of our ingredients</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="text-slab mt-2">
+                <h4 className="text-uppercase mt-2">
                   No Preservative
                 </h4>
                 <p>No process or additives to expand the shelf-life</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-slab">
+                <h4 className="mt-2 text-uppercase">
                   Probiotics
                 </h4>
                 <p>Good bacteria for a healthy gut</p>
               </div>
               <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-slab">
+                <h4 className="mt-2 text-uppercase">
                   Low carbs
                 </h4>
                 <p>Low carbs and suger, high in healthy fats</p>
