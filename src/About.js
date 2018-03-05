@@ -24,7 +24,7 @@ class About extends Component {
                 <p class="lead">
       {globals.description}
                 </p>
-                <p>Our mission is to help busy professionals feel, think, perform and live better using scientifically proven and pure nutrition. Health is important but going through all studies and researchers is overwhelming. In Life Elixir we collect the best quality ingredients, design tasty recipes for health and fitness (<Link to="/nutricombo">NutriCombo</Link>) and deliver it to you.</p>
+                <p>Our mission is to help busy professionals feel, think, perform and live better using scientifically proven and pure nutrition. Health is important but going through all studies and researchers is overwhelming. In Life Elixir we collect the best quality ingredients, design tasty smoothie recipes for health and fitness (<Link to="/nutricombo">NutriCombo</Link>) and deliver it to you.</p>
                 <p class="">
       There is a direct connection between what we eat and how we feel. We may feel having occasional headaches, joint pains, bloating, brain fogs, chronic fatigues, leaky guts, depression, insomnia, being moody are normal but it is not.
 </p>
