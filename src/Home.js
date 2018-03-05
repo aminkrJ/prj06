@@ -209,12 +209,12 @@ Breathing box is a technique to manage your stress in any stressful situations. 
             </h3>
             <h5></h5>
             <div class='row'>
-              <div class='col-4'>
+              <div class='col-md-4'>
               </div>
-              <div class='col-4'>
+              <div class='col-md-4'>
       <img src={Instruction} class='img-fluid' />
               </div>
-              <div class='col-4'>
+              <div class='col-md-4'>
               </div>
             </div>
           </div>
