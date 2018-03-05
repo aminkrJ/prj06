@@ -64,9 +64,6 @@ class NutriComboList extends Component {
       categories.map((category, index) => {
         return (
           <div key={index} class="col-12">
-            <h4 class="text-center text-black text-uppercase">{category.name}</h4>
-<h5 class="text-center font-weight-light mt-2 mb-0 text-muted">{category.short_description}</h5>
-            <hr className="mb-2 w-30 mx-auto" />
             <div class="row">
             {this.renderProductsInCategory(category.id)}
             </div>
