@@ -1,6 +1,6 @@
 const globals = {
   brand: "Lifelixir",
-  tagline: "Feel the result",
+  tagline: "Brain on NutriComb",
   title: "Life Elixir | Nutrition to improve your mental and physical well-being",
   description: "Nutrition to help individuals rise above stress, overwhelm, and life challenges and promote mental acuteness and overall well being and performance in delicious and effective recipes.",
   mission: "",
