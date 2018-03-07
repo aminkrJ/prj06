@@ -8,7 +8,7 @@ const globals = {
   nutricombo: {
     tagline: "Leaner, stronger, and more focused",
     title: "NutriCombo | Leaner, stronger, and more focused",
-    description: "NutriCombo is quick, all-in-one and effective smoothie recipes to heal and enhance your body and mind packed with superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats."
+    description: "NutriCombo is delicious, quick, all-in-one and effective combos for health and fitness packed with superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats."
   },
   about: {
     title: "Brain on NutriCombo",

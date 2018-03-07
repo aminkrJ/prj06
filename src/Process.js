@@ -59,9 +59,9 @@ class Process extends Component {
           <div class="tab-content text-center pb-2 px-md-6">
             <div class={classNames("tab-pane fade", {show: this.state.selected === 5}, {active: this.state.selected === 5})} id="tab-steps1">
               <h4 class="text-uppercase">
-                Electrolyte-enhanced water
+                Probiotics
               </h4>
-              <p>Electrolyte enhanced water is water that has electrically charged minerals, or electrolytes, added to it. The most common electrolytes found in the body are sodium, potassium, chloride, phosphate, calcium, magnesium, and bicarbonate.</p>
+              <p>Probiotics are bacteria that line your digestive tract and support your body’s ability to absorb nutrients and fight infection. Probiotics benefits have been proven effective in supporting immune function, reducing inflammation, promoting healthy digestion, as well as maintaining beautiful skin.</p>
             </div>
             <div class={classNames("tab-pane fade", {show: this.state.selected === 1}, {active: this.state.selected === 1})} id="tab-steps2">
               <h4 class="text-uppercase">
