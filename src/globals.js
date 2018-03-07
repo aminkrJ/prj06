@@ -2,7 +2,7 @@ const globals = {
   brand: "Lifelixir",
   tagline: "Brain on NutriCombo",
   title: "Life Elixir | Nutrition to improve your mental and physical well-being",
-  description: "Nutrition to help individuals rise above stress, overwhelm, and life challenges and promote mental acuteness and overall well being and performance in delicious and effective recipes.",
+  description: "Nutrition to help individuals rise above stress, overwhelm, and struggle and promote mental acuteness and well being and performance.",
   mission: "",
   keywords: "nutricombo, life elixir, food for brain, fitness, health, smoothies, healthy shakes",
   nutricombo: {
@@ -11,7 +11,12 @@ const globals = {
     description: "NutriCombo is quick, all-in-one and effective smoothie recipes to heal and enhance your body and mind packed with superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats."
   },
   about: {
-    title: "We make healthy delicious"
+    title: "Brain on NutriCombo",
+    p1: "Our mission is to help busy professionals feel, think, perform, and live exceptional using a proven blend of ancient knowledge and brand new technologies.",
+    title2: "Health is vital but overwhelming.",
+    p2: "We are devoted to quality and effectiveness. We rigorously analyse our ingredients and source them from pure, clean, certified organic and natural Australian and imported products so you can focus on what you love.",
+    title3: "Unforgettable flavour.",
+    p3: "We have designed formulas to help you celebrate the explosion of unforgettable flavour without struggling and suffering in less than five minutes for all seasons, cold and warm days. ",
   },
   blog: {
     title: "Life Elixir | Blog",

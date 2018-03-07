@@ -136,8 +136,7 @@ class Home extends Component {
       {globals.description}
                       </h2>
                       <p>
-                        <Link class='btn btn-primary text-uppercase' to='/nutricombo'>NutriCombo</Link>
-                        <a href='#' onClick={this.handleDownloadPdf.bind(this)} class='text-uppercase btn btn-link text-primary'>The 10 most effective bio-hacks</a>
+                        <Link class='text-sm text-uppercase' to='/about'>Learn more</Link>
                       </p>
                     </div>
                   </div>

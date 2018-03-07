@@ -20,19 +20,20 @@ class About extends Component {
             </h3>
             <hr class="mb-5 w-50 mx-auto" />
             <div class="row">
-              <div class="col-md-6">
+              <div class="col">
                 <p class="lead">
       {globals.description}
                 </p>
-                <p>Our mission is to help busy professionals feel, think, perform and live better using scientifically proven and pure nutrition. Health is important but going through all studies and researchers is overwhelming. In Life Elixir we collect the best quality ingredients, design tasty smoothie recipes for health and fitness (<Link to="/nutricombo">NutriCombo</Link>) and deliver it to you.</p>
+                <p>{globals.about.p1}</p>
+                <p class='lead'>{globals.about.title2}</p>
                 <p class="">
-                                We source our ingredients from premium quality, certified organic, Australian and imported products. We utilize pure, clean and natural ingredients with no preservative, added sugar, added salt, or added fat.
+      {globals.about.p2}
 </p>
-<p>
-               Our formulas not only taste extraordinary but also are effective and science-based designed for busy professionals who love being leaner, stronger and more focused.
+    <p class='lead'>{globals.about.title3}</p>
+                <p class="">
+      {globals.about.p3}
 </p>
-              </div>
-              <div class="col-md-6">
+
               </div>
             </div>
           </div>
