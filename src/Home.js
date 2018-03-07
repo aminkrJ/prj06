@@ -105,13 +105,16 @@ class Home extends Component {
     e.preventDefault()
 
     render(
-      <Modal title="The 10 most effective bio-hacks">
+      <Modal title="First Step">
         <p class='text-sm'>
+          <p class='lead'>
+          Receive the 10 easiest and most effective biohacks to enhance your life today in your inbox.
+          </p>
           <p>Biohacking is maximising our biological potentials.
           In order to hack our biology we have to hack our mitochondria, our energy powerhouse, to produce more energy.
-         </p>
-          <p> In this PDF you will find the most effective methods for biohacking which improves your overal health and performance.
-         </p>
+          </p>
+          <p class='text-xs'>
+          </p>
         </p>
         <Subscribe campaign="Download10Hacks"/>
       </Modal>
@@ -153,17 +156,21 @@ class Home extends Component {
           <div class="row mt-4">
           <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
             <h3 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
-      The body's powerhouse
+      join at your own risk!
             </h3>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
-            <p class='text-sm'>We all know about our mind-body connection and how our thoughts, beliefs can impact our biology. Body-mind connection is another side of the coin.</p> <p class='text-uppercase'><a href="#" onClick={this.handleDownloadPdf.bind(this)} class='font-weight-bold'>
-                  Download the 10 most effective bio-hacks to enhance your life today.</a></p>
-            <div class='box-breathing-wrapper pos-relative'>
+            <p class=''>
+       <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest and secret formulas to hack your body and brain and unlock your superhuman potentials.
+            </p>
+            <p class=''><a href="#" onClick={this.handleDownloadPdf.bind(this)} class=''>
+                  Download the 10 easiest and most effective biohacks to enhance your life today.</a>
+            </p>
+            <div class='mb-4 box-breathing-wrapper pos-relative'>
               <div class='box-breathing'></div>
-              <p class='text-sm'>
+            </div>
+            <p class='text-xs text-center'>
 Breathing box is a technique to manage your stress in any stressful situations. <span class='font-weight-bold text-uppercase'>Inhale, hold, exhale, hold and repeat</span> until you are feeling back in control.
 </p>
-            </div>
           </div>
           <div class="col-lg-8 col-xl-7">
             <div class="row no-gutters text-center mb-4">
