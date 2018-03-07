@@ -37,13 +37,7 @@ class NutriCombo extends Component {
               <div class="col-md-12">
 <div class="container padding-bottom-2x mb-2">
         <div class="row align-items-center padding-bottom-2x">
-          <div class="col-md-6 order-md-1 text-md-left text-center">
-          	<div class="embed-responsive embed-responsive-16by9">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KGzT8CMoBQc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	          </div>
-          <p></p>
-          </div>
-          <div class="col-md-6">
+          <div class="col">
             <h1 class="h2 text-slab">{globals.nutricombo.tagline}</h1>
             <p>
       {globals.nutricombo.description}
