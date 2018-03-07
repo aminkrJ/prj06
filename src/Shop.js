@@ -150,9 +150,6 @@ class Shop extends Component {
           <div className="row">
             <div className="col-lg-9 order-lg-2">
               <div className="row">
-                <div class='mb-2 col-12'>
-      <img src={Banner} class="img-fluid" />
-                </div>
                 {this.renderTagInfo()}
                 {this.renderProducts()}
             <div class="row no-gutters text-center mb-4">

@@ -50,7 +50,7 @@ class ShopItem extends Component {
     return (
       this.state.product.tags.map((tag) => {
         return (
-          <Link to={"/shop/tags/" + tag.id} class='text-sm mb-sm-1 mr-3 text-uppercase font-weight-light'>
+          <Link to={"/shop/tags/" + tag.id} class='text-xs mb-sm-1 mr-3 text-uppercase text-black font-weight-light'>
             {tag.name}
           </Link>
         )
@@ -137,7 +137,6 @@ class ShopItem extends Component {
         <img src={this.state.product.photo.original} class='img-fluid'/>
                 </div>
                 <div class='mt-3'>
-                <p class='text-center'>{this.renderTags()}</p>
                 </div>
               </div>
               <div class="col-lg-7">
@@ -167,6 +166,9 @@ class ShopItem extends Component {
                     </div>
                     <hr class="my-3" />
                     <p dangerouslySetInnerHTML={{__html: this.state.product.description}} class="" />
+                    <p class='mb-1'>
+                    {this.renderTags()}
+                    </p>
                     <div class="card-accordion card-accordion-list-style card-accordion-icons-left" role="tablist" aria-multiselectable="true">
                       {this.renderIngredients()}
                       <div class="card">
@@ -181,8 +183,8 @@ class ShopItem extends Component {
                       </div>
                     </div>
 
-                <div class='my-3 text-xs font-weight-bold text-uppercase'>{this.renderProps()}</div>
-<div class='text-xs my-2 text-muted'>* Always consult a medical professional for any health conditions and questions that relate to pregnancy. </div>
+                <div class='my-2 text-xs font-weight-bold text-uppercase'>{this.renderProps()}</div>
+<div class='text-xs my-2 text-muted'></div>
                   </div>
                 </div>
               </div>
