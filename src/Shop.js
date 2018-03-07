@@ -153,39 +153,12 @@ class Shop extends Component {
                 {this.renderTagInfo()}
                 {this.renderProducts()}
             <div class="row no-gutters text-center mb-4">
-              <div class="col-md-7 d-lg-flex p-2">
-                <a href="#" onClick={this.handleDiscount.bind(this)} class="py-6 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold">
-      20% OFF
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-uppercase">20% discount on your first order</p>
-                </a>
-              </div>
-              <div class="col-md-4 d-lg-flex p-2">
-                <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
-                  <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Adaptogens
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-uppercase">Help reduce stress</p>
-                </a>
-              </div>
-              <div class="col-md-5 d-lg-flex p-2">
-                <a href="/shop/tags/2" class="py-6 ef-bg-01 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-                    All Day, Every day
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-uppercase">ON Shrooms</p>
-                </a>
-              </div>
             </div>
 
               </div>
             </div>
             <div className="mt-5 col-lg-3 order-lg-1">
             <div class="nav-section-menu">
-              <div class='text-xs text-center text-uppercase font-weight-bold text-primary'>
-                <span class='fa'> </span> Flat $8 delivery Australia wide
-              </div>
               <div class="nav nav-list">
                {this.renderTags()}
               </div>

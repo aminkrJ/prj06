@@ -132,7 +132,6 @@ class ShopItem extends Component {
           <Loader loaded={this.state.loaded}>
             <div class="row">
               <div class="col-lg-5">
-                <p class="text-center text-uppercase text-primary mb-4 text-xs"> Get 20% off your first order. <a class='font-weight-bold' href="#" onClick={this.handleSubscribe.bind(this)}> Join the mailing list now!</a></p>
                 <div class="product-gallery pos-relative">
         <img src={this.state.product.photo.original} class='img-fluid'/>
                 </div>

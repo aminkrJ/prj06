@@ -86,14 +86,13 @@ Nutritions your competitors consume to be one step ahead in the game.
                   <li><Link to="/about">About us</Link></li>
                   <li><Link to="/blog">Blog</Link></li>
                   <li><Link to="/contact">Contact us</Link></li>
-                  <li><a target="_blank" href="https://business.lifelixir.com.au">NutriCombo Frequent X</a></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">
                 <h4 class="text-uppercase text-white">
                   Newsletter
                 </h4>
-                <p class='text-sm'><span class='font-weight-bold text-uppercase'>Get 20% off from your first order.</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
+                <p class='text-sm'><span class='text-sm font-weight-bold text-uppercase'>Get 10% off from your first order.</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
 <Subscribe />
               </div>
             </div>
