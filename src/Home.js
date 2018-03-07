@@ -253,52 +253,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
             </div>
           </div>
           <Process />
-          <div id="features" className="container">
-            <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h3 className="text-center text-uppercase font-weight-bold my-0">
-              Why Us?
-            </h3>
-            <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-            </h5>
-            <hr className="mb-5 w-50 mx-auto" />
-            <div className="row text-center">
-              <div className="col-lg-4 py-2">
-                <h4 className="text-uppercase mt-2">
-                  Freshness
-                </h4>
-                <p>Fresh ingredients are at the heart of our philosophy</p>
-              </div>
-              <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-uppercase">
-                  Premium Ingredients
-                </h4>
-                <p>Seasonal, pesticide-free, and certified organic ingredients</p>
-              </div>
-              <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-uppercase">
-                  No Added Sugar
-                </h4>
-                <p>Enjoy the naturally occurring sweetness of our ingredients</p>
-              </div>
-              <div className="col-lg-4 py-2">
-                <h4 className="text-uppercase mt-2">
-                  No Preservative
-                </h4>
-                <p>No process or additives to expand the shelf-life</p>
-              </div>
-              <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-uppercase">
-                  Probiotics
-                </h4>
-                <p>Good bacteria for a healthy gut</p>
-              </div>
-              <div className="col-lg-4 py-2">
-                <h4 className="mt-2 text-uppercase">
-                  Low carbs
-                </h4>
-                <p>Low carbs and suger, high in healthy fats</p>
-              </div>
-            </div>
+          <div id="" className="container">
           </div>
         </div>
 
