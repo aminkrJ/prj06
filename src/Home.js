@@ -55,9 +55,11 @@ class Home extends Component {
       this.props.bundles.map((product, index) => {
         return (
           <div class="card product-card mb-5">
-          {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-info text-white text-uppercase'>On Sale</div> : null}
+          {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-danger text-white text-uppercase'>On Sale</div> : null}
             <div class="pos-relative">
+              <Link to={'/shop/' + product.slug} class="card-title h4">
               <img src={product.photo.original} class='card-img-top img-fluid'/>
+              </Link>
               <span class='badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist'>
           {product.before_discount_price !== 0 ? <span> <del class='op-5'>${product.before_discount_price}</del> / </span> : null}
                 ${product.price}
@@ -129,7 +131,7 @@ class Home extends Component {
             <div class="item">
               <div class="container padding-top-3x">
                 <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-6 col-md-6 padding-bottom-1x text-md-left text-center">
+                  <div class="col-lg-6 padding-bottom-1x text-md-left text-center">
                     <div class="from-bottom">
                       <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
       {globals.tagline}
@@ -143,8 +145,7 @@ class Home extends Component {
                       </p>
                     </div>
                   </div>
-                  <div class="col-md-6 mt-3 mt-md-0 text-center">
-      <img src={EffectiveFormula} class='img-fluid' style={{width: '60%'}} />
+                  <div class="col-lg-6 d-none d-lg-block mt-3 mt-md-0 text-center">
                   </div>
                 </div>
               </div>
@@ -156,7 +157,7 @@ class Home extends Component {
           <div class="row mt-4">
           <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
             <h3 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
-      join at your own risk!
+      Unlock your brain potentials
             </h3>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
             <p class=''>
@@ -177,9 +178,9 @@ Breathing box is a technique to manage your stress in any stressful situations. 
               <div class="col-md-6 d-lg-flex p-2">
                 <a href= "/shop/tags/2" class="py-6 ef-bg-01 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      10X more done
+      Smart drugs
                   </h3>
-                  <p class="text-white text-sm mb-0">Unlock your brain potentials</p>
+                  <p class="text-white text-sm mb-0">Natural brain enhancers</p>
                 </a>
               </div>
               <div class="col-md-6 d-lg-flex p-2">
@@ -187,23 +188,23 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Adaptogens
                   </h3>
-                  <p class="text-white text-sm mb-0">Help reduce stress</p>
+                  <p class="text-white text-sm mb-0">Reduce stress</p>
                 </a>
               </div>
               <div class="col-md-6 d-lg-flex p-2">
                 <a href="/shop/tags/7" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-                    Chakra healing
+                    brain fats
                   </h3>
-                  <p class="text-white text-sm mb-0">Connect to your higher self</p>
+                  <p class="text-white text-sm mb-0">MCT oil and unsaturated fats</p>
                 </a>
               </div>
               <div class="col-md-6 d-lg-flex p-2">
                 <a href="/shop/tags/9" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Fat burn
+      Gut health
                   </h3>
-                  <p class="text-white text-sm mb-0">Pre and post workout nutritions</p>
+                  <p class="text-white text-sm mb-0">Better decisions and mood</p>
                 </a>
               </div>
             </div>
@@ -220,7 +221,6 @@ Breathing box is a technique to manage your stress in any stressful situations. 
             <h5></h5>
             <div class='row justify-content-center'>
               <div class='col-4'>
-      <img src={Instruction} class='img-fluid' />
               </div>
             </div>
           </div>
