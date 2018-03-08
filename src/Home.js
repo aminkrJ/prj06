@@ -88,7 +88,7 @@ class Home extends Component {
       Our Bundles
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0">
-      Make ultimate brain&#43; all-in-one elixir at home or office
+      Make ultimate brain&#43; all-in-one elixirs at home or office
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
