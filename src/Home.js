@@ -166,8 +166,9 @@ class Home extends Component {
             <p class=''>
        <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest and secret formulas to hack your body and brain and unlock your potentials.
             </p>
-            <p class=''><a href="#" onClick={this.handleDownloadPdf.bind(this)} class=''>
-                  Download the 10 easiest and most effective biohacks to enhance your life today.</a>
+            <p class='lead'>
+              Download the 10 easiest and most effective biohacks to enhance your life today.
+            <div class='mt-2'><Subscribe campaign="Download10Hacks"/></div>
             </p>
             <div class='mb-4 box-breathing-wrapper pos-relative'>
               <div class='box-breathing'></div>
@@ -183,7 +184,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Smart drugs
                   </h3>
-                  <p class="text-white text-sm mb-0">Natural brain enhancers</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Natural brain enhancers</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
@@ -191,7 +192,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Adaptogens
                   </h3>
-                  <p class="text-white text-sm mb-0">Reduce stress</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Reduce stress</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
@@ -199,7 +200,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
                     brain fats
                   </h3>
-                  <p class="text-white text-sm mb-0">MCT oil and unsaturated fats</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">The Rocket fuel</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
@@ -207,7 +208,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Gut health
                   </h3>
-                  <p class="text-white text-sm mb-0">The second brain</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">The second brain</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
@@ -215,15 +216,15 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Antioxidant
                   </h3>
-                  <p class="text-white text-sm mb-0">Protect against brain ageing</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Protect against brain ageing</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
                 <a href="/shop/tags/1" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Lean & Strong
+      Clean protein
                   </h3>
-                  <p class="text-white text-sm mb-0">Clean protein</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Lean and strong</p>
                 </a>
               </div>
               
