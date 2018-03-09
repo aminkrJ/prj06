@@ -161,7 +161,10 @@ class Home extends Component {
             </h3>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
             <p class=''>
-       <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest and secret formulas to hack your body and brain and unlock your superhuman potentials.
+      Unlock your brain potential with six groups of nutrition which you don't get enough in your normal diet.
+           </p>
+            <p class=''>
+       <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest and secret formulas to hack your body and brain and unlock your potentials.
             </p>
             <p class=''><a href="#" onClick={this.handleDownloadPdf.bind(this)} class=''>
                   Download the 10 easiest and most effective biohacks to enhance your life today.</a>
@@ -175,38 +178,55 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
           <div class="col-lg-8 col-xl-7">
             <div class="row no-gutters text-center mb-4">
-              <div class="col-md-6 d-lg-flex p-2">
-                <a href= "/shop/tags/2" class="py-6 ef-bg-01 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+              <div class="col-md-6  p-1">
+                <a href= "/shop/tags/2" class="py-6 smart-drugs px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Smart drugs
                   </h3>
                   <p class="text-white text-sm mb-0">Natural brain enhancers</p>
                 </a>
               </div>
-              <div class="col-md-6 d-lg-flex p-2">
-                <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+              <div class="col-md-6  p-1">
+                <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
                   <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Adaptogens
                   </h3>
                   <p class="text-white text-sm mb-0">Reduce stress</p>
                 </a>
               </div>
-              <div class="col-md-6 d-lg-flex p-2">
-                <a href="/shop/tags/7" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+              <div class="col-md-6  p-1">
+                <a href="/shop" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
                     brain fats
                   </h3>
                   <p class="text-white text-sm mb-0">MCT oil and unsaturated fats</p>
                 </a>
               </div>
-              <div class="col-md-6 d-lg-flex p-2">
-                <a href="/shop/tags/9" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
+              <div class="col-md-6  p-1">
+                <a href="/shop/tags/5" class="py-6 gut-health px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Gut health
                   </h3>
-                  <p class="text-white text-sm mb-0">Better decisions and mood</p>
+                  <p class="text-white text-sm mb-0">The second brain</p>
                 </a>
               </div>
+              <div class="col-md-6  p-1">
+                <a href="/shop/tags/3" class="py-6 antioxidant px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+      Antioxidant
+                  </h3>
+                  <p class="text-white text-sm mb-0">Protect against brain ageing</p>
+                </a>
+              </div>
+              <div class="col-md-6  p-1">
+                <a href="/shop/tags/1" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
+                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
+      Lean & Strong
+                  </h3>
+                  <p class="text-white text-sm mb-0">Clean protein</p>
+                </a>
+              </div>
+              
             </div>
           </div>
         </div>

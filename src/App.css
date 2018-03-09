@@ -6,8 +6,25 @@
   background-size:  cover;
   background-color: #999;
 }
-.ef-bg-01{
+.gut-health{
+  background-image: url(./img/gut-health.jpg);
+  background-size: cover;
+  text-decoration: none;
+  background-repeat: no-repeat
+}
+.antioxidant{
+  background-image: url(./img/antioxidant.jpg);
+  background-size: cover;
+  text-decoration: none;
+  background-repeat: no-repeat
+}
+.smart-drugs{
   background-image: url(./img/ef-bg-01.png);
+  background-size: cover;
+  text-decoration: none;
+  background-repeat: no-repeat
+}
+.healthy-guts{
   background-size: cover;
   text-decoration: none;
   background-repeat: no-repeat
