@@ -110,7 +110,14 @@ class App extends Component {
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/find_us" component={Find} />
-          <Route exact path="/nutricombo" component={(props) => <NutriCombo {...props} products={this.state.products} nutricombo={this.state.recipes} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
+          <Route exact path="/nutricombo" component={(props) => <NutriCombo {...props} 
+            products={this.state.products}
+            nutricombo={this.state.recipes}
+            bundles={this.state.bundles.slice(0, 3)}
+            dropFromCart={this.props.dropFromCart}
+            cart={this.props.cart}
+            addToCart={this.props.addToCart}
+            removeFromCart={this.props.removeFromCart} />} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/affiliate" component={Affiliate} />
           <Route exact path="/blog" component={Blog} />

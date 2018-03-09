@@ -14,6 +14,7 @@ import ProductsCarousel from './ProductsCarousel'
 import Subscribe from './Subscribe'
 import Modal from './Modal'
 import ServingIdeas from './ServingIdeas'
+import Bundles from './Bundles'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
 import Instruction from './img/instructions.png'
@@ -48,58 +49,6 @@ class Home extends Component {
           </ul>
         )
       })
-    )
-  }
-
-  renderBundleItems() {
-    return (
-      this.props.bundles.map((product, index) => {
-        return (
-          <div class="card product-card mb-5">
-          {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-danger text-white text-uppercase'>On Sale</div> : null}
-            <div class="pos-relative">
-              <Link to={'/shop/' + product.slug} class="card-title h4">
-              <img src={product.photo.original} class='card-img-top img-fluid'/>
-              </Link>
-              <span class='badge badge-primary product-price-badge pos-absolute pos-t pos-r mt-2 mr-2 persist'>
-          {product.before_discount_price !== 0 ? <span> <del class='op-5'>${product.before_discount_price}</del> / </span> : null}
-                ${product.price}
-              </span>
-            </div>
-            <div class="card-body">
-              <Link to={'/shop/' + product.slug} class="card-title h4">
-                <span class="text-capitalize">{product.name}</span>
-              </Link>
-              <div class='card-text text-sm'>
-              <p class="font-weight-light">{product.short_description}</p>
-              </div>
-              <a href="#" class="btn btn-primary btn-block mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
-            </div>
-          </div>
-        )
-      })
-    )
-  }
-
-  renderBundles() {
-    return(
-      <div class="bg-faded">
-        <div class="container">
-          <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-          <h3 class="text-center text-uppercase font-weight-bold my-0">
-      Our Bundles
-          </h3>
-          <h5 class="text-center font-weight-light mt-2 mb-0">
-      Make ultimate brain&#43; all-in-one elixirs at home or office
-          </h5>
-          <hr class="mb-5 w-50 mx-auto" />
-          <div class="row pricing-stack">
-            <div class="card-group">
-              {this.renderBundleItems()}
-            </div>
-          </div>
-        </div>
-      </div>
     )
   }
 
@@ -232,7 +181,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
         </div>
         </div>
-        {this.renderBundles()}
+        <Bundles addToCart={this.props.addToCart} products={this.props.bundles}/>
         <div class='bg-light py-1 py-lg-3'>
           <hr class='hr-lg mt-0 mb-3 w-10 mx-auto hr-primary' />
           <div class='container'>
