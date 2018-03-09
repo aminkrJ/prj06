@@ -43,11 +43,15 @@ class NutriCombo extends Component {
       {globals.nutricombo.description}
       </p>
           </div>
+          <div class='col'>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sQwljK9S9A0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+          </div>
         </div>
-        <Process />
         <hr />
         <NutriComboList recipes={this.props.nutricombo} />
-        <hr />
+        <Process />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
         </div>
       </div>

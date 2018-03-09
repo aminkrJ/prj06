@@ -6,9 +6,9 @@ const globals = {
   mission: "",
   keywords: "nutricombo, life elixir, food for brain, fitness, health, smoothies, healthy shakes",
   nutricombo: {
-    tagline: "Leaner, stronger, and more focused",
-    title: "NutriCombo | Leaner, stronger, and more focused",
-    description: "NutriCombo is delicious, quick, all-in-one and effective elixirs for health and fitness packed with superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats."
+    tagline: "Astronauts love it",
+    title: "NutriCombo | Astronauts love it",
+    description: "NutriCombo is delicious, quick, all-in-one and effective elixirs for health and fitness packed with superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats which gives you all the nutritions you need to become leaner, stronger and more focused."
   },
   about: {
     title: "Brain on NutriCombo",
