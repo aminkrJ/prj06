@@ -216,7 +216,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Antioxidant
                   </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Protect against brain ageing</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Anti cancer & anti ageing</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
@@ -224,7 +224,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
       Clean protein
                   </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Lean and strong</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Lean & strong</p>
                 </a>
               </div>
               
