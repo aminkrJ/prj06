@@ -53,13 +53,20 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    var recipes = nextProps.products.entities.map((p) => {
+      return p.recipes
+    })
+
+    recipes = _.flatten(recipes)
+
+
     this.setState({
       products: nextProps.products.entities,
       bundles: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Bundles"}),
       menu: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Shop"}),
       featured: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop"}),
       shop: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop" || p.category.name === 'Bundles'}),
-      recipes: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Shop" && p.category.name !== "Bundles"})
+      recipes: recipes
     })
   }
 

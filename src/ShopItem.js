@@ -12,12 +12,13 @@ import _ from 'underscore'
 import Subscribe from './Subscribe'
 import Modal from './Modal'
 import ProductsCarousel from './ProductsCarousel'
+import ServingIdeas from './ServingIdeas'
 
 class ShopItem extends Component {
   constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}, tags: [], ingredients: [], category: {}},
+      product: {photo: {original: ""}, recipes: [], tags: [], ingredients: [], category: {}},
       activeTabIndex: 1,
       loaded: false
     }
@@ -73,11 +74,19 @@ class ShopItem extends Component {
     return(
       this.state.product.recipes.map((r, index) => {
         return (
-          <span key={r.id}>
-            <span>{r.description} </span>
-            {r.title}
-            {index + 1 === this.state.product.recipes.length ? null : <span>, &nbsp;</span>}
-          </span>
+          <div key={r.id} class="col-6 col-lg-4 d-flex">
+            <div class="card mb-3 border-0 flex-ew">
+              <div class="card-effect card-effect-front-to-back">
+                <img class="card-img-top img-fluid" src={r.photo.original} alt={r.title}/>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-uppercase text-sm mb-1">
+          {r.title}
+                </h5>
+                <p class="card-text text-uppercase text-inverse text-xs">{r.category.name}</p>
+              </div>
+            </div>
+          </div>
         )
       })
     )
@@ -172,11 +181,23 @@ class ShopItem extends Component {
                       {this.renderIngredients()}
                       <div class="card">
                         <div class='text-sm text-uppercase font-weight-bold my-2 card-header py-0 px-0'>
-                        How to use
+                        Serving ideas
                         </div>
                         <div class='collapse show'>
                           <div class='mb-2'>
-                            <p dangerouslySetInnerHTML={{__html: this.state.product.serving_idea}} class="text-sm" />
+                          <ServingIdeas />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class='text-sm text-uppercase font-weight-bold my-2 card-header py-0 px-0'>
+                        NutriCombo
+                        </div>
+                        <div class='collapse show'>
+                          <div class='mb-2'>
+                          <div class='row'>
+                          {this.renderRecipes()}
+                          </div>
                           </div>
                         </div>
                       </div>

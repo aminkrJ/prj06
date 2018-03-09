@@ -13,6 +13,7 @@ import NutriComboList from './NutriComboList'
 import ProductsCarousel from './ProductsCarousel'
 import Subscribe from './Subscribe'
 import Modal from './Modal'
+import ServingIdeas from './ServingIdeas'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
 import Instruction from './img/instructions.png'
@@ -216,13 +217,10 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           <hr class='hr-lg mt-0 mb-3 w-10 mx-auto hr-primary' />
           <div class='container'>
             <h3 class='text-center text-uppercase font-weight-bold my-0'>
-                Serving instructions
+                Serving ideas
             </h3>
             <h5></h5>
-            <div class='row justify-content-center'>
-              <div class='col-4'>
-              </div>
-            </div>
+            <ServingIdeas /> 
           </div>
         </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
@@ -248,7 +246,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
           <div className="row p-3 py-lg-1">
-      <NutriComboList products={this.props.nutricombo} />
+      <NutriComboList recipes={this.props.nutricombo} />
           </div>
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">

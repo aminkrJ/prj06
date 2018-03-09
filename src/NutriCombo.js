@@ -46,7 +46,7 @@ class NutriCombo extends Component {
         </div>
         <Process />
         <hr />
-        <NutriComboList products={this.props.nutricombo} />
+        <NutriComboList recipes={this.props.nutricombo} />
         <hr />
         <div class="row align-items-center padding-top-2x padding-bottom-2x">
         </div>
