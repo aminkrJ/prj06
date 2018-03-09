@@ -66,7 +66,7 @@ class App extends Component {
       menu: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Shop"}),
       featured: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop"}),
       shop: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Shop" || p.category.name === 'Bundles'}),
-      recipes: recipes
+      recipes: _.uniq(recipes, (i) =>{ return i.id })
     })
   }
 
