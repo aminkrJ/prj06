@@ -74,12 +74,12 @@ class ShopItem extends Component {
     return(
       this.state.product.recipes.map((r, index) => {
         return (
-          <div key={r.id} class="col-6 col-lg-4 d-flex">
+          <div key={r.id} class="col-4 col-lg-3 d-flex p-0">
             <div class="card mb-3 border-0 flex-ew">
               <div class="card-effect card-effect-front-to-back">
                 <img class="card-img-top img-fluid" src={r.photo.original} alt={r.title}/>
               </div>
-              <div class="card-body">
+              <div class="card-body pb-0">
                 <h5 class="card-title text-uppercase text-sm mb-1">
           {r.title}
                 </h5>
@@ -194,7 +194,7 @@ class ShopItem extends Component {
                         NutriCombo
                         </div>
                         <div class='collapse show'>
-                          <div class='mb-2'>
+                          <div class=''>
                           <div class='row'>
                           {this.renderRecipes()}
                           </div>
