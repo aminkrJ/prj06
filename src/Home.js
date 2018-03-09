@@ -72,7 +72,6 @@ class Home extends Component {
               </Link>
               <div class='card-text text-sm'>
               <p class="font-weight-light">{product.short_description}</p>
-              <p dangerouslySetInnerHTML={{__html: product.description}} />
               </div>
               <a href="#" class="btn btn-primary btn-block mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
             </div>
