@@ -52,7 +52,7 @@ class NutriCombo extends Component {
         </div>
         <hr />
         <NutriComboList recipes={this.props.nutricombo} />
-        <Bundles addToCart={this.props.addToCart} products={this.props.bundles}/>
+        <Bundles addToCart={this.props.addToCart} history={this.props.history} products={this.props.bundles}/>
           <div id="features" className="container">
             <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-uppercase font-weight-bold my-0">

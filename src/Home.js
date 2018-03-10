@@ -90,7 +90,7 @@ class Home extends Component {
       {globals.description}
                       </h2>
                       <p>
-                        <Link class='text-sm text-uppercase' to='/about'>Learn more</Link>
+                        <Link class='text-sm text-uppercase' to='/nutricombo'>Learn more</Link>
                       </p>
                     </div>
                   </div>
@@ -181,7 +181,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
         </div>
         </div>
-        <Bundles addToCart={this.props.addToCart} products={this.props.bundles}/>
+        <Bundles history={this.props.history} addToCart={this.props.addToCart} products={this.props.bundles}/>
         <div class='bg-light py-1 py-lg-3'>
           <hr class='hr-lg mt-0 mb-3 w-10 mx-auto hr-primary' />
           <div class='container'>
@@ -189,7 +189,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                 Serving ideas
             </h3>
             <h5></h5>
-            <ServingIdeas /> 
+            <ServingIdeas />
           </div>
         </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
