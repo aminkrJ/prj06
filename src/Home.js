@@ -131,9 +131,9 @@ Breathing box is a technique to manage your stress in any stressful situations. 
               <div class="col-md-6  p-1">
                 <a href= "/shop/tags/2" class="py-6 smart-drugs px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
                   <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Smart drugs
+      nootropics
                   </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Natural brain enhancers</p>
+                  <p class="text-white text-sm mb-0 text-capitalize">Natural & herbal brain enhancers</p>
                 </a>
               </div>
               <div class="col-md-6  p-1">
