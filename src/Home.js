@@ -238,7 +238,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
 Home.defaultProps = {
   bundles: [],
   recipes: [],
-  shop: []
+  featured: []
 }
 
 export default Home

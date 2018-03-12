@@ -13,24 +13,25 @@ class ProductsCarousel extends Component {
   }
 
   render() {
-    var menu = this.props.shop.map((shopItem, index) => {
+    var menu = this.props.shop.map((product, index) => {
         return(
           <div class="card border-0" key={index}>
-            <Link to={"/shop/" + shopItem.slug}>
-              <img src={shopItem.photo.original} className="card-img-top img-fluid" />
+            <Link to={"/shop/" + product.slug}>
+              <img src={product.photo.original} className="card-img-top img-fluid" />
             </Link>
             <div class="card-body">
-              <Link to={"/shop/" + shopItem.slug}>
-                <h4 class="text-slab card-title">{shopItem.name}</h4>
+              <small class='text-muted text-uppercase'>{product.category.name}</small>
+              <Link to={"/shop/" + product.slug}>
+                <h4 class="text-slab card-title">{product.name}</h4>
               </Link>
               <p>
-                {shopItem.short_description}
+                {product.short_description}
               </p>
               <p class="text-xs">
-              {shopItem.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
+              {product.ingredients.map((i) => {return i.name}).join(', ').replace(/^(.{100}[^\s]*).*/, "$1") + "\n ..."}
               </p>
               { this.props.withAddBtn ? 
-              <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={shopItem} />
+              <AddToCartButton dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} class="btn btn-primary" product={product} />
                 : null }
             </div>
           </div>
