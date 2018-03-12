@@ -106,14 +106,14 @@ class Home extends Component {
           <div class="row mt-4">
           <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
             <h3 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
-      Unlock your brain potentials
+      Think smarter
             </h3>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
             <p class=''>
-      Unlock your brain potential with six groups of nutrition which you don't get enough in your normal diet.
+      Thought are an emergent property of our biology. To think smarter thought, your whole biology - physical, emotional, and chemical - must be changed.
            </p>
             <p class=''>
-       <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest and secret formulas to hack your body and brain and unlock your potentials.
+       <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest methods to heal and enhance your biology to unlock your potentials.
             </p>
             <p class='lead'>
               Download the 10 easiest and most effective biohacks to enhance your life today.
@@ -176,7 +176,6 @@ Breathing box is a technique to manage your stress in any stressful situations. 
                   <p class="text-white text-sm mb-0 text-capitalize">Lean & strong</p>
                 </a>
               </div>
-              
             </div>
           </div>
         </div>
@@ -197,7 +196,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
     Popular products
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
-            Certified organic, healthy and delicious
+      {globals.values}
             </h5>
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">

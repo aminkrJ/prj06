@@ -134,7 +134,8 @@ class Shop extends Component {
       if(tag){
       return (
         <div class='col-12 text-center'>
-          <h4 class='text-slab'>{tag.short_description}</h4>
+          <h4 class='text-uppercase'>{tag.name}</h4>
+          <h5 class='text-center font-weight-light mt-2 mb-0 text-muted'>{tag.short_description}</h5>
           <p dangerouslySetInnerHTML={{__html: tag.description}} />
           <hr />
         </div>

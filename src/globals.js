@@ -4,6 +4,7 @@ const globals = {
   title: "Life Elixir | Nutrition to improve your mental and physical well-being",
   description: "Nutrition to help individuals rise above stress, overwhelm, and struggle and promote mental acuteness, well being and performance.",
   mission: "",
+  values: "Natural, plant-based, organic, effective, and delicious",
   keywords: "nutricombo, life elixir, food for brain, fitness, health, smoothies, healthy shakes",
   nutricombo: {
     tagline: "Astronauts love it",

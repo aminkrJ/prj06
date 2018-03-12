@@ -31,7 +31,7 @@ class Bundles extends Component {
                 <span class="text-capitalize">{product.name}</span>
               </Link>
               <div class='card-text text-sm'>
-              <p class="font-weight-light">{product.short_description}</p>
+              <p class="">{product.short_description}</p>
               </div>
               <a href="#" class="btn btn-primary btn-block mt-4" onClick={this.handleOrderNow.bind(this, product)}>Order Now</a>
             </div>
@@ -50,7 +50,7 @@ class Bundles extends Component {
       3 day NutriCombo Plan
           </h3>
           <h5 class="text-center font-weight-light mt-2 mb-0">
-      Make 6 ultimate brain&#43; all-in-one elixirs at home or office and measure your performance before and after
+      Make six NutriCombo at home or office
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
