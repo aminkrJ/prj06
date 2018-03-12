@@ -12,6 +12,9 @@ class ServingIdeas extends Component {
         <div class='col-4'>
           <h5 class='lead'>Latte</h5>
         </div>
+        <div class='col-4'>
+          <h5 class='lead'>Tea</h5>
+        </div>
       </div>
     )
   }
