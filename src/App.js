@@ -31,6 +31,7 @@ import Affiliate from './Affiliate';
 import MenuItem from './MenuItem';
 import ShopItem from './ShopItem';
 import Find from './Find';
+import Research from './Research';
 import api from "./Api.js"
 import globals from "./globals.js"
 
@@ -104,6 +105,7 @@ class App extends Component {
             featured={this.state.featured}
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/research" component={Research} />
           <Route exact path="/find_us" component={Find} />
           <Route exact path="/nutricombo" component={(props) => <NutriCombo {...props} 
             products={this.state.products}

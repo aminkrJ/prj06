@@ -89,8 +89,12 @@ class Home extends Component {
                       <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
       {globals.description}
                       </h2>
+                      <p class='mb-5 text-sm font-weight-light'>
+                      {globals.values}
+                      </p>
                       <p>
-                        <Link class='text-sm text-uppercase' to='/nutricombo'>Learn more</Link>
+                        <Link class='text-sm text-uppercase btn btn-primary mr-2' to='/shop'>Shop Now</Link>
+                        <Link class='text-sm text-uppercase' to='/research'>Learn More</Link>
                       </p>
                     </div>
                   </div>

@@ -15,7 +15,7 @@ class About extends Component {
         <div id="content">
           <div class="container">
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-            <h3 class="text-center font-weight-bold my-0 text-slab">
+            <h3 class="text-center my-0 text-uppercase">
       {globals.about.title}
             </h3>
             <hr class="mb-5 w-50 mx-auto" />
