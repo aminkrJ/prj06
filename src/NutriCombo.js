@@ -39,7 +39,7 @@ class NutriCombo extends Component {
 <div class="container padding-bottom-2x mb-2">
         <div class="row align-items-center padding-bottom-2x">
           <div class="col">
-            <h1 class="h2 text-slab">{globals.nutricombo.tagline}</h1>
+            <h1 class="h2 text-uppercase">{globals.nutricombo.tagline}</h1>
             <p>
       {globals.nutricombo.description}
       </p>

@@ -49,7 +49,7 @@ class Blog extends Component {
 <span class="date-m bg-primary">{moment(article.created_at).format("MMMM")}</span>
 <span class="date-d">{moment(article.created_at).format("D")}</span> </div>
               <div class="tags"></div>
-              <h4 class="text-slab timeline-item-title">
+              <h4 class="timeline-item-title">
                 <Link to={"/blog/" + article.slug}>{article.title}</Link>
               </h4>
               <p class="timeline-item-description">{article.description}</p>

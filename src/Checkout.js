@@ -227,19 +227,19 @@ class Checkout extends Component {
         <div class="row">
 
         <div class="col-md-8">
-          <h4 class="text-slab">
+          <h4 class="text-uppercase">
             Customer Information
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
             <CustomInput ref='email' type='email' placeholder='Email' name='email' />
           </div>
-          <h4 class="text-slab">
+          <h4 class="text-uppercase">
             Delivery Address
           </h4>
           <div class="mb-2 bg-faded p-3 rounded" id="">
             <ShippingAddress ref='shippingAddress' errors={this.state.errors} />
           </div>
-          <h4 class="text-slab">
+          <h4 class="text-uppercase">
             Payment Options
           </h4>
           <div id="payment-options" class="bg-faded p-3 rounded">

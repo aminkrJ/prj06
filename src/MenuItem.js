@@ -119,7 +119,7 @@ class MenuItem extends Component {
                     <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
                     </div>
   <p class="text-muted text-uppercase text-xs mb-0"><Link to={'/menu/categories/' + this.state.product.category.id} class="text-primary">{this.state.product.category.name}</Link></p>
-                    <h2 class="text-slab card-title mb-2">
+                    <h2 class="text-uppercase card-title mb-2">
                       {this.state.product.name}
                     </h2>
                     <hr class="my-3" />

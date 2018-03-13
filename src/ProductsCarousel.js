@@ -22,7 +22,7 @@ class ProductsCarousel extends Component {
             <div class="card-body">
               <small class='text-muted text-uppercase'>{product.category.name}</small>
               <Link to={"/shop/" + product.slug}>
-                <h4 class="text-slab card-title">{product.name}</h4>
+                <h4 class="text-uppercase card-title">{product.name}</h4>
               </Link>
               <p>
                 {product.short_description}

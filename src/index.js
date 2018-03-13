@@ -20,7 +20,7 @@ axios.defaults.baseURL = `${process.env.REACT_APP_API_URL}/api/v1`
 
 WebFont.load({
   google: {
-    families: ['Open+Sans:400,700,300', 'Rambla:400,700', 'Calligraffitti', 'Roboto+Slab:400,700']
+    families: ['Open+Sans:400,700,300', 'Roboto:400,700']
   }
 });
 

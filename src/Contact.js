@@ -12,7 +12,7 @@ class Contact extends Component {
             <div class="row">
               <div class="col-md-3">
                 <div class="nav-section-menu">
-      <h4 class="text-slab">We love to hear from you</h4>
+      <h4 class="">We love to hear from you</h4>
       Interested in becoming a stockist or have any questions about our catering services or our products please contact us. 
                 </div>
               </div>

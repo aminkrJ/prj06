@@ -79,7 +79,7 @@ class Totals extends Component {
         <hr class="my-3 ml-0 ml-md-auto mr-md-0" />
         <div class="row">
           <div class="col-md-8">
-            <h3 class="text-slab">Total</h3>
+            <h3 class="">Total</h3>
           </div>
           <div class="col-md-4 text-right">
             <h3 class="text-primary">${this.state.total}</h3>

@@ -152,7 +152,7 @@ class ShopItem extends Component {
                   <div class="card-body p-0 px-4 pos-relative">
                     <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
                     </div>
-                    <h2 class="text-capitalize text-slab card-title mb-2">
+                    <h2 class="text-capitalize text-uppercase card-title mb-2">
                       {this.state.product.name}
                     </h2>
                     <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="lead" />
@@ -211,7 +211,7 @@ class ShopItem extends Component {
             </div>
             <div class="col-lg-12">
               <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
-              <h3 className="text-center text-slab font-weight-bold my-0">
+              <h3 className="text-center text-uppercase font-weight-bold my-0">
       You might also like
               </h3>
               <hr className="mb-2 w-50 mx-auto" />
