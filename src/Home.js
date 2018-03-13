@@ -86,7 +86,7 @@ class Home extends Component {
       {globals.tagline}
                       </h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <h2 class="h4 tp-caption mb-4 pb-1 font-weight-light text-black tagline">
+                      <h2 class="h4 tp-caption mb-4 pb-1 text-black tagline">
       {globals.description}
                       </h2>
                       <p class='mb-5 text-sm font-weight-light'>
