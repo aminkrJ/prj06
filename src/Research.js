@@ -16,19 +16,21 @@ class Research extends Component {
               <p>Thoughts are an emergent property of our biology. To think smarter thoughts, your whole biology - physical, emotional, and chemical - must be changed.
               </p>
               <a class='' name='nootropics'><h5 class='text-uppercase'>natural Nootropics</h5></a>
-              <p></p>
+              <p>Outstanding all-natural plant, herb and root extracts that can improve your memory, elevate your mood, and enhance your learning capacity.</p>
               <a class='' name='adaptogens'><h5 class='text-uppercase'>Adaptogens</h5></a>
-              <p></p>
+              <p>People who experience the fight-or-flight responses, cortisol rise which stimulates your sympathetic nervous system and your adrenal glands, on a regular basis, many times a day, may experience a state of constant stress, which can burn out your adrenal glands, stress your digestive tract and cause you to age more rapidly. Adaptogens are a unique class of healing plants help you respond to any influence or stressor, normalizing your physiological functions.</p>
               <a class='' name='brain-fats'><h5 class='text-uppercase'>Brain Fats</h5></a>
-              <p></p>
+              <p>
+     Fueling your brain with fat, in particular, encourages ketosis, which provides energy to the brain and helps protect against brain diseases, among other health benefits. A diet high in monounsaturated fats can also increase production of acetylcholine, a neurotransmitter that plays an important role in learning and memory. 
+              </p>
               <a class='' name='gut-health'><h5 class='text-uppercase'>Gut Health</h5></a>
-              <p></p>
+              <p>A troubled intestine can send signals to the brain, just as a troubled brain can send signals to the gut. Therefore, a person's stomach or intestinal distress can be the cause or the product of anxiety, stress, or depression. That's because the brain and the gastrointestinal (GI) system are intimately connected.</p>
               <a class='' name='antioxidants'><h5 class='text-uppercase'>Antioxidants</h5></a>
-              <p></p>
+              <p>As your brain ages, it is more difficult for important nerve cells to protect themselves against highly reactive, rogue compounds called free radicals. Every cell in your body manufactures thousands of these unstable oxygen molecules every day. Free radicals damage cells (a process called oxidative stress), which contributes to age-related degenerative diseases, including mental decline.</p>
               <a class='' name='clean-protein'><h5 class='text-uppercase'>Clean Protein</h5></a>
-              <p></p>
-              <a class='' name='detox'><h5 class='text-uppercase'>Detox</h5></a>
-              <p></p>
+              <p>Proteins optimize brain function and are essential for getting nutrients to your brain cells in order to maintain a healthy heart/brain balance, and also brain regulation.</p>
+              <a class='' name='detox'><h5 class='text-uppercase'>Detox body & brain</h5></a>
+              <p>Not only is detoxing your body improtant for brain function but also brain itself has a fascinating maintenance system called the glymphatic system, which uses the cells’ mitochondria to remove cellular waste from the brain.</p>
               <h4 class='text-uppercase text-center'>Superfoods</h4>
               <hr class="w-50 ml-0 mb-3 mx-auto" />
               <a class='' name='coconut'><h5 class='text-uppercase'>Coconut</h5></a>
