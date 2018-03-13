@@ -67,7 +67,9 @@ class Shop extends Component {
           <div style={{border: 0}} className="card product-card overlay-hover mb-4">
           {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-danger text-white text-uppercase'>On Sale</div> : null}
             <div className="pos-relative">
+              <Link to={'/shop/' + product.slug}>
         <img src={product.photo.original} class='img-fluid'/>
+              </Link>
             </div>
             <div className="card-body">
               <small class='text-muted text-uppercase'>{product.category.name}</small>
