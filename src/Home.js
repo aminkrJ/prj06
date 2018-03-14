@@ -100,7 +100,6 @@ class Home extends Component {
                     </div>
                   </div>
                   <div class="col-lg-6 mt-3 mt-md-0 text-center">
-                    <img src={Bundle} class='img-fluid'/>
                   </div>
                 </div>
               </div>
