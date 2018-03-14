@@ -6,6 +6,9 @@
   background-size:  cover;
   background-color: #999;
 }
+.owl-theme .owl-nav.disabled + .owl-dots{
+  margin-top: 0 !important;
+}
 .gut-health{
   background-image: url(./img/gut-health.jpg);
   background-size: cover;

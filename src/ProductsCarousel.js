@@ -20,7 +20,7 @@ class ProductsCarousel extends Component {
             <Link to={"/shop/" + product.slug}>
               <img src={product.photo.original} className="card-img-top img-fluid" />
             </Link>
-            <div class="card-body">
+            <div class="pb-0 card-body">
               <small class='text-muted text-uppercase'>{product.category.name}</small>
               <Link to={"/shop/" + product.slug}>
                 <h5 class="text-uppercase card-title text-black">{product.name}</h5>

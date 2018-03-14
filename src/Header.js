@@ -80,6 +80,9 @@ class Header extends Component {
                         <NavLink href="/research">Research</NavLink>
                       </NavItem>
                       <NavItem>
+                        <NavLink href="/blog">Blog</NavLink>
+                      </NavItem>
+                      <NavItem>
                         <NavLink href="/contact">Contact us</NavLink>
                       </NavItem>
                     </Nav>
