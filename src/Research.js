@@ -48,7 +48,7 @@ class Research extends Component {
               <a class='' name='chia-seed'><h5 class='text-uppercase'>Chia seeds</h5></a>
               <p></p>
               <a class='' name='raw-cacao'><h5 class='text-uppercase'>Raw Cacao</h5></a>
-              <p></p>
+              <p>Sun-dried raw cacao powder is made by grinding up raw cacao beans, then extracting the pure oil in a cold pressing process. The result is a silky smooth powder with deep sensual notes of flavour.</p>
               <a class='' name='beetroot'><h5 class='text-uppercase'>beetroot</h5></a>
               <p></p>
               <a class='' name='barley-grass'><h5 class='text-uppercase'>Barely grass</h5></a>
@@ -61,6 +61,7 @@ class Research extends Component {
               <p></p>
               <h4 class='text-uppercase text-center'>Medicinal mushrooms</h4>
               <hr class="w-50 ml-0 mb-3 mx-auto" />
+              <p>We use dual extracted mushrooms 10:1. This process is required in order to release the bioactive ingredients of mushroom and prepare it for human consumption.</p>
               <a class='' name='lions-mane-mushroom'><h5 class='text-uppercase'>Lion's mane mushroom</h5></a>
               <p></p>
               <a class='' name='chaga-mushroom'><h5 class='text-uppercase'>Chaga mushroom</h5></a>

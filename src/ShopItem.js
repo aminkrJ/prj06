@@ -202,7 +202,7 @@ class ShopItem extends Component {
                     </div>
 
                 <div class='my-2 text-xs font-weight-bold text-uppercase'>{this.renderProps()}</div>
-<div class='text-xs my-2 text-muted'></div>
+<div class='text-xs my-2 text-muted'>Note: These statements have not been evaluated by food and drug administration. This product is not intended to diagnose, treat, cure or prevent any disease.</div>
                   </div>
                 </div>
               </div>
