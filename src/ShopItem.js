@@ -93,6 +93,16 @@ class ShopItem extends Component {
   }
 
   renderIngredients() {
+    var ingredients = this.state.product.ingredients.map((i, index) => {
+      return (
+        <span>
+          <a class='text-black' href={"https://www.lifelixir.com.au/research#" + i.info_link} target='_blank'>{i.name}</a>
+          {i.extract ? <span class=''>&#176;</span> : null}
+          {this.state.product.ingredients.length - 1 !== index ? <span>, </span> : null}
+        </span>
+      )
+    })
+
     if(this.state.product.category.name === "Bundles"){
       return(
         <div></div>
@@ -106,8 +116,9 @@ class ShopItem extends Component {
           <div class='collapse show'>
             <div class='mb-2'>
               <div class="text-sm">
-                {this.state.product.ingredients.map((i) => {return i.name}).join(', ')}
+        {ingredients}
               </div>
+              <p class='mt-2 mb-0 text-muted'>&#176; <span class='text-xs'>Extract</span></p>
             </div>
           </div>
         </div>
