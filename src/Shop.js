@@ -80,7 +80,7 @@ class Shop extends Component {
               </Link>
 {product.before_discount_price !== 0 ? <span> <del class='text-danger'>${product.before_discount_price}</del> / </span> : null}
                 ${product.price}
-              <p style={{"line-height": "1em"}} class='text-sm'>{product.short_description}</p>
+              <p class='text-sm'>{product.short_description}</p>
               <p className="card-text">
       {this.renderIngredients(product)}
         </p>
