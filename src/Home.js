@@ -17,6 +17,7 @@ import ServingIdeas from './ServingIdeas'
 import Bundles from './Bundles'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
+import Bundle from './img/bundle.png'
 import Instruction from './img/instructions.png'
 import EffectiveFormula from './img/effective-formula.png'
 
@@ -86,10 +87,10 @@ class Home extends Component {
       {globals.tagline}
                       </h1>
                       <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <h2 class="h4 tp-caption mb-4 pb-1 text-black tagline">
+                      <h2 class="h4 font-weight-normal tp-caption mb-4 pb-1 text-black tagline">
       {globals.description}
                       </h2>
-                      <p class='mb-5 text-sm font-weight-light'>
+                      <p class='mb-5 text-sm'>
                       {globals.values}
                       </p>
                       <p>
@@ -99,6 +100,7 @@ class Home extends Component {
                     </div>
                   </div>
                   <div class="col-lg-6 d-none d-lg-block mt-3 mt-md-0 text-center">
+      <img src={Bundle} class='img-fluid' />
                   </div>
                 </div>
               </div>
