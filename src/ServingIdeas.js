@@ -5,15 +5,18 @@ class ServingIdeas extends Component {
 
   render() {
     return (
-      <div class='row'>
-        <div class='col-4'>
-          <h5 class='lead'>Smoothie</h5>
+      <div class='row text-sm justify-content-md-center'>
+        <div class='col'>
+          <h6 class='text-uppercase'>Smoothie</h6>
+          <p>Blend it with milk and fruits</p>
         </div>
-        <div class='col-4'>
-          <h5 class='lead'>Latte</h5>
+        <div class='col'>
+          <h6 class='text-uppercase'>Latte</h6>
+          <p>Mix it with frothed milk</p>
         </div>
-        <div class='col-4'>
-          <h5 class='lead'>Tea</h5>
+        <div class='col'>
+          <h6 class='text-uppercase'>Brew</h6>
+          <p>Brew it</p>
         </div>
       </div>
     )

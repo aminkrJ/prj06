@@ -184,9 +184,7 @@ class ShopItem extends Component {
                         Serving ideas
                         </div>
                         <div class='collapse show'>
-                          <div class='mb-2'>
-                          <ServingIdeas />
-                          </div>
+                    <p dangerouslySetInnerHTML={{__html: this.state.product.serving_idea}} class="text-sm" />
                         </div>
                       </div>
                       <div class="card">

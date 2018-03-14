@@ -184,19 +184,9 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
         </div>
         </div>
-        <div class='bg-light py-1 py-lg-3'>
-          <hr class='hr-lg mt-0 mb-3 w-10 mx-auto hr-primary' />
-          <div class='container'>
-            <h3 class='text-center text-uppercase font-weight-bold my-0'>
-                Serving ideas
-            </h3>
-            <h5></h5>
-            <ServingIdeas />
-          </div>
-        </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-uppercase font-weight-bold my-0">
-    Popular products
+    Featured products
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
       {globals.values}
