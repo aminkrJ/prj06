@@ -184,7 +184,6 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
         </div>
         </div>
-        <Bundles history={this.props.history} addToCart={this.props.addToCart} products={this.props.bundles}/>
         <div class='bg-light py-1 py-lg-3'>
           <hr class='hr-lg mt-0 mb-3 w-10 mx-auto hr-primary' />
           <div class='container'>
