@@ -64,7 +64,7 @@ class Shop extends Component {
     return products.map((product, index) => {
       return(
         <div key={index} className="col-lg-4">
-          <div style={{border: 0}} className="card product-card overlay-hover mb-4">
+          <div className="card border-0 product-card overlay-hover mb-4">
           {product.before_discount_price !== 0 ? <div class='card-ribbon card-ribbon-top card-ribbon-left bg-danger text-white text-uppercase'>On Sale</div> : null}
             <div className="pos-relative">
               <Link to={'/shop/' + product.slug}>
@@ -80,7 +80,7 @@ class Shop extends Component {
               </Link>
 {product.before_discount_price !== 0 ? <span> <del class='text-danger'>${product.before_discount_price}</del> / </span> : null}
                 ${product.price}
-              <p style={{"line-height": "1em"}}><small>{product.short_description}</small></p>
+              <p style={{"line-height": "1em"}} class='text-sm'>{product.short_description}</p>
               <p className="card-text">
       {this.renderIngredients(product)}
         </p>

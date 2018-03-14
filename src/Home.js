@@ -194,7 +194,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           <hr className="mb-2 w-50 mx-auto" />
           <div class="container">
             <div className="row p-3 py-lg-1">
-              <ProductsCarousel shop={this.props.featured} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
+              <ProductsCarousel shop={this.props.featured} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} withAddBtn={false} />
             </div>
           </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
