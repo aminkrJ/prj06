@@ -37,7 +37,7 @@ class About extends Component {
               </div>
               <div class='col'>
               <h4 class='text-uppercase'>Effectiveness</h4>
-              <p>Not getting the promised result from a healthy product? Not all products created equally, not even close. We are dedicated to the best processes for making each ingredient and right dosages to make effective formula.</p>
+              <p>Not getting the promised result from a healthy product? Not all products created equally, not even close. We are dedicated to find the highest quality ingredients and right dosages to make effective formula for busy professionals.</p>
               </div>
             </div>
           </div>
