@@ -11,7 +11,6 @@ class About extends Component {
   render() {
     return (
       <div className="">
-        <PageTitle title="About us" location={ {title: "About us", path:"/about"} } />
         <div id="content">
           <div class="container">
             <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
@@ -25,6 +24,7 @@ class About extends Component {
       {globals.description}
                 </p>
                 <p>{globals.about.p1}</p>
+                <p>Our philosophy is to consume clean and enhanced daily routine foods like coffee, chocolate, and protein and also integrating nutrition that we lack in a normal diet for optimum health and performance.</p>
                 <p class='lead'>{globals.about.title2}</p>
                 <p class="">
       {globals.about.p2}

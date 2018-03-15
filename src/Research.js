@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Benefits from './Benefits'
+
 class Research extends Component {
 
   render() {
@@ -25,10 +27,8 @@ class Research extends Component {
               </p>
               <a class='' name='gut-health'><h5 class='text-uppercase'>Gut Health</h5></a>
               <p>A troubled intestine can send signals to the brain, just as a troubled brain can send signals to the gut. Therefore, a person's stomach or intestinal distress can be the cause or the product of anxiety, stress, or depression. That's because the brain and the gastrointestinal (GI) system are intimately connected.</p>
-              <a class='' name='antioxidants'><h5 class='text-uppercase'>Antioxidants</h5></a>
-              <p>As your brain ages, it is more difficult for important nerve cells to protect themselves against highly reactive, rogue compounds called free radicals. Every cell in your body manufactures thousands of these unstable oxygen molecules every day. Free radicals damage cells (a process called oxidative stress), which contributes to age-related degenerative diseases, including mental decline.</p>
               <a class='' name='clean-protein'><h5 class='text-uppercase'>Clean Protein</h5></a>
-              <p>Proteins optimize brain function and are essential for getting nutrients to your brain cells in order to maintain a healthy heart/brain balance, and also brain regulation.</p>
+              <p>The body breaks down proteins into building blocks called amino acids. Amino acids are a major component in the hundreds of brain chemicals known as neurotransmitters. Neurotransmitters enable brain cells to communicate with each other. Examples of common neurotransmitters include dopamine, serotonin, GABA, norepinephrine, and endorphins.</p>
               <a class='' name='detox'><h5 class='text-uppercase'>Detox body & brain</h5></a>
               <p>Not only is detoxing your body improtant for brain function but also brain itself has a fascinating maintenance system called the glymphatic system, which uses the cells’ mitochondria to remove cellular waste from the brain.</p>
               <h4 class='text-uppercase text-center'>Superfoods</h4>
@@ -89,62 +89,9 @@ class Research extends Component {
               <a class='' name='lactobacillus'><h5 class='text-uppercase'>Lactobacillus</h5></a>
               <p></p>
             </div>
-            
-
             <div class="col-md-6">
-              <div class="row no-gutters text-center mb-4">
-                <div class="col-md-6  p-1">
-                  <a href= "/shop/tags/2" class="py-6 smart-drugs px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                    <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-        nootropics
-                    </h3>
-                    <p class="text-white text-sm mb-0 text-capitalize">Natural & herbal brain enhancers</p>
-                  </a>
-                </div>
-                <div class="col-md-6  p-1">
-                  <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                    <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-        Adaptogens
-                    </h3>
-                    <p class="text-white text-sm mb-0 text-capitalize">Reduce stress</p>
-                  </a>
-                </div>
-                <div class="col-md-6  p-1">
-                  <a href="/shop" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
-                    <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-                      brain fats
-                    </h3>
-                    <p class="text-white text-sm mb-0 text-capitalize">The Rocket fuel</p>
-                  </a>
-                </div>
-                <div class="col-md-6  p-1">
-                  <a href="/shop/tags/5" class="py-6 gut-health px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                    <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-        Gut health
-                    </h3>
-                    <p class="text-white text-sm mb-0 text-capitalize">The second brain</p>
-                  </a>
-                </div>
-                <div class="col-md-6  p-1">
-                  <a href="/shop/tags/3" class="py-6 antioxidant px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                    <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-        Antioxidant
-                    </h3>
-                    <p class="text-white text-sm mb-0 text-capitalize">Anti cancer & anti ageing</p>
-                  </a>
-                </div>
-                <div class="col-md-6  p-1">
-                  <a href="/shop/tags/1" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                    <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-        Clean protein
-                    </h3>
-                    <p class="text-white text-sm mb-0 text-capitalize">Lean & strong</p>
-                  </a>
-                </div>
-              </div>
+              <Benefits />
             </div>
-
-
           </div>
         </div>
       </div>

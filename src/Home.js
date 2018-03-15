@@ -18,6 +18,7 @@ import Subscribe from './Subscribe'
 import Modal from './Modal'
 import ServingIdeas from './ServingIdeas'
 import Bundles from './Bundles'
+import Benefits from './Benefits'
 
 import Bowl from './img/sunshine-smoothie-bowl.png'
 import Bundle from './img/bundle.png'
@@ -107,13 +108,34 @@ class Home extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 mt-3 mt-md-0 text-center">
+                </div>
+              </div>
+              <div>
+                <div className="bg-white main-bg px-3 py-3 py-lg-5 flex-valign">
+                  <div class="container padding-top-3x">
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-lg-6 padding-bottom-1x text-md-left text-center">
+                        <div class="from-bottom">
+                          <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
+          {globals.tagline}
+                          </h1>
+                          <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
+                          <h2 class="h4 font-weight-normal tp-caption mb-4 pb-1 text-black tagline">
+          {globals.description}
+                          </h2>
+                          <p>
+                            <Link class='text-sm text-uppercase btn btn-primary mr-2' to='/shop'>Shop Now</Link>
+                            <Link class='text-sm text-uppercase' to='/research'>Learn More</Link>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 mt-3 mt-md-0 text-center">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+              </React_Bootstrap_Carousel>
         <div id="content" className="p-0">
           <div class="container">
           <div class="row mt-4">
@@ -140,56 +162,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
 </p>
           </div>
           <div class="col-lg-8 col-xl-7">
-            <div class="row no-gutters text-center mb-4">
-              <div class="col-md-6  p-1">
-                <a href= "/shop/tags/2" class="py-6 smart-drugs px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      nootropics
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Natural & herbal brain enhancers</p>
-                </a>
-              </div>
-              <div class="col-md-6  p-1">
-                <a href="/shop/tags/12" class="py-6 ef-bg-02 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                  <h3 class="text-white my-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Adaptogens
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Reduce stress</p>
-                </a>
-              </div>
-              <div class="col-md-6  p-1">
-                <a href="/shop" class="py-6 ef-bg-03 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-4 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-                    brain fats
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">The Rocket fuel</p>
-                </a>
-              </div>
-              <div class="col-md-6  p-1">
-                <a href="/shop/tags/5" class="py-6 gut-health px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Gut health
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">The second brain</p>
-                </a>
-              </div>
-              <div class="col-md-6  p-1">
-                <a href="/shop/tags/3" class="py-6 antioxidant px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Antioxidant
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Anti cancer & anti ageing</p>
-                </a>
-              </div>
-              <div class="col-md-6  p-1">
-                <a href="/shop/tags/1" class="py-6 ef-bg-04 px-3 flex-valign flex-ew overlay overlay-blue-dark overlay-op-5 rounded pos-relative">
-                  <h3 class="text-white mb-0 text-uppercase font-weight-bold text-letter-spacing-sm">
-      Clean protein
-                  </h3>
-                  <p class="text-white text-sm mb-0 text-capitalize">Lean & strong</p>
-                </a>
-              </div>
-            </div>
+            <Benefits />
           </div>
         </div>
         </div>
