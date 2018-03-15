@@ -6,6 +6,14 @@
   background-size:  cover;
   background-color: #999;
 }
+/* The plugin I am using for carousel is using bootstrap 3 however my bootstrap version is 4
+ * I wrote the following styles to make it compatible. TODO: write the plugin with v4
+ * */
+.carousel-inner > .next, .carousel-inner > .prev{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 .owl-theme .owl-nav.disabled + .owl-dots{
   margin-top: 0 !important;
 }

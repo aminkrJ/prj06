@@ -4,6 +4,9 @@ import NProgress from 'nprogress';
 import {render} from 'react-dom';
 import _ from 'underscore';
 
+import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
+import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
+
 import Carousel from './Carousel';
 import Process from './Process';
 import DeliverySearch from './DeliverySearch'
@@ -76,27 +79,32 @@ class Home extends Component {
   render() {
     return (
       <div className="">
-        <div id="highlighted">
-          <div className="bg-white main-bg px-3 py-3 py-lg-5 flex-valign">
-            <div class="item">
-              <div class="container padding-top-3x">
-                <div class="row justify-content-center align-items-center">
-                  <div class="col-lg-6 padding-bottom-1x text-md-left text-center">
-                    <div class="from-bottom">
-                      <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
-      {globals.tagline}
-                      </h1>
-                      <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
-                      <h2 class="h4 font-weight-normal tp-caption mb-4 pb-1 text-black tagline">
-      {globals.description}
-                      </h2>
-                      <p class='mb-5 text-sm'>
-                      {globals.values}
-                      </p>
-                      <p>
-                        <Link class='text-sm text-uppercase btn btn-primary mr-2' to='/shop'>Shop Now</Link>
-                        <Link class='text-sm text-uppercase' to='/research'>Learn More</Link>
-                      </p>
+              <React_Bootstrap_Carousel
+                animation={true}
+                slideshowSpeed={7000}
+                className="carousel-fade"
+              >
+              <div style={{}}>
+                <div className="bg-white main-bg px-3 py-3 py-lg-5 flex-valign">
+                  <div class="container padding-top-3x">
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-lg-6 padding-bottom-1x text-md-left text-center">
+                        <div class="from-bottom">
+                          <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
+          {globals.tagline}
+                          </h1>
+                          <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
+                          <h2 class="h4 font-weight-normal tp-caption mb-4 pb-1 text-black tagline">
+          {globals.description}
+                          </h2>
+                          <p>
+                            <Link class='text-sm text-uppercase btn btn-primary mr-2' to='/shop'>Shop Now</Link>
+                            <Link class='text-sm text-uppercase' to='/research'>Learn More</Link>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 mt-3 mt-md-0 text-center">
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-6 mt-3 mt-md-0 text-center">
