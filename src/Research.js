@@ -30,7 +30,7 @@ class Research extends Component {
               <a class='' name='clean-protein'><h5 class='text-uppercase'>Clean Protein</h5></a>
               <p>The body breaks down proteins into building blocks called amino acids. Amino acids are a major component in the hundreds of brain chemicals known as neurotransmitters. Neurotransmitters enable brain cells to communicate with each other. Examples of common neurotransmitters include dopamine, serotonin, GABA, norepinephrine, and endorphins.</p>
               <a class='' name='detox'><h5 class='text-uppercase'>Detox body & brain</h5></a>
-              <p>Not only is detoxing your body improtant for brain function but also brain itself has a fascinating maintenance system called the glymphatic system, which uses the cells’ mitochondria to remove cellular waste from the brain.</p>
+              <p>Detoxification helps our body to get nutrition from the food we eat and get rid of toxins stored in our body. On the other hand, our brain has its own maintenance system called the glymphatic system, which uses the cells’ mitochondria to remove cellular waste from the brain. Cleansing your body and your brain from these contaminations can improve your brain function and overall well-being.</p>
               <h4 class='text-uppercase text-center'>Superfoods</h4>
               <hr class="w-50 ml-0 mb-3 mx-auto" />
               <a class='' name='coconut'><h5 class='text-uppercase'>Coconut</h5></a>
@@ -91,6 +91,18 @@ class Research extends Component {
             </div>
             <div class="col-md-6">
               <Benefits />
+              <h5>References</h5>
+              <ul class='text-sm list-unstyled mx-2'>
+               <li>[1] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5641835/' target='_blank'>Gut microbiota’s effect on mental health</a> <span class='text-xs'>2017 Sep 15</span></li>
+               <li>[2] <a href='https://www.ncbi.nlm.nih.gov/pubmed/25550456' target='_blank'>Gut microbes promote colonic serotonin production</a> <span class='text-xs'>2015 Apr 29</span></li>
+               <li>[3] <a href='https://www.ncbi.nlm.nih.gov/pubmed/28483500' target='_blank'>Probiotic Bifidobacterium longum reduces depression</a> <span class='text-xs'>2017 Aug 15</span></li>
+               <li>[4] <a href='http://www.pnas.org/content/108/38/16050' target='_blank'>Ingestion of Lactobacillus strain regulates emotional behavior</a> <span class='text-xs'>2011 Feb 27</span></li>
+               <li>[5] <a href='https://www.alzforum.org/news/research-news/brain-drain-glymphatic-pathway-clears-av-requires-water-channel' target='_blank'>"Glymphatic" Pathway Clears Aβ, Requires Water Channel</a> <span class='text-xs'>2012 Aug 17</span></li>
+               <li>[6] <a href='http://www.cell.com/cell-metabolism/abstract/S1550-4131%2813%2900454-3' target='_blank'>Inflammation-Induced Alteration of Astrocyte Mitochondrial ...</a> <span class='text-xs'>2013 Dec 03</span></li>
+               <li>[7] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636982' target='_blank'>The Glymphatic System – A Beginner's Guide</a> <span class='text-xs'>2015 May 07</span></li>
+               <li>[8] <a href='https://www.ncbi.nlm.nih.gov/pubmed/24409051' target='_blank'>Sleep, immunity and inflammation in gastrointestinal disorders</a> <span class='text-xs'>2013 Dec 28</span></li>
+               <li>[9] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20329590' target='_blank'>Essential fatty acids and human brain</a> <span class='text-xs'>2009 Dec 18</span></li>
+              </ul>
             </div>
           </div>
         </div>
