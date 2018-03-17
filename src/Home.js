@@ -86,17 +86,13 @@ class Home extends Component {
                 className="carousel-fade"
               >
               <div style={{}}>
-                <div className="bg-white main-bg px-3 py-3 py-lg-5 flex-valign">
+                <div className="bg-white main-bg px-3 py-3 py-lg-7 flex-valign">
                   <div class="container padding-top-3x">
                     <div class="row justify-content-center align-items-center">
                       <div class="col-lg-6 padding-bottom-1x text-md-left text-center">
                         <div class="from-bottom">
-                          <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
-          {globals.tagline}
-                          </h1>
-                          <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                           <h2 class="h4 font-weight-normal tp-caption mb-4 pb-1 text-black tagline">
-          {globals.description}
+          {globals.description2}
                           </h2>
                           <p>
                             <Link class='text-sm text-uppercase btn btn-primary mr-2' to='/shop'>Shop Now</Link>
@@ -111,17 +107,13 @@ class Home extends Component {
                 </div>
               </div>
               <div>
-                <div className="bg-white main-bg px-3 py-3 py-lg-5 flex-valign">
+                <div className="bg-white main-bg px-3 py-3 py-lg-7 flex-valign">
                   <div class="container padding-top-3x">
                     <div class="row justify-content-center align-items-center">
                       <div class="col-lg-6 padding-bottom-1x text-md-left text-center">
                         <div class="from-bottom">
-                          <h1 className="font-weight-bold text-black mb-2 h2 pt-1 text-uppercase">
-          {globals.tagline}
-                          </h1>
-                          <hr className="hr-inverse hr-lg w-100 mx-auto my-4" />
                           <h2 class="h4 font-weight-normal tp-caption mb-4 pb-1 text-black tagline">
-          {globals.description}
+          {globals.description2}
                           </h2>
                           <p>
                             <Link class='text-sm text-uppercase btn btn-primary mr-2' to='/shop'>Shop Now</Link>
