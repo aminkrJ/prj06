@@ -2,7 +2,7 @@ const globals = {
   brand: "Lifelixir",
   tagline: "Brain on NutriCombo",
   title: "Life Elixir | Brain on NutriCombo",
-  description2: "Boosting mental function with effective nutrition and cutting-edge technologies",
+  description2: "Nutrition and techniques to enhance mental fitness, cognitive functions and emotional health.",
   description: "Nutrition to help individuals rise above stress, overwhelm, and struggle and promote mental acuteness, well being and performance.",
   mission: "",
   values: "Natural, plant-based, organic, effective, and delicious",
