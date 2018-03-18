@@ -127,7 +127,12 @@ class App extends Component {
           <Route exact path="/thanks" component={Thanks} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/legal" component={Legal} />
-          <Route exact path='/recipes/:slug' component={(props) => <MenuItem {...props} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>} />
+          <Route exact path='/nutricombo/:slug' component={(props) => <MenuItem {...props}
+            dropFromCart={this.props.dropFromCart}
+            cart={this.props.cart}
+            featured={this.state.featured}
+            addToCart={this.props.addToCart}
+            removeFromCart={this.props.removeFromCart}/>} />
           <Route exact path='/shop' component={(props) => <Shop {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/shop/categories/:category_id' component={(props) => <Shop {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />
           <Route exact path='/shop/tags/:tag_id' component={(props) => <Shop {...props} products={this.state.products} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} /> } />

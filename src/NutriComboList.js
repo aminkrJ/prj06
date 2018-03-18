@@ -32,10 +32,14 @@ class NutriComboList extends Component {
       recipesInCategory.map((recipe, index) => {
         return (
           <div class='col-md-3 card product border-0' key={index}>
+            <Link to={'nutricombo/' + recipe.slug}>
             <img src={recipe.photo.original} class='card-img-top img-fluid' alt={recipe.title}/>
+            </Link>
             <div class='card-body'>
             <div class='card-title'>
-            <h5 class='text-uppercase'>{recipe.title}</h5>
+            <Link to={'nutricombo/' + recipe.slug}>
+            <h5 class='text-uppercase text-black'>{recipe.title}</h5>
+            </Link>
             </div>
             <div class='card-subtitle'>
             <p class="text-sm text-muted">{recipe.short_description}</p>
