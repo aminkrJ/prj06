@@ -177,7 +177,7 @@ class ShopItem extends Component {
                         </h4>
                       </div>
                       <div class='col-auto'>
-                        <h4 class='font-weight-light my-2'>{this.state.product.category.name === 'Bundles' ? null : <span>{this.state.product.weight}g</span>}</h4>
+                        <h4 class='font-weight-light my-2'>{this.state.product.category.name === 'Bundles' ? null : <span>{this.state.product.weight}{this.state.product.unit}</span>}</h4>
                       </div>
                       <div class='col-auto'>
                         <AddToCartButton class='btn btn-primary m-0' product={this.state.product} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
