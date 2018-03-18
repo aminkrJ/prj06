@@ -10,7 +10,7 @@ class Research extends Component {
       <div id="content">
         <div class="container">
           <h2 class="text-center my-0 text-uppercase">
-    Think smarter thoughts
+    Think smarter
           </h2>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row">
