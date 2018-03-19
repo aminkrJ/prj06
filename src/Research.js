@@ -76,7 +76,9 @@ class Research extends Component {
               <p></p>
               <h4 class='text-uppercase text-center'>Functional herbs</h4>
               <hr class="w-50 ml-0 mb-3 mx-auto" />
-              <a class='' name='guto-kola'><h5 class='text-uppercase'>Guto Kola</h5></a>
+              <a class='' name='guto-kola'><h5 class='text-uppercase'>Guto kola</h5></a>
+              <p></p>
+              <a class='' name='milk-thistle'><h5 class='text-uppercase'>Milk thistle</h5></a>
               <p></p>
               <a class='' name='turmeric'><h5 class='text-uppercase'>Turmeric</h5></a> <p></p> <a class='' name='cinnamon'><h5 class='text-uppercase'>Cinnamon</h5></a>
               <p></p>
@@ -86,7 +88,7 @@ class Research extends Component {
               <p></p>
               <a class='' name='curcumin'><h5 class='text-uppercase'>Curcumin</h5></a>
               <p></p>
-              <a class='' name='guto-kola'><h5 class='text-uppercase'>Gotu Kola</h5></a>
+              <a class='' name='guto-kola'><h5 class='text-uppercase'>Gotu kola</h5></a>
               <p></p>
               <a class='' name='ginko-leaf'><h5 class='text-uppercase'>Ginko leaf</h5></a>
               <p></p>
@@ -111,6 +113,7 @@ class Research extends Component {
                <li>[8] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636982' target='_blank'>The Glymphatic System – A Beginner's Guide</a> <span class='text-xs'>2015 May 07</span></li>
                <li>[9] <a href='https://www.ncbi.nlm.nih.gov/pubmed/24409051' target='_blank'>Sleep, immunity and inflammation in gastrointestinal disorders</a> <span class='text-xs'>2013 Dec 28</span></li>
                <li>[10] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20329590' target='_blank'>Essential fatty acids and human brain</a> <span class='text-xs'>2009 Dec 18</span></li>
+               <li>[11] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20564545' target='_blank'>Milk thistle in liver diseases</a> <span class='text-xs'>2009 Dec 18</span></li>
               </ul>
             </div>
           </div>
