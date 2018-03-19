@@ -48,7 +48,7 @@ class Post extends Component {
           <div class="col-md-9">
               <div class="row blog-post">
                 <div class="col-md-1 date-md">
-                  <div class="date-wrapper"> <span class="date-m bg-primary">{moment(this.state.post.updated_at).format("MMMM")}</span> <span class="date-d">{moment(this.state.post.updated_at).format("DD")}</span>
+                  <div class="date-wrapper"> <span class="date-m bg-primary">{moment(this.state.post.updated_at).format("MMM")}</span> <span class="date-d">{moment(this.state.post.updated_at).format("DD")}</span>
         </div>
                 </div>
                 <div class="col-md-11">

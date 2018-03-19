@@ -46,7 +46,7 @@ class Blog extends Component {
             </div>
             <div class="mt-4">
               <div class="date-wrapper date-wrapper-horizontal">
-<span class="date-m bg-primary">{moment(article.created_at).format("MMMM")}</span>
+<span class="date-m bg-primary">{moment(article.updated_at).format("MMMM")}</span>
 <span class="date-d">{moment(article.created_at).format("D")}</span> </div>
               <div class="tags"></div>
               <h4 class="timeline-item-title">
@@ -74,15 +74,11 @@ class Blog extends Component {
     <div id="content">
       <div class="container">
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-12">
             <div class="blog-roll blog-grid">
               <div class="row">
               {this.renderArticles()}
               </div>
-            </div>
-          </div>
-          <div class="col-md-3 sidebar-right">
-            <div class="mb-4">
             </div>
           </div>
         </div>
