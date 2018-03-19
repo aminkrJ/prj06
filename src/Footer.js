@@ -40,7 +40,7 @@ class Footer extends Component {
       <div class="container"> <div class="row"> <div class="col-lg-4"> <h3 class="text-white text-uppercase font-weight-bold"> Life<span class="text-primary">Elixir</span> </h3>
       <p class="text-sm">
 
-Nutritions your competitors consume to be one step ahead of the game.
+Nutrition and techniques your competitors employ to be ahead of the game.
 </p>
       <address>
         <ul class="list-unstyled text-sm">
