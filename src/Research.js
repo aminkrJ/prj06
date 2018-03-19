@@ -35,6 +35,8 @@ class Research extends Component {
               <hr class="w-50 ml-0 mb-3 mx-auto" />
               <a class='' name='coconut'><h5 class='text-uppercase'>Coconut</h5></a>
               <p></p>
+              <a class='' name='activated-charcoal'><h5 class='text-uppercase'>Activated charcoal</h5></a>
+              <p></p>
               <a class='' name='mct-oil'><h5 class='text-uppercase'>MCT oil</h5></a>
               <p></p>
               <a class='' name='acai-berries'><h5 class='text-uppercase'>Acai berries</h5></a>
@@ -58,6 +60,12 @@ class Research extends Component {
               <a class='' name='stevia'><h5 class='text-uppercase'>stevia</h5></a>
               <p></p>
               <a class='' name='hemp'><h5 class='text-uppercase'>hemp</h5></a>
+              <p></p>
+              <h4 class='text-uppercase text-center'>Green Algae</h4>
+              <hr class="w-50 ml-0 mb-3 mx-auto" />
+              <a class='' name='chlorella'><h5 class='text-uppercase'>Chlorella</h5></a>
+              <p></p>
+              <a class='' name='spirulina'><h5 class='text-uppercase'>Spirulina</h5></a>
               <p></p>
               <h4 class='text-uppercase text-center'>Medicinal mushrooms</h4>
               <hr class="w-50 ml-0 mb-3 mx-auto" />
