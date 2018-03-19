@@ -19,18 +19,12 @@ class ShopItem extends Component {
     super(props)
     this.state = {
       product: {photo: {original: ""}, recipes: [], tags: [], ingredients: [], category: {}},
-      activeTabIndex: 1,
       loaded: false
     }
   }
   
-  handleTabChange(index) {
-    this.setState({
-      activeTabIndex: index
-    })
-  }
-
-  componentDidMount() {
+  // SEO
+  componentWillMount() {
     NProgress.start()
 
     api.get("/products/" + this.props.match.params.slug)
@@ -128,18 +122,6 @@ class ShopItem extends Component {
         </div>
       )
     }
-  }
-
-  handleSubscribe(e) {
-    e.preventDefault()
-
-    render(
-      <Modal title="Newsletter">
-<p class='text-sm'><span class="font-weight-bold text-uppercase">Receive 20% off your first order</span> Plus be the first to know about our exclusive offers and deals, special events, and product releases!</p>
-        <Subscribe />
-      </Modal>
-      , document.getElementById('modal')).toggle()
-
   }
 
   render() {
