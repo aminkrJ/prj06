@@ -211,9 +211,6 @@ class ShopItem extends Component {
     You might also like
             </h3>
             <hr className="mb-2 w-50 mx-auto" />
-            {this.state.product.id ? <ProductsCarousel shop={_.filter(this.props.featured, (i) => {
-              return i.id !== this.state.product.id
-            })} withAddBtn={false} /> : null }
           </div>
         </div>
       </div>
