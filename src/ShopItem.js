@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import api from './Api.js'
+import axios from 'axios'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
 import AddToCartButton from './AddToCartButton.js';
@@ -17,15 +17,21 @@ class ShopItem extends Component {
   constructor(props){
     super(props)
     this.state = {
-      product: {photo: {original: ""}, recipes: [], tags: [], ingredients: [], category: {}}
+      product: {
+        photo: {original: ""},
+        recipes: [],
+        tags: [],
+        ingredients: [],
+        category: {}
+      }
     }
   }
-  
+
   // SEO
   componentWillMount() {
     NProgress.start()
 
-    api.get("/products/" + this.props.match.params.slug)
+    axios.get("/products/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 
