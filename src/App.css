@@ -6,6 +6,10 @@
   background-size:  cover;
   background-color: #999;
 }
+#nprogress .bar {
+  background: #FFF !important;
+}
+
 /* The plugin I am using for carousel is using bootstrap 3 however my bootstrap version is 4
  * I wrote the following styles to make it compatible. TODO: write the plugin with v4
  * */
