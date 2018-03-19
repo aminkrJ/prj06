@@ -8,10 +8,7 @@ import {Helmet} from "react-helmet"
 import {render} from 'react-dom';
 import _ from 'underscore'
 
-import Subscribe from './Subscribe'
-import Modal from './Modal'
 import ProductsCarousel from './ProductsCarousel'
-import ServingIdeas from './ServingIdeas'
 
 class ShopItem extends Component {
   constructor(props){
@@ -48,9 +45,11 @@ class ShopItem extends Component {
     return (
       this.state.product.tags.map((tag) => {
         return (
-          <Link to={"/shop/tags/" + tag.id} class='text-xs mb-sm-1 mr-3 text-uppercase text-black font-weight-light'>
-            {tag.name}
-          </Link>
+          <span key={tag.id}>
+            <Link to={"/shop/tags/" + tag.id} class='text-xs mb-sm-1 mr-3 text-uppercase text-black font-weight-light'>
+              {tag.name}
+            </Link>
+          </span>
         )
       })
     )
@@ -59,10 +58,10 @@ class ShopItem extends Component {
   renderProps() {
     return (
       <div class=''>
-      {this.state.product.vegan ? <span>Vegan, </span> : null}
-      {this.state.product.gluten_free ? <span>Gluten Free, </span> : null}
-      {this.state.product.non_gmo ? <span>Non GMO, </span> : null}
-      {this.state.product.organic ? <span>Certified Organic Ingredients</span> : null}
+        {this.state.product.vegan ? <span>Vegan, </span> : null}
+        {this.state.product.gluten_free ? <span>Gluten Free, </span> : null}
+        {this.state.product.non_gmo ? <span>Non GMO, </span> : null}
+        {this.state.product.organic ? <span>Certified Organic Ingredients</span> : null}
       </div>
     )
   }
@@ -96,7 +95,7 @@ class ShopItem extends Component {
   renderIngredients() {
     var ingredients = this.state.product.ingredients.map((i, index) => {
       return (
-        <span>
+        <span key={index}>
           <a class='text-black' href={"https://www.lifelixir.com.au/research#" + i.info_link} target='_blank'>{i.name}</a>
           {i.extract ? <span class=''>&#176;</span> : null}
           {this.state.product.ingredients.length - 1 !== index ? <span>, </span> : null}
@@ -139,22 +138,22 @@ class ShopItem extends Component {
         </Helmet>
         <div class="container">
           <div class="row">
-            <div class="col-lg-5">
-              <div class="product-gallery pos-relative">
-      <img src={this.state.product.photo.original} class='img-fluid'/>
+            <div className="col-lg-5">
+              <div className="product-gallery pos-relative">
+      <img src={this.state.product.photo.original} className='img-fluid'/>
               </div>
-              <div class='mt-3'>
+              <div className='mt-3'>
               </div>
             </div>
             <div class="col-lg-7">
               <div class="product-card mb-4">
                 <div class="card-body p-0 px-4 pos-relative">
-                  <div class="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
+                  <div className="pos-md-absolute pos-t pos-r mr-4 mt-3 text-md-right">
                   </div>
-                  <h2 class="text-capitalize text-uppercase card-title mb-2">
+                  <h2 className="text-capitalize text-uppercase card-title mb-2">
                     {this.state.product.name}
                   </h2>
-                  <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} class="lead" />
+                  <p dangerouslySetInnerHTML={{__html: this.state.product.short_description}} className="lead" />
                   <hr class="my-3" />
                   <div class='row'>
                     <div class='col-auto mr-auto'>
@@ -212,7 +211,7 @@ class ShopItem extends Component {
     You might also like
             </h3>
             <hr className="mb-2 w-50 mx-auto" />
-                        {this.state.product.id ? <ProductsCarousel shop={_.filter(this.props.featured, (i) => {
+            {this.state.product.id ? <ProductsCarousel shop={_.filter(this.props.featured, (i) => {
               return i.id !== this.state.product.id
             })} withAddBtn={false} /> : null }
           </div>

@@ -61,7 +61,7 @@ class Subscribe extends Component {
       <div class="">
         <form>
           <div class="input-group">
-            <label class="sr-only" for="email-field">Email</label>
+            <label class="sr-only" htmlFor="email-field">Email</label>
             <input type="text" class="form-control" id="email-field" placeholder="Your Email" onChange={this.handleEmailChange.bind(this)}/>
             <span class="input-group-btn">
               <button class="btn btn-primary" onClick={this.handleSubscribe.bind(this)} type="button">Go!</button>

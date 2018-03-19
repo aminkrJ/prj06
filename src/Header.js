@@ -60,10 +60,10 @@ class Header extends Component {
               calculatedHeight
         }) => {
           return (
-            <header class="header" style={style}>
+            <header className="header" style={style}>
               <div className="container">
                 <Navbar expand="md" light>
-                  <NavbarBrand className="header-brand"><Link className="" to="/"><img src={logo} /></Link></NavbarBrand>
+                  <NavbarBrand className="header-brand" href='/'><img src={logo} /></NavbarBrand>
                   <NavbarToggler onClick={this.toggle} />
                   <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>

@@ -37,7 +37,7 @@ class Blog extends Component {
     return(
       this.state.articles.map((article, index) => {
        return(
-        <div class="col-sm-6 col-md-4 grid-item">
+        <div key={index} class="col-sm-6 col-md-4 grid-item">
           <div class="blog-post">
             <div class="blog-media">
               <Link to={"/blog/" + article.slug}>

@@ -59,12 +59,12 @@ class CardWidget extends Component {
   render() {
     return (
       <div>
-        <div class="header-divider d-none d-lg-block"></div>
-        <a id="Popover1" onClick={this.toggle} class="btn btn-icon btn-dark btn-link float-right dropdown-toggle cart-link">
-          <span class="cart-link-icon">
-            <i class="fa fa-shopping-cart"></i>
-            <span class="sr-only">Cart</span> 
-            <span class="cart-link-count bg-primary text-white">{this.props.cart.length}</span>
+        <div className="header-divider d-none d-lg-block"></div>
+        <a id="Popover1" onClick={this.toggle} className="btn btn-icon btn-dark btn-link float-right dropdown-toggle cart-link">
+          <span className="cart-link-icon">
+            <i className="fa fa-shopping-cart"></i>
+            <span className="sr-only">Cart</span> 
+            <span className="cart-link-count bg-primary text-white">{this.props.cart.length}</span>
           </span>
         </a>
         <Popover placement="bottom" isOpen={this.state.isOpen} target="Popover1" toggle={this.toggle}>
