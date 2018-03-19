@@ -77,12 +77,12 @@ class ShopItem extends Component {
           <div key={r.id} class="col-4 col-lg-3 d-flex p-0">
             <div class="card mb-3 border-0 flex-ew">
               <div class="card-effect card-effect-front-to-back">
-            <Link to={'nutricombo/' + r.slug}>
+            <Link to={'/nutricombo/' + r.slug}>
                 <img class="card-img-top img-fluid" src={r.photo.original} alt={r.title}/>
             </Link>
               </div>
               <div class="card-body pb-0">
-            <Link to={'nutricombo/' + r.slug}>
+            <Link to={'/nutricombo/' + r.slug}>
                 <h5 class="text-black card-title text-uppercase text-sm mb-1">
           {r.title}
                 </h5>
