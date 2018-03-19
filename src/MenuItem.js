@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import api from './Api.js'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
-import Loader from 'react-loader';
 import {Helmet} from "react-helmet"
 
 class MenuItem extends Component {
@@ -15,7 +14,7 @@ class MenuItem extends Component {
     }
   }
   
-  componentDidMount() {
+  componentWillMount() {
     NProgress.start()
 
     api.get("/recipes/" + this.props.match.params.slug)
@@ -24,7 +23,6 @@ class MenuItem extends Component {
 
       this.setState({
         recipe: response.data,
-        loaded: true
       })
     })
     .catch((error) => {
@@ -43,7 +41,6 @@ class MenuItem extends Component {
           <meta name="description" content={this.state.recipe.short_description}/>
         </Helmet>
         <div class="container">
-          <Loader loaded={this.state.loaded}>
             <div class="row">
               <div class="col-lg-5">
                 <div class="product-gallery pos-relative">
@@ -73,7 +70,6 @@ class MenuItem extends Component {
             </div>
             <div class="col-lg-12">
             </div>
-          </Loader>
         </div>
       </div>
     )
