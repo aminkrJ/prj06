@@ -131,7 +131,7 @@ class ShopItem extends Component {
         <Helmet>
           <title>{this.state.product.name}</title>
           <meta name="description" content={this.state.product.description}/>
-          <meta name="keywords" content={null}/>
+          <meta name="keywords" content={this.state.product.meta_keywords}/>
         </Helmet>
         <div class="container">
           <div class="row">
