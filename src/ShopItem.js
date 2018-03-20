@@ -210,7 +210,9 @@ class ShopItem extends Component {
             <h3 className="text-center text-uppercase font-weight-bold my-0">
     You might also like
             </h3>
-            <hr className="mb-2 w-50 mx-auto" />
+            {this.state.product.id ? <ProductsCarousel shop={_.filter(this.props.featured, (i) => {
+              return i.id !== this.state.product.id
+            })} withAddBtn={false} /> : null } <hr className="mb-2 w-50 mx-auto" />
           </div>
         </div>
       </div>
