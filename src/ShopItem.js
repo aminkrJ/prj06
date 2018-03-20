@@ -137,7 +137,7 @@ class ShopItem extends Component {
           <div class="row">
             <div className="col-lg-5">
               <div className="product-gallery pos-relative">
-      <img src={this.state.product.photo.original} className='img-fluid'/>
+                <img src={this.state.product.photo.original} className='img-fluid'/>
               </div>
               <div className='mt-3'>
               </div>

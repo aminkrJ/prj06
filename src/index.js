@@ -1,11 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
-
 import { Provider } from 'react-redux';
-import store, { history } from './store';
+import 'babel-polyfill'
 import { ConnectedRouter } from 'react-router-redux';
+
+import App from './App'
+import store, { history } from './store';
+import registerServiceWorker from './registerServiceWorker'
 
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.css';
