@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios'
 import classnames from 'classnames'
 import NProgress from 'nprogress'
 import AddToCartButton from './AddToCartButton.js';
@@ -8,6 +7,7 @@ import {Helmet} from "react-helmet"
 import {render} from 'react-dom';
 import _ from 'underscore'
 
+import api from './Api'
 import ProductsCarousel from './ProductsCarousel'
 
 class ShopItem extends Component {
@@ -24,11 +24,10 @@ class ShopItem extends Component {
     }
   }
 
-  // SEO
-  componentWillMount() {
+  componentDidMount() {
     NProgress.start()
 
-    axios.get("/products/" + this.props.match.params.slug)
+    api.get("/products/" + this.props.match.params.slug)
     .then((response) => {
       NProgress.done()
 

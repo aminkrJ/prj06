@@ -13,8 +13,7 @@ class Post extends Component {
     }
   }
 
-  // SEO ajax request before rendering a component
-  componentWillMount() {
+  componentDidMount() {
     NProgress.start()
 
     api.get("/articles/" + this.props.match.params.slug)
