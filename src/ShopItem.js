@@ -15,6 +15,7 @@ class ShopItem extends Component {
     super(props)
     this.state = {
       product: {
+        description: "",
         photo: {original: ""},
         recipes: [],
         tags: [],
@@ -130,7 +131,7 @@ class ShopItem extends Component {
       <div id="content" class="pt-3 pt-lg-6 pb-lg-0">
         <Helmet>
           <title>{this.state.product.name}</title>
-          <meta name="description" content={this.state.product.description}/>
+          <meta name="description" content={this.state.product.description.replace(/(<([^>]+)>)/ig,"")}/>
           <meta name="keywords" content={this.state.product.meta_keywords}/>
         </Helmet>
         <div class="container">
