@@ -69,7 +69,7 @@ class ShopItem extends Component {
     return(
       this.state.product.recipes.map((r, index) => {
         return (
-          <div key={r.id} class="col-4 col-lg-3 d-flex p-0">
+          <div key={index} class="col-4 col-lg-3 d-flex p-0">
             <div class="card mb-3 border-0 flex-ew">
               <div class="card-effect card-effect-front-to-back">
             <Link to={'/nutricombo/' + r.slug}>
@@ -126,14 +126,12 @@ class ShopItem extends Component {
   }
 
   render() {
-    var tags = this.state.product.tags.map((p) => {return p.name})
-
     return (
       <div id="content" class="pt-3 pt-lg-6 pb-lg-0">
         <Helmet>
           <title>{this.state.product.name}</title>
-          <meta name="description" content={this.state.product.short_description}/>
-          <meta name="keywords" content={tags.join(', ')}/>
+          <meta name="description" content={this.state.product.description}/>
+          <meta name="keywords" content={null}/>
         </Helmet>
         <div class="container">
           <div class="row">
