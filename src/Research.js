@@ -33,11 +33,11 @@ class Research extends Component {
               <p>Detoxification helps our body to get nutrition from the food we eat and get rid of toxins stored in our body. On the other hand, our brain has its own maintenance system called the glymphatic system, which uses the cells’ mitochondria to remove cellular waste from the brain. Cleansing your body and your brain from these contaminations can improve your brain function and overall well-being.</p>
               <h4 class='text-uppercase text-center'>Superfoods</h4>
               <hr class="w-50 ml-0 mb-3 mx-auto" />
-              <a class='' name='coconut'><h5 class='text-uppercase'>Coconut</h5></a>
-              <p></p>
-              <a class='' name='activated-charcoal'><h5 class='text-uppercase'>Activated charcoal</h5></a>
-              <p></p>
+              <a class='' name='coconut-oil'><h5 class='text-uppercase'>Coconut oil</h5></a>
+              <p>Unrefined organic coconut oil considered the gold standard. It is extracted from fresh coconut using a wet-milled fermentation process that protects the beneficial properties of the coconut. The 62% is made up of a combination of the 4 types of medium-chain fatty acids(C6, C8, C10, C12) mainly Luric acid (C12).</p>
               <a class='' name='mct-oil'><h5 class='text-uppercase'>MCT oil</h5></a>
+              <p>MCT oil is extracted from Coconut oil which is concentrated and has only C8 and C10 for fast and lasting energy.</p>
+              <a class='' name='activated-charcoal'><h5 class='text-uppercase'>Activated charcoal</h5></a>
               <p></p>
               <a class='' name='acai-berries'><h5 class='text-uppercase'>Acai berries</h5></a>
               <p></p>
