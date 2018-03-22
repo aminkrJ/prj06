@@ -26,7 +26,7 @@ class Research extends Component {
      Fueling your brain with fat, in particular, encourages ketosis, which provides energy to the brain and helps protect against brain diseases, among other health benefits. A diet high in monounsaturated fats can also increase production of acetylcholine, a neurotransmitter that plays an important role in learning and memory. 
               </p>
               <a class='' name='gut-health'><h5 class='text-uppercase'>Gut Health</h5></a>
-              <p>A troubled intestine can send signals to the brain, just as a troubled brain can send signals to the gut. Therefore, a person's stomach or intestinal distress can be the cause or the product of anxiety, stress, or depression. That's because the brain and the gastrointestinal (GI) system are intimately connected.</p>
+              <p>A troubled intestine can send signals to the brain, just as a troubled brain can send signals to the gut. Therefore, a person's stomach or intestinal distress can be the cause or the product of anxiety, stress, or depression. That's because the brain and the gastrointestinal (GI) system are intimately connected [2, 3, 4].</p>
               <a class='' name='clean-protein'><h5 class='text-uppercase'>Clean Protein</h5></a>
               <p>The body breaks down proteins into building blocks called amino acids. Amino acids are a major component in the hundreds of brain chemicals known as neurotransmitters. Neurotransmitters enable brain cells to communicate with each other. Examples of common neurotransmitters include dopamine, serotonin, GABA, norepinephrine, and endorphins.</p>
               <a class='' name='detox'><h5 class='text-uppercase'>Detox body & brain</h5></a>
@@ -36,7 +36,7 @@ class Research extends Component {
               <a class='' name='coconut-oil'><h5 class='text-uppercase'>Coconut oil</h5></a>
               <p>Unrefined organic coconut oil considered the gold standard. It is extracted from fresh coconut using a wet-milled fermentation process that protects the beneficial properties of the coconut. The 62% is made up of a combination of the 4 types of medium-chain fatty acids(C6, C8, C10, C12) mainly Luric acid (C12).</p>
               <a class='' name='mct-oil'><h5 class='text-uppercase'>MCT oil</h5></a>
-              <p>MCT oil is extracted from Coconut oil which is concentrated and has only C8 and C10 for fast and lasting energy.</p>
+              <p>MCT oil is extracted from Coconut oil which is concentrated and has only C8 and C10. MCTs are easily digested and absorbed. Therefore, they provide nourishment to the body and are a quick source of energy for body and brain [14].</p>
               <a class='' name='activated-charcoal'><h5 class='text-uppercase'>Activated charcoal</h5></a>
               <p></p>
               <a class='' name='acai-berries'><h5 class='text-uppercase'>Acai berries</h5></a>
@@ -71,7 +71,7 @@ class Research extends Component {
               <hr class="w-50 ml-0 mb-3 mx-auto" />
               <p>We use dual extracted mushrooms 10:1. This process is required in order to release the bioactive ingredients of mushroom and prepare it for human consumption.</p>
               <a class='' name='lions-mane-mushroom'><h5 class='text-uppercase'>Lion's mane mushroom</h5></a>
-              <p></p>
+              <p>Lion’s Mane increases the amount of NGF(Nerve Growth Factor) [13] in the brain, which enhances cognition by reducing inflammation, encouraging neural growth, and improving overall brain health [12].</p>
               <a class='' name='chaga-mushroom'><h5 class='text-uppercase'>Chaga mushroom</h5></a>
               <p></p>
               <h4 class='text-uppercase text-center'>Functional herbs</h4>
@@ -114,6 +114,10 @@ class Research extends Component {
                <li>[9] <a href='https://www.ncbi.nlm.nih.gov/pubmed/24409051' target='_blank'>Sleep, immunity and inflammation in gastrointestinal disorders</a> <span class='text-xs'>2013 Dec 28</span></li>
                <li>[10] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20329590' target='_blank'>Essential fatty acids and human brain</a> <span class='text-xs'>2009 Dec 18</span></li>
                <li>[11] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20564545' target='_blank'>Milk thistle in liver diseases</a> <span class='text-xs'>2009 Dec 18</span></li>
+               <li>[12] <a href='https://www.ncbi.nlm.nih.gov/pubmed/18844328' target='_blank'>Improving effects of the mushroom Yamabushitake on mild cognitive impairment</a> <span class='text-xs'>2009 Mar 23</span></li>
+               <li>[13] <a href='https://www.ncbi.nlm.nih.gov/gene/4803' target='_blank'>NGF nerve growth factor [Homo sapiens(human)]</a> <span class='text-xs'>2018 Mar 11</span></li>
+               <li>[14] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2604900' target='_blank'>Hypometabolism as a therapeutic target in Alzheimer's disease</a> <span class='text-xs'>2018 Mar 11</span></li>
+               <li>[15] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4960264' target='_blank'>Neuroplasticity and Clinical Practice: Building Brain Power for Health</a> <span class='text-xs'>2016 Jul 26</span></li>
               </ul>
             </div>
           </div>
