@@ -53,8 +53,10 @@ class Research extends Component {
               <p>Sun-dried raw cacao powder is made by grinding up raw cacao beans, then extracting the pure oil in a cold pressing process. The result is a silky smooth powder with deep sensual notes of flavour.</p>
               <a class='' name='beetroot'><h5 class='text-uppercase'>beetroot</h5></a>
               <p></p>
-              <a class='' name='barley-grass'><h5 class='text-uppercase'>Barely grass</h5></a>
+              <a class='' name='green-tea'><h5 class='text-uppercase'>Green tea</h5></a>
               <p></p>
+              <a class='' name='coffee'><h5 class='text-uppercase'>Coffee</h5></a>
+              <p>Caffeine in coffee is a central nervous system stimulant that is consumed all over the world to boost alertness and fight fatigue. It works by blocking the effects of a neurotransmitter called adenosine, which builds up over the course of the day and makes you feel tired [16]. </p>
               <a class='' name='matcha'><h5 class='text-uppercase'>matcha</h5></a>
               <p></p>
               <a class='' name='stevia'><h5 class='text-uppercase'>stevia</h5></a>
@@ -103,21 +105,24 @@ class Research extends Component {
               <Benefits />
               <h5>References</h5>
               <ul class='text-sm list-unstyled mx-2'>
-               <li>[1] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805706/' target='_blank'>The effects of nutrients on brain function</a> <span class='text-xs'>2010 Jan 12</span></li>
-               <li>[2] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5641835/' target='_blank'>Gut microbiota’s effect on mental health</a> <span class='text-xs'>2017 Sep 15</span></li>
-               <li>[3] <a href='https://www.ncbi.nlm.nih.gov/pubmed/25550456' target='_blank'>Gut microbes promote colonic serotonin production</a> <span class='text-xs'>2015 Apr 29</span></li>
-               <li>[4] <a href='https://www.ncbi.nlm.nih.gov/pubmed/28483500' target='_blank'>Probiotic Bifidobacterium longum reduces depression</a> <span class='text-xs'>2017 Aug 15</span></li>
-               <li>[5] <a href='http://www.pnas.org/content/108/38/16050' target='_blank'>Ingestion of Lactobacillus strain regulates emotional behavior</a> <span class='text-xs'>2011 Feb 27</span></li>
-               <li>[6] <a href='https://www.alzforum.org/news/research-news/brain-drain-glymphatic-pathway-clears-av-requires-water-channel' target='_blank'>"Glymphatic" Pathway Clears Aβ, Requires Water Channel</a> <span class='text-xs'>2012 Aug 17</span></li>
-               <li>[7] <a href='http://www.cell.com/cell-metabolism/abstract/S1550-4131%2813%2900454-3' target='_blank'>Inflammation-Induced Alteration of Astrocyte Mitochondrial ...</a> <span class='text-xs'>2013 Dec 03</span></li>
-               <li>[8] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636982' target='_blank'>The Glymphatic System – A Beginner's Guide</a> <span class='text-xs'>2015 May 07</span></li>
-               <li>[9] <a href='https://www.ncbi.nlm.nih.gov/pubmed/24409051' target='_blank'>Sleep, immunity and inflammation in gastrointestinal disorders</a> <span class='text-xs'>2013 Dec 28</span></li>
-               <li>[10] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20329590' target='_blank'>Essential fatty acids and human brain</a> <span class='text-xs'>2009 Dec 18</span></li>
-               <li>[11] <a href='https://www.ncbi.nlm.nih.gov/pubmed/20564545' target='_blank'>Milk thistle in liver diseases</a> <span class='text-xs'>2009 Dec 18</span></li>
-               <li>[12] <a href='https://www.ncbi.nlm.nih.gov/pubmed/18844328' target='_blank'>Improving effects of the mushroom Yamabushitake on mild cognitive impairment</a> <span class='text-xs'>2009 Mar 23</span></li>
-               <li>[13] <a href='https://www.ncbi.nlm.nih.gov/gene/4803' target='_blank'>NGF nerve growth factor [Homo sapiens(human)]</a> <span class='text-xs'>2018 Mar 11</span></li>
-               <li>[14] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2604900' target='_blank'>Hypometabolism as a therapeutic target in Alzheimer's disease</a> <span class='text-xs'>2018 Mar 11</span></li>
-               <li>[15] <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4960264' target='_blank'>Neuroplasticity and Clinical Practice: Building Brain Power for Health</a> <span class='text-xs'>2016 Jul 26</span></li>
+               <li>[1] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805706/' target='_blank'>The effects of nutrients on brain function</a> </li>
+               <li>[2] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5641835/' target='_blank'>Gut microbiota’s effect on mental health</a> </li>
+               <li>[3] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/25550456' target='_blank'>Gut microbes promote colonic serotonin production</a> </li>
+               <li>[4] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/28483500' target='_blank'>Probiotic Bifidobacterium longum reduces depression</a> </li>
+               <li>[5] <a class='text-black' href='http://www.pnas.org/content/108/38/16050' target='_blank'>Ingestion of Lactobacillus strain regulates emotional behavior</a> </li>
+               <li>[6] <a class='text-black' href='https://www.alzforum.org/news/research-news/brain-drain-glymphatic-pathway-clears-av-requires-water-channel' target='_blank'>"Glymphatic" Pathway Clears Aβ, Requires Water Channel</a> </li>
+               <li>[7] <a class='text-black' href='http://www.cell.com/cell-metabolism/abstract/S1550-4131%2813%2900454-3' target='_blank'>Inflammation-Induced Alteration of Astrocyte Mitochondrial ...</a> </li>
+               <li>[8] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4636982' target='_blank'>The Glymphatic System – A Beginner's Guide</a> </li>
+               <li>[9] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/24409051' target='_blank'>Sleep, immunity and inflammation in gastrointestinal disorders</a></li>
+               <li>[10] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/20329590' target='_blank'>Essential fatty acids and human brain</a></li>
+               <li>[11] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/20564545' target='_blank'>Milk thistle in liver diseases</a></li>
+               <li>[12] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/18844328' target='_blank'>Improving effects of the mushroom Yamabushitake on mild ...</a></li>
+               <li>[13] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/gene/4803' target='_blank'>NGF nerve growth factor [Homo sapiens(human)]</a></li>
+               <li>[14] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2604900' target='_blank'>Hypometabolism as a therapeutic target in Alzheimer's disease</a></li>
+               <li>[15] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4960264' target='_blank'>Neuroplasticity and Clinical Practice: Building Brain...</a></li>
+               <li>[16] <a class='text-black' href='https://www.ncbi.nlm.nih.gov/pubmed/11283304' target='_blank'>The role and regulation of adenosine in the central nervous system
+      
+      </a></li>
               </ul>
             </div>
           </div>
