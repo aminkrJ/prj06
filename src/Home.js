@@ -171,7 +171,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
               <ProductsCarousel shop={this.props.featured} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} withAddBtn={false} />
             </div>
           </div>
-          <Bundles products={this.props.bundles} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart}/>
+          <Bundles products={this.props.bundles} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} history={this.props.history}/>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 className="text-center text-uppercase font-weight-bold my-0">
             NutriCombo
