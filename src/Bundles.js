@@ -47,10 +47,10 @@ class Bundles extends Component {
         <div class="container">
           <hr class="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
           <h3 class="text-center text-uppercase font-weight-bold my-0">
-      3 day NutriCombo Plan
+      Our bundles
           </h3>
-          <h5 class="text-center font-weight-light mt-2 mb-0">
-      Make six NutriCombo at home or office
+          <h5 class="text-muted text-center font-weight-light mt-2 mb-0">
+      For Maximum Results
           </h5>
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row pricing-stack">
