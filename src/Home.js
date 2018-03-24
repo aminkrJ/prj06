@@ -64,13 +64,13 @@ class Home extends Component {
         return (
           <div class="col-12 col-lg-4 mb-lg-1">
             <Link to={"/blog/" + article.slug} class="card border-0 flex-ew">
-              <img class="card-img img-fluid" src={article.photo.medium} alt={article.title} />
+              <img class="card-img img-fluid" src={article.photo.original} alt={article.title} />
               <div class="card-img-overlay bg-dark bg-op-5 text-white flex-valign-b">
                 <div>
                   <h5 class="card-title text-white mb-1">
           {article.title}
                   </h5>
-                  <p class="card-text text-uppercase text-white text-xs"><span class="text-primary">{article.auther}</span> <span class="px-1">/</span> {moment(article.updated_at).format("MMM Do YY")}</p>
+                  <p class="card-text text-uppercase text-white text-xs"><span class="text-primary">{article.author}</span> <span class="px-1">/</span> {moment(article.updated_at).format("MMM Do YY")}</p>
                 </div>
               </div>
             </Link>
