@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NProgress from 'nprogress';
 import {render} from 'react-dom';
 import _ from 'underscore';
+import moment from 'moment'
 
 import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
 import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
@@ -52,6 +53,28 @@ class Home extends Component {
             <span>{r.description} </span>
             {r.title}
           </ul>
+        )
+      })
+    )
+  }
+
+  renderArticles() {
+    return (
+      this.props.articles.map((article, map) => {
+        return (
+          <div class="col-12 col-lg-4 mb-lg-1">
+            <Link to={"/blog/" + article.slug} class="card border-0 flex-ew">
+              <img class="card-img img-fluid" src={article.photo.medium} alt={article.title} />
+              <div class="card-img-overlay bg-dark bg-op-5 text-white flex-valign-b">
+                <div>
+                  <h5 class="card-title text-white mb-1">
+          {article.title}
+                  </h5>
+                  <p class="card-text text-uppercase text-white text-xs"><span class="text-primary">{article.auther}</span> <span class="px-1">/</span> {moment(article.updated_at).format("MMM Do YY")}</p>
+                </div>
+              </div>
+            </Link>
+          </div>
         )
       })
     )
@@ -130,6 +153,9 @@ class Home extends Component {
               </React_Bootstrap_Carousel>
         <div id="content" className="p-0">
           <div class="container">
+          <div class="row mt-4">
+          {this.renderArticles()}
+          </div>
           <div class="row mt-4">
           <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
             <h3 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">

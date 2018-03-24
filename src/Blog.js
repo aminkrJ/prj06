@@ -11,31 +11,15 @@ class Blog extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      articles: []
     }
   }
 
   componentDidMount() {
-    NProgress.start()
-
-    api.get("/articles")
-    .then((response) => {
-      NProgress.done()
-
-      this.setState({
-        articles: response.data
-      })
-
-      document.title = "Life Elixir, " + response.data.title
-    })
-    .catch((error) => {
-      NProgress.done()
-    })
   }
 
   renderArticles() {
     return(
-      this.state.articles.map((article, index) => {
+      this.props.articles.map((article, index) => {
        return(
         <div key={index} class="col-sm-6 col-md-4 grid-item">
           <div class="blog-post">

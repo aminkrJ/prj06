@@ -9,6 +9,7 @@ import {Helmet} from "react-helmet"
 
 import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
 import { fetchProducts } from './actions/productsActions';
+import { fetchArticles } from './actions/articlesActions';
 
 import Header from './Header';
 import Legal from './Legal';
@@ -45,7 +46,8 @@ class App extends Component {
       products: [],
       bundles: [],
       recipes: [],
-      featured: []
+      featured: [],
+      articles: []
     }
   }
 
@@ -62,6 +64,7 @@ class App extends Component {
 
     this.setState({
       products: nextProps.products.entities,
+      articles: nextProps.articles.entities,
       bundles: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Bundles"}),
       featured: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Bundles"}),
       recipes: _.uniq(recipes, (i) =>{ return i.id })
@@ -70,6 +73,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchProducts()
+    this.props.fetchArticles()
   }
 
   render() {
@@ -103,6 +107,7 @@ class App extends Component {
             bundles={this.state.bundles.slice(0, 3)}
             nutricombo={this.state.recipes}
             featured={this.state.featured}
+            articles={this.state.articles.slice(0, 3)}
             products={this.state.products}/>} />
           <Route exact path="/about" component={About} />
           <Route exact path="/research" component={Research} />
@@ -118,7 +123,13 @@ class App extends Component {
             removeFromCart={this.props.removeFromCart} />} />
           <Route exact path="/join" component={Join} />
           <Route exact path="/affiliate" component={Affiliate} />
-          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/blog" component={(props) => <Blog {...props}
+            dropFromCart={this.props.dropFromCart}
+            cart={this.props.cart} addToCart={this.props.addToCart}
+            removeFromCart={this.props.removeFromCart}
+            articles={this.state.articles}
+            />}
+          />
           <Route exact path="/blog/:slug" component={Post} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/cart" component={(props) => <Cart {...props} reset={this.props.reset} dropFromCart={this.props.dropFromCart} cart={this.props.cart} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />} />
@@ -152,6 +163,7 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   cart: state.cart,
+  articles: state.articles,
   products: state.products
 })
 
@@ -160,6 +172,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   addToCart,
   removeFromCart,
   fetchProducts,
+  fetchArticles,
   reset
 }, dispatch)
 
