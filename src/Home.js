@@ -166,10 +166,10 @@ class Home extends Component {
 Thoughts are an emergent property of our biology. To think smarter thoughts, your whole biology - physical, emotional, and chemical - must be changed.
            </p>
             <p class=''>
-       <a href="#" onClick={this.handleDownloadPdf.bind(this)}>Join us</a> to receive our latest methods to heal and enhance your biology to unlock your potentials.
+
             </p>
             <p class='lead'>
-              Download the 10 easiest and most effective biohacks to enhance your life today.
+              Download daily rituals and practices for optimum brain function.
             <div class='mt-2'><Subscribe campaign="Download10Hacks"/></div>
             </p>
             <div class='mb-4 box-breathing-wrapper pos-relative'>
