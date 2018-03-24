@@ -154,9 +154,6 @@ class Home extends Component {
         <div id="content" className="p-0">
           <div class="container">
           <div class="row mt-4">
-          {this.renderArticles()}
-          </div>
-          <div class="row mt-4">
           <div class="col-lg-4 col-xl-5 flex-valign pos-relative">
             <h3 class="text-uppercase my-0 pos-relative z-index-2 text-dark font-weight-bold">
       Think smarter
@@ -166,7 +163,6 @@ class Home extends Component {
 Thoughts are an emergent property of our biology. To think smarter thoughts, your whole biology - physical, emotional, and chemical - must be changed.
            </p>
             <p class=''>
-
             </p>
             <p class='lead'>
               Download daily rituals and practices for optimum brain function.
@@ -209,6 +205,11 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           <div class="container">
           <div className="row p-3 py-lg-1">
       <NutriComboList recipes={this.props.nutricombo} />
+          </div>
+          </div>
+          <div class="container">
+          <div class="row">
+          {this.renderArticles()}
           </div>
           </div>
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
