@@ -180,9 +180,14 @@ Breathing box is a technique to manage your stress in any stressful situations. 
           </div>
         </div>
         </div>
+          <div class="container">
+          <div class="row">
+          {this.renderArticles()}
+          </div>
+          </div>
           <hr className="hr-lg mt-0 mb-3 w-10 mx-auto hr-primary" />
             <h3 className="text-center text-uppercase font-weight-bold my-0">
-    Featured products
+    Products
             </h3>
             <h5 className="text-center font-weight-light mt-2 mb-0 text-muted">
       {globals.values}
@@ -207,11 +212,7 @@ Breathing box is a technique to manage your stress in any stressful situations. 
       <NutriComboList recipes={this.props.nutricombo} />
           </div>
           </div>
-          <div class="container">
-          <div class="row">
-          {this.renderArticles()}
-          </div>
-          </div>
+          
           <div class="bg-primary bg-op-5 py-4 py-lg-6">
             <h3 className="text-center text-uppercase font-weight-bold my-0">
      Product Locator
