@@ -22,6 +22,7 @@ import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import Blog from './Blog'
 import Post from './Post'
+import Source from './Source'
 import Delivery from './Delivery'
 import About from './About'
 import CustomModal from './Modal'
@@ -112,6 +113,7 @@ class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/research" component={Research} />
           <Route exact path="/find_us" component={Find} />
+          <Route exact path="/src/:slug" component={Source} />
           <Route exact path="/nutricombo" component={(props) => <NutriCombo {...props} 
             products={this.state.products}
             nutricombo={this.state.recipes}
