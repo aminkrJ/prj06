@@ -15,7 +15,7 @@ class Research extends Component {
           <hr class="mb-5 w-50 mx-auto" />
           <div class="row">
             <div class="col-md-6">
-              <p>Thoughts are an emergent property of our biology. To think smarter thoughts, your whole biology - physical, emotional, and chemical - must be changed.
+              <p>Thoughts and emotions are an emergent property of our biology. To think smarter thoughts and live a happier life, your whole biology - physical, emotional, and chemical - must be changed.
               </p>
               <a class='' name='nootropics'><h5 class='text-uppercase'>natural Nootropics</h5></a>
               <p>Outstanding all-natural plant, herb and root extracts that can improve your memory, elevate your mood, and enhance your learning capacity.</p>

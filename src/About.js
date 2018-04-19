@@ -24,7 +24,7 @@ class About extends Component {
       {globals.description}
                 </p>
                 <p>{globals.about.p1}</p>
-                <p>Our philosophy is to consume clean and enhanced daily routine foods like coffee, chocolate, and protein and also integrating nutrition that we lack in a normal diet for optimum health and performance.</p>
+                <p>Thoughts and emotions are an emergent property of our biology. To think smarter thoughts and live a happier life, your whole biology - physical, emotional, and chemical - must be changed.</p>
                 <p class='lead'>{globals.about.title2}</p>
                 <p class="">
       {globals.about.p2}
