@@ -160,7 +160,7 @@ class Home extends Component {
             </h3>
             <hr class="hr-primary w-15 hr-xl ml-0 mb-3" />
             <p class=''>
-Thoughts are an emergent property of our biology. To think smarter thoughts, your whole biology - physical, emotional, and chemical - must be changed.
+Thoughts and emotions are an emergent property of our biology. To think smarter thoughts and live a happier life, your whole biology - physical, emotional, and chemical - must be changed.
            </p>
             <p class=''>
             </p>
