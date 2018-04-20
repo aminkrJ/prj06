@@ -13,12 +13,12 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    $("#" + this.props.id).owlCarousel(this.props)
+    $(this.el).owlCarousel(this.props)
   }
 
   render() {
     return (
-      <div id={this.props.id} className={ classNames("owl-carousel owl-theme", {"product-carousel": this.props.productCarousel, "large-controls": this.props.largeControls, "dots-inside": this.props.dotsInside}) }>
+      <div ref={el => this.el = el} id={this.props.id} className={ classNames("owl-carousel owl-theme", {"product-carousel": this.props.productCarousel, "large-controls": this.props.largeControls, "dots-inside": this.props.dotsInside}) }>
         {this.props.children}
       </div>
     )
