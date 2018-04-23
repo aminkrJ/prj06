@@ -13,6 +13,7 @@ import Totals from './Totals'
 class Cart extends Component {
   constructor(props) {
     super(props)
+
     this.state = {
       shippingFee: 8,
       subtotal: 0,
@@ -21,9 +22,10 @@ class Cart extends Component {
     }
   }
 
-  componentDidMount() {
+  // we need subtotal to send accurate value to component's children
+  componentWillMount() {
     this.setState({
-      subtotal: this.calcSubtotal(),
+      subtotal: this.calcSubtotal()
     })
   }
 

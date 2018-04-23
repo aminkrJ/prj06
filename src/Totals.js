@@ -42,17 +42,14 @@ class Totals extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      subtotal: nextProps.subtotal,
-      shippingFee: this.calcShippingFee(nextProps),
-      total: this.calcTotal(nextProps),
-      coupon: nextProps.coupon,
-      hasCoupon: nextProps.hasCoupon
-    })
-  }
-
   componentDidMount() {
+    this.setState({
+      subtotal: this.props.subtotal,
+      shippingFee: this.calcShippingFee(this.props),
+      total: this.calcTotal(this.props),
+      coupon: this.props.coupon,
+      hasCoupon: this.props.hasCoupon
+    })
   }
 
   render() {

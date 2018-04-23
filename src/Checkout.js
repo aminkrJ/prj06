@@ -210,7 +210,7 @@ class Checkout extends Component {
     })
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       subtotal: this.calcSubtotal()
     })
