@@ -77,5 +77,4 @@ Subscribe.defaultProps = {
   campaign: "Subscribe",
 }
 
-
 export default Subscribe
