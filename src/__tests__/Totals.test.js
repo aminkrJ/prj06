@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Totals from './Totals'
+import Totals from '../Totals'
 
 it("renders without crashing", () => {
   shallow(<Totals />)
