@@ -73,12 +73,6 @@ Nutrition and techniques your competitors employ to be ahead of the game.
           <div class="col-lg-7 offset-lg-1">
             <div class="row">
               <div class="col-6 col-md-3">
-                <h4 class="mt-0 text-uppercase text-white">
-                Ingredients
-                </h4>
-                <ul class="list-unstyled footer-links">
-                  <li><Link to="/src/green-tea">Green Tea</Link></li>
-                </ul>
               </div>
               <div class="col-6 col-md-3">
                 <h4 class="mt-0 text-uppercase text-white">
