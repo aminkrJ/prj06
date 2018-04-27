@@ -6,6 +6,8 @@ import AddToCartButton from './AddToCartButton.js';
 import {Helmet} from "react-helmet"
 import {render} from 'react-dom';
 import _ from 'underscore'
+import ImageGallery from 'react-image-gallery'
+import "react-image-gallery/styles/css/image-gallery-no-icon.css"
 
 import api from './Api'
 import ProductsCarousel from './ProductsCarousel'
@@ -15,12 +17,13 @@ class ShopItem extends Component {
     super(props)
     this.state = {
       product: {
-        description: "",
-        photo: {original: ""},
+        description: '',
+        photo: {original: '', medium: ''},
         recipes: [],
         tags: [],
         ingredients: [],
-        category: {}
+        category: {},
+        photos: []
       }
     }
   }
@@ -33,7 +36,7 @@ class ShopItem extends Component {
       NProgress.done()
 
       this.setState({
-        product: response.data
+        product: response.data,
       })
     })
     .catch((error) => {
@@ -126,6 +129,21 @@ class ShopItem extends Component {
     }
   }
 
+  imageGalleryImages() {
+    let images = this.state.product.photos.map(function(image) {
+      return {
+        original: image.original,
+        thumbnail: image.medium
+      }
+    })
+
+    images.unshift(
+      {original: this.state.product.photo.original, thumbnail: this.state.product.photo.medium}
+    )
+
+    return images
+  }
+
   render() {
     return (
       <div id="content" class="pt-3 pt-lg-6 pb-lg-0">
@@ -138,6 +156,7 @@ class ShopItem extends Component {
           <div class="row">
             <div className="col-lg-5">
               <div className="product-gallery pos-relative">
+                <ImageGallery items={this.imageGalleryImages()} showNav={false} showFullscreenButton={false} showPlayButton={false} />
                 <img src={this.state.product.photo.original} className='img-fluid'/>
               </div>
               <div className='mt-3'>
