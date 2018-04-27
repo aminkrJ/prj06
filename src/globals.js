@@ -10,7 +10,7 @@ const globals = {
   nutricombo: {
     tagline: "Astronauts love it",
     title: "NutriCombo | Astronauts love it",
-    description: "NutriCombo is delicious, quick, all-in-one and effective elixirs for health and fitness packed with superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats which gives you all the nutritions you need to become leaner, stronger and more focused."
+    description: "NutriCombo leverages your already installed habits to offer clean, all-in-one, effective and enhanced recipes packed with high-quality superfoods, functional herbs and extracts, medicinal mushrooms, probiotics and healthy fats which gives you all the nutrition you need to become leaner, stronger and more focused."
   },
   about: {
     title: "Brain on NutriCombo",
