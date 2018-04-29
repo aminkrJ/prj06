@@ -15,7 +15,7 @@ export default function reducer(state = initialState, action){
     case actions.FETCH_RECIPES_FULFILLED:
       return Object.assign({}, state, {
         isFetching: false,
-        entities: action.products
+        entities: action.recipes
       })
     case actions.FETCH_RECIPES_REJECTED:
       return Object.assign({}, state, {

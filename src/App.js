@@ -10,6 +10,7 @@ import {Helmet} from "react-helmet"
 import { reset, addToCart, removeFromCart, dropFromCart } from './actions/cartActions';
 import { fetchProducts } from './actions/productsActions';
 import { fetchArticles } from './actions/articlesActions';
+import { fetchRecipes } from './actions/recipesActions';
 
 import Header from './Header';
 import Legal from './Legal';
@@ -56,25 +57,19 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    var recipes = nextProps.products.entities.map((p) => {
-      return p.recipes
-    })
-
-    recipes = _.flatten(recipes)
-
-
     this.setState({
       products: nextProps.products.entities,
       articles: nextProps.articles.entities,
       bundles: _.filter(nextProps.products.entities, (p) => {return p.category.name === "Bundles"}),
       featured: _.filter(nextProps.products.entities, (p) => {return p.category.name !== "Bundles"}),
-      recipes: _.uniq(recipes, (i) =>{ return i.id })
+      recipes: nextProps.recipes.entities
     })
   }
 
   componentDidMount() {
     this.props.fetchProducts()
     this.props.fetchArticles()
+    this.props.fetchRecipes()
   }
 
   render() {
@@ -166,6 +161,7 @@ class App extends Component {
 const mapStateToProps = state => ({
   cart: state.cart,
   articles: state.articles,
+  recipes: state.recipes,
   products: state.products
 })
 
@@ -175,6 +171,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   removeFromCart,
   fetchProducts,
   fetchArticles,
+  fetchRecipes,
   reset
 }, dispatch)
 
