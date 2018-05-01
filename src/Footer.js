@@ -69,7 +69,6 @@ Nutrition and techniques your competitors employ to be ahead of the game.
                 <img src={PaymentMethods} alt="Payment Methods" />
               </div>
           </div>
-          
           <div class="col-lg-7 offset-lg-1">
             <div class="row">
               <div class="col-6 col-md-3">
@@ -78,10 +77,12 @@ Nutrition and techniques your competitors employ to be ahead of the game.
                 <h4 class="mt-0 text-uppercase text-white">
                   Company
                 </h4>
-                <ul class="list-unstyled footer-links">
-                  <li><Link to="/about">About us</Link></li>
+                <ul class="text-sm list-unstyled footer-links">
+                  <li><Link to="/about">About</Link></li>
                   <li><Link to="/blog">Blog</Link></li>
-                  <li><Link to="/contact">Contact us</Link></li>
+                  <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
+                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
                 </ul>
               </div>
               <div class="col-12 col-md-6">

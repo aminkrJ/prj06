@@ -30,7 +30,8 @@ import CustomModal from './Modal'
 import Shop from './Shop';
 import NutriCombo from './NutriCombo';
 import Join from './Join';
-import Affiliate from './Affiliate';
+import Terms from './Terms';
+import Privacy from './Privacy';
 import MenuItem from './MenuItem';
 import ShopItem from './ShopItem';
 import Find from './Find';
@@ -119,7 +120,8 @@ class App extends Component {
             addToCart={this.props.addToCart}
             removeFromCart={this.props.removeFromCart} />} />
           <Route exact path="/join" component={Join} />
-          <Route exact path="/affiliate" component={Affiliate} />
+          <Route exact path="/terms-conditions" component={Terms} />
+          <Route exact path="/privacy-policy" component={Privacy} />
           <Route exact path="/blog" component={(props) => <Blog {...props}
             dropFromCart={this.props.dropFromCart}
             cart={this.props.cart} addToCart={this.props.addToCart}
