@@ -15,8 +15,6 @@ class Footer extends Component {
     this.state = {};
   }
 
-  componentWillMount() {}
-
   renderCollections() {
     var collections = _.uniq(
       this.props.products.map(p => {

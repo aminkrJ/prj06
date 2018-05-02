@@ -59,8 +59,6 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {}
-
   componentWillReceiveProps(nextProps) {
     this.setState({
       products: nextProps.products.entities,

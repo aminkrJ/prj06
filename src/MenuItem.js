@@ -14,7 +14,7 @@ class MenuItem extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     NProgress.start();
 
     api

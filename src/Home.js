@@ -34,8 +34,6 @@ class Home extends Component {
     };
   }
 
-  componentWillMount() {}
-
   handleOrderNow(product, e) {
     e.preventDefault();
 
