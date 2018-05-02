@@ -1,27 +1,30 @@
 import axios from 'axios';
 import { beginTask, endTask } from 'redux-nprogress';
-import api from '../Api'
-import * as actions from '../constants/ActionTypes'
+import api from '../Api';
+import * as actions from '../constants/ActionTypes';
 
 export function fetchRecipes() {
-  return function(dispatch){
-    dispatch({ type: actions.FETCH_RECIPES })
+  return function(dispatch) {
+    dispatch({ type: actions.FETCH_RECIPES });
 
-    dispatch(beginTask())
+    dispatch(beginTask());
 
-    api.get("/recipes")
-    .then((response) => {
-      dispatch( {type: actions.FETCH_RECIPES_FULFILLED, recipes: response.data })
+    api
+      .get('/recipes')
+      .then(response => {
+        dispatch({
+          type: actions.FETCH_RECIPES_FULFILLED,
+          recipes: response.data,
+        });
 
-      dispatch(endTask())
-    })
-    .catch((error) => {
-      dispatch({ type: actions.FETCH_RECIPES_REJECTED, error: error })
+        dispatch(endTask());
+      })
+      .catch(error => {
+        dispatch({ type: actions.FETCH_RECIPES_REJECTED, error: error });
 
-      dispatch(endTask())
+        dispatch(endTask());
 
-      // TODO display error message
-    })
-  }
+        // TODO display error message
+      });
+  };
 }
-

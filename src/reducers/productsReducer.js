@@ -1,27 +1,28 @@
-import * as actions from '../constants/ActionTypes'
+import * as actions from '../constants/ActionTypes';
 
 const initialState = {
   entities: [],
   isFetching: false,
-  didInvalid: false
-}
+  didInvalid: false,
+};
 
-export default function reducer(state = initialState, action){
-  switch (action.type){
+export default function reducer(state = initialState, action) {
+  switch (action.type) {
     case actions.FETCH_PRODUCTS:
       return Object.assign({}, state, {
-        isFetching: true
-      })
+        isFetching: true,
+      });
     case actions.FETCH_PRODUCTS_FULFILLED:
-      return {...state,
+      return {
+        ...state,
         isFetching: false,
-        entities: action.products
-      }
+        entities: action.products,
+      };
     case actions.FETCH_PRODUCTS_REJECTED:
       return Object.assign({}, state, {
-        isFetching: false
-      })
+        isFetching: false,
+      });
     default:
-      return state
+      return state;
   }
 }

@@ -1,27 +1,30 @@
 import axios from 'axios';
 import { beginTask, endTask } from 'redux-nprogress';
-import api from '../Api'
-import * as actions from '../constants/ActionTypes'
+import api from '../Api';
+import * as actions from '../constants/ActionTypes';
 
 export function fetchProducts() {
-  return function(dispatch){
-    dispatch({ type: actions.FETCH_PRODUCTS })
+  return function(dispatch) {
+    dispatch({ type: actions.FETCH_PRODUCTS });
 
-    dispatch(beginTask())
+    dispatch(beginTask());
 
-    api.get("/products")
-    .then((response) => {
-      dispatch( {type: actions.FETCH_PRODUCTS_FULFILLED, products: response.data })
+    api
+      .get('/products')
+      .then(response => {
+        dispatch({
+          type: actions.FETCH_PRODUCTS_FULFILLED,
+          products: response.data,
+        });
 
-      dispatch(endTask())
-    })
-    .catch((error) => {
-      dispatch({ type: actions.FETCH_PRODUCTS_REJECTED, error: error })
+        dispatch(endTask());
+      })
+      .catch(error => {
+        dispatch({ type: actions.FETCH_PRODUCTS_REJECTED, error: error });
 
-      dispatch(endTask())
+        dispatch(endTask());
 
-      // TODO display error message
-    })
-  }
+        // TODO display error message
+      });
+  };
 }
-

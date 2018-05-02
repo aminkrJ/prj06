@@ -2,58 +2,85 @@ import React, { Component } from 'react';
 import MaskedInput from 'react-maskedinput';
 import classnames from 'classnames';
 import validate from 'validate.js';
-import _ from 'underscore'
+import _ from 'underscore';
 import PropTypes from 'prop-types';
 
 import './CustomInput.css';
 
 class CustomInput extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       value: props.value,
-      errors: []
-    }
+      errors: [],
+    };
   }
 
-  handleChange(e){
-    this.setState({ value: e.target.value })
+  handleChange(e) {
+    this.setState({ value: e.target.value });
   }
 
-  handleBlur(e){
-    var errors = validate.single(this.state.value, Object.assign({ presence: this.props.required }, this.props.constraints))
+  handleBlur(e) {
+    var errors = validate.single(
+      this.state.value,
+      Object.assign({ presence: this.props.required }, this.props.constraints)
+    );
 
-    this.setState({ errors: errors === undefined ? [] : errors })
+    this.setState({ errors: errors === undefined ? [] : errors });
   }
 
   render() {
     var messages = this.props.errors.map((message, index) => {
       return (
-        <div key={index} className="error-message">{ message }</div>
-      )
-    })
-    var label = <label htmlFor={ this.props.name }>{ this.props.label }</label>
+        <div key={index} className="error-message">
+          {message}
+        </div>
+      );
+    });
+    var label = <label htmlFor={this.props.name}>{this.props.label}</label>;
 
     return (
-      <div className={classnames('custom-input', 'form-group', { required: this.props.required, error: this.state.errors.length > 0 })}>
-        {this.props.label === undefined ? "" : label}
-        { this.props.mask ?
-        <MaskedInput { ...this.props } className='form-control' value={ this.state.value } onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } /> :
-        <input value={ this.state.value } { ..._.omit(this.props, "required") } className={classnames('form-control', {"is-invalid": this.state.errors.length > 0})} onBlur={ this.handleBlur.bind(this) } onChange={ this.handleChange.bind(this) } />
-        }
-        <span class="text-danger"><small>{ messages }</small></span>
+      <div
+        className={classnames('custom-input', 'form-group', {
+          required: this.props.required,
+          error: this.state.errors.length > 0,
+        })}
+      >
+        {this.props.label === undefined ? '' : label}
+        {this.props.mask ? (
+          <MaskedInput
+            {...this.props}
+            className="form-control"
+            value={this.state.value}
+            onBlur={this.handleBlur.bind(this)}
+            onChange={this.handleChange.bind(this)}
+          />
+        ) : (
+          <input
+            value={this.state.value}
+            {..._.omit(this.props, 'required')}
+            className={classnames('form-control', {
+              'is-invalid': this.state.errors.length > 0,
+            })}
+            onBlur={this.handleBlur.bind(this)}
+            onChange={this.handleChange.bind(this)}
+          />
+        )}
+        <span class="text-danger">
+          <small>{messages}</small>
+        </span>
       </div>
-    )
+    );
   }
 }
 
 CustomInput.propTypes = {
   constraints: PropTypes.object,
-  errors: PropTypes.array
-}
+  errors: PropTypes.array,
+};
 
 CustomInput.defaultProps = {
-  errors: []
-}
+  errors: [],
+};
 
-export default CustomInput
+export default CustomInput;

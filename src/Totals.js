@@ -2,43 +2,46 @@ import React, { Component } from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 
 class Totals extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       shippingFee: 0,
       total: 0,
       coupon: {},
       subtotal: props.subtotal,
-      freeDelivery: false
-    }
+      freeDelivery: false,
+    };
   }
 
   calcShippingFee(props) {
-    return props.subtotal > 100 ? 0 : 8
+    return props.subtotal > 100 ? 0 : 8;
   }
 
   calcTotal(props) {
-    if(props.hasCoupon){
-      return props.subtotal + this.calcShippingFee(props) - props.coupon.discount
+    if (props.hasCoupon) {
+      return (
+        props.subtotal + this.calcShippingFee(props) - props.coupon.discount
+      );
     } else {
-      return props.subtotal + this.calcShippingFee(props)
+      return props.subtotal + this.calcShippingFee(props);
     }
   }
 
   renderDiscount() {
-    if(this.props.hasCoupon) {
+    if (this.props.hasCoupon) {
       return (
         <div class="row">
-        <div class="col-md-6">
-          <h4 class="font-weight-light text-danger">Discount</h4>
+          <div class="col-md-6">
+            <h4 class="font-weight-light text-danger">Discount</h4>
+          </div>
+          <div class="col-md-6 text-right">
+            <h4 class="font-weight-light text-danger">
+              -${this.props.coupon.discount}
+            </h4>
+          </div>
         </div>
-        <div class="col-md-6 text-right">
-          <h4 class="font-weight-light text-danger">-${this.props.coupon.discount}</h4>
-        </div>
-        </div>
-      )
+      );
     }
   }
 
@@ -48,8 +51,8 @@ class Totals extends Component {
       shippingFee: this.calcShippingFee(this.props),
       total: this.calcTotal(this.props),
       coupon: this.props.coupon,
-      hasCoupon: this.props.hasCoupon
-    })
+      hasCoupon: this.props.hasCoupon,
+    });
   }
 
   render() {
@@ -66,7 +69,11 @@ class Totals extends Component {
         <div class="row">
           <div class="col-md-8">
             <h4 class="font-weight-light mb-0">Delivery fee</h4>
-            {this.state.subtotal > 100 ? <div class="mb-2 font-weight-light text-xs">Free delivery on orders over $100</div> : null}
+            {this.state.subtotal > 100 ? (
+              <div class="mb-2 font-weight-light text-xs">
+                Free delivery on orders over $100
+              </div>
+            ) : null}
           </div>
           <div class="col-md-4 text-right">
             <h4 class="font-weight-light">${this.state.shippingFee}</h4>
@@ -84,7 +91,7 @@ class Totals extends Component {
         </div>
         <hr class="my-3 ml-0 ml-md-auto mr-md-0" />
       </div>
-    )
+    );
   }
 }
 
@@ -92,8 +99,7 @@ Totals.defaultProps = {
   subtotal: 0,
   coupon: {},
   shippingFee: 0,
-  hasCoupon: false
-}
+  hasCoupon: false,
+};
 
-
-export default Totals
+export default Totals;
