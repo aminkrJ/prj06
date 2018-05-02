@@ -15,6 +15,7 @@
     "moment-timezone": "^0.5.14",
     "moxios": "^0.4.0",
     "nprogress": "^0.2.0",
+    "onchange": "^3.3.0",
     "owl.carousel": "^2.2.0",
     "react": "^16.0.0",
     "react-async-script-loader": "^0.3.0",
@@ -57,6 +58,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier-watch": "onchange '**/*.js' -- prettier --single-quote --trailing-comma es5 --write {{changed}}"
   }
 }
